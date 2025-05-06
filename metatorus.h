@@ -66,6 +66,7 @@ public:
 //    bool hasLink(Node *a, Node *b);
     void setFaultyLink(Node *a, Node *b);
     bool hasFaultyLink(Node *a, Node *b);
+
     void setProbability(Node *a, int h, int d, double p);
     double getProbability(Node *a, int h, int d);
     void setDirectedProbability(Node *a, Node *b, int h, int d, double p);
@@ -122,6 +123,13 @@ public:
     void calcDirectedRoutingProbabilities();
     void testDirectedRoutingProbabilities();
 
+    //new strategy
+    std::vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_of_metatori, std::vector<int> standing, std::vector<int> destination);
+
+    // testing routing algorithms
+    int route_test(Node *prev, Node* c, Node* t, std::unordered_map<int, bool>& visited, int depth);
+    int directed_route_test(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>& visited, int depth);
+
     // routing algorithms
     int route(Node *prev, Node* c, Node* t, unordered_map<int, bool> visited, int d);
     int directed_route(Node *prev, Node *c, Node *t, unordered_map<int, bool> visited, int d);
@@ -129,6 +137,10 @@ public:
 
     // breath-first search for optimal routing
     int bfs(Node *c, Node *t, unordered_map<int, bool> visited);
+
+    // test if the graph is fully connected
+    bool isFullyConnected();
+    void clearFaultyLinks();
 
     void printPath(vector<int> p);
 };

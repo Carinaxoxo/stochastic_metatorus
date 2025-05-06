@@ -12,6 +12,7 @@
 #include <utility>
 #include <iomanip>
 #include <set>
+#include <stack>
 
 #include "bbst.h"
 #include "random.h"
@@ -24,6 +25,7 @@
 #define DELIVERY_FAIL -1;
 
 metaTorus::metaTorus(int _n, int _k) {
+    // _n + 1 =
     assert(_k > 2);
     assert(_n >= 0);
     //to make sure it is different from hypercube
@@ -66,15 +68,34 @@ void metaTorus::display() {
         }
         std::cout << "): ";
 
-        int validity = (nodes[i].validity) ? 1 : 0;
-        cout << "validity: " << validity << ": ";
+//        int validity = (nodes[i].validity) ? 1 : 0;
+//        cout << "validity: " << validity << ": ";
 
         // Print neighbors
         for (auto neighbor : nodes[i].neighbors) {
-            std::cout << neighbor << " ";
+//            std::cout << neighbor << " ";
+            for (int j = 0; j < n; ++j) {
+                std::cout << nodes[neighbor].value[j];
+                if (j < n - 1) std::cout << ",";
+            }
+            std::cout << "/" << std::endl;
         }
         std::cout << std::endl;
     }
+
+    for (int i = 0; i < V; i++) {
+        Node* a = &nodes[i];
+        for (int h = 1; h <= diameter; h++) {
+            for (int d = h; d <= diameter; d++) {
+                for (int index = 0; index < 4; index++) {
+                    if (a->d_P[h][d][index] > -1)
+                        std::cout << "nodes[" << a->index << "].d_P[" << h << "][" << d << "][" << index << "] = "
+                                  << a->d_P[h][d][index] << std::endl;
+                }
+            }
+        }
+    }
+
 
 //    std::cout << "Adjacency matrix (F):" << std::endl;
 //    for (int i = 0; i < V; ++i) {
@@ -105,6 +126,7 @@ void metaTorus::allocate() {
     }
 }
 
+
 // インデックスをk進数に変換するようなアルゴリズム
 //stay the same
 void metaTorus::setValues() {
@@ -124,7 +146,7 @@ void metaTorus::setValues() {
 
         (nodes)[i].value[n-1] = m;
 
-        nodes[i].validity = (0 <= nodes[i].value[0] && nodes[i].value[0] < (n - 1));
+//        nodes[i].validity = (0 <= nodes[i].value[0] && nodes[i].value[0] < (n - 1));
 
 //        std::string v = "";
 //        for(int j=0; j<n; j++)
@@ -227,8 +249,6 @@ void metaTorus::setRandomFaultyLinks(double p_faulty, int* seed) {
     // Generate all unique links in the torus
     for (int i = 0; i < V; ++i) {
 
-        if (!nodes[i].validity) continue; // Skip invalid nodes
-
         for (int j : nodes[i].neighbors) {
             if (i < j) {
                 all_links.emplace_back(i, j);
@@ -284,7 +304,7 @@ int metaTorus::getId(vector<int> input){
 
 bool metaTorus::isNeighbor(Node *a, Node *b) {
     // Number of differing dimensions and index of the differing dimension
-    int hamming_dist = 0, i_different = 0, i_check;
+    int hamming_dist = 0, i_different = 0;
     int h_a, h_b;
     //values at the header
 
@@ -292,7 +312,6 @@ bool metaTorus::isNeighbor(Node *a, Node *b) {
     int a_differ, b_differ;
     h_a = a->value[0];
     h_b = b->value[0];
-    i_check = h_a;
 
     // check all dimensions
     for (int i = 0; i < n; i++) {
@@ -302,28 +321,32 @@ bool metaTorus::isNeighbor(Node *a, Node *b) {
         }
     }
 
+    // Debug prints
+//    std::cout << "Checking if nodes " << a->index << " and " << b->index << " are neighbors." << std::endl;
+//    std::cout << "Hamming distance: " << hamming_dist << ", Differing dimension: " << i_different << std::endl;
+
     // If more than one dimension differs, they cannot be neighbors
     if (hamming_dist != 1)
         return false;
 
-    if (i_different == 0 && h_a != h_b){
+    // Check if they are neighbors in the first dimension
+    if (i_different == 0){
         if (abs(h_a - h_b) == 1)
             return true;
-        // Case 2.2: Wrap-around difference (e.g., 0 and k-1)
-        if ((h_a == n - 2 && h_b == 0) || (h_a == 0 && h_b == n - 2))
+        // Wrap-around difference (e.g., 0 and k-1)
+        if ((h_a == k - 1 && h_b == 0) || (h_a == 0 && h_b == k - 1))
             return true;
     }
 
-    if (i_different == i_check + 1 && h_a == h_b) {
-        // Get the differing values in the differing dimension
+    // Check if they are neighbors in other dimensions
+    if (i_different > 0) {
         a_differ = a->value[i_different];
         b_differ = b->value[i_different];
 
-        if(abs(a_differ - b_differ) == 1)
+        if (abs(a_differ - b_differ) == 1)
             return true;
-
-        // 0とk-1のパターン
-        if((a_differ == k-1 and b_differ == 0) or (a_differ == 0 and b_differ == k-1))
+        // Wrap-around difference (e.g., 0 and k-1)
+        if ((a_differ == k - 1 && b_differ == 0) || (a_differ == 0 && b_differ == k - 1))
             return true;
     }
 
@@ -381,7 +404,6 @@ bool metaTorus::inPre(Node *neighbor, Node *a, Node *b) {
     return distance(neighbor, b) < distance(a, b);
 }
 
-
 bool metaTorus::inSpr(Node *neighbor, Node *a, Node *b) {
     return not inPre(neighbor, a, b);
 }
@@ -427,8 +449,6 @@ void metaTorus::calcRoutingProbabilities() {
         a = &nodes[i];
         p11 = 0.0;
 
-        if (!a->validity) continue;
-
         for (int j = 0; j < 4; j++) {
             if (j >= sizeof(a->neighbors)) {
                 cerr << "Error: Neighbor index " << j << " out of bounds for node " << i << " in initial loop" << endl;
@@ -447,7 +467,7 @@ void metaTorus::calcRoutingProbabilities() {
 //                cout << "not faulty link" << endl;
             }
         }
-        p11 /= 4;
+        p11 /= 2 * n;
 //        setProbability(a, 0, 0, 1);
         setProbability(a, 1, 1, p11);
 
@@ -472,8 +492,6 @@ void metaTorus::calcRoutingProbabilities() {
                 a = &(nodes[i]);
 //                cout << "current node id is " << i << endl;
                 sum = 0.0;
-
-                if (!a->validity) continue;
 
                 if (h == 1) {
                     for (int in = 0; in < 4; in++) {
@@ -515,7 +533,7 @@ void metaTorus::calcRoutingProbabilities() {
                         sum += (f * (double(h - 1) * p1 + double(d - h) * p2)) / double(d - 1);
                     }
                 }
-                sum /= 4;
+                sum /= (2 * n);
 //                p /= pow(2, h) * combination(n, h);
                 setProbability(a, h, d, sum);
 //                cout << "p_" << h << "," << d << " = " << p << endl;
@@ -540,8 +558,6 @@ void metaTorus::calcDirectedRoutingProbabilities() {
     for(int i=0; i<V; i++) {
 //        std::cout << "Processing node " << i << std::endl;  // Debugging output
         s = &nodes[i];
-
-        if (!s->validity) continue;
 
         for (int j=0; j<4; j++) {
             if (s->neighbors[j] < 0 || s->neighbors[j] >= V) {  // Check array bounds
@@ -679,6 +695,7 @@ void metaTorus::calcDirectedRoutingProbabilities() {
     }
 
 //    cout << "Finished calculation of routing probabilities." << endl;
+
 }
 
 void metaTorus::testDirectedRoutingProbabilities() {
@@ -687,69 +704,110 @@ void metaTorus::testDirectedRoutingProbabilities() {
     Node *neighbor;
     double sum, p, p11;
 
-//    cout << "Starting calculation of directed routing probabilities..." << endl;
-    /*
-     * まず全てのノードについてP(a)_{1,1}を計算
-     * First, calculate P(a)_{1,1} for all nodes
-     */
-    for(int i=0; i<V; i++) {
-//        std::cout << "Processing node " << i << std::endl;  // Debugging output
+    cout << "Starting calculation of directed routing probabilities..." << endl;
+
+    // Step 1: Calculate P(a)_{1,1} for all nodes
+    for (int i = 0; i < V; i++) {
         s = &nodes[i];
-        for (int j=0; j<4; j++) {
-            if (s->neighbors[j] < 0 || s->neighbors[j] >= V) {  // Check array bounds
+
+        for (int j = 0; j < 4; j++) {
+            if (s->neighbors[j] < 0 || s->neighbors[j] >= V) {
                 std::cerr << "Neighbor index out of bounds: " << s->neighbors[j] << std::endl;
                 continue;
             }
-            double total = 0.0;
             a = &nodes[s->neighbors[j]];
-//            cout << "getting direction node " << a->index << " for h = d = 1" << endl; // Debugging output
             sum = 0.0;
 
-            for (int in=0; in < 4; in++) {
-                if (s->neighbors[in] < 0 || s->neighbors[j] >= V) {  // Check array bounds
+            for (int in = 0; in < 4; in++) {
+                if (s->neighbors[in] < 0 || s->neighbors[in] >= V) {
                     std::cerr << "Neighbor index out of bounds: " << s->neighbors[in] << std::endl;
                     continue;
                 }
-
                 neighbor = &nodes[s->neighbors[in]];
-
-//                cout << "getting neighbor node " << neighbor->index << " for h = d = 1" << endl;  // Debugging output
-                if (a != neighbor){
-                    total += 1.0;
-                    sum += !hasFaultyLink(s, a) ? 1.0 : 0.0;
-//                    cout << "faultiness = " << hasFaultyLink(s, a) << endl;
+                if (a != neighbor) {
+                    sum += !hasFaultyLink(s, neighbor) ? 1.0 : 0.0;
                 }
             }
 
-            cout << "sum = " << sum;
-
-            p11 = sum / total;
-            cout << "p1,1 = " << p11 << " for node " << s->index << " -> neighbor " << a->index << endl;
+            p11 = sum / (2 * n - 1); // Normalize by the number of neighbors
+            if (p11 == 0.0) {
+                std::cerr << "Warning: P(a)_{1,1} rounded to 0 for node " << s->index << " -> " << a->index << std::endl;
+            }
             setDirectedProbability(s, a, 1, 1, p11);
         }
-
     }
 
-    /*
-     * P(a)_{h,d}を計算していく
-     * P(a)_{h,d}の計算には, P(a)_{h,d-1}やP(a)_{h-1,d-1}が必要になる.
-     * P(a)_{1,1}だけで計算できるP(a)_{1,2}から順番に計算していく(動的計画法)
-     *
-     * Calculation of P(a)_{h,d}
-     * P(a)_{h,d} needs P(a)_{h,d-1} and P(a)_{h-1,d-1}.
-     * Calculation starts with P(a)_{1,2}.
-     */
+    // Step 2: Calculate P(a)_{h,d} for h >= 1, d >= 2
+    for (int d = 2; d <= diameter; d++) {
+        for (int h = 1; h <= std::min(n, d); h++) {
+            for (int i = 0; i < V; i++) {
+                s = &nodes[i];
 
-//    cout << "come to the second round" << endl;
+                for (int j = 0; j < 4; j++) {
+                    if (s->neighbors[j] < 0 || s->neighbors[j] >= V) {
+                        std::cerr << "Neighbor index out of bounds: " << s->neighbors[j] << std::endl;
+                        continue;
+                    }
+                    a = &nodes[s->neighbors[j]];
+                    sum = 0.0;
 
-//    cout << "Finished calculation of routing probabilities." << endl;
+                    if (h == 1) {
+                        for (int in = 0; in < 4; in++) {
+                            if (s->neighbors[in] < 0 || s->neighbors[in] >= V) {
+                                std::cerr << "Neighbor index out of bounds: " << s->neighbors[in] << std::endl;
+                                continue;
+                            }
+                            neighbor = &nodes[s->neighbors[in]];
+                            if (a != neighbor) {
+                                double f = !hasFaultyLink(s, neighbor) ? 1.0 : 0.0;
+                                double temp = getDirectedProbability(neighbor, s, h, d - 1);
+                                sum += f * temp;
+                            }
+                        }
+                    } else if (h == d) {
+                        for (int in = 0; in < 4; in++) {
+                            if (s->neighbors[in] < 0 || s->neighbors[in] >= V) {
+                                std::cerr << "Neighbor index out of bounds: " << s->neighbors[in] << std::endl;
+                                continue;
+                            }
+                            neighbor = &nodes[s->neighbors[in]];
+                            if (a != neighbor) {
+                                double f = !hasFaultyLink(s, neighbor) ? 1.0 : 0.0;
+                                double temp = getDirectedProbability(neighbor, s, h - 1, d - 1);
+                                sum += f * temp;
+                            }
+                        }
+                    } else {
+                        for (int in = 0; in < 4; in++) {
+                            if (s->neighbors[in] < 0 || s->neighbors[in] >= V) {
+                                std::cerr << "Neighbor index out of bounds: " << s->neighbors[in] << std::endl;
+                                continue;
+                            }
+                            neighbor = &nodes[s->neighbors[in]];
+                            if (a != neighbor) {
+                                double f = !hasFaultyLink(s, neighbor) ? 1.0 : 0.0;
+                                double p1 = getDirectedProbability(neighbor, s, h - 1, d - 1);
+                                double p2 = getDirectedProbability(neighbor, s, h, d - 1);
+                                sum += (f * ((h - 1) * p1 + (d - h) * p2)) / (d - 1);
+                            }
+                        }
+                    }
+
+                    p = sum / (2 * n - 1); // Normalize by the number of neighbors
+                    if (p == 0.0) {
+                        std::cerr << "Warning: P(a)_{h,d} rounded to 0 for node " << s->index << " -> " << a->index << std::endl;
+                    }
+                    setDirectedProbability(s, a, h, d, p);
+                }
+            }
+        }
+    }
 }
 
 void metaTorus::setProbability(Node *a, int h, int d, double p) {
     assert(0 < h && h <= n);
     assert(0 < d && d <= diameter);
     assert(0.0 <= p && p <= 1.0);
-    assert(a->validity);
 
     // Ensure this is the first time the probability is being set
     assert(nodes[a->index].P[h][d] == -1);
@@ -757,25 +815,58 @@ void metaTorus::setProbability(Node *a, int h, int d, double p) {
 }
 
 void metaTorus::setDirectedProbability(Node *a, Node *b, int h, int d, double d_p) {
+    if (h < 0 || h > diameter || d < 0 || d > diameter || a->index < 0 || a->index >= V) {
+        std::cerr << "Index out of bounds: h = " << h << ", d = " << d << ", index = " << a->index << std::endl;
+        return;
+    }
+
+//    cout << "setting probabilities" << endl;
+//
+//    if (d_p < 0.0) {
+//        std::cerr << "Warning: less than 0" << a->index << " -> " << a->index << std::endl;
+//    }
+//    if (d_p > 1.0) {
+//        std::cerr << "Warning: bigger than 1" << a->index << " -> " << a->index << std::endl;
+//    }
+
+
+    int index = getSpecificNeighbor(a, b->index);
+//    cout << "neighbor index get, " << index << endl;
+    // Ensure that the index is within bounds
+    assert(index >= 0 && index < 4);
+//    std::cout << "setting nodes[" << a->index << "].d_P[" << h << "][" << d << "][" << index << "] = "
+//              << d_p << std::endl;
+
     assert(0 <= h && h <= n);
     assert(0 <= d && d <= diameter);
     assert(0.0 <= d_p && d_p <= 1.0);
-    assert(a->validity);
-    assert(b->validity);
 
-    int index = getSpecificNeighbor(a, b->index);
-    // Ensure that the index is within bounds
-    assert(index >= 0 && index < 4);
+//     Ensure this is the first time the directed probability is being set
+//    std::cout << "nodes[" << a->index << "].d_P[" << h << "][" << d << "][" << index << "] = "
+//              << nodes[a->index].d_P[h][d][index] << std::endl;
+//    cout << "nodes[a->index].d_P[h][d][index] = " << nodes[a->index].d_P[h][d][index] << endl;
+    assert(nodes[a->index].d_P[h][d][index] == -1);
 
-    // Ensure this is the first time the directed probability is being set
-//    assert(nodes[a->index].d_P[h][d][index] == -1);
+//    if (!(0.0L <= d_p && d_p <= 1.0L * SCALE_FACTOR)) {
+//        std::cerr << "Assertion failed in setDirectedProbability:" << std::endl;
+//        std::cerr << "d_p = " << d_p
+//                  << ", expected range: [0.0, " << 1.0L * SCALE_FACTOR << "]"
+//                  << std::endl;
+//        std::cerr << "Node a = " << a->index << ", Node b = " << b->index
+//                  << ", h = " << h << ", d = " << d << std::endl;
+//        std::exit(EXIT_FAILURE); // Exit the program
+//    }
+//
+//
     nodes[a->index].d_P[h][d][index] = d_p;
+//    cout<< "directed routing probability set successfully for node "
+//    << a->index << " -> neighbor " << b->index
+//    << " with h = " << h << " and d = " << d <<endl;
 }
 
 double metaTorus::getProbability(Node *a, int h, int d) {
     assert(0 <= h && h <= n);
     assert(0 <= d && d <= diameter);
-    assert(a->validity);
 
     if (h == 0) {
         assert(d == 0);
@@ -796,8 +887,6 @@ double metaTorus::getProbability(Node *a, int h, int d) {
 double metaTorus::getDirectedProbability(Node *a, Node *b, int h, int d) {
     assert(0 <= h && h <= n);
     assert(0 <= d && d <= diameter);
-    assert(a->validity);
-    assert(b->validity);
 
     if (h == 0) {
         assert(d == 0);
@@ -825,8 +914,6 @@ void metaTorus::printProbabilities() {
 
     for (int i = 0; i < V; i++) {
         a = &nodes[i];
-
-        if (!a->validity) continue;
 
         std::cout << "(";
         for (int j = 0; j < n; j++) {
@@ -857,8 +944,6 @@ void metaTorus::printDirectedProbabilities() {
     for (int i = 0; i < V; i++) {
         s = &nodes[i];
 
-        if (!s->validity) continue;
-
         for (int j = 0; j < s->neighbors.size(); j++) {
             a = &nodes[s->neighbors[j]];
 
@@ -879,13 +964,226 @@ void metaTorus::printDirectedProbabilities() {
 
             for (int d = 1; d <= floor(k / 2) * n; d++)
                 for (int h = 1; h <= std::min(n, d); h++) {
-                    std::cout << std::fixed << std::setprecision(2)
+                    std::cout << std::fixed << std::setprecision(5)
                               << getDirectedProbability(s, a, h, d) << " ";
                 }
             std::cout << std::endl;
         }
         std::cout << std::endl;
     }
+}
+
+vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_of_metatori, std::vector<int> standing, std::vector<int> destination){
+    std::vector<std::vector<int>> wanted;
+
+    //1つめ
+    std::vector<int> neiborhood = standing;
+    //std::cout << standing[0]+1 << std::endl;
+    int header = neiborhood[0]+1;
+
+    neiborhood[header]++;
+    neiborhood[header] %= size_of_metatori[header];
+
+    //for(int i=0;i<neiborhood.size();i++)std::cout << neiborhood[i] << " ";
+    //std::cout << std::endl << std::endl;
+
+    int pre_move = std::abs(standing[header]-destination[header]);
+    pre_move = std::min(size_of_metatori[header]-pre_move,pre_move);
+
+    int post_move = std::abs(neiborhood[header]-destination[header]);
+    post_move = std::min(size_of_metatori[header]-post_move,post_move);
+
+    if(pre_move > post_move)wanted.push_back(neiborhood);
+
+
+    //2つめ
+    neiborhood = standing;
+    neiborhood[header]--;
+    if(neiborhood[header] == -1)neiborhood[header] += size_of_metatori[header];
+
+
+    //for(int i=0;i<neiborhood.size();i++)std::cout << neiborhood[i] << " ";
+    //std::cout << std::endl << std::endl;
+
+    //pre_move = std::abs(standing[header]-destination[header]);
+    //pre_move = std::min(destination[header]-pre_move,pre_move);
+
+    post_move = std::abs(neiborhood[header]-destination[header]);
+    post_move = std::min(size_of_metatori[header]-post_move,post_move);
+
+    if(pre_move > post_move)wanted.push_back(neiborhood);
+
+    //元の頂点からのリング移動量
+
+    std::vector<int> need_to_visit(size_of_metatori[0],0);
+    for(int i=0;i<size_of_metatori[0];i++){
+        if(standing[i+1] != destination[i+1])need_to_visit[i] = 1;
+    }
+    std::vector<int> tmp;
+    int N = size_of_metatori[0];
+    pre_move = 0;
+    tmp.push_back(standing[0]);
+    for(int i=1;i<=N;i++){
+        int pos = standing[0]+i;
+        if(need_to_visit[pos%N] == 1)tmp.push_back(pos);
+        else if(destination[0] == pos%N)tmp.push_back(pos);
+    }
+    tmp.push_back(standing[0]+N);
+    int side1 = 0,side2 = 0;
+    int half1,half2;
+    bool side = false;
+    for(int i=1;i<tmp.size();i++){
+        if(!side){
+            side1 = std::max(side1,tmp[i]-tmp[i-1]);
+        }
+        else{
+            side2 = std::max(side2,tmp[i]-tmp[i-1]);
+        }
+        if(tmp[i]%N == destination[0]){
+            side = true;
+            half1 = tmp[i]-standing[0];
+            half2 = N - half1;
+        }
+    }
+    pre_move = std::min(half1+half2*2-side2,half2+half1*2-side1);
+
+
+    //3つめのリング移動量
+    tmp.clear();
+    neiborhood = standing;
+    neiborhood[0] += 1;
+    neiborhood[0] %= N;
+
+
+    //for(int i=0;i<neiborhood.size();i++)std::cout << neiborhood[i] << " ";
+    //std::cout << std::endl << std::endl;
+
+
+
+    tmp.push_back(neiborhood[0]);
+    for(int i=1;i<=N;i++){
+        int pos = neiborhood[0]+i;
+        if(need_to_visit[pos%N] == 1)tmp.push_back(pos);
+        else if(destination[0] == pos%N)tmp.push_back(pos);
+    }
+    tmp.push_back(neiborhood[0]+N);
+    side1 = 0,side2 = 0;
+    //half1,half2;
+    side = false;
+    for(int i=1;i<tmp.size();i++){
+        if(!side){
+            side1 = std::max(side1,tmp[i]-tmp[i-1]);
+        }
+        else{
+            side2 = std::max(side2,tmp[i]-tmp[i-1]);
+        }
+        if(tmp[i]%N == destination[0]){
+            side = true;
+            half1 = tmp[i]-neiborhood[0];
+            half2 = N - half1;
+        }
+    }
+    post_move = std::min(half1+half2*2-side2,half2+half1*2-side1);
+
+    if(pre_move > post_move)wanted.push_back(neiborhood);
+
+
+    //4つめのリング移動量
+    tmp.clear();
+    neiborhood = standing;
+    neiborhood[0] += -1+N;
+    neiborhood[0] %= N;
+
+
+    //for(int i=0;i<neiborhood.size();i++)std::cout << neiborhood[i] << " ";
+    //std::cout << std::endl << std::endl;
+
+    tmp.push_back(neiborhood[0]);
+    for(int i=1;i<=N;i++){
+        int pos = neiborhood[0]+i;
+        if(need_to_visit[pos%N] == 1)tmp.push_back(pos);
+        else if(destination[0] == pos%N)tmp.push_back(pos);
+    }
+    tmp.push_back(neiborhood[0]+N);
+    side1 = 0,side2 = 0;
+    //half1,half2;
+    side = false;
+    for(int i=1;i<tmp.size();i++){
+        if(!side){
+            side1 = std::max(side1,tmp[i]-tmp[i-1]);
+        }
+        else{
+            side2 = std::max(side2,tmp[i]-tmp[i-1]);
+        }
+        if(tmp[i]%N == destination[0]){
+            side = true;
+            half1 = tmp[i]-neiborhood[0];
+            half2 = N - half1;
+        }
+    }
+    post_move = std::min(half1+half2*2-side2,half2+half1*2-side1);
+
+    if(pre_move > post_move)wanted.push_back(neiborhood);
+
+    return wanted;
+}
+
+int metaTorus::route_test(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>& visited, int depth) {
+    int dist_ct, h;
+    double p, p_max;
+    Node *neighbor, *max_neighbor = nullptr;
+
+    // Base case: If the current node is the target, return the depth
+    if (c->index == t->index) {
+        return depth;
+    }
+
+    dist_ct = distance(c, t);
+    visited[c->index] = true; // Mark the current node as visited
+
+    // Step 1: Try preferred neighbors
+    p_max = -1.0;
+    for (int i = 0; i < 4; i++) { // Assuming 4 neighbors
+        neighbor = &(nodes[c->neighbors[i]]);
+        if (prev && prev->index == neighbor->index) continue; // Skip the previous node
+        if (!hasFaultyLink(c, neighbor) && visited.count(neighbor->index) == 0 && inPre(neighbor, c, t)) {
+            h = hammingDistance(neighbor, t);
+            p = getProbability(neighbor, h, std::max(0, dist_ct - 1));
+            if (p > p_max) {
+                p_max = p;
+                max_neighbor = neighbor;
+            }
+        }
+    }
+
+    // If a preferred neighbor is found, proceed
+    if (max_neighbor != nullptr && p_max > 0) {
+        return route_test(c, max_neighbor, t, visited, depth + 1);
+    }
+
+    // Step 2: Try spare neighbors
+    p_max = -1.0;
+    max_neighbor = nullptr; // Reset max_neighbor
+    for (int i = 0; i < 4; i++) { // Assuming 4 neighbors
+        neighbor = &(nodes[c->neighbors[i]]);
+        if (prev && prev->index == neighbor->index) continue; // Skip the previous node
+        if (!hasFaultyLink(c, neighbor) && visited.count(neighbor->index) == 0 && !inPre(neighbor, c, t)) {
+            h = hammingDistance(neighbor, t);
+            p = getProbability(neighbor, h, std::min(dist_ct + 1, diameter));
+            if (p > p_max) {
+                p_max = p;
+                max_neighbor = neighbor;
+            }
+        }
+    }
+
+    // If a spare neighbor is found, proceed
+    if (max_neighbor != nullptr && p_max > 0) {
+        return route_test(c, max_neighbor, t, visited, depth + 1);
+    }
+
+    // Step 3: If no valid neighbor is found, return DELIVERY_FAIL
+    return DELIVERY_FAIL;
 }
 
 int metaTorus::route(Node *prev, Node *c, Node *t, std::unordered_map<int, bool> visited, int d) {
@@ -897,7 +1195,7 @@ int metaTorus::route(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>
 
     // Base case
     if(c->index == t->index){
-//        cout << "Reached dest node in route: " << t->index << endl;
+        cout << "Reached dest node in route: " << t->index << endl;
         return d;
     }
     //path length?
@@ -907,7 +1205,7 @@ int metaTorus::route(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>
     visited[c->index] = true;
 
     // Try to deliver message to preferred node
-    for(int i=0; i<2*n; i++) {
+    for(int i=0; i<4; i++) {
         neighbor = &(nodes[c->neighbors[i]]);
         assert(isNeighbor(c, neighbor));
 
@@ -915,7 +1213,7 @@ int metaTorus::route(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>
 
         if (inPre(neighbor, c, t) and !hasFaultyLink(c, neighbor) ) {
             h = hammingDistance(neighbor, t);
-            p = getProbability(neighbor, h, std::max(0, dist_ct - 1));
+            p = getProbability(neighbor, h, max(0, dist_ct - 1));
 
             if (p > p_max) {
                 p_max = p;
@@ -931,7 +1229,7 @@ int metaTorus::route(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>
     }
 
     // Try to deliver message to spare node
-    for(int i=0; i<2*n; i++) {
+    for(int i=0; i<4; i++) {
         neighbor = &(nodes[c->neighbors[i]]);
         assert(isNeighbor(c, neighbor));
         //haslink
@@ -959,6 +1257,76 @@ int metaTorus::route(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>
     return DELIVERY_FAIL;
 }
 
+int metaTorus::directed_route_test(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>& visited, int depth) {
+    int dist_ct, h;
+    long double p, p_max;
+    Node *neighbor, *max_neighbor = nullptr;
+
+    // Base case: If the current node is the target, return the depth
+    if (c->index == t->index) {
+        return depth;
+    }
+
+    dist_ct = distance(c, t);
+    visited[c->index] = true; // Mark the current node as visited
+
+    // Step 1: Try preferred neighbors
+    p_max = -1.0L;
+    for (int i = 0; i < 4; i++) { // Assuming 4 neighbors
+        neighbor = &(nodes[c->neighbors[i]]);
+        assert(isNeighbor(c, neighbor)); // Ensure the neighbor relationship is valid
+        if (prev && prev->index == neighbor->index) continue; // Skip the previous node
+        if (!hasFaultyLink(c, neighbor) && visited.count(neighbor->index) == 0 && inPre(neighbor, c, t)) {
+            h = hammingDistance(neighbor, t);
+            if (h < 0 || h > diameter || dist_ct - 1 < 0 || dist_ct - 1 > diameter) {
+                std::cerr << "Invalid parameters: h = " << h << ", dist_ct - 1 = " << dist_ct - 1 << std::endl;
+                continue;
+            }
+            p = getDirectedProbability(neighbor, c, h, dist_ct - 1);
+            p = std::max(p, 1e-15L); // Ensure p is not rounded to 0
+            if (p > p_max) {
+                p_max = p;
+                max_neighbor = neighbor;
+            }
+        }
+    }
+
+    // If a preferred neighbor is found, proceed
+    if (max_neighbor != nullptr && p_max > 0) {
+        return directed_route(c, max_neighbor, t, visited, depth + 1);
+    }
+
+    // Step 2: Try spare neighbors
+    p_max = -1.0L;
+    max_neighbor = nullptr; // Reset max_neighbor
+    for (int i = 0; i < 4; i++) { // Assuming 4 neighbors
+        neighbor = &(nodes[c->neighbors[i]]);
+        assert(isNeighbor(c, neighbor)); // Ensure the neighbor relationship is valid
+        if (prev && prev->index == neighbor->index) continue; // Skip the previous node
+        if (!hasFaultyLink(c, neighbor) && visited.count(neighbor->index) == 0 && inSpr(neighbor, c, t)) {
+            h = hammingDistance(neighbor, t);
+            if (h < 0 || h > diameter || dist_ct + 1 < 0 || dist_ct + 1 > diameter) {
+                std::cerr << "Invalid parameters: h = " << h << ", dist_ct + 1 = " << dist_ct + 1 << std::endl;
+                continue;
+            }
+            p = getDirectedProbability(neighbor, c, h, std::min(dist_ct + 1, diameter));
+            p = std::max(p, 1e-15L); // Ensure p is not rounded to 0
+            if (p > p_max) {
+                p_max = p;
+                max_neighbor = neighbor;
+            }
+        }
+    }
+
+    // If a spare neighbor is found, proceed
+    if (max_neighbor != nullptr && p_max > 0) {
+        return directed_route(c, max_neighbor, t, visited, depth + 1);
+    }
+
+    // Step 3: If no valid neighbor is found, return DELIVERY_FAIL
+    return DELIVERY_FAIL;
+}
+
 int metaTorus::directed_route(Node *prev, Node *c, Node *t, std::unordered_map<int, bool> visited, int d) {
     int dist_ct, h;
     double p, p_max;
@@ -968,7 +1336,7 @@ int metaTorus::directed_route(Node *prev, Node *c, Node *t, std::unordered_map<i
 
     // Base case
     if(c->index == t->index){
-//        cout << "Reached dest node in route: " << t->index << endl;
+        cout << "Reached dest node in directed: " << t->index << endl;
         return d;
     }
 
@@ -977,7 +1345,7 @@ int metaTorus::directed_route(Node *prev, Node *c, Node *t, std::unordered_map<i
     visited[c->index] = true;
 
     // Try to deliver message to preferred node
-    for(int i=0; i<2*n; i++) {
+    for(int i=0; i<4; i++) {
         neighbor = &(nodes[c->neighbors[i]]);
         assert(isNeighbor(c, neighbor));
         //has link
@@ -1004,7 +1372,7 @@ int metaTorus::directed_route(Node *prev, Node *c, Node *t, std::unordered_map<i
     }
 
     // Try to deliver message to spare node
-    for(int i=0; i<2*n; i++) {
+    for(int i=0; i<4; i++) {
         neighbor = &(nodes[c->neighbors[i]]);
         assert(isNeighbor(c, neighbor));
         //haslink
@@ -1034,19 +1402,15 @@ int metaTorus::directed_route(Node *prev, Node *c, Node *t, std::unordered_map<i
 int metaTorus::brute(Node *prev, Node *c, Node *t, std::unordered_map<int, bool> visited, int d) {
     Node *neighbor;
 
-    //std::cout << "c:";
-    //for(int i=0; i<n; i++)
-    //    std::cout << c->value[i] << " ";
-    //std::cout << std::endl;
-
     if(c->index == t->index){
+        cout << "Reached dest node in broute: " << t->index << endl;
         return d;
     }
 
     visited[c->index] = true;
 
     // Try to deliver message to preferred node
-    for(int i=0; i<2*n; i++) {
+    for(int i=0; i<4; i++) {
         neighbor = &(nodes[c->neighbors[i]]);
         if(prev and prev->index == neighbor->index){
             continue;
@@ -1054,14 +1418,15 @@ int metaTorus::brute(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>
 
         if(inPre(neighbor, c, t) and not hasFaultyLink(c, neighbor)) {
             if(visited.count(neighbor->index) > 0)
+//                cout << "visted node" << endl;
                 return DELIVERY_FAIL;
-//            cout << "brute choose " << neighbor->index << ",";
+//            cout << "brute choose " << neighbor->index << "," << endl;
             return brute(c, neighbor, t, visited, d + 1);
         }
     }
 
     // Try to deliver message to spare node
-    for(int i=0; i<2*n; i++) {
+    for(int i=0; i<4; i++) {
         neighbor = &(nodes[c->neighbors[i]]);
         if(prev and prev->index == neighbor->index){
             continue;
@@ -1069,8 +1434,9 @@ int metaTorus::brute(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>
         if (not hasFaultyLink(c, neighbor)){
             assert(inSpr(neighbor, c, t));
             if (visited.count(neighbor->index) > 0)
+//                cout << "visted node" << endl;
                 return DELIVERY_FAIL;
-//            cout << "brute choose " << neighbor->index << ",";
+//            cout << "brute choose " << neighbor->index << "," << endl;
             return brute(c, neighbor, t, visited, d + 1);
         }
     }
@@ -1091,8 +1457,7 @@ int metaTorus::bfs(Node *c, Node *t, std::unordered_map<int, bool> visited) {
     q_i.push(c->index);
     q_d.push(0);
 
-    while(not q_i.empty()){
-
+    while(!q_i.empty()){
         assert(q_d.size() == q_i.size());
 
         a = &(nodes[q_i.front()]);
@@ -1103,9 +1468,13 @@ int metaTorus::bfs(Node *c, Node *t, std::unordered_map<int, bool> visited) {
         if(a->index == t->index)
             return a_d;
 
-        for(int i=0; i<2*n; i++) {
+        for(int i=0; i<4; i++) {
             neighbor = &(nodes[a->neighbors[i]]);
-            if(not hasFaultyLink(a, neighbor) and visited.count(neighbor->index) == 0){
+            // Debug faulty links
+            if (hasFaultyLink(a, neighbor)) {
+                std::cout << "Unexpected faulty link: " << a->index << " ↔ " << neighbor->index << std::endl;
+            }
+            if(!hasFaultyLink(a, neighbor) && visited.count(neighbor->index) == 0){
                 visited[neighbor->index] = true;
                 q_i.push(neighbor->index);
                 q_d.push(a_d+1);
@@ -1144,6 +1513,45 @@ metaTorus::~metaTorus() {
 //        delete[] nodes[i].neighbors;
 //    }
 //    free(nodes);
+}
+
+bool metaTorus::isFullyConnected() {
+    std::vector<bool> visited(V, false);
+    int startNode = 0;
+
+    // Perform DFS from the start node
+    std::stack<int> stack;
+    stack.push(startNode);
+    visited[startNode] = true;
+
+    while (!stack.empty()) {
+        int node = stack.top();
+        stack.pop();
+
+        for (int neighbor : nodes[node].neighbors) {
+            if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                stack.push(neighbor);
+            }
+        }
+    }
+
+    // Check if all nodes were visited
+    for (bool v : visited) {
+        if (!v) {
+            return false;
+        }
+    }
+    return true;
+}
+
+//wrong dont use please
+void metaTorus::clearFaultyLinks() {
+    for (int i = 0; i < V; ++i) {
+        for (int j = 0; j < V; ++j) {
+            F[i][j] = 1;
+        }
+    }
 }
 
 //
