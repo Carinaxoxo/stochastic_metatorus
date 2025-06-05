@@ -68,9 +68,9 @@ void test_torus_constructor(int n, int k) {
 //
 //        torus.calcRoutingProbabilities();
 //        torus.printProbabilities();
-        torus.testDirectedRoutingProbabilities();
+//        torus.testDirectedRoutingProbabilities();
 //        torus.calcDirectedRoutingProbabilities();
-        torus.printDirectedProbabilities();
+//        torus.printDirectedProbabilities();
 
 //        std::cout << "Routing from node " << from << " to node " << to << std::endl;
 //        d_route = torus.route(nullptr, &(torus.nodes[from]), &(torus.nodes[to]), *(new std::unordered_map<int, bool>), 0);
@@ -96,6 +96,161 @@ void test_torus_constructor(int n, int k) {
     } catch (const std::exception &e) {
         std::cerr << "Error initializing Torus with n=" << n << ", k=" << k << ": " << e.what() << std::endl;
     }
+}
+
+void test_strategy(int n, int k, int num_tests) {
+    random_device rd;
+    mt19937 mt(rd());
+    int nonEmptyCount = 0;
+    for (int i = 0; i < num_tests; ++i) {
+        try {
+            metaTorus torus(n, k);
+//            std::cout << "Torus initialized." << std::endl;
+//        torus.display();
+//        torus.setTestedFaultyLinks();
+
+            // Clear any faulty links
+//        torus.clearFaultyLinks();
+
+            if (!torus.isFullyConnected()) {
+                std::cerr << "Error: The torus is not fully connected." << std::endl;
+                return;
+            } else{
+//                std::cout << "The torus is fully connected." << std::endl;
+            }
+
+            int seed=52;
+            int d_route, d_directed_route, d_brute, d_bfs;
+//            torus.setRandomFaultyLinks((double)0, &seed);
+//        int from, to;
+            int from = mt() % torus.V;
+            int to = mt() % torus.V;
+//         Ensure no faulty links
+//            torus.printFaultyLinks();
+
+            std::vector<std::vector<std::vector<int>>> result = torus.return_node_which_close_to_goal(&(torus.nodes[from]), &(torus.nodes[to]));
+            // Print the input nodes
+//            std::cout << "Node c (current): ";
+//            for (int val : torus.nodes[from].value) {
+//                std::cout << val << " ";
+//            }
+//            std::cout << std::endl;
+//
+//            std::cout << "Node t (target): ";
+//            for (int val : torus.nodes[to].value) {
+//                std::cout << val << " ";
+//            }
+//            std::cout << std::endl;
+
+            // Print the result
+//            if (!result.empty()){
+//                std::cout << "Nodes closer to the target in 2d:" << std::endl;
+//                for (const auto& node : result) {
+//                    for (int val : node) {
+//                        std::cout << val << " ";
+//                    }
+//                    std::cout << std::endl;
+//                }
+//            } else {
+//                std::cout << "No valid neighbor found in 2d." << std::endl;
+//            }
+
+            if (result.empty()){
+                std::cout << "No valid neighbor found." << std::endl;
+                std::cout << "Node c (current): ";
+                for (int val : torus.nodes[from].value) {
+                    std::cout << val << " ";
+                }
+                std::cout << std::endl;
+
+                std::cout << "Node t (target): ";
+                for (int val : torus.nodes[to].value) {
+                    std::cout << val << " ";
+                }
+                std::cout << std::endl;
+            } else {
+                nonEmptyCount++;
+            }
+
+            // Print the result
+//            if (!result.empty()){
+//                nonEmptyCount++;
+//                std::cout << "Nodes closer to the target in 2d:" << std::endl;
+//                for (const auto& node : result) {
+//                    for (int val : node) {
+//                        std::cout << val << " ";
+//                    }
+//                    std::cout << std::endl;
+//                }
+//            } else {
+//                std::cout << "No valid neighbor found in 2d." << std::endl;
+//                std::cout << "Node c (current): ";
+//                for (int val : torus.nodes[from].value) {
+//                    std::cout << val << " ";
+//                }
+//                std::cout << std::endl;
+//
+//                std::cout << "Node t (target): ";
+//                for (int val : torus.nodes[to].value) {
+//                    std::cout << val << " ";
+//                }
+//                std::cout << std::endl;
+//            }
+
+
+            // Randomly generate two valid nodes
+//        do {
+//            from = get_random(seed++, torus.V);
+//        } while (!torus.nodes[from].validity); // Ensure 'from' is valid
+//
+//        do {
+//            to = get_random(seed++, torus.V);
+//        } while (!torus.nodes[to].validity); // Ensure 'to' is valid
+
+//        torus.calcRoutingProbabilities();
+//        torus.calcDirectedRoutingProbabilities();
+
+//        cout << "Routing from node " << from << " to node " << to << endl;
+//        std::unordered_map<int, bool> visited;
+//        d_bfs = torus.bfs(&(torus.nodes[from]), &(torus.nodes[to]), visited);
+//        std::cout << "BFS distance: " << d_bfs << std::endl;
+
+//        int reachable = torus.bfs(&(torus.nodes[from]), &(torus.nodes[to]), visited);
+//        std::cout << "Reachable nodes from 0: " << visited.size() << " / " << torus.V << std::endl;
+
+//
+//        torus.calcRoutingProbabilities();
+//        torus.printProbabilities();
+//        torus.testDirectedRoutingProbabilities();
+//        torus.calcDirectedRoutingProbabilities();
+//        torus.printDirectedProbabilities();
+
+//        std::cout << "Routing from node " << from << " to node " << to << std::endl;
+//        d_route = torus.route(nullptr, &(torus.nodes[from]), &(torus.nodes[to]), *(new std::unordered_map<int, bool>), 0);
+//        d_directed_route = torus.directed_route(nullptr, &(torus.nodes[from]), &(torus.nodes[to]), *(new std::unordered_map<int, bool>), 0);
+//        d_brute = torus.brute(nullptr, &(torus.nodes[from]), &(torus.nodes[to]), *(new std::unordered_map<int, bool>), 0);
+//        d_bfs = torus.bfs(&(torus.nodes[from]), &(torus.nodes[to]), *(new std::unordered_map<int, bool>));
+//
+//        cout <<
+//        d_route << ", " <<
+//        d_directed_route << " , " <<
+//        d_brute << " , " <<
+//        d_bfs << " , " << endl;
+
+//        std::cout << "Path: ";
+//        for (Node* node : path) {
+//            std::cout << node->index << " ";
+//        }
+//        torus.display();
+//        torus.printFaultyLinks();
+//        torus.testDirectedRoutingProbabilities();
+
+//            std::cout << "Torus initialized successfully with n = " << n << ", k = " << k << std::endl;
+        } catch (const std::exception &e) {
+            std::cerr << "Error initializing Torus with n=" << n << ", k=" << k << ": " << e.what() << std::endl;
+        }
+    }
+    std::cout << "Non-empty wanted ratio: " << nonEmptyCount << "/" << num_tests<< std::endl;
 }
 
 void test_bfs_multiple_times(int n, int k, int num_tests){
@@ -207,15 +362,117 @@ void test_all_algorithms_multiple_times(int n, int k, int num_tests){
 //    std::cout << "Mean brute force distance: " << mean_d_brute / n_brute_success << std::endl;
 }
 
+void test_brute(int n, int k, int num_tests){
+    std::cout << "Running brute test " << num_tests << " times with n=" << n << ", k=" << k << std::endl;
+    random_device rd;
+    mt19937 mt(rd());
+    int seed = 52;
+    int successful_tests = 0;
+    double mean_d_brute = 0;
 
- int main(int argc, char* argv[]){
+    for (int i = 0; i < num_tests; ++i) {
+        try {
+            metaTorus torus(n, k);
+
+            if (!torus.isFullyConnected()) {
+                std::cerr << "Error: The torus is not fully connected." << std::endl;
+                continue;
+            }
+
+            int from = mt() % torus.V;
+            int to = mt() % torus.V;
+
+            int iterations = 0;
+            std::unordered_map<int, bool> visited;
+            int d_brute = torus.brute(nullptr, &(torus.nodes[from]), &(torus.nodes[to]), *(new std::unordered_map<int, bool>), 0);
+
+            if (d_brute != DELIVERY_FAIL) {
+                successful_tests++;
+                mean_d_brute += d_brute;
+            }
+
+        } catch (const std::exception &e) {
+            std::cerr << "Error during brute test: " << e.what() << std::endl;
+        }
+    }
+//    double p_brute_success = successful_tests / (double) num_tests;
+
+    std::cout << "brute test completed. Successful tests: " << successful_tests << " / " << num_tests << std::endl;
+    std::cout << "Mean brute force distance: " << mean_d_brute / successful_tests << std::endl;
+}
+
+void test_directed(int n, int k, int num_tests){
+    std::cout << "Running directed test " << num_tests << " times with n=" << n << ", k=" << k << std::endl;
+    random_device rd;
+    mt19937 mt(rd());
+    int seed = 52;
+    int successful_tests = 0;
+
+    int n_directed_route_success = 0;
+    double mean_d_directed_route = 0, mean_d_bfs = 0;
+
+    for (int i = 0; i < num_tests; ++i) {
+        try{
+            metaTorus torus(n, k);
+
+            if (!torus.isFullyConnected()) {
+                std::cerr << "Error: The torus is not fully connected." << std::endl;
+                continue;
+            } else {
+                cout << "it is fully connected" << endl;
+            }
+
+            int from = mt() % torus.V;
+            int to = mt() % torus.V;
+            std::unordered_map<int, bool> visited;
+            int d_bfs = torus.bfs(&(torus.nodes[from]), &(torus.nodes[to]), visited);
+
+            if (d_bfs != DELIVERY_FAIL) {
+                successful_tests++;
+            }
+
+            torus.testDirectedRoutingProbabilities();
+//            torus.printDirectedProbabilities();
+            int d_directed_route = torus.directed_route_test(nullptr, &(torus.nodes[from]), &(torus.nodes[to]), *(new std::unordered_map<int, bool>), 0);
+
+//
+            if (d_directed_route != DELIVERY_FAIL) {
+                n_directed_route_success++;
+                mean_d_directed_route += d_directed_route;
+            }
+
+            mean_d_bfs += d_bfs;
+        } catch (const std::exception &e) {
+            std::cerr << "Error during test: " << e.what() << std::endl;
+        }
+    }
+
+    double p_directed_route_success = n_directed_route_success / (double) num_tests;
+
+    std::cout << "All algorithms test completed." << std::endl;
+    std::cout << "Successful tests: " << successful_tests << " / " << num_tests << std::endl;
+    std::cout << "Directed route success rate: " << p_directed_route_success << std::endl;
+    std::cout << "Mean BFS distance: " << mean_d_bfs / num_tests << std::endl;
+    std::cout << "Mean directed route distance: " << mean_d_directed_route / n_directed_route_success << std::endl;
+
+}
+
+
+int main(int argc, char* argv[]){
     using namespace std;
+    test_strategy(4, 3, 1000);
+//     test_strategy(5, 4, 1000);
 //    test_all_algorithms_multiple_times(4, 3, 1000);
 //    test_all_algorithms_multiple_times(5, 4, 1000);
 //    test_bfs_multiple_times(4, 3, 10000); // Run BFS test 10,000 times
 //    test_bfs_multiple_times(5, 4, 10000); // Run BFS test 10,000 times
-    test_torus_constructor(4, 3); // Edge case
+//    test_torus_constructor(4, 3); // Edge case
 //    test_torus_constructor(5, 4); // New test case
+//     test_brute(4, 3, 1000);
+//     test_brute(5, 4, 1000);
+//    test_directed(4, 3, 1000);
+//     test_directed(5, 4, 1000);
+//    test_proposal();
     return 0;
 }
 

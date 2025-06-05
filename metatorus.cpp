@@ -973,8 +973,25 @@ void metaTorus::printDirectedProbabilities() {
     }
 }
 
-vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_of_metatori, std::vector<int> standing, std::vector<int> destination){
+std::vector<std::vector<std::vector<int>>> metaTorus::return_node_which_close_to_goal(Node *c, Node *t){
     std::vector<std::vector<int>> wanted;
+    std::vector<int> size_of_metatori;
+    vector<int> standing = c->value, destination = t ->value;
+
+    std::vector<std::vector<int>> shorter_path_neighbors;
+    std::vector<std::vector<int>> same_distance_neighbors;
+    std::vector<std::vector<int>> longer_path_neighbors;
+
+    //return if standing and destination are the same
+//    if (standing == destination) {
+//        wanted.push_back(standing);
+//        return wanted;
+//    }
+
+    size_of_metatori.push_back(n); // Add the number of dimensions as the first element.
+    for (int i = 0; i < n; i++) {
+        size_of_metatori.push_back(k); // Add each dimension size to the vector.
+    }
 
     //1つめ
     std::vector<int> neiborhood = standing;
@@ -987,13 +1004,16 @@ vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_o
     //for(int i=0;i<neiborhood.size();i++)std::cout << neiborhood[i] << " ";
     //std::cout << std::endl << std::endl;
 
-    int pre_move = std::abs(standing[header]-destination[header]);
-    pre_move = std::min(size_of_metatori[header]-pre_move,pre_move);
+    int pre_move1 = std::abs(standing[header]-destination[header]);
+    pre_move1 = std::min(size_of_metatori[header]-pre_move1,pre_move1);
 
-    int post_move = std::abs(neiborhood[header]-destination[header]);
-    post_move = std::min(size_of_metatori[header]-post_move,post_move);
+    int post_move1 = std::abs(neiborhood[header]-destination[header]);
+    post_move1 = std::min(size_of_metatori[header]-post_move1,post_move1);
 
-    if(pre_move > post_move)wanted.push_back(neiborhood);
+    if(pre_move1 > post_move1)shorter_path_neighbors.push_back(neiborhood);
+    else if (pre_move1 == post_move1)same_distance_neighbors.push_back(neiborhood);
+    else longer_path_neighbors.push_back(neiborhood);
+    //current and neighbor
 
 
     //2つめ
@@ -1008,10 +1028,12 @@ vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_o
     //pre_move = std::abs(standing[header]-destination[header]);
     //pre_move = std::min(destination[header]-pre_move,pre_move);
 
-    post_move = std::abs(neiborhood[header]-destination[header]);
-    post_move = std::min(size_of_metatori[header]-post_move,post_move);
+    int post_move2 = std::abs(neiborhood[header]-destination[header]);
+    post_move2 = std::min(size_of_metatori[header]-post_move2,post_move2);
 
-    if(pre_move > post_move)wanted.push_back(neiborhood);
+    if(pre_move1 > post_move2)shorter_path_neighbors.push_back(neiborhood);
+    else if (pre_move1 == post_move2)same_distance_neighbors.push_back(neiborhood);
+    else longer_path_neighbors.push_back(neiborhood);
 
     //元の頂点からのリング移動量
 
@@ -1020,15 +1042,15 @@ vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_o
         if(standing[i+1] != destination[i+1])need_to_visit[i] = 1;
     }
     std::vector<int> tmp;
-    int N = size_of_metatori[0];
-    pre_move = 0;
+//    int N = size_of_metatori[0];
+    int pre_move = 0;
     tmp.push_back(standing[0]);
-    for(int i=1;i<=N;i++){
+    for(int i=1;i<=n;i++){
         int pos = standing[0]+i;
-        if(need_to_visit[pos%N] == 1)tmp.push_back(pos);
-        else if(destination[0] == pos%N)tmp.push_back(pos);
+        if(need_to_visit[pos%n] == 1)tmp.push_back(pos);
+        else if(destination[0] == pos%n)tmp.push_back(pos);
     }
-    tmp.push_back(standing[0]+N);
+    tmp.push_back(standing[0]+n);
     int side1 = 0,side2 = 0;
     int half1,half2;
     bool side = false;
@@ -1039,20 +1061,20 @@ vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_o
         else{
             side2 = std::max(side2,tmp[i]-tmp[i-1]);
         }
-        if(tmp[i]%N == destination[0]){
+        if(tmp[i]%n == destination[0]){
             side = true;
             half1 = tmp[i]-standing[0];
-            half2 = N - half1;
+            half2 = n - half1;
         }
     }
-    pre_move = std::min(half1+half2*2-side2,half2+half1*2-side1);
+    int pre_move2 = std::min(half1+half2*2-side2,half2+half1*2-side1);
 
 
     //3つめのリング移動量
     tmp.clear();
     neiborhood = standing;
     neiborhood[0] += 1;
-    neiborhood[0] %= N;
+    neiborhood[0] %= n;
 
 
     //for(int i=0;i<neiborhood.size();i++)std::cout << neiborhood[i] << " ";
@@ -1061,12 +1083,12 @@ vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_o
 
 
     tmp.push_back(neiborhood[0]);
-    for(int i=1;i<=N;i++){
+    for(int i=1;i<=n;i++){
         int pos = neiborhood[0]+i;
-        if(need_to_visit[pos%N] == 1)tmp.push_back(pos);
-        else if(destination[0] == pos%N)tmp.push_back(pos);
+        if(need_to_visit[pos%n] == 1)tmp.push_back(pos);
+        else if(destination[0] == pos%n)tmp.push_back(pos);
     }
-    tmp.push_back(neiborhood[0]+N);
+    tmp.push_back(neiborhood[0]+n);
     side1 = 0,side2 = 0;
     //half1,half2;
     side = false;
@@ -1077,34 +1099,36 @@ vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_o
         else{
             side2 = std::max(side2,tmp[i]-tmp[i-1]);
         }
-        if(tmp[i]%N == destination[0]){
+        if(tmp[i]%n == destination[0]){
             side = true;
             half1 = tmp[i]-neiborhood[0];
-            half2 = N - half1;
+            half2 = n - half1;
         }
     }
-    post_move = std::min(half1+half2*2-side2,half2+half1*2-side1);
+    int post_move3 = std::min(half1+half2*2-side2,half2+half1*2-side1);
 
-    if(pre_move > post_move)wanted.push_back(neiborhood);
+    if(pre_move2 > post_move3)shorter_path_neighbors.push_back(neiborhood);
+    else if (pre_move2 == post_move3)same_distance_neighbors.push_back(neiborhood);
+    else longer_path_neighbors.push_back(neiborhood);
 
 
     //4つめのリング移動量
     tmp.clear();
     neiborhood = standing;
-    neiborhood[0] += -1+N;
-    neiborhood[0] %= N;
+    neiborhood[0] += -1+n;
+    neiborhood[0] %= n;
 
 
     //for(int i=0;i<neiborhood.size();i++)std::cout << neiborhood[i] << " ";
     //std::cout << std::endl << std::endl;
 
     tmp.push_back(neiborhood[0]);
-    for(int i=1;i<=N;i++){
+    for(int i=1;i<=n;i++){
         int pos = neiborhood[0]+i;
-        if(need_to_visit[pos%N] == 1)tmp.push_back(pos);
-        else if(destination[0] == pos%N)tmp.push_back(pos);
+        if(need_to_visit[pos%n] == 1)tmp.push_back(pos);
+        else if(destination[0] == pos%n)tmp.push_back(pos);
     }
-    tmp.push_back(neiborhood[0]+N);
+    tmp.push_back(neiborhood[0]+n);
     side1 = 0,side2 = 0;
     //half1,half2;
     side = false;
@@ -1115,18 +1139,42 @@ vector<std::vector<int>> return_node_which_close_to_goal(std::vector<int> size_o
         else{
             side2 = std::max(side2,tmp[i]-tmp[i-1]);
         }
-        if(tmp[i]%N == destination[0]){
+        if(tmp[i]%n == destination[0]){
             side = true;
             half1 = tmp[i]-neiborhood[0];
-            half2 = N - half1;
+            half2 = n - half1;
         }
     }
-    post_move = std::min(half1+half2*2-side2,half2+half1*2-side1);
+    int post_move4 = std::min(half1+half2*2-side2,half2+half1*2-side1);
 
-    if(pre_move > post_move)wanted.push_back(neiborhood);
+    if(pre_move2 > post_move4)shorter_path_neighbors.push_back(neiborhood);
+    else if (pre_move2 == post_move4)same_distance_neighbors.push_back(neiborhood);
+    else longer_path_neighbors.push_back(neiborhood);
 
-    return wanted;
+    // Combine all categories into a single return value
+    return {shorter_path_neighbors, same_distance_neighbors, longer_path_neighbors};
+
+    // If no neighbor is on the shortest path, return  (wanted.empty()){
+//        std::cout << "Wanted vector is empty. Debugging distances:" << std::endl;
+//
+//        cout << "pre1 = " << pre_move1 << endl;
+//        cout << "post1 = " << post_move1 << endl;
+//        cout << "post2 = " << post_move2 << endl;
+//        cout << "pre2 = " << pre_move2 << endl;
+//        cout << "post3 = " << post_move3 << endl;
+//        cout << "post4 = " << post_move4 << endl;
+//    }all neighbors
+//    if (!wanted.empty()) {
+//        return wanted;
+//    } else {
+//        for (int i = 0; i < c->neighbors.size(); i++) {
+//            wanted.push_back(nodes[c->neighbors[i]].value);
+//        }
+//        return wanted;
+//    }
+
 }
+
 
 int metaTorus::route_test(Node *prev, Node *c, Node *t, std::unordered_map<int, bool>& visited, int depth) {
     int dist_ct, h;
