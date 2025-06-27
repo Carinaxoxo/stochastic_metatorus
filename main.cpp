@@ -23,7 +23,7 @@ void test_torus_constructor(int n, int k) {
     try {
         metaTorus torus(n, k);
         std::cout << "Torus initialized." << std::endl;
-//        torus.display();
+        torus.display();
 //        torus.setTestedFaultyLinks();
 
         // Clear any faulty links
@@ -457,10 +457,126 @@ void test_directed(int n, int k, int num_tests){
 
 }
 
+void experiments(int n, int k, int num_tests){
+//    std::cout << "Running directed test " << num_tests << " times with n=" << n << ", k=" << k << std::endl;
+    random_device rd;
+    mt19937 mt(rd());
+    int seed = 52;
+    //    int seed = atoi(argv[5]);
+
+    // Loop through faulty link ratios from 0 to 0.5 in increments of 0.05
+    for (int step = 0; step <= 10; ++step) {
+        double p_faulty = step * 0.05; // Calculate the faulty link ratio
+
+        int successful_tests = 0;
+        int n_brute_success = 0, n_directed_route_success = 0, n_strategy_success = 0;
+        double mean_d_directed_route = 0, mean_d_brute = 0, mean_d_bfs = 0, mean_d_strategy = 0;
+
+        while (successful_tests < num_tests) {
+            try{
+//            metaTorus torus(n, k);
+                metaTorus* torus = new metaTorus(n, k);
+//            cout << "V = " << torus->V << endl;
+                if (!torus->isFullyConnected()) {
+                    std::cerr << "Error: The torus is not fully connected." << std::endl;
+                    continue;
+                }
+
+//                std::cout << "Test iteration " << successful_tests << std::endl;
+                torus->setRandomFaultyLinks((double) p_faulty, &seed);
+//            torus->printFaultyLinks();
+
+                int from = mt() % torus->V;
+                int to = mt() % torus->V;
+                std::unordered_map<int, bool> visited;
+
+                // Print the node pair
+//                std::cout << "Node Pair:" << std::endl;
+//                std::cout << "From Node (" << from << "): ";
+//                for (int val : (torus->nodes[from]).value) {
+//                    std::cout << val << " ";
+//                }
+//                std::cout << std::endl;
+//
+//                std::cout << "To Node (" << to << "): ";
+//                for (int val : (torus->nodes[to]).value) {
+//                    std::cout << val << " ";
+//                }
+//                std::cout << std::endl;
+
+                int d_bfs = torus->bfs(&(torus->nodes[from]), &(torus->nodes[to]), visited);
+
+//            if (d_bfs != DELIVERY_FAIL) {
+//                successful_tests++;
+//            } else continue;
+
+                if (d_bfs == DELIVERY_FAIL) {
+//                    std::cerr << "BFS failed to find a path. Skipping routing algorithms for this test." << std::endl;
+                    delete torus;
+                    continue; // Skip this test iteration
+                }
+
+                // BFS succeeded, proceed with routing algorithms
+                successful_tests++;
+                mean_d_bfs += d_bfs;
+
+                torus->testDirectedRoutingProbabilities();
+//            torus->printDirectedProbabilities();
+                int d_brute = torus->brute(nullptr, &(torus->nodes[from]), &(torus->nodes[to]), *(new std::unordered_map<int, bool>), 0);
+                int d_directed_route = torus->directed_route_test(nullptr, &(torus->nodes[from]), &(torus->nodes[to]), *(new std::unordered_map<int, bool>), 0);
+//            cout << "start new strategy" << endl;
+                int d_strategy = torus->strategy_route(nullptr, &(torus->nodes[from]), &(torus->nodes[to]), *(new std::unordered_map<int, bool>), 0);
+
+//
+                if (d_brute != DELIVERY_FAIL) {
+                    n_brute_success++;
+                    mean_d_brute += d_brute;
+                }
+//
+                if (d_directed_route != DELIVERY_FAIL) {
+                    n_directed_route_success++;
+                    mean_d_directed_route += d_directed_route;
+                }
+
+                if (d_strategy != DELIVERY_FAIL) {
+                    n_strategy_success++;
+                    mean_d_strategy += d_strategy;
+                }
+
+                mean_d_bfs += d_bfs;
+                delete torus;
+            } catch (const std::exception &e) {
+                std::cerr << "Error during test: " << e.what() << std::endl;
+            }
+
+        }
+
+        double p_brute_success = n_brute_success / (double) num_tests;
+        double p_directed_route_success = n_directed_route_success / (double) num_tests;
+        double p_strategy_success = n_strategy_success / (double) num_tests;
+
+        std::cout << "All algorithms test completed in n = "<< n << ", k = " << k << std::endl;
+        std::cout << "faulty links ratio: " << p_faulty << std::endl;
+        std::cout << "Successful tests: " << successful_tests << " / " << num_tests << std::endl;
+        std::cout << "Brute success rate: " << p_brute_success << std::endl;
+        std::cout << "Directed route success rate: " << p_directed_route_success << std::endl;
+        std::cout << "Strategy route success rate: " << p_strategy_success << std::endl;
+        std::cout << "Mean BFS distance: " << mean_d_bfs / num_tests << std::endl;
+        std::cout << "Mean brute force distance: " << mean_d_brute / n_brute_success << std::endl;
+        std::cout << "Mean directed route distance: " << mean_d_directed_route / n_directed_route_success << std::endl;
+        std::cout << "Mean strategy distance: " << mean_d_strategy / n_strategy_success << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
+    }
+//    double p_faulty = atof(argv[3]);
+
+}
+
+
 
 int main(int argc, char* argv[]){
     using namespace std;
-    test_strategy(4, 3, 1000);
+//    test_strategy(4, 3, 1000);
 //     test_strategy(5, 4, 1000);
 //    test_all_algorithms_multiple_times(4, 3, 1000);
 //    test_all_algorithms_multiple_times(5, 4, 1000);
@@ -472,7 +588,13 @@ int main(int argc, char* argv[]){
 //     test_brute(5, 4, 1000);
 //    test_directed(4, 3, 1000);
 //     test_directed(5, 4, 1000);
-//    test_proposal();
+    experiments(4, 3, 10);
+//    cout << endl;
+//    cout << endl;
+//    cout << "5,4 now" << endl;
+//    cout << endl;
+//    cout << endl;
+    experiments(5, 4, 10);
     return 0;
 }
 

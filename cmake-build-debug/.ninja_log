@@ -1,9 +1,9 @@
 # ninja log v5
-7114	9750	1732275407959533117	StochasticMetaTorus	fcf391791904d21a
-18	6713	1732275404923351360	CMakeFiles/StochasticMetaTorus.dir/main.cpp.o	c1f6e5c9732c7ca5
-0	235	1735527911320983499	build.ninja	37ca38f3e897ffba
-20	6226	1732275404430880345	CMakeFiles/StochasticMetaTorus.dir/bbst.cpp.o	e4f511113690a202
-19	7114	1732275405324470862	CMakeFiles/StochasticMetaTorus.dir/metatorus.cpp.o	f39fff88994875a4
-29	2243	1742109840875847840	CMakeFiles/StochasticMetaTorus.dir/main.cpp.o	c1f6e5c9732c7ca5
-31	2747	1742109841377553802	CMakeFiles/StochasticMetaTorus.dir/metatorus.cpp.o	f39fff88994875a4
 2747	2989	1742109841627456509	StochasticMetaTorus	fcf391791904d21a
+29	2243	1742109840875847840	CMakeFiles/StochasticMetaTorus.dir/main.cpp.o	c1f6e5c9732c7ca5
+0	235	1749367372905182530	build.ninja	37ca38f3e897ffba
+20	6226	1732275404430880345	CMakeFiles/StochasticMetaTorus.dir/bbst.cpp.o	e4f511113690a202
+31	2747	1742109841377553802	CMakeFiles/StochasticMetaTorus.dir/metatorus.cpp.o	f39fff88994875a4
+56	4171	1750724351215028137	CMakeFiles/StochasticMetaTorus.dir/main.cpp.o	c1f6e5c9732c7ca5
+60	4998	1750724352040047733	CMakeFiles/StochasticMetaTorus.dir/metatorus.cpp.o	f39fff88994875a4
+4998	7147	1750724354191786631	StochasticMetaTorus	fcf391791904d21a

@@ -112,6 +112,7 @@ public:
     void printFaultyLinks();
     void printProbabilities();
     void printDirectedProbabilities();
+    vector<vector<int>> getNeighbors(Node *a);
 
     // ↓割りと重要な関数たち Very important algorithms
     void setRandomFaultyLinks(double p_faulty, int* seed);
@@ -133,6 +134,7 @@ public:
     // routing algorithms
     int route(Node *prev, Node* c, Node* t, unordered_map<int, bool> visited, int d);
     int directed_route(Node *prev, Node *c, Node *t, unordered_map<int, bool> visited, int d);
+    int strategy_route(Node *prev, Node *c, Node *t, unordered_map<int, bool> visited, int d);
     int brute(Node *prev, Node *c, Node *t, unordered_map<int, bool> visited, int d);
 
     // breath-first search for optimal routing
