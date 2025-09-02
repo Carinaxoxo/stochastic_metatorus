@@ -56,7 +56,7 @@ metaTorus::metaTorus(int n_, int k_) : n(n_), k(k_), V(0), E(0), diameter(0) {
     int Dmax = diameter;
     P.resize(V);
     for (int u = 0; u < V; ++u)
-        for (int b = 0; b < 4; ++b)
+        for (int b = 0; b < NODE_DEGREE; ++b)
             P[u][b] = DRPTable(Hmax, Dmax);
 }
 
@@ -74,8 +74,18 @@ int metaTorus::alpha(int u, int v) const {
     return faulty_edges.count(edgeKey(u, v)) ? 0 : 1;
 }
 
-long double metaTorus::getP(int u, int bdir, int h, int d) const {
-    return P[u][bdir].get(h, d);
+
+long double metaTorus::getP(int u, int b_id, int h, int d) const {
+    // Check if h and d are within the valid range to prevent crashes.
+    if (h < 0 || h > n || d < 0 || d > diameter) {
+        return -1.0L;
+    }
+    // Find the DRP table associated with the incoming hop 'b_id'.
+    auto it = P[u].find(b_id);
+    if (it != P[u].end()) {
+        return it->second.get(h, d);
+    }
+    return -1.0L; // Should not happen in a correct implementation
 }
 
 int metaTorus::getId(const vector<int>& coord) const {
@@ -107,44 +117,178 @@ void metaTorus::computeDirectedRoutingProbabilities() {
     const int Hcap = n;
     const int denom = 2 * n - 1;
 
+    P.assign(V, map<int, DRPTable>());
+
+    // Initialize DRP tables for all nodes and all incoming directions
     for (int u = 0; u < V; ++u) {
-        long double total_sum_over_all_neighbors = 0.0L;
-        for (int dir = 0; dir < 4; ++dir) {
-            int a = nodes[u].neighbors[dir];
-            total_sum_over_all_neighbors += (long double)alpha(u, a);
+        for (int b_neighbor_id : nodes[u].neighbors) {
+            P[u][b_neighbor_id] = DRPTable(Hcap, Dmax);
         }
-        for (int bdir = 0; bdir < 4; ++bdir) {
-            int b = nodes[u].neighbors[bdir];
-            long double numerator = total_sum_over_all_neighbors - (long double)alpha(u, b);
-            P[u][bdir].at(1, 1) = numerator / (long double)denom;
+        // Also need a dummy entry for the source node's initial call
+        P[u][u] = DRPTable(Hcap, Dmax);
+    }
+
+    // Base case: (h, d) = (1, 1)
+    for (int u = 0; u < V; ++u) {
+        // For each possible incoming direction 'b'...
+        for (int b_neighbor_id : nodes[u].neighbors) {
+            long double numerator = 0.0L;
+            // Sum over all *other* outgoing directions 'a'.
+            for (int a_neighbor_id : nodes[u].neighbors) {
+                if (a_neighbor_id == b_neighbor_id) continue;
+                numerator += (long double)alpha(u, a_neighbor_id);
+            }
+            P[u][b_neighbor_id].at(1, 1) = numerator / (long double)denom;
         }
     }
 
+    // Inductive steps: d = 2..Dmax, h = 1..min(d, n)
     for (int d = 2; d <= Dmax; ++d) {
         int hmax = min(d, Hcap);
         for (int h = 1; h <= hmax; ++h) {
             for (int u = 0; u < V; ++u) {
+                // First, calculate the total sum S_h,d(u)
                 long double Shd = 0.0L;
-                for (int dir = 0; dir < 4; ++dir) {
-                    int a = nodes[u].neighbors[dir];
-                    int rev = rev_dir[u][dir];
-                    long double term = 0.0L;
-                    if (h == 1) term = P[a][rev].get(1, d - 1);
-                    else if (h == d) term = P[a][rev].get(h - 1, d - 1);
-                    else term = ((long double)(h - 1) / (d - 1)) * P[a][rev].get(h - 1, d - 1)
-                                + ((long double)(d - h) / (d - 1)) * P[a][rev].get(h, d - 1);
-                    Shd += (long double)alpha(u, a) * term;
+                for (int a_dir = 0; a_dir < NODE_DEGREE; ++a_dir) {
+                    int a_id = nodes[u].neighbors[a_dir];
+                    long double term_a = 0.0L;
+                    // The probability at neighbor 'a' depends on the incoming direction being 'u'
+                    if (h == 1) {
+                        term_a = getP(a_id, u, 1, d - 1);
+                    } else if (h == d) {
+                        term_a = getP(a_id, u, h - 1, d - 1);
+                    } else {
+                        term_a = ((long double)(h - 1) / (d - 1)) * getP(a_id, u, h - 1, d - 1)
+                                 + ((long double)(d - h) / (d - 1)) * getP(a_id, u, h, d - 1);
+                    }
+                    Shd += (long double)alpha(u, a_id) * term_a;
                 }
-                for (int bdir = 0; bdir < 4; ++bdir) {
-                    int b = nodes[u].neighbors[bdir];
-                    int rev = rev_dir[u][bdir];
+
+                // Now, calculate P_h,d^b(u) for each incoming direction 'b'
+                for (int b_neighbor_id : nodes[u].neighbors) {
                     long double term_b = 0.0L;
-                    if (h == 1) term_b = P[b][rev].get(1, d - 1);
-                    else if (h == d) term_b = P[b][rev].get(h - 1, d - 1);
-                    else term_b = ((long double)(h - 1) / (d - 1)) * P[b][rev].get(h - 1, d - 1)
-                                  + ((long double)(d - h) / (d - 1)) * P[b][rev].get(h, d - 1);
-                    long double num = Shd - (long double)alpha(u, b) * term_b;
-                    P[u][bdir].at(h, d) = num / (long double)denom;
+                    if (h == 1) {
+                        term_b = getP(b_neighbor_id, u, 1, d - 1);
+                    } else if (h == d) {
+                        term_b = getP(b_neighbor_id, u, h - 1, d - 1);
+                    } else {
+                        term_b = ((long double)(h - 1) / (d - 1)) * getP(b_neighbor_id, u, h - 1, d - 1)
+                                 + ((long double)(d - h) / (d - 1)) * getP(b_neighbor_id, u, h, d - 1);
+                    }
+
+                    long double num = Shd - (long double)alpha(u, b_neighbor_id) * term_b;
+                    P[u][b_neighbor_id].at(h, d) = num / (long double)denom;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * @brief Calculates the directed routing probabilities for all nodes in the torus.
+ *
+ * This function is corrected to use the project's variable naming convention:
+ * - n: number of dimensions
+ * - k: arity (number of nodes per dimension)
+ *
+ * It implements the advanced algorithm from the paper "A Stochastic
+ * Edge-fault-tolerant Routing Algorithm in Torus Networks" by Zhang and Kaneko.
+ */
+
+
+
+void metaTorus::calcDirectedRoutingProbabilities() {
+    // --- Correct Parameterization using YOUR variable names ---
+    // n: number of dimensions
+    // k: arity (nodes per dimension)
+
+    // Degree of each node in an n-dimensional torus is 2*n.
+    const int degree = 2 * n;
+    // Diameter is dimension * floor(arity / 2).
+    const int diameter = n * (k / 2);
+
+    // --- Step 1: Base Case Calculation (d=1, h=1) ---
+    // This must be completed for ALL nodes before moving to the next step,
+    // as the main loop depends on these initial values from neighbors.
+    for (int i = 0; i < V; ++i) {
+        Node* u = &nodes[i];
+
+        // For each possible incoming direction from a neighbor 'b'...
+        for (int b_idx = 0; b_idx < degree; ++b_idx) {
+            Node* b = &nodes[u->neighbors[b_idx]];
+            double sum_alpha = 0.0;
+
+            // ...sum the link statuses of all OTHER outgoing neighbors 'a'.
+            for (int a_idx = 0; a_idx < degree; ++a_idx) {
+                Node* a = &nodes[u->neighbors[a_idx]];
+                if (a->id == b->id) {
+                    continue; // Exclude the incoming path
+                }
+                sum_alpha += !hasFaultyLink(u, a) ? 1.0 : 0.0;
+            }
+
+            // Probability is normalized by the number of valid outgoing paths (degree - 1).
+            double p_1_1 = sum_alpha / (degree - 1.0);
+            setDirectedProbability(u, b, 1, 1, p_1_1);
+        }
+    }
+
+    // --- Step 2: Main Loop (Dynamic Programming) ---
+    // Iterate through increasing path lengths (d) and Hamming distances (h).
+    for (int d = 2; d <= diameter; ++d) {
+        // --- CRITICAL FIX: Hamming distance 'h' is limited by the number of dimensions 'n'. ---
+        for (int h = 1; h <= std::min(d, n); ++h) {
+
+            // This loop completes for all nodes 'u' at a given (h,d) before the
+            // next iteration, simulating synchronized message passing.
+            for (int i = 0; i < V; ++i) {
+                Node* u = &nodes[i];
+
+                // Part A: Pre-calculate the total sum 'S_hd' over ALL neighbors 'a'.
+                double S_hd = 0.0;
+                for (int a_idx = 0; a_idx < degree; ++a_idx) {
+                    Node* a = &nodes[u->neighbors[a_idx]];
+                    double alpha = !hasFaultyLink(u, a) ? 1.0 : 0.0;
+                    if (alpha == 0.0) continue;
+
+                    // Apply the correct recurrence relation from the paper
+                    if (h == 1) {
+                        S_hd += alpha * getDirectedProbability(a, u, h, d - 1);
+                    } else if (h == d) {
+                        S_hd += alpha * getDirectedProbability(a, u, h - 1, d - 1);
+                    } else { // General case
+                        double p1 = getDirectedProbability(a, u, h - 1, d - 1);
+                        double p2 = getDirectedProbability(a, u, h, d - 1);
+                        if (d > 1) {
+                            S_hd += alpha * (((h - 1.0) * p1 + (d - h) * p2) / (d - 1.0));
+                        }
+                    }
+                }
+
+                // Part B: Calculate the specific directed probability P(h,d,b)(u).
+                // For each incoming direction 'b', subtract its term from the total sum 'S_hd'.
+                for (int b_idx = 0; b_idx < degree; ++b_idx) {
+                    Node* b = &nodes[u->neighbors[b_idx]];
+                    double alpha_b = !hasFaultyLink(u, b) ? 1.0 : 0.0;
+                    double term_for_b = 0.0;
+
+                    if (alpha_b > 0.0) { // Calculate the term 'b' would have contributed
+                        if (h == 1) {
+                            term_for_b = alpha_b * getDirectedProbability(b, u, h, d - 1);
+                        } else if (h == d) {
+                            term_for_b = alpha_b * getDirectedProbability(b, u, h - 1, d - 1);
+                        } else { // General case
+                            double p1 = getDirectedProbability(b, u, h - 1, d - 1);
+                            double p2 = getDirectedProbability(b, u, h, d - 1);
+                            if (d > 1) {
+                                term_for_b = alpha_b * (((h - 1.0) * p1 + (d - h) * p2) / (d - 1.0));
+                            }
+                        }
+                    }
+
+                    // The directed probability is the sum from all *other* paths, normalized.
+                    double p_hd = (S_hd - term_for_b) / (degree - 1.0);
+                    setDirectedProbability(u, b, h, d, p_hd);
                 }
             }
         }
@@ -212,41 +356,52 @@ void metaTorus::computeCoordinatesFromIds() {
 void metaTorus::createNeighbors4() {
     for (int i = 0; i < V; ++i) {
         const vector<int> current = nodes[i].value;
-        nodes[i].neighbors.clear();
-        nodes[i].neighbors.reserve(4);
-        int header = current[0] % (n - 1);
+        nodes[i].neighbors.assign(NODE_DEGREE, -1); // Initialize with -1
+
+        // A temporary structure to hold neighbor and the dimension it affects
+        vector<pair<int, int>> temp_neighbors;
+
+        int header = current[0];
         int x = header + 1;
         assert(1 <= x && x <= (n - 1));
-        {
-            vector<int> temp = current;
-            temp[x] = (temp[x] + 1) % k;
-            nodes[i].neighbors.push_back(getId(temp));
-        }
-        {
-            vector<int> temp = current;
-            temp[x] = (temp[x] - 1 + k) % k;
-            nodes[i].neighbors.push_back(getId(temp));
-        }
-        {
-            vector<int> temp = current;
-            temp[0] = (header + 1) % (n - 1);
-            nodes[i].neighbors.push_back(getId(temp));
-        }
-        {
-            vector<int> temp = current;
-            temp[0] = (header - 1 + (n - 1)) % (n - 1);
-            nodes[i].neighbors.push_back(getId(temp));
+
+        // Neighbor on header ring (dimension 0) +1
+        vector<int> temp3_coords = current;
+        temp3_coords[0] = (header + 1) % (n - 1);
+        temp_neighbors.push_back({0, getId(temp3_coords)});
+
+        // Neighbor on header ring (dimension 0) -1
+        vector<int> temp4_coords = current;
+        temp4_coords[0] = (header - 1 + (n - 1)) % (n - 1);
+        temp_neighbors.push_back({0, getId(temp4_coords)});
+
+        // Neighbor in dimension x, +1
+        vector<int> temp1_coords = current;
+        temp1_coords[x] = (temp1_coords[x] + 1) % k;
+        temp_neighbors.push_back({x, getId(temp1_coords)});
+
+        // Neighbor in dimension x, -1
+        vector<int> temp2_coords = current;
+        temp2_coords[x] = (temp2_coords[x] - 1 + k) % k;
+        temp_neighbors.push_back({x, getId(temp2_coords)});
+
+        // Sort the neighbors based on the dimension they affect
+        std::sort(temp_neighbors.begin(), temp_neighbors.end());
+
+        // Assign the sorted neighbor IDs to the node
+        for(int j=0; j < NODE_DEGREE; ++j) {
+            nodes[i].neighbors[j] = temp_neighbors[j].second;
         }
     }
 }
 
 void metaTorus::computeReverseDirs() {
-    rev_dir.assign(V, array<int,4>{-1, -1, -1, -1});
+    rev_dir.assign(V, array<int,NODE_DEGREE>{-1, -1, -1, -1});
     for (int u = 0; u < V; ++u) {
-        for (int dir = 0; dir < 4; ++dir) {
+        for (int dir = 0; dir < NODE_DEGREE; ++dir) {
             int v = nodes[u].neighbors[dir];
             int r = -1;
-            for (int t = 0; t < 4; ++t) {
+            for (int t = 0; t < NODE_DEGREE; ++t) {
                 if (nodes[v].neighbors[t] == u) { r = t; break; }
             }
             assert(r != -1 && "Neighbor relationship must be symmetric");
@@ -258,11 +413,11 @@ void metaTorus::computeReverseDirs() {
 void metaTorus::validateNeighbors() const {
     for (int i = 0; i < V; ++i) {
         const auto& nbrs = nodes[i].neighbors;
-        assert((int)nbrs.size() == 4);
-        for (int t = 0; t < 4; ++t) {
+        assert((int)nbrs.size() == NODE_DEGREE);
+        for (int t = 0; t < NODE_DEGREE; ++t) {
             assert(0 <= nbrs[t] && nbrs[t] < V);
             assert(nbrs[t] != i);
-            for (int u = t + 1; u < 4; ++u) assert(nbrs[t] != nbrs[u]);
+            for (int u = t + 1; u < NODE_DEGREE; ++u) assert(nbrs[t] != nbrs[u]);
         }
     }
 }
@@ -303,7 +458,7 @@ void metaTorus::setRandomFaults(double ratio, unsigned long long seed) {
     std::vector<std::pair<int,int>> edges;
     edges.reserve(static_cast<size_t>(E));
     for (int u = 0; u < V; ++u) {
-        for (int dir = 0; dir < 4; ++dir) {
+        for (int dir = 0; dir < NODE_DEGREE; ++dir) {
             int v = nodes[u].neighbors[dir];
             if (u < v) edges.emplace_back(u, v);
         }
@@ -317,12 +472,37 @@ void metaTorus::setRandomFaults(double ratio, unsigned long long seed) {
     }
 }
 
+std::vector<int> metaTorus::findAllReachableNodes(int start_node_id) const {
+    std::vector<int> reachable_nodes;
+    std::queue<int> q;
+    std::unordered_set<int> visited;
+
+    q.push(start_node_id);
+    visited.insert(start_node_id);
+
+    while (!q.empty()) {
+        int current_id = q.front();
+        q.pop();
+        reachable_nodes.push_back(current_id);
+
+        // Explore neighbors
+        for (int neighbor_id : nodes[current_id].neighbors) {
+            // Check if neighbor has been visited AND if the link is fault-free
+            if (visited.find(neighbor_id) == visited.end() && !hasFaultyLink(current_id, neighbor_id)) {
+                visited.insert(neighbor_id);
+                q.push(neighbor_id);
+            }
+        }
+    }
+    return reachable_nodes;
+}
+
 void metaTorus::printAllDRP(std::ostream& os) const {
     os.setf(std::ios::fixed);
     os << std::setprecision(6);
     os << "u,b,h,d,P\n";
     for (int u = 0; u < V; ++u) {
-        for (int b = 0; b < 4; ++b) {
+        for (int b = 0; b < NODE_DEGREE; ++b) {
             for (int d = 1; d <= diameter; ++d) {
                 int hmax = std::min(d, n);
                 for (int h = 1; h <= hmax; ++h) {
@@ -347,7 +527,7 @@ void metaTorus::printOld() const {
             if (j < n - 1) std::cout << ",";
         }
         std::cout << "): " << std::endl;
-        for (int j = 0; j < 4; ++j) {
+        for (int j = 0; j < NODE_DEGREE; ++j) {
             int neighbor_id = nodes[i].neighbors[j];
             int faultiness = 1 - alpha(i, neighbor_id);
             std::cout << "  Neighbor " << j << " (" << neighbor_id << " -> ";
@@ -363,7 +543,7 @@ void metaTorus::printOld() const {
     for (int i = 0; i < V; i++) {
         for (int h = 1; h <= n; h++) {
             for (int d = h; d <= diameter; d++) {
-                for (int index = 0; index < 4; index++) {
+                for (int index = 0; index < NODE_DEGREE; index++) {
                     long double prob = getP(i, index, h, d);
                     if (prob > 0.0L) {
                         std::cout << "nodes[" << i << "].d_P[" << h << "][" << d << "][" << index << "] = "
@@ -376,9 +556,9 @@ void metaTorus::printOld() const {
     std::cout << std::endl;
 }
 
-// --------- Routing and Pathfinding Implementation ---------
 /**
- * @brief Public wrapper to start the greedy routing algorithm.
+ * @brief The recursive, greedy routing algorithm as you designed it.
+ * It commits to the first valid path it finds.
  */
 int metaTorus::route_brute(int start_id, int target_id) {
     std::unordered_map<int, bool> visited;
@@ -387,46 +567,41 @@ int metaTorus::route_brute(int start_id, int target_id) {
 }
 
 /**
- * @brief The recursive, greedy routing algorithm as you designed it.
- * It commits to the first valid path it finds.
+ * @brief The corrected brute algorithm. It is greedy, stateful (for cycle
+ * detection), and uses deterministic dimension-order routing.
  */
-int metaTorus::brute(int prev_id, int current_id, int target_id, std::unordered_map<int, bool>& visited, int depth)
-{
+int metaTorus::brute(int prev_id, int current_id, int target_id, std::unordered_map<int, bool>& visited, int depth) {
     if (current_id == target_id) return depth;
 
     visited[current_id] = true;
 
-    // Get the classification of neighbors (preferred vs. spare)
-    NeighborClasses neighbors = classifyNeighbors(current_id, target_id);
+    NeighborClasses classes = classifyNeighbors(current_id, target_id);
 
-    // --- Step 1: Try to route to any available preferred neighbor ---
-    for (int neighbor_id : neighbors.preferred) {
-        // Don't immediately go back to the node we just came from
-        if (neighbor_id == prev_id) continue;
-
-        // Check if the link is fault-free
-        if (!hasFaultyLink(current_id, neighbor_id)) {
-            // If the neighbor has already been visited in this path, it's a cycle.
-            if (visited.count(neighbor_id) > 0) continue; // Just skip, don't fail the whole route
-
-            // Greedily commit to this path and return the result immediately.
+    // --- Step 1: Check preferred neighbors in dimension order ---
+    // The neighbors are already sorted by dimension, so we just iterate.
+    for (int neighbor_id : classes.preferred) {
+        if (neighbor_id != prev_id && !hasFaultyLink(current_id, neighbor_id)) {
+            // Check for a cycle before making the move.
+            if (visited.count(neighbor_id)) {
+                return DELIVERY_FAIL; // Fail immediately if a loop is detected
+            }
+            // The first valid neighbor found is the deterministic choice.
             return brute(current_id, neighbor_id, target_id, visited, depth + 1);
         }
     }
 
-    // --- Step 2: If no preferred neighbors worked, try spare neighbors ---
-    for (int neighbor_id : neighbors.spare) {
-        if (neighbor_id == prev_id) continue;
-
-        if (!hasFaultyLink(current_id, neighbor_id)) {
-            if (visited.count(neighbor_id) > 0) continue;
-
-            // Greedily commit to this path and return the result immediately.
+    // --- Step 2: If no valid preferred, check spare neighbors in dimension order ---
+    for (int neighbor_id : classes.spare) {
+        if (neighbor_id != prev_id && !hasFaultyLink(current_id, neighbor_id)) {
+            // Check for a cycle before making the move.
+            if (visited.count(neighbor_id)) {
+                return DELIVERY_FAIL; // Fail immediately if a loop is detected
+            }
             return brute(current_id, neighbor_id, target_id, visited, depth + 1);
         }
     }
 
-    // If no preferred or spare neighbors could be taken, this path is a dead end.
+    // --- Step 3: If no valid moves at all ---
     return DELIVERY_FAIL;
 }
 
@@ -445,113 +620,99 @@ int metaTorus::directed(int prev_id, int current_id, int target_id, std::unorder
     if (current_id == target_id) return depth;
 
     visited[current_id] = true;
-    const Node& current_node = nodes[current_id];
-    NeighborClasses neighbors = classifyNeighbors(current_id, target_id);
 
-    // --- Step 1: Find the BEST candidate among all preferred neighbors ---
+    NeighborClasses classes = classifyNeighbors(current_id, target_id);
+    int dist_ct = distance(current_id, target_id);
+
+    // Find BEST preferred neighbor
     int best_preferred_id = -1;
     long double max_prob_p = -1.0L;
-
-    for (int neighbor_id : neighbors.preferred) {
+    for (int neighbor_id : classes.preferred) {
         if (neighbor_id == prev_id) continue;
-
-        int fwd_dir = -1;
-        for(int j=0; j<4; ++j) if(current_node.neighbors[j] == neighbor_id) { fwd_dir = j; break; }
-        if (fwd_dir == -1) continue;
-
         int h = hammingDistance(neighbor_id, target_id);
-        int d = distance(neighbor_id, target_id);
-        int rev = rev_dir[current_id][fwd_dir];
-        long double prob = getP(neighbor_id, rev, h, d);
-
+        // Probability at 'neighbor_id' given it came from 'current_id'
+        long double prob = getP(neighbor_id, current_id, h, dist_ct - 1);
         if (prob > max_prob_p) {
             max_prob_p = prob;
             best_preferred_id = neighbor_id;
         }
     }
 
-    // --- Step 2: If a best preferred neighbor was found, try to route through it ---
-    if (best_preferred_id != -1 && !hasFaultyLink(current_id, best_preferred_id) && visited.count(best_preferred_id) == 0) {
-        int result = directed(current_id, best_preferred_id, target_id, visited, depth + 1);
-        // If this path was successful, return the result.
-        if (result != DELIVERY_FAIL) return result;
+    if (best_preferred_id != -1 && !hasFaultyLink(current_id, best_preferred_id)) {
+        if (visited.count(best_preferred_id) != 0) return DELIVERY_FAIL;
+        return directed(current_id, best_preferred_id, target_id, visited, depth + 1);
     }
 
-    // --- Step 3: If the preferred path failed or was invalid, find the BEST spare neighbor ---
+    // Find BEST spare neighbor
     int best_spare_id = -1;
     long double max_prob_s = -1.0L;
-
-    for (int neighbor_id : neighbors.spare) {
+    for (int neighbor_id : classes.spare) {
         if (neighbor_id == prev_id) continue;
-
-        int fwd_dir = -1;
-        for(int j=0; j<4; ++j) if(current_node.neighbors[j] == neighbor_id) { fwd_dir = j; break; }
-        if (fwd_dir == -1) continue;
-
         int h = hammingDistance(neighbor_id, target_id);
-        int d = distance(neighbor_id, target_id);
-        int rev = rev_dir[current_id][fwd_dir];
-        long double prob = getP(neighbor_id, rev, h, d);
-
+        long double prob = getP(neighbor_id, current_id, h, std::min(dist_ct + 1, diameter));
         if (prob > max_prob_s) {
             max_prob_s = prob;
             best_spare_id = neighbor_id;
         }
     }
 
-    // --- Step 4: If a best spare neighbor was found, try to route through it ---
-    if (best_spare_id != -1 && !hasFaultyLink(current_id, best_spare_id) && visited.count(best_spare_id) == 0) {
-        int result = directed(current_id, best_spare_id, target_id, visited, depth + 1);
-        if (result != DELIVERY_FAIL) return result;
+    if (best_spare_id != -1 && !hasFaultyLink(current_id, best_spare_id)) {
+        if (visited.count(best_spare_id) != 0) return DELIVERY_FAIL;
+        return directed(current_id, best_spare_id, target_id, visited, depth + 1);
     }
 
-    // --- Step 5: If all options have been exhausted and failed, backtrack ---
-    // Un-mark the current node so other paths can use it
-    visited.erase(current_id);
     return DELIVERY_FAIL;
 }
 
-
 // --------- Strategic Classification Helpers ---------
 
-int metaTorus::ringDistance(int p1, int p2, int size) const {
-    int diff = std::abs(p1 - p2);
-    return std::min(diff, size - diff);
+int metaTorus::ringDistance(int a, int b, int k) const {
+    int diff = std::abs(a - b);
+    return std::min(diff, k - diff);
 }
 
-// CORRECTED: This function now uses a simpler, more robust heuristic.
 int metaTorus::acrossRing(int h_start, int h_target, const std::vector<int>& need_to_visit) const {
-    int ring_size = n - 1;
-    if (ring_size <= 0) return 0;
+    int num = need_to_visit.size();
+    if (num == 0) return 0;
+    std::vector<int> temp;
+    temp.push_back(h_start);
 
-    // Find the min and max dimension that needs to be visited, including start and end
-    int min_visit = h_start;
-    int max_visit = h_start;
-    bool needs_travel = false;
+    for (int i = 1; i <= (n-1); i++) {
+        int pos = h_start + i;
+        if (need_to_visit[pos % (n - 1)] == 1 || pos % (n - 1) == h_target)
+            temp.push_back(pos);
+    }
+    temp.push_back(h_start + n-1);
 
-    for (int i = 0; i < ring_size; ++i) {
-        if (need_to_visit[i] == 1) {
-            min_visit = std::min(min_visit, i);
-            max_visit = std::max(max_visit, i);
-            needs_travel = true;
+    int side1 = 0, side2 = 0, half1 = 0, half2 = 0;
+    bool switch_side = false;
+
+    for (size_t i = 1; i < temp.size(); i++) {
+        int delta = temp[i] - temp[i - 1];
+        if (!switch_side){
+            side1 = std::max(side1, delta);
+        }
+        else{
+            side2 = std::max(side2, delta);
+        }
+        if (temp[i] % (n-1)  == h_target) {
+            switch_side = true;
+            half1 = temp[i] - h_start;
+            half2 = n-1 - half1;
         }
     }
-    min_visit = std::min(min_visit, h_target);
-    max_visit = std::max(max_visit, h_target);
 
-    if (!needs_travel && h_start == h_target) return 0;
+    if (half1 == 0 && half2 == 0 && h_start != h_target) {
+        return ringDistance(h_start, h_target, n-1);
+    }
+    if (half1 + half2 != n-1) return ringDistance(h_start, h_target, n-1);
 
-    // Calculate the cost of traversing the segment that contains all required nodes
-    int forward_dist = max_visit - min_visit;
-    int backward_dist = ring_size - forward_dist;
 
-    // The total travel is the shorter of the two paths, plus the distance to cover the segment itself.
-    return std::min(ringDistance(h_start, min_visit, ring_size) + forward_dist,
-                    ringDistance(h_start, max_visit, ring_size) + forward_dist);
+    return std::min(half1 + half2 * 2 - side2 * 2, half2 + half1 * 2 - side1 * 2);
 }
 
 
-// --------- Strategic Classification Implementations ---------
+// --------- Strategic Classification Implementations (Corrected) ---------
 
 StrategicNeighborClasses2 metaTorus::classify_strategic_two(int c_id, int t_id) {
     const Node& c = nodes[c_id];
@@ -560,37 +721,43 @@ StrategicNeighborClasses2 metaTorus::classify_strategic_two(int c_id, int t_id) 
 
     const auto& standing = c.value;
     const auto& destination = t.value;
-    // CORRECTED: The header index must be within the bounds of the coordinate vector.
-    int header = (standing[0] + 1) % n;
-    if (header == 0) header = 1; // Header must be a dimension from 1 to n-1
 
-    // Dimension move cost
-    int d_dim = ringDistance(standing[header], destination[header], k);
-    int d1_dim = ringDistance(nodes[c.neighbors[0]].value[header], destination[header], k);
-    int d2_dim = ringDistance(nodes[c.neighbors[1]].value[header], destination[header], k);
+    // Iterate through each neighbor and dynamically determine its type and cost
+    for (int neighbor_id : c.neighbors) {
+        const auto& neighbor_coords = nodes[neighbor_id].value;
+        int changed_dim = -1;
+        // Find which dimension changed to create this neighbor
+        for (int i = 0; i < n; ++i) {
+            if (standing[i] != neighbor_coords[i]) {
+                changed_dim = i;
+                break;
+            }
+        }
 
-    if (d1_dim < d_dim) classes.shorter.push_back(c.neighbors[0]);
-    else classes.other.push_back(c.neighbors[0]);
+        if (changed_dim == 0) { // It's a RING move
+            std::vector<int> need_to_visit(n - 1, 0);
+            for(int i = 0; i < (n - 1); i++) {
+                if(standing[i + 1] != destination[i + 1]) need_to_visit[i] = 1;
+            }
+            int ring_cost = acrossRing(standing[0], destination[0], need_to_visit);
+            int neighbor_ring_cost = acrossRing(neighbor_coords[0], destination[0], need_to_visit);
 
-    if (d2_dim < d_dim) classes.shorter.push_back(c.neighbors[1]);
-    else classes.other.push_back(c.neighbors[1]);
+            if (neighbor_ring_cost < ring_cost) {
+                classes.shorter.push_back(neighbor_id);
+            } else {
+                classes.other.push_back(neighbor_id);
+            }
+        } else if (changed_dim > 0) { // It's a DIMENSION move
+            int d_dim = ringDistance(standing[changed_dim], destination[changed_dim], k);
+            int d_neighbor_dim = ringDistance(neighbor_coords[changed_dim], destination[changed_dim], k);
 
-    // Ring move cost
-    std::vector<int> need_to_visit(n - 1, 0);
-    for(int i = 0; i < (n - 1); i++) {
-        if(standing[i + 1] != destination[i + 1]) need_to_visit[i] = 1;
+            if (d_neighbor_dim < d_dim) {
+                classes.shorter.push_back(neighbor_id);
+            } else {
+                classes.other.push_back(neighbor_id);
+            }
+        }
     }
-
-    int ring_cost = acrossRing(standing[0], destination[0], need_to_visit);
-    int ring_cost3 = acrossRing(nodes[c.neighbors[2]].value[0], destination[0], need_to_visit);
-    int ring_cost4 = acrossRing(nodes[c.neighbors[3]].value[0], destination[0], need_to_visit);
-
-    if (ring_cost3 < ring_cost) classes.shorter.push_back(c.neighbors[2]);
-    else classes.other.push_back(c.neighbors[2]);
-
-    if (ring_cost4 < ring_cost) classes.shorter.push_back(c.neighbors[3]);
-    else classes.other.push_back(c.neighbors[3]);
-
     return classes;
 }
 
@@ -601,44 +768,40 @@ StrategicNeighborClasses3 metaTorus::classify_strategic_three(int c_id, int t_id
 
     const auto& standing = c.value;
     const auto& destination = t.value;
-    // CORRECTED: The header index must be within the bounds of the coordinate vector.
-    int header = (standing[0] + 1) % n;
-    if (header == 0) header = 1; // Header must be a dimension from 1 to n-1
 
-    // Dimension move cost
-    int d_dim = ringDistance(standing[header], destination[header], k);
-    int d1_dim = ringDistance(nodes[c.neighbors[0]].value[header], destination[header], k);
-    int d2_dim = ringDistance(nodes[c.neighbors[1]].value[header], destination[header], k);
+    for (int neighbor_id : c.neighbors) {
+        const auto& neighbor_coords = nodes[neighbor_id].value;
+        int changed_dim = -1;
+        for (int i = 0; i < n; ++i) {
+            if (standing[i] != neighbor_coords[i]) {
+                changed_dim = i;
+                break;
+            }
+        }
 
-    if (d1_dim < d_dim) classes.shorter.push_back(c.neighbors[0]);
-    else if (d1_dim == d_dim) classes.same.push_back(c.neighbors[0]);
-    else classes.longer.push_back(c.neighbors[0]);
+        if (changed_dim == 0) { // RING move
+            std::vector<int> need_to_visit(n - 1, 0);
+            for(int i = 0; i < (n - 1); i++) {
+                if(standing[i + 1] != destination[i + 1]) need_to_visit[i] = 1;
+            }
+            int ring_cost = acrossRing(standing[0], destination[0], need_to_visit);
+            int neighbor_ring_cost = acrossRing(neighbor_coords[0], destination[0], need_to_visit);
 
-    if (d2_dim < d_dim) classes.shorter.push_back(c.neighbors[1]);
-    else if (d2_dim == d_dim) classes.same.push_back(c.neighbors[1]);
-    else classes.longer.push_back(c.neighbors[1]);
+            if (neighbor_ring_cost < ring_cost) classes.shorter.push_back(neighbor_id);
+            else if (neighbor_ring_cost == ring_cost) classes.same.push_back(neighbor_id);
+            else classes.longer.push_back(neighbor_id);
 
-    // Ring move cost
-    std::vector<int> need_to_visit(n - 1, 0);
-    for(int i = 0; i < (n - 1); i++) {
-        if(standing[i + 1] != destination[i + 1]) need_to_visit[i] = 1;
+        } else if (changed_dim > 0) { // DIMENSION move
+            int d_dim = ringDistance(standing[changed_dim], destination[changed_dim], k);
+            int d_neighbor_dim = ringDistance(neighbor_coords[changed_dim], destination[changed_dim], k);
+
+            if (d_neighbor_dim < d_dim) classes.shorter.push_back(neighbor_id);
+            else if (d_neighbor_dim == d_dim) classes.same.push_back(neighbor_id);
+            else classes.longer.push_back(neighbor_id);
+        }
     }
-
-    int ring_cost = acrossRing(standing[0], destination[0], need_to_visit);
-    int ring_cost3 = acrossRing(nodes[c.neighbors[2]].value[0], destination[0], need_to_visit);
-    int ring_cost4 = acrossRing(nodes[c.neighbors[3]].value[0], destination[0], need_to_visit);
-
-    if (ring_cost3 < ring_cost) classes.shorter.push_back(c.neighbors[2]);
-    else if (ring_cost3 == ring_cost) classes.same.push_back(c.neighbors[2]);
-    else classes.longer.push_back(c.neighbors[2]);
-
-    if (ring_cost4 < ring_cost) classes.shorter.push_back(c.neighbors[3]);
-    else if (ring_cost4 == ring_cost) classes.same.push_back(c.neighbors[3]);
-    else classes.longer.push_back(c.neighbors[3]);
-
     return classes;
 }
-
 
 // --------- Strategic Routing Implementations ---------
 
@@ -651,7 +814,6 @@ int metaTorus::strategic_two(int prev_id, int current_id, int target_id, std::un
     if (current_id == target_id) return depth;
     visited[current_id] = true;
 
-    const Node& current_node = nodes[current_id];
     StrategicNeighborClasses2 classes = classify_strategic_two(current_id, target_id);
 
     // --- Step 1: Try best neighbor from 'shorter' class ---
@@ -659,22 +821,20 @@ int metaTorus::strategic_two(int prev_id, int current_id, int target_id, std::un
     long double max_prob_shorter = -1.0L;
     for (int neighbor_id : classes.shorter) {
         if (neighbor_id == prev_id) continue;
-        int fwd_dir = -1; for(int j=0; j<4; ++j) if(current_node.neighbors[j] == neighbor_id) { fwd_dir = j; break; }
-        if (fwd_dir == -1) continue;
 
         int h = hammingDistance(neighbor_id, target_id);
         int d = distance(neighbor_id, target_id);
-        int rev = rev_dir[current_id][fwd_dir];
-        long double prob = getP(neighbor_id, rev, h, d);
+        // [FIXED] Use 'current_id' as the incoming node for the DRP lookup.
+        long double prob = getP(neighbor_id, current_id, h, d);
 
         if (prob > max_prob_shorter) {
             max_prob_shorter = prob;
             best_shorter_id = neighbor_id;
         }
     }
-    if (best_shorter_id != -1 && !hasFaultyLink(current_id, best_shorter_id) && visited.count(best_shorter_id) == 0) {
-        int result = strategic_two(current_id, best_shorter_id, target_id, visited, depth + 1);
-        if (result != DELIVERY_FAIL) return result;
+    if (best_shorter_id != -1 && !hasFaultyLink(current_id, best_shorter_id)) {
+        if (visited.count(best_shorter_id) > 0) return DELIVERY_FAIL;
+        return strategic_two(current_id, best_shorter_id, target_id, visited, depth + 1);
     }
 
     // --- Step 2: Try best neighbor from 'other' class ---
@@ -682,22 +842,20 @@ int metaTorus::strategic_two(int prev_id, int current_id, int target_id, std::un
     long double max_prob_other = -1.0L;
     for (int neighbor_id : classes.other) {
         if (neighbor_id == prev_id) continue;
-        int fwd_dir = -1; for(int j=0; j<4; ++j) if(current_node.neighbors[j] == neighbor_id) { fwd_dir = j; break; }
-        if (fwd_dir == -1) continue;
 
         int h = hammingDistance(neighbor_id, target_id);
         int d = distance(neighbor_id, target_id);
-        int rev = rev_dir[current_id][fwd_dir];
-        long double prob = getP(neighbor_id, rev, h, d);
+        // [FIXED] Use 'current_id' as the incoming node for the DRP lookup.
+        long double prob = getP(neighbor_id, current_id, h, d);
 
         if (prob > max_prob_other) {
             max_prob_other = prob;
             best_other_id = neighbor_id;
         }
     }
-    if (best_other_id != -1 && !hasFaultyLink(current_id, best_other_id) && visited.count(best_other_id) == 0) {
-        int result = strategic_two(current_id, best_other_id, target_id, visited, depth + 1);
-        if (result != DELIVERY_FAIL) return result;
+    if (best_other_id != -1 && !hasFaultyLink(current_id, best_other_id)) {
+        if (visited.count(best_other_id) > 0) return DELIVERY_FAIL;
+        return strategic_two(current_id, best_other_id, target_id, visited, depth + 1);
     }
 
     visited.erase(current_id);
@@ -714,54 +872,149 @@ int metaTorus::strategic_three(int prev_id, int current_id, int target_id, std::
     if (current_id == target_id) return depth;
     visited[current_id] = true;
 
-    const Node& current_node = nodes[current_id];
     StrategicNeighborClasses3 classes = classify_strategic_three(current_id, target_id);
 
     // --- Step 1: Try 'shorter' class ---
     int best_id = -1; long double max_prob = -1.0L;
     for (int neighbor_id : classes.shorter) {
         if (neighbor_id == prev_id) continue;
-        int fwd_dir = -1; for(int j=0; j<4; ++j) if(current_node.neighbors[j] == neighbor_id) { fwd_dir = j; break; }
-        if (fwd_dir == -1) continue;
-        int h = hammingDistance(neighbor_id, target_id); int d = distance(neighbor_id, target_id); int rev = rev_dir[current_id][fwd_dir];
-        long double prob = getP(neighbor_id, rev, h, d);
+        int h = hammingDistance(neighbor_id, target_id);
+        int d = distance(neighbor_id, target_id);
+        // [FIXED] Use 'current_id' as the incoming node for the DRP lookup.
+        long double prob = getP(neighbor_id, current_id, h, d);
         if (prob > max_prob) { max_prob = prob; best_id = neighbor_id; }
     }
-    if (best_id != -1 && !hasFaultyLink(current_id, best_id) && visited.count(best_id) == 0) {
-        int result = strategic_three(current_id, best_id, target_id, visited, depth + 1);
-        if (result != DELIVERY_FAIL) return result;
+    if (best_id != -1 && !hasFaultyLink(current_id, best_id)) {
+        if (visited.count(best_id) > 0) return DELIVERY_FAIL;
+        return strategic_three(current_id, best_id, target_id, visited, depth + 1);
     }
 
     // --- Step 2: Try 'same' class ---
     best_id = -1; max_prob = -1.0L;
     for (int neighbor_id : classes.same) {
         if (neighbor_id == prev_id) continue;
-        int fwd_dir = -1; for(int j=0; j<4; ++j) if(current_node.neighbors[j] == neighbor_id) { fwd_dir = j; break; }
-        if (fwd_dir == -1) continue;
-        int h = hammingDistance(neighbor_id, target_id); int d = distance(neighbor_id, target_id); int rev = rev_dir[current_id][fwd_dir];
-        long double prob = getP(neighbor_id, rev, h, d);
+        int h = hammingDistance(neighbor_id, target_id);
+        int d = distance(neighbor_id, target_id);
+        // [FIXED] Use 'current_id' as the incoming node for the DRP lookup.
+        long double prob = getP(neighbor_id, current_id, h, d);
         if (prob > max_prob) { max_prob = prob; best_id = neighbor_id; }
     }
-    if (best_id != -1 && !hasFaultyLink(current_id, best_id) && visited.count(best_id) == 0) {
-        int result = strategic_three(current_id, best_id, target_id, visited, depth + 1);
-        if (result != DELIVERY_FAIL) return result;
+    if (best_id != -1 && !hasFaultyLink(current_id, best_id)) {
+        if (visited.count(best_id) > 0) return DELIVERY_FAIL;
+        return strategic_three(current_id, best_id, target_id, visited, depth + 1);
     }
 
     // --- Step 3: Try 'longer' class ---
     best_id = -1; max_prob = -1.0L;
     for (int neighbor_id : classes.longer) {
         if (neighbor_id == prev_id) continue;
-        int fwd_dir = -1; for(int j=0; j<4; ++j) if(current_node.neighbors[j] == neighbor_id) { fwd_dir = j; break; }
-        if (fwd_dir == -1) continue;
-        int h = hammingDistance(neighbor_id, target_id); int d = distance(neighbor_id, target_id); int rev = rev_dir[current_id][fwd_dir];
-        long double prob = getP(neighbor_id, rev, h, d);
+        int h = hammingDistance(neighbor_id, target_id);
+        int d = distance(neighbor_id, target_id);
+        // [FIXED] Use 'current_id' as the incoming node for the DRP lookup.
+        long double prob = getP(neighbor_id, current_id, h, d);
         if (prob > max_prob) { max_prob = prob; best_id = neighbor_id; }
     }
-    if (best_id != -1 && !hasFaultyLink(current_id, best_id) && visited.count(best_id) == 0) {
-        int result = strategic_three(current_id, best_id, target_id, visited, depth + 1);
-        if (result != DELIVERY_FAIL) return result;
+    if (best_id != -1 && !hasFaultyLink(current_id, best_id)) {
+        if (visited.count(best_id) > 0) return DELIVERY_FAIL;
+        return strategic_three(current_id, best_id, target_id, visited, depth + 1);
     }
 
-    visited.erase(current_id);
     return DELIVERY_FAIL;
+}
+
+std::vector<int> metaTorus::route_strategic_three_with_path(int start_id, int target_id) {
+    std::unordered_map<int, bool> visited;
+    return strategic_three_with_path_worker(-1, start_id, target_id, visited);
+}
+
+std::vector<int> metaTorus::strategic_three_with_path_worker(int prev_id, int current_id, int target_id, std::unordered_map<int, bool>& visited) {
+    if (current_id == target_id) {
+        return {current_id};
+    }
+    visited[current_id] = true;
+
+    StrategicNeighborClasses3 classes = classify_strategic_three(current_id, target_id);
+
+    auto try_candidate_class = [&](const std::vector<int>& candidates) -> std::vector<int> {
+        int best_id = -1;
+        long double max_prob = -1.0L;
+
+        for (int neighbor_id : candidates) {
+            if (neighbor_id == prev_id) continue;
+            int h = hammingDistance(neighbor_id, target_id);
+            int d = distance(neighbor_id, target_id);
+            long double prob = getP(neighbor_id, current_id, h, d);
+            if (prob > max_prob) {
+                max_prob = prob;
+                best_id = neighbor_id;
+            }
+        }
+
+        if (best_id != -1 && !hasFaultyLink(current_id, best_id) && visited.count(best_id) == 0) {
+            std::vector<int> result_path = strategic_three_with_path_worker(current_id, best_id, target_id, visited);
+            if (!result_path.empty()) {
+                result_path.insert(result_path.begin(), current_id);
+                return result_path;
+            }
+        }
+        return {}; // Return empty vector if this class yielded no path
+    };
+
+    std::vector<int> path = try_candidate_class(classes.shorter);
+    if (!path.empty()) return path;
+
+    path = try_candidate_class(classes.same);
+    if (!path.empty()) return path;
+
+    path = try_candidate_class(classes.longer);
+    if (!path.empty()) return path;
+
+    return {}; // Return empty vector if no path found
+}
+
+std::vector<int> metaTorus::route_strategic_two_with_path(int start_id, int target_id) {
+    std::unordered_map<int, bool> visited;
+    return strategic_two_with_path_worker(-1, start_id, target_id, visited);
+}
+
+std::vector<int> metaTorus::strategic_two_with_path_worker(int prev_id, int current_id, int target_id, std::unordered_map<int, bool>& visited) {
+    if (current_id == target_id) {
+        return {current_id};
+    }
+    visited[current_id] = true;
+
+    StrategicNeighborClasses2 classes = classify_strategic_two(current_id, target_id);
+
+    auto try_candidate_class = [&](const std::vector<int>& candidates) -> std::vector<int> {
+        int best_id = -1;
+        long double max_prob = -1.0L;
+
+        for (int neighbor_id : candidates) {
+            if (neighbor_id == prev_id) continue;
+            int h = hammingDistance(neighbor_id, target_id);
+            int d = distance(neighbor_id, target_id);
+            long double prob = getP(neighbor_id, current_id, h, d);
+            if (prob > max_prob) {
+                max_prob = prob;
+                best_id = neighbor_id;
+            }
+        }
+
+        if (best_id != -1 && !hasFaultyLink(current_id, best_id) && visited.count(best_id) == 0) {
+            std::vector<int> result_path = strategic_two_with_path_worker(current_id, best_id, target_id, visited);
+            if (!result_path.empty()) {
+                result_path.insert(result_path.begin(), current_id);
+                return result_path;
+            }
+        }
+        return {};
+    };
+
+    std::vector<int> path = try_candidate_class(classes.shorter);
+    if (!path.empty()) return path;
+
+    path = try_candidate_class(classes.other);
+    if (!path.empty()) return path;
+
+    return {};
 }

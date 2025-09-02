@@ -1,0 +1,489 @@
+--- Metatorus Network Structure ---
+--- Configuration: n=4, k=3, V=81 ---
+
+Node     0       (0,0,0,0) is connected to:
+	- Neighbor     9 (0,1,0,0)
+	- Neighbor    18 (0,2,0,0)
+	- Neighbor    27 (1,0,0,0)
+	- Neighbor    54 (2,0,0,0)
+
+Node     1       (0,0,0,1) is connected to:
+	- Neighbor    10 (0,1,0,1)
+	- Neighbor    19 (0,2,0,1)
+	- Neighbor    28 (1,0,0,1)
+	- Neighbor    55 (2,0,0,1)
+
+Node     2       (0,0,0,2) is connected to:
+	- Neighbor    11 (0,1,0,2)
+	- Neighbor    20 (0,2,0,2)
+	- Neighbor    29 (1,0,0,2)
+	- Neighbor    56 (2,0,0,2)
+
+Node     3       (0,0,1,0) is connected to:
+	- Neighbor    12 (0,1,1,0)
+	- Neighbor    21 (0,2,1,0)
+	- Neighbor    30 (1,0,1,0)
+	- Neighbor    57 (2,0,1,0)
+
+Node     4       (0,0,1,1) is connected to:
+	- Neighbor    13 (0,1,1,1)
+	- Neighbor    22 (0,2,1,1)
+	- Neighbor    31 (1,0,1,1)
+	- Neighbor    58 (2,0,1,1)
+
+Node     5       (0,0,1,2) is connected to:
+	- Neighbor    14 (0,1,1,2)
+	- Neighbor    23 (0,2,1,2)
+	- Neighbor    32 (1,0,1,2)
+	- Neighbor    59 (2,0,1,2)
+
+Node     6       (0,0,2,0) is connected to:
+	- Neighbor    15 (0,1,2,0)
+	- Neighbor    24 (0,2,2,0)
+	- Neighbor    33 (1,0,2,0)
+	- Neighbor    60 (2,0,2,0)
+
+Node     7       (0,0,2,1) is connected to:
+	- Neighbor    16 (0,1,2,1)
+	- Neighbor    25 (0,2,2,1)
+	- Neighbor    34 (1,0,2,1)
+	- Neighbor    61 (2,0,2,1)
+
+Node     8       (0,0,2,2) is connected to:
+	- Neighbor    17 (0,1,2,2)
+	- Neighbor    26 (0,2,2,2)
+	- Neighbor    35 (1,0,2,2)
+	- Neighbor    62 (2,0,2,2)
+
+Node     9       (0,1,0,0) is connected to:
+	- Neighbor    18 (0,2,0,0)
+	- Neighbor     0 (0,0,0,0)
+	- Neighbor    36 (1,1,0,0)
+	- Neighbor    63 (2,1,0,0)
+
+Node    10       (0,1,0,1) is connected to:
+	- Neighbor    19 (0,2,0,1)
+	- Neighbor     1 (0,0,0,1)
+	- Neighbor    37 (1,1,0,1)
+	- Neighbor    64 (2,1,0,1)
+
+Node    11       (0,1,0,2) is connected to:
+	- Neighbor    20 (0,2,0,2)
+	- Neighbor     2 (0,0,0,2)
+	- Neighbor    38 (1,1,0,2)
+	- Neighbor    65 (2,1,0,2)
+
+Node    12       (0,1,1,0) is connected to:
+	- Neighbor    21 (0,2,1,0)
+	- Neighbor     3 (0,0,1,0)
+	- Neighbor    39 (1,1,1,0)
+	- Neighbor    66 (2,1,1,0)
+
+Node    13       (0,1,1,1) is connected to:
+	- Neighbor    22 (0,2,1,1)
+	- Neighbor     4 (0,0,1,1)
+	- Neighbor    40 (1,1,1,1)
+	- Neighbor    67 (2,1,1,1)
+
+Node    14       (0,1,1,2) is connected to:
+	- Neighbor    23 (0,2,1,2)
+	- Neighbor     5 (0,0,1,2)
+	- Neighbor    41 (1,1,1,2)
+	- Neighbor    68 (2,1,1,2)
+
+Node    15       (0,1,2,0) is connected to:
+	- Neighbor    24 (0,2,2,0)
+	- Neighbor     6 (0,0,2,0)
+	- Neighbor    42 (1,1,2,0)
+	- Neighbor    69 (2,1,2,0)
+
+Node    16       (0,1,2,1) is connected to:
+	- Neighbor    25 (0,2,2,1)
+	- Neighbor     7 (0,0,2,1)
+	- Neighbor    43 (1,1,2,1)
+	- Neighbor    70 (2,1,2,1)
+
+Node    17       (0,1,2,2) is connected to:
+	- Neighbor    26 (0,2,2,2)
+	- Neighbor     8 (0,0,2,2)
+	- Neighbor    44 (1,1,2,2)
+	- Neighbor    71 (2,1,2,2)
+
+Node    18       (0,2,0,0) is connected to:
+	- Neighbor     0 (0,0,0,0)
+	- Neighbor     9 (0,1,0,0)
+	- Neighbor    45 (1,2,0,0)
+	- Neighbor    72 (2,2,0,0)
+
+Node    19       (0,2,0,1) is connected to:
+	- Neighbor     1 (0,0,0,1)
+	- Neighbor    10 (0,1,0,1)
+	- Neighbor    46 (1,2,0,1)
+	- Neighbor    73 (2,2,0,1)
+
+Node    20       (0,2,0,2) is connected to:
+	- Neighbor     2 (0,0,0,2)
+	- Neighbor    11 (0,1,0,2)
+	- Neighbor    47 (1,2,0,2)
+	- Neighbor    74 (2,2,0,2)
+
+Node    21       (0,2,1,0) is connected to:
+	- Neighbor     3 (0,0,1,0)
+	- Neighbor    12 (0,1,1,0)
+	- Neighbor    48 (1,2,1,0)
+	- Neighbor    75 (2,2,1,0)
+
+Node    22       (0,2,1,1) is connected to:
+	- Neighbor     4 (0,0,1,1)
+	- Neighbor    13 (0,1,1,1)
+	- Neighbor    49 (1,2,1,1)
+	- Neighbor    76 (2,2,1,1)
+
+Node    23       (0,2,1,2) is connected to:
+	- Neighbor     5 (0,0,1,2)
+	- Neighbor    14 (0,1,1,2)
+	- Neighbor    50 (1,2,1,2)
+	- Neighbor    77 (2,2,1,2)
+
+Node    24       (0,2,2,0) is connected to:
+	- Neighbor     6 (0,0,2,0)
+	- Neighbor    15 (0,1,2,0)
+	- Neighbor    51 (1,2,2,0)
+	- Neighbor    78 (2,2,2,0)
+
+Node    25       (0,2,2,1) is connected to:
+	- Neighbor     7 (0,0,2,1)
+	- Neighbor    16 (0,1,2,1)
+	- Neighbor    52 (1,2,2,1)
+	- Neighbor    79 (2,2,2,1)
+
+Node    26       (0,2,2,2) is connected to:
+	- Neighbor     8 (0,0,2,2)
+	- Neighbor    17 (0,1,2,2)
+	- Neighbor    53 (1,2,2,2)
+	- Neighbor    80 (2,2,2,2)
+
+Node    27       (1,0,0,0) is connected to:
+	- Neighbor    30 (1,0,1,0)
+	- Neighbor    33 (1,0,2,0)
+	- Neighbor    54 (2,0,0,0)
+	- Neighbor     0 (0,0,0,0)
+
+Node    28       (1,0,0,1) is connected to:
+	- Neighbor    31 (1,0,1,1)
+	- Neighbor    34 (1,0,2,1)
+	- Neighbor    55 (2,0,0,1)
+	- Neighbor     1 (0,0,0,1)
+
+Node    29       (1,0,0,2) is connected to:
+	- Neighbor    32 (1,0,1,2)
+	- Neighbor    35 (1,0,2,2)
+	- Neighbor    56 (2,0,0,2)
+	- Neighbor     2 (0,0,0,2)
+
+Node    30       (1,0,1,0) is connected to:
+	- Neighbor    33 (1,0,2,0)
+	- Neighbor    27 (1,0,0,0)
+	- Neighbor    57 (2,0,1,0)
+	- Neighbor     3 (0,0,1,0)
+
+Node    31       (1,0,1,1) is connected to:
+	- Neighbor    34 (1,0,2,1)
+	- Neighbor    28 (1,0,0,1)
+	- Neighbor    58 (2,0,1,1)
+	- Neighbor     4 (0,0,1,1)
+
+Node    32       (1,0,1,2) is connected to:
+	- Neighbor    35 (1,0,2,2)
+	- Neighbor    29 (1,0,0,2)
+	- Neighbor    59 (2,0,1,2)
+	- Neighbor     5 (0,0,1,2)
+
+Node    33       (1,0,2,0) is connected to:
+	- Neighbor    27 (1,0,0,0)
+	- Neighbor    30 (1,0,1,0)
+	- Neighbor    60 (2,0,2,0)
+	- Neighbor     6 (0,0,2,0)
+
+Node    34       (1,0,2,1) is connected to:
+	- Neighbor    28 (1,0,0,1)
+	- Neighbor    31 (1,0,1,1)
+	- Neighbor    61 (2,0,2,1)
+	- Neighbor     7 (0,0,2,1)
+
+Node    35       (1,0,2,2) is connected to:
+	- Neighbor    29 (1,0,0,2)
+	- Neighbor    32 (1,0,1,2)
+	- Neighbor    62 (2,0,2,2)
+	- Neighbor     8 (0,0,2,2)
+
+Node    36       (1,1,0,0) is connected to:
+	- Neighbor    39 (1,1,1,0)
+	- Neighbor    42 (1,1,2,0)
+	- Neighbor    63 (2,1,0,0)
+	- Neighbor     9 (0,1,0,0)
+
+Node    37       (1,1,0,1) is connected to:
+	- Neighbor    40 (1,1,1,1)
+	- Neighbor    43 (1,1,2,1)
+	- Neighbor    64 (2,1,0,1)
+	- Neighbor    10 (0,1,0,1)
+
+Node    38       (1,1,0,2) is connected to:
+	- Neighbor    41 (1,1,1,2)
+	- Neighbor    44 (1,1,2,2)
+	- Neighbor    65 (2,1,0,2)
+	- Neighbor    11 (0,1,0,2)
+
+Node    39       (1,1,1,0) is connected to:
+	- Neighbor    42 (1,1,2,0)
+	- Neighbor    36 (1,1,0,0)
+	- Neighbor    66 (2,1,1,0)
+	- Neighbor    12 (0,1,1,0)
+
+Node    40       (1,1,1,1) is connected to:
+	- Neighbor    43 (1,1,2,1)
+	- Neighbor    37 (1,1,0,1)
+	- Neighbor    67 (2,1,1,1)
+	- Neighbor    13 (0,1,1,1)
+
+Node    41       (1,1,1,2) is connected to:
+	- Neighbor    44 (1,1,2,2)
+	- Neighbor    38 (1,1,0,2)
+	- Neighbor    68 (2,1,1,2)
+	- Neighbor    14 (0,1,1,2)
+
+Node    42       (1,1,2,0) is connected to:
+	- Neighbor    36 (1,1,0,0)
+	- Neighbor    39 (1,1,1,0)
+	- Neighbor    69 (2,1,2,0)
+	- Neighbor    15 (0,1,2,0)
+
+Node    43       (1,1,2,1) is connected to:
+	- Neighbor    37 (1,1,0,1)
+	- Neighbor    40 (1,1,1,1)
+	- Neighbor    70 (2,1,2,1)
+	- Neighbor    16 (0,1,2,1)
+
+Node    44       (1,1,2,2) is connected to:
+	- Neighbor    38 (1,1,0,2)
+	- Neighbor    41 (1,1,1,2)
+	- Neighbor    71 (2,1,2,2)
+	- Neighbor    17 (0,1,2,2)
+
+Node    45       (1,2,0,0) is connected to:
+	- Neighbor    48 (1,2,1,0)
+	- Neighbor    51 (1,2,2,0)
+	- Neighbor    72 (2,2,0,0)
+	- Neighbor    18 (0,2,0,0)
+
+Node    46       (1,2,0,1) is connected to:
+	- Neighbor    49 (1,2,1,1)
+	- Neighbor    52 (1,2,2,1)
+	- Neighbor    73 (2,2,0,1)
+	- Neighbor    19 (0,2,0,1)
+
+Node    47       (1,2,0,2) is connected to:
+	- Neighbor    50 (1,2,1,2)
+	- Neighbor    53 (1,2,2,2)
+	- Neighbor    74 (2,2,0,2)
+	- Neighbor    20 (0,2,0,2)
+
+Node    48       (1,2,1,0) is connected to:
+	- Neighbor    51 (1,2,2,0)
+	- Neighbor    45 (1,2,0,0)
+	- Neighbor    75 (2,2,1,0)
+	- Neighbor    21 (0,2,1,0)
+
+Node    49       (1,2,1,1) is connected to:
+	- Neighbor    52 (1,2,2,1)
+	- Neighbor    46 (1,2,0,1)
+	- Neighbor    76 (2,2,1,1)
+	- Neighbor    22 (0,2,1,1)
+
+Node    50       (1,2,1,2) is connected to:
+	- Neighbor    53 (1,2,2,2)
+	- Neighbor    47 (1,2,0,2)
+	- Neighbor    77 (2,2,1,2)
+	- Neighbor    23 (0,2,1,2)
+
+Node    51       (1,2,2,0) is connected to:
+	- Neighbor    45 (1,2,0,0)
+	- Neighbor    48 (1,2,1,0)
+	- Neighbor    78 (2,2,2,0)
+	- Neighbor    24 (0,2,2,0)
+
+Node    52       (1,2,2,1) is connected to:
+	- Neighbor    46 (1,2,0,1)
+	- Neighbor    49 (1,2,1,1)
+	- Neighbor    79 (2,2,2,1)
+	- Neighbor    25 (0,2,2,1)
+
+Node    53       (1,2,2,2) is connected to:
+	- Neighbor    47 (1,2,0,2)
+	- Neighbor    50 (1,2,1,2)
+	- Neighbor    80 (2,2,2,2)
+	- Neighbor    26 (0,2,2,2)
+
+Node    54       (2,0,0,0) is connected to:
+	- Neighbor    55 (2,0,0,1)
+	- Neighbor    56 (2,0,0,2)
+	- Neighbor     0 (0,0,0,0)
+	- Neighbor    27 (1,0,0,0)
+
+Node    55       (2,0,0,1) is connected to:
+	- Neighbor    56 (2,0,0,2)
+	- Neighbor    54 (2,0,0,0)
+	- Neighbor     1 (0,0,0,1)
+	- Neighbor    28 (1,0,0,1)
+
+Node    56       (2,0,0,2) is connected to:
+	- Neighbor    54 (2,0,0,0)
+	- Neighbor    55 (2,0,0,1)
+	- Neighbor     2 (0,0,0,2)
+	- Neighbor    29 (1,0,0,2)
+
+Node    57       (2,0,1,0) is connected to:
+	- Neighbor    58 (2,0,1,1)
+	- Neighbor    59 (2,0,1,2)
+	- Neighbor     3 (0,0,1,0)
+	- Neighbor    30 (1,0,1,0)
+
+Node    58       (2,0,1,1) is connected to:
+	- Neighbor    59 (2,0,1,2)
+	- Neighbor    57 (2,0,1,0)
+	- Neighbor     4 (0,0,1,1)
+	- Neighbor    31 (1,0,1,1)
+
+Node    59       (2,0,1,2) is connected to:
+	- Neighbor    57 (2,0,1,0)
+	- Neighbor    58 (2,0,1,1)
+	- Neighbor     5 (0,0,1,2)
+	- Neighbor    32 (1,0,1,2)
+
+Node    60       (2,0,2,0) is connected to:
+	- Neighbor    61 (2,0,2,1)
+	- Neighbor    62 (2,0,2,2)
+	- Neighbor     6 (0,0,2,0)
+	- Neighbor    33 (1,0,2,0)
+
+Node    61       (2,0,2,1) is connected to:
+	- Neighbor    62 (2,0,2,2)
+	- Neighbor    60 (2,0,2,0)
+	- Neighbor     7 (0,0,2,1)
+	- Neighbor    34 (1,0,2,1)
+
+Node    62       (2,0,2,2) is connected to:
+	- Neighbor    60 (2,0,2,0)
+	- Neighbor    61 (2,0,2,1)
+	- Neighbor     8 (0,0,2,2)
+	- Neighbor    35 (1,0,2,2)
+
+Node    63       (2,1,0,0) is connected to:
+	- Neighbor    64 (2,1,0,1)
+	- Neighbor    65 (2,1,0,2)
+	- Neighbor     9 (0,1,0,0)
+	- Neighbor    36 (1,1,0,0)
+
+Node    64       (2,1,0,1) is connected to:
+	- Neighbor    65 (2,1,0,2)
+	- Neighbor    63 (2,1,0,0)
+	- Neighbor    10 (0,1,0,1)
+	- Neighbor    37 (1,1,0,1)
+
+Node    65       (2,1,0,2) is connected to:
+	- Neighbor    63 (2,1,0,0)
+	- Neighbor    64 (2,1,0,1)
+	- Neighbor    11 (0,1,0,2)
+	- Neighbor    38 (1,1,0,2)
+
+Node    66       (2,1,1,0) is connected to:
+	- Neighbor    67 (2,1,1,1)
+	- Neighbor    68 (2,1,1,2)
+	- Neighbor    12 (0,1,1,0)
+	- Neighbor    39 (1,1,1,0)
+
+Node    67       (2,1,1,1) is connected to:
+	- Neighbor    68 (2,1,1,2)
+	- Neighbor    66 (2,1,1,0)
+	- Neighbor    13 (0,1,1,1)
+	- Neighbor    40 (1,1,1,1)
+
+Node    68       (2,1,1,2) is connected to:
+	- Neighbor    66 (2,1,1,0)
+	- Neighbor    67 (2,1,1,1)
+	- Neighbor    14 (0,1,1,2)
+	- Neighbor    41 (1,1,1,2)
+
+Node    69       (2,1,2,0) is connected to:
+	- Neighbor    70 (2,1,2,1)
+	- Neighbor    71 (2,1,2,2)
+	- Neighbor    15 (0,1,2,0)
+	- Neighbor    42 (1,1,2,0)
+
+Node    70       (2,1,2,1) is connected to:
+	- Neighbor    71 (2,1,2,2)
+	- Neighbor    69 (2,1,2,0)
+	- Neighbor    16 (0,1,2,1)
+	- Neighbor    43 (1,1,2,1)
+
+Node    71       (2,1,2,2) is connected to:
+	- Neighbor    69 (2,1,2,0)
+	- Neighbor    70 (2,1,2,1)
+	- Neighbor    17 (0,1,2,2)
+	- Neighbor    44 (1,1,2,2)
+
+Node    72       (2,2,0,0) is connected to:
+	- Neighbor    73 (2,2,0,1)
+	- Neighbor    74 (2,2,0,2)
+	- Neighbor    18 (0,2,0,0)
+	- Neighbor    45 (1,2,0,0)
+
+Node    73       (2,2,0,1) is connected to:
+	- Neighbor    74 (2,2,0,2)
+	- Neighbor    72 (2,2,0,0)
+	- Neighbor    19 (0,2,0,1)
+	- Neighbor    46 (1,2,0,1)
+
+Node    74       (2,2,0,2) is connected to:
+	- Neighbor    72 (2,2,0,0)
+	- Neighbor    73 (2,2,0,1)
+	- Neighbor    20 (0,2,0,2)
+	- Neighbor    47 (1,2,0,2)
+
+Node    75       (2,2,1,0) is connected to:
+	- Neighbor    76 (2,2,1,1)
+	- Neighbor    77 (2,2,1,2)
+	- Neighbor    21 (0,2,1,0)
+	- Neighbor    48 (1,2,1,0)
+
+Node    76       (2,2,1,1) is connected to:
+	- Neighbor    77 (2,2,1,2)
+	- Neighbor    75 (2,2,1,0)
+	- Neighbor    22 (0,2,1,1)
+	- Neighbor    49 (1,2,1,1)
+
+Node    77       (2,2,1,2) is connected to:
+	- Neighbor    75 (2,2,1,0)
+	- Neighbor    76 (2,2,1,1)
+	- Neighbor    23 (0,2,1,2)
+	- Neighbor    50 (1,2,1,2)
+
+Node    78       (2,2,2,0) is connected to:
+	- Neighbor    79 (2,2,2,1)
+	- Neighbor    80 (2,2,2,2)
+	- Neighbor    24 (0,2,2,0)
+	- Neighbor    51 (1,2,2,0)
+
+Node    79       (2,2,2,1) is connected to:
+	- Neighbor    80 (2,2,2,2)
+	- Neighbor    78 (2,2,2,0)
+	- Neighbor    25 (0,2,2,1)
+	- Neighbor    52 (1,2,2,1)
+
+Node    80       (2,2,2,2) is connected to:
+	- Neighbor    78 (2,2,2,0)
+	- Neighbor    79 (2,2,2,1)
+	- Neighbor    26 (0,2,2,2)
+	- Neighbor    53 (1,2,2,2)
+

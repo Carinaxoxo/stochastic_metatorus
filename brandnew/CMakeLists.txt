@@ -5,4 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(brandnew main.cpp
         metatorus.cpp
-        metatorus.h)
+        metatorus.h
+        test.cpp
+        testMeta.cpp
+        testMeta.h)

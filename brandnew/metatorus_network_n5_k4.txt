@@ -1,0 +1,6147 @@
+--- Metatorus Network Structure ---
+--- Configuration: n=5, k=4, V=1024 ---
+
+Node     0     (0,0,0,0,0) is connected to:
+	- Neighbor    64 (0,1,0,0,0)
+	- Neighbor   192 (0,3,0,0,0)
+	- Neighbor   256 (1,0,0,0,0)
+	- Neighbor   768 (3,0,0,0,0)
+
+Node     1     (0,0,0,0,1) is connected to:
+	- Neighbor    65 (0,1,0,0,1)
+	- Neighbor   193 (0,3,0,0,1)
+	- Neighbor   257 (1,0,0,0,1)
+	- Neighbor   769 (3,0,0,0,1)
+
+Node     2     (0,0,0,0,2) is connected to:
+	- Neighbor    66 (0,1,0,0,2)
+	- Neighbor   194 (0,3,0,0,2)
+	- Neighbor   258 (1,0,0,0,2)
+	- Neighbor   770 (3,0,0,0,2)
+
+Node     3     (0,0,0,0,3) is connected to:
+	- Neighbor    67 (0,1,0,0,3)
+	- Neighbor   195 (0,3,0,0,3)
+	- Neighbor   259 (1,0,0,0,3)
+	- Neighbor   771 (3,0,0,0,3)
+
+Node     4     (0,0,0,1,0) is connected to:
+	- Neighbor    68 (0,1,0,1,0)
+	- Neighbor   196 (0,3,0,1,0)
+	- Neighbor   260 (1,0,0,1,0)
+	- Neighbor   772 (3,0,0,1,0)
+
+Node     5     (0,0,0,1,1) is connected to:
+	- Neighbor    69 (0,1,0,1,1)
+	- Neighbor   197 (0,3,0,1,1)
+	- Neighbor   261 (1,0,0,1,1)
+	- Neighbor   773 (3,0,0,1,1)
+
+Node     6     (0,0,0,1,2) is connected to:
+	- Neighbor    70 (0,1,0,1,2)
+	- Neighbor   198 (0,3,0,1,2)
+	- Neighbor   262 (1,0,0,1,2)
+	- Neighbor   774 (3,0,0,1,2)
+
+Node     7     (0,0,0,1,3) is connected to:
+	- Neighbor    71 (0,1,0,1,3)
+	- Neighbor   199 (0,3,0,1,3)
+	- Neighbor   263 (1,0,0,1,3)
+	- Neighbor   775 (3,0,0,1,3)
+
+Node     8     (0,0,0,2,0) is connected to:
+	- Neighbor    72 (0,1,0,2,0)
+	- Neighbor   200 (0,3,0,2,0)
+	- Neighbor   264 (1,0,0,2,0)
+	- Neighbor   776 (3,0,0,2,0)
+
+Node     9     (0,0,0,2,1) is connected to:
+	- Neighbor    73 (0,1,0,2,1)
+	- Neighbor   201 (0,3,0,2,1)
+	- Neighbor   265 (1,0,0,2,1)
+	- Neighbor   777 (3,0,0,2,1)
+
+Node    10     (0,0,0,2,2) is connected to:
+	- Neighbor    74 (0,1,0,2,2)
+	- Neighbor   202 (0,3,0,2,2)
+	- Neighbor   266 (1,0,0,2,2)
+	- Neighbor   778 (3,0,0,2,2)
+
+Node    11     (0,0,0,2,3) is connected to:
+	- Neighbor    75 (0,1,0,2,3)
+	- Neighbor   203 (0,3,0,2,3)
+	- Neighbor   267 (1,0,0,2,3)
+	- Neighbor   779 (3,0,0,2,3)
+
+Node    12     (0,0,0,3,0) is connected to:
+	- Neighbor    76 (0,1,0,3,0)
+	- Neighbor   204 (0,3,0,3,0)
+	- Neighbor   268 (1,0,0,3,0)
+	- Neighbor   780 (3,0,0,3,0)
+
+Node    13     (0,0,0,3,1) is connected to:
+	- Neighbor    77 (0,1,0,3,1)
+	- Neighbor   205 (0,3,0,3,1)
+	- Neighbor   269 (1,0,0,3,1)
+	- Neighbor   781 (3,0,0,3,1)
+
+Node    14     (0,0,0,3,2) is connected to:
+	- Neighbor    78 (0,1,0,3,2)
+	- Neighbor   206 (0,3,0,3,2)
+	- Neighbor   270 (1,0,0,3,2)
+	- Neighbor   782 (3,0,0,3,2)
+
+Node    15     (0,0,0,3,3) is connected to:
+	- Neighbor    79 (0,1,0,3,3)
+	- Neighbor   207 (0,3,0,3,3)
+	- Neighbor   271 (1,0,0,3,3)
+	- Neighbor   783 (3,0,0,3,3)
+
+Node    16     (0,0,1,0,0) is connected to:
+	- Neighbor    80 (0,1,1,0,0)
+	- Neighbor   208 (0,3,1,0,0)
+	- Neighbor   272 (1,0,1,0,0)
+	- Neighbor   784 (3,0,1,0,0)
+
+Node    17     (0,0,1,0,1) is connected to:
+	- Neighbor    81 (0,1,1,0,1)
+	- Neighbor   209 (0,3,1,0,1)
+	- Neighbor   273 (1,0,1,0,1)
+	- Neighbor   785 (3,0,1,0,1)
+
+Node    18     (0,0,1,0,2) is connected to:
+	- Neighbor    82 (0,1,1,0,2)
+	- Neighbor   210 (0,3,1,0,2)
+	- Neighbor   274 (1,0,1,0,2)
+	- Neighbor   786 (3,0,1,0,2)
+
+Node    19     (0,0,1,0,3) is connected to:
+	- Neighbor    83 (0,1,1,0,3)
+	- Neighbor   211 (0,3,1,0,3)
+	- Neighbor   275 (1,0,1,0,3)
+	- Neighbor   787 (3,0,1,0,3)
+
+Node    20     (0,0,1,1,0) is connected to:
+	- Neighbor    84 (0,1,1,1,0)
+	- Neighbor   212 (0,3,1,1,0)
+	- Neighbor   276 (1,0,1,1,0)
+	- Neighbor   788 (3,0,1,1,0)
+
+Node    21     (0,0,1,1,1) is connected to:
+	- Neighbor    85 (0,1,1,1,1)
+	- Neighbor   213 (0,3,1,1,1)
+	- Neighbor   277 (1,0,1,1,1)
+	- Neighbor   789 (3,0,1,1,1)
+
+Node    22     (0,0,1,1,2) is connected to:
+	- Neighbor    86 (0,1,1,1,2)
+	- Neighbor   214 (0,3,1,1,2)
+	- Neighbor   278 (1,0,1,1,2)
+	- Neighbor   790 (3,0,1,1,2)
+
+Node    23     (0,0,1,1,3) is connected to:
+	- Neighbor    87 (0,1,1,1,3)
+	- Neighbor   215 (0,3,1,1,3)
+	- Neighbor   279 (1,0,1,1,3)
+	- Neighbor   791 (3,0,1,1,3)
+
+Node    24     (0,0,1,2,0) is connected to:
+	- Neighbor    88 (0,1,1,2,0)
+	- Neighbor   216 (0,3,1,2,0)
+	- Neighbor   280 (1,0,1,2,0)
+	- Neighbor   792 (3,0,1,2,0)
+
+Node    25     (0,0,1,2,1) is connected to:
+	- Neighbor    89 (0,1,1,2,1)
+	- Neighbor   217 (0,3,1,2,1)
+	- Neighbor   281 (1,0,1,2,1)
+	- Neighbor   793 (3,0,1,2,1)
+
+Node    26     (0,0,1,2,2) is connected to:
+	- Neighbor    90 (0,1,1,2,2)
+	- Neighbor   218 (0,3,1,2,2)
+	- Neighbor   282 (1,0,1,2,2)
+	- Neighbor   794 (3,0,1,2,2)
+
+Node    27     (0,0,1,2,3) is connected to:
+	- Neighbor    91 (0,1,1,2,3)
+	- Neighbor   219 (0,3,1,2,3)
+	- Neighbor   283 (1,0,1,2,3)
+	- Neighbor   795 (3,0,1,2,3)
+
+Node    28     (0,0,1,3,0) is connected to:
+	- Neighbor    92 (0,1,1,3,0)
+	- Neighbor   220 (0,3,1,3,0)
+	- Neighbor   284 (1,0,1,3,0)
+	- Neighbor   796 (3,0,1,3,0)
+
+Node    29     (0,0,1,3,1) is connected to:
+	- Neighbor    93 (0,1,1,3,1)
+	- Neighbor   221 (0,3,1,3,1)
+	- Neighbor   285 (1,0,1,3,1)
+	- Neighbor   797 (3,0,1,3,1)
+
+Node    30     (0,0,1,3,2) is connected to:
+	- Neighbor    94 (0,1,1,3,2)
+	- Neighbor   222 (0,3,1,3,2)
+	- Neighbor   286 (1,0,1,3,2)
+	- Neighbor   798 (3,0,1,3,2)
+
+Node    31     (0,0,1,3,3) is connected to:
+	- Neighbor    95 (0,1,1,3,3)
+	- Neighbor   223 (0,3,1,3,3)
+	- Neighbor   287 (1,0,1,3,3)
+	- Neighbor   799 (3,0,1,3,3)
+
+Node    32     (0,0,2,0,0) is connected to:
+	- Neighbor    96 (0,1,2,0,0)
+	- Neighbor   224 (0,3,2,0,0)
+	- Neighbor   288 (1,0,2,0,0)
+	- Neighbor   800 (3,0,2,0,0)
+
+Node    33     (0,0,2,0,1) is connected to:
+	- Neighbor    97 (0,1,2,0,1)
+	- Neighbor   225 (0,3,2,0,1)
+	- Neighbor   289 (1,0,2,0,1)
+	- Neighbor   801 (3,0,2,0,1)
+
+Node    34     (0,0,2,0,2) is connected to:
+	- Neighbor    98 (0,1,2,0,2)
+	- Neighbor   226 (0,3,2,0,2)
+	- Neighbor   290 (1,0,2,0,2)
+	- Neighbor   802 (3,0,2,0,2)
+
+Node    35     (0,0,2,0,3) is connected to:
+	- Neighbor    99 (0,1,2,0,3)
+	- Neighbor   227 (0,3,2,0,3)
+	- Neighbor   291 (1,0,2,0,3)
+	- Neighbor   803 (3,0,2,0,3)
+
+Node    36     (0,0,2,1,0) is connected to:
+	- Neighbor   100 (0,1,2,1,0)
+	- Neighbor   228 (0,3,2,1,0)
+	- Neighbor   292 (1,0,2,1,0)
+	- Neighbor   804 (3,0,2,1,0)
+
+Node    37     (0,0,2,1,1) is connected to:
+	- Neighbor   101 (0,1,2,1,1)
+	- Neighbor   229 (0,3,2,1,1)
+	- Neighbor   293 (1,0,2,1,1)
+	- Neighbor   805 (3,0,2,1,1)
+
+Node    38     (0,0,2,1,2) is connected to:
+	- Neighbor   102 (0,1,2,1,2)
+	- Neighbor   230 (0,3,2,1,2)
+	- Neighbor   294 (1,0,2,1,2)
+	- Neighbor   806 (3,0,2,1,2)
+
+Node    39     (0,0,2,1,3) is connected to:
+	- Neighbor   103 (0,1,2,1,3)
+	- Neighbor   231 (0,3,2,1,3)
+	- Neighbor   295 (1,0,2,1,3)
+	- Neighbor   807 (3,0,2,1,3)
+
+Node    40     (0,0,2,2,0) is connected to:
+	- Neighbor   104 (0,1,2,2,0)
+	- Neighbor   232 (0,3,2,2,0)
+	- Neighbor   296 (1,0,2,2,0)
+	- Neighbor   808 (3,0,2,2,0)
+
+Node    41     (0,0,2,2,1) is connected to:
+	- Neighbor   105 (0,1,2,2,1)
+	- Neighbor   233 (0,3,2,2,1)
+	- Neighbor   297 (1,0,2,2,1)
+	- Neighbor   809 (3,0,2,2,1)
+
+Node    42     (0,0,2,2,2) is connected to:
+	- Neighbor   106 (0,1,2,2,2)
+	- Neighbor   234 (0,3,2,2,2)
+	- Neighbor   298 (1,0,2,2,2)
+	- Neighbor   810 (3,0,2,2,2)
+
+Node    43     (0,0,2,2,3) is connected to:
+	- Neighbor   107 (0,1,2,2,3)
+	- Neighbor   235 (0,3,2,2,3)
+	- Neighbor   299 (1,0,2,2,3)
+	- Neighbor   811 (3,0,2,2,3)
+
+Node    44     (0,0,2,3,0) is connected to:
+	- Neighbor   108 (0,1,2,3,0)
+	- Neighbor   236 (0,3,2,3,0)
+	- Neighbor   300 (1,0,2,3,0)
+	- Neighbor   812 (3,0,2,3,0)
+
+Node    45     (0,0,2,3,1) is connected to:
+	- Neighbor   109 (0,1,2,3,1)
+	- Neighbor   237 (0,3,2,3,1)
+	- Neighbor   301 (1,0,2,3,1)
+	- Neighbor   813 (3,0,2,3,1)
+
+Node    46     (0,0,2,3,2) is connected to:
+	- Neighbor   110 (0,1,2,3,2)
+	- Neighbor   238 (0,3,2,3,2)
+	- Neighbor   302 (1,0,2,3,2)
+	- Neighbor   814 (3,0,2,3,2)
+
+Node    47     (0,0,2,3,3) is connected to:
+	- Neighbor   111 (0,1,2,3,3)
+	- Neighbor   239 (0,3,2,3,3)
+	- Neighbor   303 (1,0,2,3,3)
+	- Neighbor   815 (3,0,2,3,3)
+
+Node    48     (0,0,3,0,0) is connected to:
+	- Neighbor   112 (0,1,3,0,0)
+	- Neighbor   240 (0,3,3,0,0)
+	- Neighbor   304 (1,0,3,0,0)
+	- Neighbor   816 (3,0,3,0,0)
+
+Node    49     (0,0,3,0,1) is connected to:
+	- Neighbor   113 (0,1,3,0,1)
+	- Neighbor   241 (0,3,3,0,1)
+	- Neighbor   305 (1,0,3,0,1)
+	- Neighbor   817 (3,0,3,0,1)
+
+Node    50     (0,0,3,0,2) is connected to:
+	- Neighbor   114 (0,1,3,0,2)
+	- Neighbor   242 (0,3,3,0,2)
+	- Neighbor   306 (1,0,3,0,2)
+	- Neighbor   818 (3,0,3,0,2)
+
+Node    51     (0,0,3,0,3) is connected to:
+	- Neighbor   115 (0,1,3,0,3)
+	- Neighbor   243 (0,3,3,0,3)
+	- Neighbor   307 (1,0,3,0,3)
+	- Neighbor   819 (3,0,3,0,3)
+
+Node    52     (0,0,3,1,0) is connected to:
+	- Neighbor   116 (0,1,3,1,0)
+	- Neighbor   244 (0,3,3,1,0)
+	- Neighbor   308 (1,0,3,1,0)
+	- Neighbor   820 (3,0,3,1,0)
+
+Node    53     (0,0,3,1,1) is connected to:
+	- Neighbor   117 (0,1,3,1,1)
+	- Neighbor   245 (0,3,3,1,1)
+	- Neighbor   309 (1,0,3,1,1)
+	- Neighbor   821 (3,0,3,1,1)
+
+Node    54     (0,0,3,1,2) is connected to:
+	- Neighbor   118 (0,1,3,1,2)
+	- Neighbor   246 (0,3,3,1,2)
+	- Neighbor   310 (1,0,3,1,2)
+	- Neighbor   822 (3,0,3,1,2)
+
+Node    55     (0,0,3,1,3) is connected to:
+	- Neighbor   119 (0,1,3,1,3)
+	- Neighbor   247 (0,3,3,1,3)
+	- Neighbor   311 (1,0,3,1,3)
+	- Neighbor   823 (3,0,3,1,3)
+
+Node    56     (0,0,3,2,0) is connected to:
+	- Neighbor   120 (0,1,3,2,0)
+	- Neighbor   248 (0,3,3,2,0)
+	- Neighbor   312 (1,0,3,2,0)
+	- Neighbor   824 (3,0,3,2,0)
+
+Node    57     (0,0,3,2,1) is connected to:
+	- Neighbor   121 (0,1,3,2,1)
+	- Neighbor   249 (0,3,3,2,1)
+	- Neighbor   313 (1,0,3,2,1)
+	- Neighbor   825 (3,0,3,2,1)
+
+Node    58     (0,0,3,2,2) is connected to:
+	- Neighbor   122 (0,1,3,2,2)
+	- Neighbor   250 (0,3,3,2,2)
+	- Neighbor   314 (1,0,3,2,2)
+	- Neighbor   826 (3,0,3,2,2)
+
+Node    59     (0,0,3,2,3) is connected to:
+	- Neighbor   123 (0,1,3,2,3)
+	- Neighbor   251 (0,3,3,2,3)
+	- Neighbor   315 (1,0,3,2,3)
+	- Neighbor   827 (3,0,3,2,3)
+
+Node    60     (0,0,3,3,0) is connected to:
+	- Neighbor   124 (0,1,3,3,0)
+	- Neighbor   252 (0,3,3,3,0)
+	- Neighbor   316 (1,0,3,3,0)
+	- Neighbor   828 (3,0,3,3,0)
+
+Node    61     (0,0,3,3,1) is connected to:
+	- Neighbor   125 (0,1,3,3,1)
+	- Neighbor   253 (0,3,3,3,1)
+	- Neighbor   317 (1,0,3,3,1)
+	- Neighbor   829 (3,0,3,3,1)
+
+Node    62     (0,0,3,3,2) is connected to:
+	- Neighbor   126 (0,1,3,3,2)
+	- Neighbor   254 (0,3,3,3,2)
+	- Neighbor   318 (1,0,3,3,2)
+	- Neighbor   830 (3,0,3,3,2)
+
+Node    63     (0,0,3,3,3) is connected to:
+	- Neighbor   127 (0,1,3,3,3)
+	- Neighbor   255 (0,3,3,3,3)
+	- Neighbor   319 (1,0,3,3,3)
+	- Neighbor   831 (3,0,3,3,3)
+
+Node    64     (0,1,0,0,0) is connected to:
+	- Neighbor   128 (0,2,0,0,0)
+	- Neighbor     0 (0,0,0,0,0)
+	- Neighbor   320 (1,1,0,0,0)
+	- Neighbor   832 (3,1,0,0,0)
+
+Node    65     (0,1,0,0,1) is connected to:
+	- Neighbor   129 (0,2,0,0,1)
+	- Neighbor     1 (0,0,0,0,1)
+	- Neighbor   321 (1,1,0,0,1)
+	- Neighbor   833 (3,1,0,0,1)
+
+Node    66     (0,1,0,0,2) is connected to:
+	- Neighbor   130 (0,2,0,0,2)
+	- Neighbor     2 (0,0,0,0,2)
+	- Neighbor   322 (1,1,0,0,2)
+	- Neighbor   834 (3,1,0,0,2)
+
+Node    67     (0,1,0,0,3) is connected to:
+	- Neighbor   131 (0,2,0,0,3)
+	- Neighbor     3 (0,0,0,0,3)
+	- Neighbor   323 (1,1,0,0,3)
+	- Neighbor   835 (3,1,0,0,3)
+
+Node    68     (0,1,0,1,0) is connected to:
+	- Neighbor   132 (0,2,0,1,0)
+	- Neighbor     4 (0,0,0,1,0)
+	- Neighbor   324 (1,1,0,1,0)
+	- Neighbor   836 (3,1,0,1,0)
+
+Node    69     (0,1,0,1,1) is connected to:
+	- Neighbor   133 (0,2,0,1,1)
+	- Neighbor     5 (0,0,0,1,1)
+	- Neighbor   325 (1,1,0,1,1)
+	- Neighbor   837 (3,1,0,1,1)
+
+Node    70     (0,1,0,1,2) is connected to:
+	- Neighbor   134 (0,2,0,1,2)
+	- Neighbor     6 (0,0,0,1,2)
+	- Neighbor   326 (1,1,0,1,2)
+	- Neighbor   838 (3,1,0,1,2)
+
+Node    71     (0,1,0,1,3) is connected to:
+	- Neighbor   135 (0,2,0,1,3)
+	- Neighbor     7 (0,0,0,1,3)
+	- Neighbor   327 (1,1,0,1,3)
+	- Neighbor   839 (3,1,0,1,3)
+
+Node    72     (0,1,0,2,0) is connected to:
+	- Neighbor   136 (0,2,0,2,0)
+	- Neighbor     8 (0,0,0,2,0)
+	- Neighbor   328 (1,1,0,2,0)
+	- Neighbor   840 (3,1,0,2,0)
+
+Node    73     (0,1,0,2,1) is connected to:
+	- Neighbor   137 (0,2,0,2,1)
+	- Neighbor     9 (0,0,0,2,1)
+	- Neighbor   329 (1,1,0,2,1)
+	- Neighbor   841 (3,1,0,2,1)
+
+Node    74     (0,1,0,2,2) is connected to:
+	- Neighbor   138 (0,2,0,2,2)
+	- Neighbor    10 (0,0,0,2,2)
+	- Neighbor   330 (1,1,0,2,2)
+	- Neighbor   842 (3,1,0,2,2)
+
+Node    75     (0,1,0,2,3) is connected to:
+	- Neighbor   139 (0,2,0,2,3)
+	- Neighbor    11 (0,0,0,2,3)
+	- Neighbor   331 (1,1,0,2,3)
+	- Neighbor   843 (3,1,0,2,3)
+
+Node    76     (0,1,0,3,0) is connected to:
+	- Neighbor   140 (0,2,0,3,0)
+	- Neighbor    12 (0,0,0,3,0)
+	- Neighbor   332 (1,1,0,3,0)
+	- Neighbor   844 (3,1,0,3,0)
+
+Node    77     (0,1,0,3,1) is connected to:
+	- Neighbor   141 (0,2,0,3,1)
+	- Neighbor    13 (0,0,0,3,1)
+	- Neighbor   333 (1,1,0,3,1)
+	- Neighbor   845 (3,1,0,3,1)
+
+Node    78     (0,1,0,3,2) is connected to:
+	- Neighbor   142 (0,2,0,3,2)
+	- Neighbor    14 (0,0,0,3,2)
+	- Neighbor   334 (1,1,0,3,2)
+	- Neighbor   846 (3,1,0,3,2)
+
+Node    79     (0,1,0,3,3) is connected to:
+	- Neighbor   143 (0,2,0,3,3)
+	- Neighbor    15 (0,0,0,3,3)
+	- Neighbor   335 (1,1,0,3,3)
+	- Neighbor   847 (3,1,0,3,3)
+
+Node    80     (0,1,1,0,0) is connected to:
+	- Neighbor   144 (0,2,1,0,0)
+	- Neighbor    16 (0,0,1,0,0)
+	- Neighbor   336 (1,1,1,0,0)
+	- Neighbor   848 (3,1,1,0,0)
+
+Node    81     (0,1,1,0,1) is connected to:
+	- Neighbor   145 (0,2,1,0,1)
+	- Neighbor    17 (0,0,1,0,1)
+	- Neighbor   337 (1,1,1,0,1)
+	- Neighbor   849 (3,1,1,0,1)
+
+Node    82     (0,1,1,0,2) is connected to:
+	- Neighbor   146 (0,2,1,0,2)
+	- Neighbor    18 (0,0,1,0,2)
+	- Neighbor   338 (1,1,1,0,2)
+	- Neighbor   850 (3,1,1,0,2)
+
+Node    83     (0,1,1,0,3) is connected to:
+	- Neighbor   147 (0,2,1,0,3)
+	- Neighbor    19 (0,0,1,0,3)
+	- Neighbor   339 (1,1,1,0,3)
+	- Neighbor   851 (3,1,1,0,3)
+
+Node    84     (0,1,1,1,0) is connected to:
+	- Neighbor   148 (0,2,1,1,0)
+	- Neighbor    20 (0,0,1,1,0)
+	- Neighbor   340 (1,1,1,1,0)
+	- Neighbor   852 (3,1,1,1,0)
+
+Node    85     (0,1,1,1,1) is connected to:
+	- Neighbor   149 (0,2,1,1,1)
+	- Neighbor    21 (0,0,1,1,1)
+	- Neighbor   341 (1,1,1,1,1)
+	- Neighbor   853 (3,1,1,1,1)
+
+Node    86     (0,1,1,1,2) is connected to:
+	- Neighbor   150 (0,2,1,1,2)
+	- Neighbor    22 (0,0,1,1,2)
+	- Neighbor   342 (1,1,1,1,2)
+	- Neighbor   854 (3,1,1,1,2)
+
+Node    87     (0,1,1,1,3) is connected to:
+	- Neighbor   151 (0,2,1,1,3)
+	- Neighbor    23 (0,0,1,1,3)
+	- Neighbor   343 (1,1,1,1,3)
+	- Neighbor   855 (3,1,1,1,3)
+
+Node    88     (0,1,1,2,0) is connected to:
+	- Neighbor   152 (0,2,1,2,0)
+	- Neighbor    24 (0,0,1,2,0)
+	- Neighbor   344 (1,1,1,2,0)
+	- Neighbor   856 (3,1,1,2,0)
+
+Node    89     (0,1,1,2,1) is connected to:
+	- Neighbor   153 (0,2,1,2,1)
+	- Neighbor    25 (0,0,1,2,1)
+	- Neighbor   345 (1,1,1,2,1)
+	- Neighbor   857 (3,1,1,2,1)
+
+Node    90     (0,1,1,2,2) is connected to:
+	- Neighbor   154 (0,2,1,2,2)
+	- Neighbor    26 (0,0,1,2,2)
+	- Neighbor   346 (1,1,1,2,2)
+	- Neighbor   858 (3,1,1,2,2)
+
+Node    91     (0,1,1,2,3) is connected to:
+	- Neighbor   155 (0,2,1,2,3)
+	- Neighbor    27 (0,0,1,2,3)
+	- Neighbor   347 (1,1,1,2,3)
+	- Neighbor   859 (3,1,1,2,3)
+
+Node    92     (0,1,1,3,0) is connected to:
+	- Neighbor   156 (0,2,1,3,0)
+	- Neighbor    28 (0,0,1,3,0)
+	- Neighbor   348 (1,1,1,3,0)
+	- Neighbor   860 (3,1,1,3,0)
+
+Node    93     (0,1,1,3,1) is connected to:
+	- Neighbor   157 (0,2,1,3,1)
+	- Neighbor    29 (0,0,1,3,1)
+	- Neighbor   349 (1,1,1,3,1)
+	- Neighbor   861 (3,1,1,3,1)
+
+Node    94     (0,1,1,3,2) is connected to:
+	- Neighbor   158 (0,2,1,3,2)
+	- Neighbor    30 (0,0,1,3,2)
+	- Neighbor   350 (1,1,1,3,2)
+	- Neighbor   862 (3,1,1,3,2)
+
+Node    95     (0,1,1,3,3) is connected to:
+	- Neighbor   159 (0,2,1,3,3)
+	- Neighbor    31 (0,0,1,3,3)
+	- Neighbor   351 (1,1,1,3,3)
+	- Neighbor   863 (3,1,1,3,3)
+
+Node    96     (0,1,2,0,0) is connected to:
+	- Neighbor   160 (0,2,2,0,0)
+	- Neighbor    32 (0,0,2,0,0)
+	- Neighbor   352 (1,1,2,0,0)
+	- Neighbor   864 (3,1,2,0,0)
+
+Node    97     (0,1,2,0,1) is connected to:
+	- Neighbor   161 (0,2,2,0,1)
+	- Neighbor    33 (0,0,2,0,1)
+	- Neighbor   353 (1,1,2,0,1)
+	- Neighbor   865 (3,1,2,0,1)
+
+Node    98     (0,1,2,0,2) is connected to:
+	- Neighbor   162 (0,2,2,0,2)
+	- Neighbor    34 (0,0,2,0,2)
+	- Neighbor   354 (1,1,2,0,2)
+	- Neighbor   866 (3,1,2,0,2)
+
+Node    99     (0,1,2,0,3) is connected to:
+	- Neighbor   163 (0,2,2,0,3)
+	- Neighbor    35 (0,0,2,0,3)
+	- Neighbor   355 (1,1,2,0,3)
+	- Neighbor   867 (3,1,2,0,3)
+
+Node   100     (0,1,2,1,0) is connected to:
+	- Neighbor   164 (0,2,2,1,0)
+	- Neighbor    36 (0,0,2,1,0)
+	- Neighbor   356 (1,1,2,1,0)
+	- Neighbor   868 (3,1,2,1,0)
+
+Node   101     (0,1,2,1,1) is connected to:
+	- Neighbor   165 (0,2,2,1,1)
+	- Neighbor    37 (0,0,2,1,1)
+	- Neighbor   357 (1,1,2,1,1)
+	- Neighbor   869 (3,1,2,1,1)
+
+Node   102     (0,1,2,1,2) is connected to:
+	- Neighbor   166 (0,2,2,1,2)
+	- Neighbor    38 (0,0,2,1,2)
+	- Neighbor   358 (1,1,2,1,2)
+	- Neighbor   870 (3,1,2,1,2)
+
+Node   103     (0,1,2,1,3) is connected to:
+	- Neighbor   167 (0,2,2,1,3)
+	- Neighbor    39 (0,0,2,1,3)
+	- Neighbor   359 (1,1,2,1,3)
+	- Neighbor   871 (3,1,2,1,3)
+
+Node   104     (0,1,2,2,0) is connected to:
+	- Neighbor   168 (0,2,2,2,0)
+	- Neighbor    40 (0,0,2,2,0)
+	- Neighbor   360 (1,1,2,2,0)
+	- Neighbor   872 (3,1,2,2,0)
+
+Node   105     (0,1,2,2,1) is connected to:
+	- Neighbor   169 (0,2,2,2,1)
+	- Neighbor    41 (0,0,2,2,1)
+	- Neighbor   361 (1,1,2,2,1)
+	- Neighbor   873 (3,1,2,2,1)
+
+Node   106     (0,1,2,2,2) is connected to:
+	- Neighbor   170 (0,2,2,2,2)
+	- Neighbor    42 (0,0,2,2,2)
+	- Neighbor   362 (1,1,2,2,2)
+	- Neighbor   874 (3,1,2,2,2)
+
+Node   107     (0,1,2,2,3) is connected to:
+	- Neighbor   171 (0,2,2,2,3)
+	- Neighbor    43 (0,0,2,2,3)
+	- Neighbor   363 (1,1,2,2,3)
+	- Neighbor   875 (3,1,2,2,3)
+
+Node   108     (0,1,2,3,0) is connected to:
+	- Neighbor   172 (0,2,2,3,0)
+	- Neighbor    44 (0,0,2,3,0)
+	- Neighbor   364 (1,1,2,3,0)
+	- Neighbor   876 (3,1,2,3,0)
+
+Node   109     (0,1,2,3,1) is connected to:
+	- Neighbor   173 (0,2,2,3,1)
+	- Neighbor    45 (0,0,2,3,1)
+	- Neighbor   365 (1,1,2,3,1)
+	- Neighbor   877 (3,1,2,3,1)
+
+Node   110     (0,1,2,3,2) is connected to:
+	- Neighbor   174 (0,2,2,3,2)
+	- Neighbor    46 (0,0,2,3,2)
+	- Neighbor   366 (1,1,2,3,2)
+	- Neighbor   878 (3,1,2,3,2)
+
+Node   111     (0,1,2,3,3) is connected to:
+	- Neighbor   175 (0,2,2,3,3)
+	- Neighbor    47 (0,0,2,3,3)
+	- Neighbor   367 (1,1,2,3,3)
+	- Neighbor   879 (3,1,2,3,3)
+
+Node   112     (0,1,3,0,0) is connected to:
+	- Neighbor   176 (0,2,3,0,0)
+	- Neighbor    48 (0,0,3,0,0)
+	- Neighbor   368 (1,1,3,0,0)
+	- Neighbor   880 (3,1,3,0,0)
+
+Node   113     (0,1,3,0,1) is connected to:
+	- Neighbor   177 (0,2,3,0,1)
+	- Neighbor    49 (0,0,3,0,1)
+	- Neighbor   369 (1,1,3,0,1)
+	- Neighbor   881 (3,1,3,0,1)
+
+Node   114     (0,1,3,0,2) is connected to:
+	- Neighbor   178 (0,2,3,0,2)
+	- Neighbor    50 (0,0,3,0,2)
+	- Neighbor   370 (1,1,3,0,2)
+	- Neighbor   882 (3,1,3,0,2)
+
+Node   115     (0,1,3,0,3) is connected to:
+	- Neighbor   179 (0,2,3,0,3)
+	- Neighbor    51 (0,0,3,0,3)
+	- Neighbor   371 (1,1,3,0,3)
+	- Neighbor   883 (3,1,3,0,3)
+
+Node   116     (0,1,3,1,0) is connected to:
+	- Neighbor   180 (0,2,3,1,0)
+	- Neighbor    52 (0,0,3,1,0)
+	- Neighbor   372 (1,1,3,1,0)
+	- Neighbor   884 (3,1,3,1,0)
+
+Node   117     (0,1,3,1,1) is connected to:
+	- Neighbor   181 (0,2,3,1,1)
+	- Neighbor    53 (0,0,3,1,1)
+	- Neighbor   373 (1,1,3,1,1)
+	- Neighbor   885 (3,1,3,1,1)
+
+Node   118     (0,1,3,1,2) is connected to:
+	- Neighbor   182 (0,2,3,1,2)
+	- Neighbor    54 (0,0,3,1,2)
+	- Neighbor   374 (1,1,3,1,2)
+	- Neighbor   886 (3,1,3,1,2)
+
+Node   119     (0,1,3,1,3) is connected to:
+	- Neighbor   183 (0,2,3,1,3)
+	- Neighbor    55 (0,0,3,1,3)
+	- Neighbor   375 (1,1,3,1,3)
+	- Neighbor   887 (3,1,3,1,3)
+
+Node   120     (0,1,3,2,0) is connected to:
+	- Neighbor   184 (0,2,3,2,0)
+	- Neighbor    56 (0,0,3,2,0)
+	- Neighbor   376 (1,1,3,2,0)
+	- Neighbor   888 (3,1,3,2,0)
+
+Node   121     (0,1,3,2,1) is connected to:
+	- Neighbor   185 (0,2,3,2,1)
+	- Neighbor    57 (0,0,3,2,1)
+	- Neighbor   377 (1,1,3,2,1)
+	- Neighbor   889 (3,1,3,2,1)
+
+Node   122     (0,1,3,2,2) is connected to:
+	- Neighbor   186 (0,2,3,2,2)
+	- Neighbor    58 (0,0,3,2,2)
+	- Neighbor   378 (1,1,3,2,2)
+	- Neighbor   890 (3,1,3,2,2)
+
+Node   123     (0,1,3,2,3) is connected to:
+	- Neighbor   187 (0,2,3,2,3)
+	- Neighbor    59 (0,0,3,2,3)
+	- Neighbor   379 (1,1,3,2,3)
+	- Neighbor   891 (3,1,3,2,3)
+
+Node   124     (0,1,3,3,0) is connected to:
+	- Neighbor   188 (0,2,3,3,0)
+	- Neighbor    60 (0,0,3,3,0)
+	- Neighbor   380 (1,1,3,3,0)
+	- Neighbor   892 (3,1,3,3,0)
+
+Node   125     (0,1,3,3,1) is connected to:
+	- Neighbor   189 (0,2,3,3,1)
+	- Neighbor    61 (0,0,3,3,1)
+	- Neighbor   381 (1,1,3,3,1)
+	- Neighbor   893 (3,1,3,3,1)
+
+Node   126     (0,1,3,3,2) is connected to:
+	- Neighbor   190 (0,2,3,3,2)
+	- Neighbor    62 (0,0,3,3,2)
+	- Neighbor   382 (1,1,3,3,2)
+	- Neighbor   894 (3,1,3,3,2)
+
+Node   127     (0,1,3,3,3) is connected to:
+	- Neighbor   191 (0,2,3,3,3)
+	- Neighbor    63 (0,0,3,3,3)
+	- Neighbor   383 (1,1,3,3,3)
+	- Neighbor   895 (3,1,3,3,3)
+
+Node   128     (0,2,0,0,0) is connected to:
+	- Neighbor   192 (0,3,0,0,0)
+	- Neighbor    64 (0,1,0,0,0)
+	- Neighbor   384 (1,2,0,0,0)
+	- Neighbor   896 (3,2,0,0,0)
+
+Node   129     (0,2,0,0,1) is connected to:
+	- Neighbor   193 (0,3,0,0,1)
+	- Neighbor    65 (0,1,0,0,1)
+	- Neighbor   385 (1,2,0,0,1)
+	- Neighbor   897 (3,2,0,0,1)
+
+Node   130     (0,2,0,0,2) is connected to:
+	- Neighbor   194 (0,3,0,0,2)
+	- Neighbor    66 (0,1,0,0,2)
+	- Neighbor   386 (1,2,0,0,2)
+	- Neighbor   898 (3,2,0,0,2)
+
+Node   131     (0,2,0,0,3) is connected to:
+	- Neighbor   195 (0,3,0,0,3)
+	- Neighbor    67 (0,1,0,0,3)
+	- Neighbor   387 (1,2,0,0,3)
+	- Neighbor   899 (3,2,0,0,3)
+
+Node   132     (0,2,0,1,0) is connected to:
+	- Neighbor   196 (0,3,0,1,0)
+	- Neighbor    68 (0,1,0,1,0)
+	- Neighbor   388 (1,2,0,1,0)
+	- Neighbor   900 (3,2,0,1,0)
+
+Node   133     (0,2,0,1,1) is connected to:
+	- Neighbor   197 (0,3,0,1,1)
+	- Neighbor    69 (0,1,0,1,1)
+	- Neighbor   389 (1,2,0,1,1)
+	- Neighbor   901 (3,2,0,1,1)
+
+Node   134     (0,2,0,1,2) is connected to:
+	- Neighbor   198 (0,3,0,1,2)
+	- Neighbor    70 (0,1,0,1,2)
+	- Neighbor   390 (1,2,0,1,2)
+	- Neighbor   902 (3,2,0,1,2)
+
+Node   135     (0,2,0,1,3) is connected to:
+	- Neighbor   199 (0,3,0,1,3)
+	- Neighbor    71 (0,1,0,1,3)
+	- Neighbor   391 (1,2,0,1,3)
+	- Neighbor   903 (3,2,0,1,3)
+
+Node   136     (0,2,0,2,0) is connected to:
+	- Neighbor   200 (0,3,0,2,0)
+	- Neighbor    72 (0,1,0,2,0)
+	- Neighbor   392 (1,2,0,2,0)
+	- Neighbor   904 (3,2,0,2,0)
+
+Node   137     (0,2,0,2,1) is connected to:
+	- Neighbor   201 (0,3,0,2,1)
+	- Neighbor    73 (0,1,0,2,1)
+	- Neighbor   393 (1,2,0,2,1)
+	- Neighbor   905 (3,2,0,2,1)
+
+Node   138     (0,2,0,2,2) is connected to:
+	- Neighbor   202 (0,3,0,2,2)
+	- Neighbor    74 (0,1,0,2,2)
+	- Neighbor   394 (1,2,0,2,2)
+	- Neighbor   906 (3,2,0,2,2)
+
+Node   139     (0,2,0,2,3) is connected to:
+	- Neighbor   203 (0,3,0,2,3)
+	- Neighbor    75 (0,1,0,2,3)
+	- Neighbor   395 (1,2,0,2,3)
+	- Neighbor   907 (3,2,0,2,3)
+
+Node   140     (0,2,0,3,0) is connected to:
+	- Neighbor   204 (0,3,0,3,0)
+	- Neighbor    76 (0,1,0,3,0)
+	- Neighbor   396 (1,2,0,3,0)
+	- Neighbor   908 (3,2,0,3,0)
+
+Node   141     (0,2,0,3,1) is connected to:
+	- Neighbor   205 (0,3,0,3,1)
+	- Neighbor    77 (0,1,0,3,1)
+	- Neighbor   397 (1,2,0,3,1)
+	- Neighbor   909 (3,2,0,3,1)
+
+Node   142     (0,2,0,3,2) is connected to:
+	- Neighbor   206 (0,3,0,3,2)
+	- Neighbor    78 (0,1,0,3,2)
+	- Neighbor   398 (1,2,0,3,2)
+	- Neighbor   910 (3,2,0,3,2)
+
+Node   143     (0,2,0,3,3) is connected to:
+	- Neighbor   207 (0,3,0,3,3)
+	- Neighbor    79 (0,1,0,3,3)
+	- Neighbor   399 (1,2,0,3,3)
+	- Neighbor   911 (3,2,0,3,3)
+
+Node   144     (0,2,1,0,0) is connected to:
+	- Neighbor   208 (0,3,1,0,0)
+	- Neighbor    80 (0,1,1,0,0)
+	- Neighbor   400 (1,2,1,0,0)
+	- Neighbor   912 (3,2,1,0,0)
+
+Node   145     (0,2,1,0,1) is connected to:
+	- Neighbor   209 (0,3,1,0,1)
+	- Neighbor    81 (0,1,1,0,1)
+	- Neighbor   401 (1,2,1,0,1)
+	- Neighbor   913 (3,2,1,0,1)
+
+Node   146     (0,2,1,0,2) is connected to:
+	- Neighbor   210 (0,3,1,0,2)
+	- Neighbor    82 (0,1,1,0,2)
+	- Neighbor   402 (1,2,1,0,2)
+	- Neighbor   914 (3,2,1,0,2)
+
+Node   147     (0,2,1,0,3) is connected to:
+	- Neighbor   211 (0,3,1,0,3)
+	- Neighbor    83 (0,1,1,0,3)
+	- Neighbor   403 (1,2,1,0,3)
+	- Neighbor   915 (3,2,1,0,3)
+
+Node   148     (0,2,1,1,0) is connected to:
+	- Neighbor   212 (0,3,1,1,0)
+	- Neighbor    84 (0,1,1,1,0)
+	- Neighbor   404 (1,2,1,1,0)
+	- Neighbor   916 (3,2,1,1,0)
+
+Node   149     (0,2,1,1,1) is connected to:
+	- Neighbor   213 (0,3,1,1,1)
+	- Neighbor    85 (0,1,1,1,1)
+	- Neighbor   405 (1,2,1,1,1)
+	- Neighbor   917 (3,2,1,1,1)
+
+Node   150     (0,2,1,1,2) is connected to:
+	- Neighbor   214 (0,3,1,1,2)
+	- Neighbor    86 (0,1,1,1,2)
+	- Neighbor   406 (1,2,1,1,2)
+	- Neighbor   918 (3,2,1,1,2)
+
+Node   151     (0,2,1,1,3) is connected to:
+	- Neighbor   215 (0,3,1,1,3)
+	- Neighbor    87 (0,1,1,1,3)
+	- Neighbor   407 (1,2,1,1,3)
+	- Neighbor   919 (3,2,1,1,3)
+
+Node   152     (0,2,1,2,0) is connected to:
+	- Neighbor   216 (0,3,1,2,0)
+	- Neighbor    88 (0,1,1,2,0)
+	- Neighbor   408 (1,2,1,2,0)
+	- Neighbor   920 (3,2,1,2,0)
+
+Node   153     (0,2,1,2,1) is connected to:
+	- Neighbor   217 (0,3,1,2,1)
+	- Neighbor    89 (0,1,1,2,1)
+	- Neighbor   409 (1,2,1,2,1)
+	- Neighbor   921 (3,2,1,2,1)
+
+Node   154     (0,2,1,2,2) is connected to:
+	- Neighbor   218 (0,3,1,2,2)
+	- Neighbor    90 (0,1,1,2,2)
+	- Neighbor   410 (1,2,1,2,2)
+	- Neighbor   922 (3,2,1,2,2)
+
+Node   155     (0,2,1,2,3) is connected to:
+	- Neighbor   219 (0,3,1,2,3)
+	- Neighbor    91 (0,1,1,2,3)
+	- Neighbor   411 (1,2,1,2,3)
+	- Neighbor   923 (3,2,1,2,3)
+
+Node   156     (0,2,1,3,0) is connected to:
+	- Neighbor   220 (0,3,1,3,0)
+	- Neighbor    92 (0,1,1,3,0)
+	- Neighbor   412 (1,2,1,3,0)
+	- Neighbor   924 (3,2,1,3,0)
+
+Node   157     (0,2,1,3,1) is connected to:
+	- Neighbor   221 (0,3,1,3,1)
+	- Neighbor    93 (0,1,1,3,1)
+	- Neighbor   413 (1,2,1,3,1)
+	- Neighbor   925 (3,2,1,3,1)
+
+Node   158     (0,2,1,3,2) is connected to:
+	- Neighbor   222 (0,3,1,3,2)
+	- Neighbor    94 (0,1,1,3,2)
+	- Neighbor   414 (1,2,1,3,2)
+	- Neighbor   926 (3,2,1,3,2)
+
+Node   159     (0,2,1,3,3) is connected to:
+	- Neighbor   223 (0,3,1,3,3)
+	- Neighbor    95 (0,1,1,3,3)
+	- Neighbor   415 (1,2,1,3,3)
+	- Neighbor   927 (3,2,1,3,3)
+
+Node   160     (0,2,2,0,0) is connected to:
+	- Neighbor   224 (0,3,2,0,0)
+	- Neighbor    96 (0,1,2,0,0)
+	- Neighbor   416 (1,2,2,0,0)
+	- Neighbor   928 (3,2,2,0,0)
+
+Node   161     (0,2,2,0,1) is connected to:
+	- Neighbor   225 (0,3,2,0,1)
+	- Neighbor    97 (0,1,2,0,1)
+	- Neighbor   417 (1,2,2,0,1)
+	- Neighbor   929 (3,2,2,0,1)
+
+Node   162     (0,2,2,0,2) is connected to:
+	- Neighbor   226 (0,3,2,0,2)
+	- Neighbor    98 (0,1,2,0,2)
+	- Neighbor   418 (1,2,2,0,2)
+	- Neighbor   930 (3,2,2,0,2)
+
+Node   163     (0,2,2,0,3) is connected to:
+	- Neighbor   227 (0,3,2,0,3)
+	- Neighbor    99 (0,1,2,0,3)
+	- Neighbor   419 (1,2,2,0,3)
+	- Neighbor   931 (3,2,2,0,3)
+
+Node   164     (0,2,2,1,0) is connected to:
+	- Neighbor   228 (0,3,2,1,0)
+	- Neighbor   100 (0,1,2,1,0)
+	- Neighbor   420 (1,2,2,1,0)
+	- Neighbor   932 (3,2,2,1,0)
+
+Node   165     (0,2,2,1,1) is connected to:
+	- Neighbor   229 (0,3,2,1,1)
+	- Neighbor   101 (0,1,2,1,1)
+	- Neighbor   421 (1,2,2,1,1)
+	- Neighbor   933 (3,2,2,1,1)
+
+Node   166     (0,2,2,1,2) is connected to:
+	- Neighbor   230 (0,3,2,1,2)
+	- Neighbor   102 (0,1,2,1,2)
+	- Neighbor   422 (1,2,2,1,2)
+	- Neighbor   934 (3,2,2,1,2)
+
+Node   167     (0,2,2,1,3) is connected to:
+	- Neighbor   231 (0,3,2,1,3)
+	- Neighbor   103 (0,1,2,1,3)
+	- Neighbor   423 (1,2,2,1,3)
+	- Neighbor   935 (3,2,2,1,3)
+
+Node   168     (0,2,2,2,0) is connected to:
+	- Neighbor   232 (0,3,2,2,0)
+	- Neighbor   104 (0,1,2,2,0)
+	- Neighbor   424 (1,2,2,2,0)
+	- Neighbor   936 (3,2,2,2,0)
+
+Node   169     (0,2,2,2,1) is connected to:
+	- Neighbor   233 (0,3,2,2,1)
+	- Neighbor   105 (0,1,2,2,1)
+	- Neighbor   425 (1,2,2,2,1)
+	- Neighbor   937 (3,2,2,2,1)
+
+Node   170     (0,2,2,2,2) is connected to:
+	- Neighbor   234 (0,3,2,2,2)
+	- Neighbor   106 (0,1,2,2,2)
+	- Neighbor   426 (1,2,2,2,2)
+	- Neighbor   938 (3,2,2,2,2)
+
+Node   171     (0,2,2,2,3) is connected to:
+	- Neighbor   235 (0,3,2,2,3)
+	- Neighbor   107 (0,1,2,2,3)
+	- Neighbor   427 (1,2,2,2,3)
+	- Neighbor   939 (3,2,2,2,3)
+
+Node   172     (0,2,2,3,0) is connected to:
+	- Neighbor   236 (0,3,2,3,0)
+	- Neighbor   108 (0,1,2,3,0)
+	- Neighbor   428 (1,2,2,3,0)
+	- Neighbor   940 (3,2,2,3,0)
+
+Node   173     (0,2,2,3,1) is connected to:
+	- Neighbor   237 (0,3,2,3,1)
+	- Neighbor   109 (0,1,2,3,1)
+	- Neighbor   429 (1,2,2,3,1)
+	- Neighbor   941 (3,2,2,3,1)
+
+Node   174     (0,2,2,3,2) is connected to:
+	- Neighbor   238 (0,3,2,3,2)
+	- Neighbor   110 (0,1,2,3,2)
+	- Neighbor   430 (1,2,2,3,2)
+	- Neighbor   942 (3,2,2,3,2)
+
+Node   175     (0,2,2,3,3) is connected to:
+	- Neighbor   239 (0,3,2,3,3)
+	- Neighbor   111 (0,1,2,3,3)
+	- Neighbor   431 (1,2,2,3,3)
+	- Neighbor   943 (3,2,2,3,3)
+
+Node   176     (0,2,3,0,0) is connected to:
+	- Neighbor   240 (0,3,3,0,0)
+	- Neighbor   112 (0,1,3,0,0)
+	- Neighbor   432 (1,2,3,0,0)
+	- Neighbor   944 (3,2,3,0,0)
+
+Node   177     (0,2,3,0,1) is connected to:
+	- Neighbor   241 (0,3,3,0,1)
+	- Neighbor   113 (0,1,3,0,1)
+	- Neighbor   433 (1,2,3,0,1)
+	- Neighbor   945 (3,2,3,0,1)
+
+Node   178     (0,2,3,0,2) is connected to:
+	- Neighbor   242 (0,3,3,0,2)
+	- Neighbor   114 (0,1,3,0,2)
+	- Neighbor   434 (1,2,3,0,2)
+	- Neighbor   946 (3,2,3,0,2)
+
+Node   179     (0,2,3,0,3) is connected to:
+	- Neighbor   243 (0,3,3,0,3)
+	- Neighbor   115 (0,1,3,0,3)
+	- Neighbor   435 (1,2,3,0,3)
+	- Neighbor   947 (3,2,3,0,3)
+
+Node   180     (0,2,3,1,0) is connected to:
+	- Neighbor   244 (0,3,3,1,0)
+	- Neighbor   116 (0,1,3,1,0)
+	- Neighbor   436 (1,2,3,1,0)
+	- Neighbor   948 (3,2,3,1,0)
+
+Node   181     (0,2,3,1,1) is connected to:
+	- Neighbor   245 (0,3,3,1,1)
+	- Neighbor   117 (0,1,3,1,1)
+	- Neighbor   437 (1,2,3,1,1)
+	- Neighbor   949 (3,2,3,1,1)
+
+Node   182     (0,2,3,1,2) is connected to:
+	- Neighbor   246 (0,3,3,1,2)
+	- Neighbor   118 (0,1,3,1,2)
+	- Neighbor   438 (1,2,3,1,2)
+	- Neighbor   950 (3,2,3,1,2)
+
+Node   183     (0,2,3,1,3) is connected to:
+	- Neighbor   247 (0,3,3,1,3)
+	- Neighbor   119 (0,1,3,1,3)
+	- Neighbor   439 (1,2,3,1,3)
+	- Neighbor   951 (3,2,3,1,3)
+
+Node   184     (0,2,3,2,0) is connected to:
+	- Neighbor   248 (0,3,3,2,0)
+	- Neighbor   120 (0,1,3,2,0)
+	- Neighbor   440 (1,2,3,2,0)
+	- Neighbor   952 (3,2,3,2,0)
+
+Node   185     (0,2,3,2,1) is connected to:
+	- Neighbor   249 (0,3,3,2,1)
+	- Neighbor   121 (0,1,3,2,1)
+	- Neighbor   441 (1,2,3,2,1)
+	- Neighbor   953 (3,2,3,2,1)
+
+Node   186     (0,2,3,2,2) is connected to:
+	- Neighbor   250 (0,3,3,2,2)
+	- Neighbor   122 (0,1,3,2,2)
+	- Neighbor   442 (1,2,3,2,2)
+	- Neighbor   954 (3,2,3,2,2)
+
+Node   187     (0,2,3,2,3) is connected to:
+	- Neighbor   251 (0,3,3,2,3)
+	- Neighbor   123 (0,1,3,2,3)
+	- Neighbor   443 (1,2,3,2,3)
+	- Neighbor   955 (3,2,3,2,3)
+
+Node   188     (0,2,3,3,0) is connected to:
+	- Neighbor   252 (0,3,3,3,0)
+	- Neighbor   124 (0,1,3,3,0)
+	- Neighbor   444 (1,2,3,3,0)
+	- Neighbor   956 (3,2,3,3,0)
+
+Node   189     (0,2,3,3,1) is connected to:
+	- Neighbor   253 (0,3,3,3,1)
+	- Neighbor   125 (0,1,3,3,1)
+	- Neighbor   445 (1,2,3,3,1)
+	- Neighbor   957 (3,2,3,3,1)
+
+Node   190     (0,2,3,3,2) is connected to:
+	- Neighbor   254 (0,3,3,3,2)
+	- Neighbor   126 (0,1,3,3,2)
+	- Neighbor   446 (1,2,3,3,2)
+	- Neighbor   958 (3,2,3,3,2)
+
+Node   191     (0,2,3,3,3) is connected to:
+	- Neighbor   255 (0,3,3,3,3)
+	- Neighbor   127 (0,1,3,3,3)
+	- Neighbor   447 (1,2,3,3,3)
+	- Neighbor   959 (3,2,3,3,3)
+
+Node   192     (0,3,0,0,0) is connected to:
+	- Neighbor     0 (0,0,0,0,0)
+	- Neighbor   128 (0,2,0,0,0)
+	- Neighbor   448 (1,3,0,0,0)
+	- Neighbor   960 (3,3,0,0,0)
+
+Node   193     (0,3,0,0,1) is connected to:
+	- Neighbor     1 (0,0,0,0,1)
+	- Neighbor   129 (0,2,0,0,1)
+	- Neighbor   449 (1,3,0,0,1)
+	- Neighbor   961 (3,3,0,0,1)
+
+Node   194     (0,3,0,0,2) is connected to:
+	- Neighbor     2 (0,0,0,0,2)
+	- Neighbor   130 (0,2,0,0,2)
+	- Neighbor   450 (1,3,0,0,2)
+	- Neighbor   962 (3,3,0,0,2)
+
+Node   195     (0,3,0,0,3) is connected to:
+	- Neighbor     3 (0,0,0,0,3)
+	- Neighbor   131 (0,2,0,0,3)
+	- Neighbor   451 (1,3,0,0,3)
+	- Neighbor   963 (3,3,0,0,3)
+
+Node   196     (0,3,0,1,0) is connected to:
+	- Neighbor     4 (0,0,0,1,0)
+	- Neighbor   132 (0,2,0,1,0)
+	- Neighbor   452 (1,3,0,1,0)
+	- Neighbor   964 (3,3,0,1,0)
+
+Node   197     (0,3,0,1,1) is connected to:
+	- Neighbor     5 (0,0,0,1,1)
+	- Neighbor   133 (0,2,0,1,1)
+	- Neighbor   453 (1,3,0,1,1)
+	- Neighbor   965 (3,3,0,1,1)
+
+Node   198     (0,3,0,1,2) is connected to:
+	- Neighbor     6 (0,0,0,1,2)
+	- Neighbor   134 (0,2,0,1,2)
+	- Neighbor   454 (1,3,0,1,2)
+	- Neighbor   966 (3,3,0,1,2)
+
+Node   199     (0,3,0,1,3) is connected to:
+	- Neighbor     7 (0,0,0,1,3)
+	- Neighbor   135 (0,2,0,1,3)
+	- Neighbor   455 (1,3,0,1,3)
+	- Neighbor   967 (3,3,0,1,3)
+
+Node   200     (0,3,0,2,0) is connected to:
+	- Neighbor     8 (0,0,0,2,0)
+	- Neighbor   136 (0,2,0,2,0)
+	- Neighbor   456 (1,3,0,2,0)
+	- Neighbor   968 (3,3,0,2,0)
+
+Node   201     (0,3,0,2,1) is connected to:
+	- Neighbor     9 (0,0,0,2,1)
+	- Neighbor   137 (0,2,0,2,1)
+	- Neighbor   457 (1,3,0,2,1)
+	- Neighbor   969 (3,3,0,2,1)
+
+Node   202     (0,3,0,2,2) is connected to:
+	- Neighbor    10 (0,0,0,2,2)
+	- Neighbor   138 (0,2,0,2,2)
+	- Neighbor   458 (1,3,0,2,2)
+	- Neighbor   970 (3,3,0,2,2)
+
+Node   203     (0,3,0,2,3) is connected to:
+	- Neighbor    11 (0,0,0,2,3)
+	- Neighbor   139 (0,2,0,2,3)
+	- Neighbor   459 (1,3,0,2,3)
+	- Neighbor   971 (3,3,0,2,3)
+
+Node   204     (0,3,0,3,0) is connected to:
+	- Neighbor    12 (0,0,0,3,0)
+	- Neighbor   140 (0,2,0,3,0)
+	- Neighbor   460 (1,3,0,3,0)
+	- Neighbor   972 (3,3,0,3,0)
+
+Node   205     (0,3,0,3,1) is connected to:
+	- Neighbor    13 (0,0,0,3,1)
+	- Neighbor   141 (0,2,0,3,1)
+	- Neighbor   461 (1,3,0,3,1)
+	- Neighbor   973 (3,3,0,3,1)
+
+Node   206     (0,3,0,3,2) is connected to:
+	- Neighbor    14 (0,0,0,3,2)
+	- Neighbor   142 (0,2,0,3,2)
+	- Neighbor   462 (1,3,0,3,2)
+	- Neighbor   974 (3,3,0,3,2)
+
+Node   207     (0,3,0,3,3) is connected to:
+	- Neighbor    15 (0,0,0,3,3)
+	- Neighbor   143 (0,2,0,3,3)
+	- Neighbor   463 (1,3,0,3,3)
+	- Neighbor   975 (3,3,0,3,3)
+
+Node   208     (0,3,1,0,0) is connected to:
+	- Neighbor    16 (0,0,1,0,0)
+	- Neighbor   144 (0,2,1,0,0)
+	- Neighbor   464 (1,3,1,0,0)
+	- Neighbor   976 (3,3,1,0,0)
+
+Node   209     (0,3,1,0,1) is connected to:
+	- Neighbor    17 (0,0,1,0,1)
+	- Neighbor   145 (0,2,1,0,1)
+	- Neighbor   465 (1,3,1,0,1)
+	- Neighbor   977 (3,3,1,0,1)
+
+Node   210     (0,3,1,0,2) is connected to:
+	- Neighbor    18 (0,0,1,0,2)
+	- Neighbor   146 (0,2,1,0,2)
+	- Neighbor   466 (1,3,1,0,2)
+	- Neighbor   978 (3,3,1,0,2)
+
+Node   211     (0,3,1,0,3) is connected to:
+	- Neighbor    19 (0,0,1,0,3)
+	- Neighbor   147 (0,2,1,0,3)
+	- Neighbor   467 (1,3,1,0,3)
+	- Neighbor   979 (3,3,1,0,3)
+
+Node   212     (0,3,1,1,0) is connected to:
+	- Neighbor    20 (0,0,1,1,0)
+	- Neighbor   148 (0,2,1,1,0)
+	- Neighbor   468 (1,3,1,1,0)
+	- Neighbor   980 (3,3,1,1,0)
+
+Node   213     (0,3,1,1,1) is connected to:
+	- Neighbor    21 (0,0,1,1,1)
+	- Neighbor   149 (0,2,1,1,1)
+	- Neighbor   469 (1,3,1,1,1)
+	- Neighbor   981 (3,3,1,1,1)
+
+Node   214     (0,3,1,1,2) is connected to:
+	- Neighbor    22 (0,0,1,1,2)
+	- Neighbor   150 (0,2,1,1,2)
+	- Neighbor   470 (1,3,1,1,2)
+	- Neighbor   982 (3,3,1,1,2)
+
+Node   215     (0,3,1,1,3) is connected to:
+	- Neighbor    23 (0,0,1,1,3)
+	- Neighbor   151 (0,2,1,1,3)
+	- Neighbor   471 (1,3,1,1,3)
+	- Neighbor   983 (3,3,1,1,3)
+
+Node   216     (0,3,1,2,0) is connected to:
+	- Neighbor    24 (0,0,1,2,0)
+	- Neighbor   152 (0,2,1,2,0)
+	- Neighbor   472 (1,3,1,2,0)
+	- Neighbor   984 (3,3,1,2,0)
+
+Node   217     (0,3,1,2,1) is connected to:
+	- Neighbor    25 (0,0,1,2,1)
+	- Neighbor   153 (0,2,1,2,1)
+	- Neighbor   473 (1,3,1,2,1)
+	- Neighbor   985 (3,3,1,2,1)
+
+Node   218     (0,3,1,2,2) is connected to:
+	- Neighbor    26 (0,0,1,2,2)
+	- Neighbor   154 (0,2,1,2,2)
+	- Neighbor   474 (1,3,1,2,2)
+	- Neighbor   986 (3,3,1,2,2)
+
+Node   219     (0,3,1,2,3) is connected to:
+	- Neighbor    27 (0,0,1,2,3)
+	- Neighbor   155 (0,2,1,2,3)
+	- Neighbor   475 (1,3,1,2,3)
+	- Neighbor   987 (3,3,1,2,3)
+
+Node   220     (0,3,1,3,0) is connected to:
+	- Neighbor    28 (0,0,1,3,0)
+	- Neighbor   156 (0,2,1,3,0)
+	- Neighbor   476 (1,3,1,3,0)
+	- Neighbor   988 (3,3,1,3,0)
+
+Node   221     (0,3,1,3,1) is connected to:
+	- Neighbor    29 (0,0,1,3,1)
+	- Neighbor   157 (0,2,1,3,1)
+	- Neighbor   477 (1,3,1,3,1)
+	- Neighbor   989 (3,3,1,3,1)
+
+Node   222     (0,3,1,3,2) is connected to:
+	- Neighbor    30 (0,0,1,3,2)
+	- Neighbor   158 (0,2,1,3,2)
+	- Neighbor   478 (1,3,1,3,2)
+	- Neighbor   990 (3,3,1,3,2)
+
+Node   223     (0,3,1,3,3) is connected to:
+	- Neighbor    31 (0,0,1,3,3)
+	- Neighbor   159 (0,2,1,3,3)
+	- Neighbor   479 (1,3,1,3,3)
+	- Neighbor   991 (3,3,1,3,3)
+
+Node   224     (0,3,2,0,0) is connected to:
+	- Neighbor    32 (0,0,2,0,0)
+	- Neighbor   160 (0,2,2,0,0)
+	- Neighbor   480 (1,3,2,0,0)
+	- Neighbor   992 (3,3,2,0,0)
+
+Node   225     (0,3,2,0,1) is connected to:
+	- Neighbor    33 (0,0,2,0,1)
+	- Neighbor   161 (0,2,2,0,1)
+	- Neighbor   481 (1,3,2,0,1)
+	- Neighbor   993 (3,3,2,0,1)
+
+Node   226     (0,3,2,0,2) is connected to:
+	- Neighbor    34 (0,0,2,0,2)
+	- Neighbor   162 (0,2,2,0,2)
+	- Neighbor   482 (1,3,2,0,2)
+	- Neighbor   994 (3,3,2,0,2)
+
+Node   227     (0,3,2,0,3) is connected to:
+	- Neighbor    35 (0,0,2,0,3)
+	- Neighbor   163 (0,2,2,0,3)
+	- Neighbor   483 (1,3,2,0,3)
+	- Neighbor   995 (3,3,2,0,3)
+
+Node   228     (0,3,2,1,0) is connected to:
+	- Neighbor    36 (0,0,2,1,0)
+	- Neighbor   164 (0,2,2,1,0)
+	- Neighbor   484 (1,3,2,1,0)
+	- Neighbor   996 (3,3,2,1,0)
+
+Node   229     (0,3,2,1,1) is connected to:
+	- Neighbor    37 (0,0,2,1,1)
+	- Neighbor   165 (0,2,2,1,1)
+	- Neighbor   485 (1,3,2,1,1)
+	- Neighbor   997 (3,3,2,1,1)
+
+Node   230     (0,3,2,1,2) is connected to:
+	- Neighbor    38 (0,0,2,1,2)
+	- Neighbor   166 (0,2,2,1,2)
+	- Neighbor   486 (1,3,2,1,2)
+	- Neighbor   998 (3,3,2,1,2)
+
+Node   231     (0,3,2,1,3) is connected to:
+	- Neighbor    39 (0,0,2,1,3)
+	- Neighbor   167 (0,2,2,1,3)
+	- Neighbor   487 (1,3,2,1,3)
+	- Neighbor   999 (3,3,2,1,3)
+
+Node   232     (0,3,2,2,0) is connected to:
+	- Neighbor    40 (0,0,2,2,0)
+	- Neighbor   168 (0,2,2,2,0)
+	- Neighbor   488 (1,3,2,2,0)
+	- Neighbor  1000 (3,3,2,2,0)
+
+Node   233     (0,3,2,2,1) is connected to:
+	- Neighbor    41 (0,0,2,2,1)
+	- Neighbor   169 (0,2,2,2,1)
+	- Neighbor   489 (1,3,2,2,1)
+	- Neighbor  1001 (3,3,2,2,1)
+
+Node   234     (0,3,2,2,2) is connected to:
+	- Neighbor    42 (0,0,2,2,2)
+	- Neighbor   170 (0,2,2,2,2)
+	- Neighbor   490 (1,3,2,2,2)
+	- Neighbor  1002 (3,3,2,2,2)
+
+Node   235     (0,3,2,2,3) is connected to:
+	- Neighbor    43 (0,0,2,2,3)
+	- Neighbor   171 (0,2,2,2,3)
+	- Neighbor   491 (1,3,2,2,3)
+	- Neighbor  1003 (3,3,2,2,3)
+
+Node   236     (0,3,2,3,0) is connected to:
+	- Neighbor    44 (0,0,2,3,0)
+	- Neighbor   172 (0,2,2,3,0)
+	- Neighbor   492 (1,3,2,3,0)
+	- Neighbor  1004 (3,3,2,3,0)
+
+Node   237     (0,3,2,3,1) is connected to:
+	- Neighbor    45 (0,0,2,3,1)
+	- Neighbor   173 (0,2,2,3,1)
+	- Neighbor   493 (1,3,2,3,1)
+	- Neighbor  1005 (3,3,2,3,1)
+
+Node   238     (0,3,2,3,2) is connected to:
+	- Neighbor    46 (0,0,2,3,2)
+	- Neighbor   174 (0,2,2,3,2)
+	- Neighbor   494 (1,3,2,3,2)
+	- Neighbor  1006 (3,3,2,3,2)
+
+Node   239     (0,3,2,3,3) is connected to:
+	- Neighbor    47 (0,0,2,3,3)
+	- Neighbor   175 (0,2,2,3,3)
+	- Neighbor   495 (1,3,2,3,3)
+	- Neighbor  1007 (3,3,2,3,3)
+
+Node   240     (0,3,3,0,0) is connected to:
+	- Neighbor    48 (0,0,3,0,0)
+	- Neighbor   176 (0,2,3,0,0)
+	- Neighbor   496 (1,3,3,0,0)
+	- Neighbor  1008 (3,3,3,0,0)
+
+Node   241     (0,3,3,0,1) is connected to:
+	- Neighbor    49 (0,0,3,0,1)
+	- Neighbor   177 (0,2,3,0,1)
+	- Neighbor   497 (1,3,3,0,1)
+	- Neighbor  1009 (3,3,3,0,1)
+
+Node   242     (0,3,3,0,2) is connected to:
+	- Neighbor    50 (0,0,3,0,2)
+	- Neighbor   178 (0,2,3,0,2)
+	- Neighbor   498 (1,3,3,0,2)
+	- Neighbor  1010 (3,3,3,0,2)
+
+Node   243     (0,3,3,0,3) is connected to:
+	- Neighbor    51 (0,0,3,0,3)
+	- Neighbor   179 (0,2,3,0,3)
+	- Neighbor   499 (1,3,3,0,3)
+	- Neighbor  1011 (3,3,3,0,3)
+
+Node   244     (0,3,3,1,0) is connected to:
+	- Neighbor    52 (0,0,3,1,0)
+	- Neighbor   180 (0,2,3,1,0)
+	- Neighbor   500 (1,3,3,1,0)
+	- Neighbor  1012 (3,3,3,1,0)
+
+Node   245     (0,3,3,1,1) is connected to:
+	- Neighbor    53 (0,0,3,1,1)
+	- Neighbor   181 (0,2,3,1,1)
+	- Neighbor   501 (1,3,3,1,1)
+	- Neighbor  1013 (3,3,3,1,1)
+
+Node   246     (0,3,3,1,2) is connected to:
+	- Neighbor    54 (0,0,3,1,2)
+	- Neighbor   182 (0,2,3,1,2)
+	- Neighbor   502 (1,3,3,1,2)
+	- Neighbor  1014 (3,3,3,1,2)
+
+Node   247     (0,3,3,1,3) is connected to:
+	- Neighbor    55 (0,0,3,1,3)
+	- Neighbor   183 (0,2,3,1,3)
+	- Neighbor   503 (1,3,3,1,3)
+	- Neighbor  1015 (3,3,3,1,3)
+
+Node   248     (0,3,3,2,0) is connected to:
+	- Neighbor    56 (0,0,3,2,0)
+	- Neighbor   184 (0,2,3,2,0)
+	- Neighbor   504 (1,3,3,2,0)
+	- Neighbor  1016 (3,3,3,2,0)
+
+Node   249     (0,3,3,2,1) is connected to:
+	- Neighbor    57 (0,0,3,2,1)
+	- Neighbor   185 (0,2,3,2,1)
+	- Neighbor   505 (1,3,3,2,1)
+	- Neighbor  1017 (3,3,3,2,1)
+
+Node   250     (0,3,3,2,2) is connected to:
+	- Neighbor    58 (0,0,3,2,2)
+	- Neighbor   186 (0,2,3,2,2)
+	- Neighbor   506 (1,3,3,2,2)
+	- Neighbor  1018 (3,3,3,2,2)
+
+Node   251     (0,3,3,2,3) is connected to:
+	- Neighbor    59 (0,0,3,2,3)
+	- Neighbor   187 (0,2,3,2,3)
+	- Neighbor   507 (1,3,3,2,3)
+	- Neighbor  1019 (3,3,3,2,3)
+
+Node   252     (0,3,3,3,0) is connected to:
+	- Neighbor    60 (0,0,3,3,0)
+	- Neighbor   188 (0,2,3,3,0)
+	- Neighbor   508 (1,3,3,3,0)
+	- Neighbor  1020 (3,3,3,3,0)
+
+Node   253     (0,3,3,3,1) is connected to:
+	- Neighbor    61 (0,0,3,3,1)
+	- Neighbor   189 (0,2,3,3,1)
+	- Neighbor   509 (1,3,3,3,1)
+	- Neighbor  1021 (3,3,3,3,1)
+
+Node   254     (0,3,3,3,2) is connected to:
+	- Neighbor    62 (0,0,3,3,2)
+	- Neighbor   190 (0,2,3,3,2)
+	- Neighbor   510 (1,3,3,3,2)
+	- Neighbor  1022 (3,3,3,3,2)
+
+Node   255     (0,3,3,3,3) is connected to:
+	- Neighbor    63 (0,0,3,3,3)
+	- Neighbor   191 (0,2,3,3,3)
+	- Neighbor   511 (1,3,3,3,3)
+	- Neighbor  1023 (3,3,3,3,3)
+
+Node   256     (1,0,0,0,0) is connected to:
+	- Neighbor   272 (1,0,1,0,0)
+	- Neighbor   304 (1,0,3,0,0)
+	- Neighbor   512 (2,0,0,0,0)
+	- Neighbor     0 (0,0,0,0,0)
+
+Node   257     (1,0,0,0,1) is connected to:
+	- Neighbor   273 (1,0,1,0,1)
+	- Neighbor   305 (1,0,3,0,1)
+	- Neighbor   513 (2,0,0,0,1)
+	- Neighbor     1 (0,0,0,0,1)
+
+Node   258     (1,0,0,0,2) is connected to:
+	- Neighbor   274 (1,0,1,0,2)
+	- Neighbor   306 (1,0,3,0,2)
+	- Neighbor   514 (2,0,0,0,2)
+	- Neighbor     2 (0,0,0,0,2)
+
+Node   259     (1,0,0,0,3) is connected to:
+	- Neighbor   275 (1,0,1,0,3)
+	- Neighbor   307 (1,0,3,0,3)
+	- Neighbor   515 (2,0,0,0,3)
+	- Neighbor     3 (0,0,0,0,3)
+
+Node   260     (1,0,0,1,0) is connected to:
+	- Neighbor   276 (1,0,1,1,0)
+	- Neighbor   308 (1,0,3,1,0)
+	- Neighbor   516 (2,0,0,1,0)
+	- Neighbor     4 (0,0,0,1,0)
+
+Node   261     (1,0,0,1,1) is connected to:
+	- Neighbor   277 (1,0,1,1,1)
+	- Neighbor   309 (1,0,3,1,1)
+	- Neighbor   517 (2,0,0,1,1)
+	- Neighbor     5 (0,0,0,1,1)
+
+Node   262     (1,0,0,1,2) is connected to:
+	- Neighbor   278 (1,0,1,1,2)
+	- Neighbor   310 (1,0,3,1,2)
+	- Neighbor   518 (2,0,0,1,2)
+	- Neighbor     6 (0,0,0,1,2)
+
+Node   263     (1,0,0,1,3) is connected to:
+	- Neighbor   279 (1,0,1,1,3)
+	- Neighbor   311 (1,0,3,1,3)
+	- Neighbor   519 (2,0,0,1,3)
+	- Neighbor     7 (0,0,0,1,3)
+
+Node   264     (1,0,0,2,0) is connected to:
+	- Neighbor   280 (1,0,1,2,0)
+	- Neighbor   312 (1,0,3,2,0)
+	- Neighbor   520 (2,0,0,2,0)
+	- Neighbor     8 (0,0,0,2,0)
+
+Node   265     (1,0,0,2,1) is connected to:
+	- Neighbor   281 (1,0,1,2,1)
+	- Neighbor   313 (1,0,3,2,1)
+	- Neighbor   521 (2,0,0,2,1)
+	- Neighbor     9 (0,0,0,2,1)
+
+Node   266     (1,0,0,2,2) is connected to:
+	- Neighbor   282 (1,0,1,2,2)
+	- Neighbor   314 (1,0,3,2,2)
+	- Neighbor   522 (2,0,0,2,2)
+	- Neighbor    10 (0,0,0,2,2)
+
+Node   267     (1,0,0,2,3) is connected to:
+	- Neighbor   283 (1,0,1,2,3)
+	- Neighbor   315 (1,0,3,2,3)
+	- Neighbor   523 (2,0,0,2,3)
+	- Neighbor    11 (0,0,0,2,3)
+
+Node   268     (1,0,0,3,0) is connected to:
+	- Neighbor   284 (1,0,1,3,0)
+	- Neighbor   316 (1,0,3,3,0)
+	- Neighbor   524 (2,0,0,3,0)
+	- Neighbor    12 (0,0,0,3,0)
+
+Node   269     (1,0,0,3,1) is connected to:
+	- Neighbor   285 (1,0,1,3,1)
+	- Neighbor   317 (1,0,3,3,1)
+	- Neighbor   525 (2,0,0,3,1)
+	- Neighbor    13 (0,0,0,3,1)
+
+Node   270     (1,0,0,3,2) is connected to:
+	- Neighbor   286 (1,0,1,3,2)
+	- Neighbor   318 (1,0,3,3,2)
+	- Neighbor   526 (2,0,0,3,2)
+	- Neighbor    14 (0,0,0,3,2)
+
+Node   271     (1,0,0,3,3) is connected to:
+	- Neighbor   287 (1,0,1,3,3)
+	- Neighbor   319 (1,0,3,3,3)
+	- Neighbor   527 (2,0,0,3,3)
+	- Neighbor    15 (0,0,0,3,3)
+
+Node   272     (1,0,1,0,0) is connected to:
+	- Neighbor   288 (1,0,2,0,0)
+	- Neighbor   256 (1,0,0,0,0)
+	- Neighbor   528 (2,0,1,0,0)
+	- Neighbor    16 (0,0,1,0,0)
+
+Node   273     (1,0,1,0,1) is connected to:
+	- Neighbor   289 (1,0,2,0,1)
+	- Neighbor   257 (1,0,0,0,1)
+	- Neighbor   529 (2,0,1,0,1)
+	- Neighbor    17 (0,0,1,0,1)
+
+Node   274     (1,0,1,0,2) is connected to:
+	- Neighbor   290 (1,0,2,0,2)
+	- Neighbor   258 (1,0,0,0,2)
+	- Neighbor   530 (2,0,1,0,2)
+	- Neighbor    18 (0,0,1,0,2)
+
+Node   275     (1,0,1,0,3) is connected to:
+	- Neighbor   291 (1,0,2,0,3)
+	- Neighbor   259 (1,0,0,0,3)
+	- Neighbor   531 (2,0,1,0,3)
+	- Neighbor    19 (0,0,1,0,3)
+
+Node   276     (1,0,1,1,0) is connected to:
+	- Neighbor   292 (1,0,2,1,0)
+	- Neighbor   260 (1,0,0,1,0)
+	- Neighbor   532 (2,0,1,1,0)
+	- Neighbor    20 (0,0,1,1,0)
+
+Node   277     (1,0,1,1,1) is connected to:
+	- Neighbor   293 (1,0,2,1,1)
+	- Neighbor   261 (1,0,0,1,1)
+	- Neighbor   533 (2,0,1,1,1)
+	- Neighbor    21 (0,0,1,1,1)
+
+Node   278     (1,0,1,1,2) is connected to:
+	- Neighbor   294 (1,0,2,1,2)
+	- Neighbor   262 (1,0,0,1,2)
+	- Neighbor   534 (2,0,1,1,2)
+	- Neighbor    22 (0,0,1,1,2)
+
+Node   279     (1,0,1,1,3) is connected to:
+	- Neighbor   295 (1,0,2,1,3)
+	- Neighbor   263 (1,0,0,1,3)
+	- Neighbor   535 (2,0,1,1,3)
+	- Neighbor    23 (0,0,1,1,3)
+
+Node   280     (1,0,1,2,0) is connected to:
+	- Neighbor   296 (1,0,2,2,0)
+	- Neighbor   264 (1,0,0,2,0)
+	- Neighbor   536 (2,0,1,2,0)
+	- Neighbor    24 (0,0,1,2,0)
+
+Node   281     (1,0,1,2,1) is connected to:
+	- Neighbor   297 (1,0,2,2,1)
+	- Neighbor   265 (1,0,0,2,1)
+	- Neighbor   537 (2,0,1,2,1)
+	- Neighbor    25 (0,0,1,2,1)
+
+Node   282     (1,0,1,2,2) is connected to:
+	- Neighbor   298 (1,0,2,2,2)
+	- Neighbor   266 (1,0,0,2,2)
+	- Neighbor   538 (2,0,1,2,2)
+	- Neighbor    26 (0,0,1,2,2)
+
+Node   283     (1,0,1,2,3) is connected to:
+	- Neighbor   299 (1,0,2,2,3)
+	- Neighbor   267 (1,0,0,2,3)
+	- Neighbor   539 (2,0,1,2,3)
+	- Neighbor    27 (0,0,1,2,3)
+
+Node   284     (1,0,1,3,0) is connected to:
+	- Neighbor   300 (1,0,2,3,0)
+	- Neighbor   268 (1,0,0,3,0)
+	- Neighbor   540 (2,0,1,3,0)
+	- Neighbor    28 (0,0,1,3,0)
+
+Node   285     (1,0,1,3,1) is connected to:
+	- Neighbor   301 (1,0,2,3,1)
+	- Neighbor   269 (1,0,0,3,1)
+	- Neighbor   541 (2,0,1,3,1)
+	- Neighbor    29 (0,0,1,3,1)
+
+Node   286     (1,0,1,3,2) is connected to:
+	- Neighbor   302 (1,0,2,3,2)
+	- Neighbor   270 (1,0,0,3,2)
+	- Neighbor   542 (2,0,1,3,2)
+	- Neighbor    30 (0,0,1,3,2)
+
+Node   287     (1,0,1,3,3) is connected to:
+	- Neighbor   303 (1,0,2,3,3)
+	- Neighbor   271 (1,0,0,3,3)
+	- Neighbor   543 (2,0,1,3,3)
+	- Neighbor    31 (0,0,1,3,3)
+
+Node   288     (1,0,2,0,0) is connected to:
+	- Neighbor   304 (1,0,3,0,0)
+	- Neighbor   272 (1,0,1,0,0)
+	- Neighbor   544 (2,0,2,0,0)
+	- Neighbor    32 (0,0,2,0,0)
+
+Node   289     (1,0,2,0,1) is connected to:
+	- Neighbor   305 (1,0,3,0,1)
+	- Neighbor   273 (1,0,1,0,1)
+	- Neighbor   545 (2,0,2,0,1)
+	- Neighbor    33 (0,0,2,0,1)
+
+Node   290     (1,0,2,0,2) is connected to:
+	- Neighbor   306 (1,0,3,0,2)
+	- Neighbor   274 (1,0,1,0,2)
+	- Neighbor   546 (2,0,2,0,2)
+	- Neighbor    34 (0,0,2,0,2)
+
+Node   291     (1,0,2,0,3) is connected to:
+	- Neighbor   307 (1,0,3,0,3)
+	- Neighbor   275 (1,0,1,0,3)
+	- Neighbor   547 (2,0,2,0,3)
+	- Neighbor    35 (0,0,2,0,3)
+
+Node   292     (1,0,2,1,0) is connected to:
+	- Neighbor   308 (1,0,3,1,0)
+	- Neighbor   276 (1,0,1,1,0)
+	- Neighbor   548 (2,0,2,1,0)
+	- Neighbor    36 (0,0,2,1,0)
+
+Node   293     (1,0,2,1,1) is connected to:
+	- Neighbor   309 (1,0,3,1,1)
+	- Neighbor   277 (1,0,1,1,1)
+	- Neighbor   549 (2,0,2,1,1)
+	- Neighbor    37 (0,0,2,1,1)
+
+Node   294     (1,0,2,1,2) is connected to:
+	- Neighbor   310 (1,0,3,1,2)
+	- Neighbor   278 (1,0,1,1,2)
+	- Neighbor   550 (2,0,2,1,2)
+	- Neighbor    38 (0,0,2,1,2)
+
+Node   295     (1,0,2,1,3) is connected to:
+	- Neighbor   311 (1,0,3,1,3)
+	- Neighbor   279 (1,0,1,1,3)
+	- Neighbor   551 (2,0,2,1,3)
+	- Neighbor    39 (0,0,2,1,3)
+
+Node   296     (1,0,2,2,0) is connected to:
+	- Neighbor   312 (1,0,3,2,0)
+	- Neighbor   280 (1,0,1,2,0)
+	- Neighbor   552 (2,0,2,2,0)
+	- Neighbor    40 (0,0,2,2,0)
+
+Node   297     (1,0,2,2,1) is connected to:
+	- Neighbor   313 (1,0,3,2,1)
+	- Neighbor   281 (1,0,1,2,1)
+	- Neighbor   553 (2,0,2,2,1)
+	- Neighbor    41 (0,0,2,2,1)
+
+Node   298     (1,0,2,2,2) is connected to:
+	- Neighbor   314 (1,0,3,2,2)
+	- Neighbor   282 (1,0,1,2,2)
+	- Neighbor   554 (2,0,2,2,2)
+	- Neighbor    42 (0,0,2,2,2)
+
+Node   299     (1,0,2,2,3) is connected to:
+	- Neighbor   315 (1,0,3,2,3)
+	- Neighbor   283 (1,0,1,2,3)
+	- Neighbor   555 (2,0,2,2,3)
+	- Neighbor    43 (0,0,2,2,3)
+
+Node   300     (1,0,2,3,0) is connected to:
+	- Neighbor   316 (1,0,3,3,0)
+	- Neighbor   284 (1,0,1,3,0)
+	- Neighbor   556 (2,0,2,3,0)
+	- Neighbor    44 (0,0,2,3,0)
+
+Node   301     (1,0,2,3,1) is connected to:
+	- Neighbor   317 (1,0,3,3,1)
+	- Neighbor   285 (1,0,1,3,1)
+	- Neighbor   557 (2,0,2,3,1)
+	- Neighbor    45 (0,0,2,3,1)
+
+Node   302     (1,0,2,3,2) is connected to:
+	- Neighbor   318 (1,0,3,3,2)
+	- Neighbor   286 (1,0,1,3,2)
+	- Neighbor   558 (2,0,2,3,2)
+	- Neighbor    46 (0,0,2,3,2)
+
+Node   303     (1,0,2,3,3) is connected to:
+	- Neighbor   319 (1,0,3,3,3)
+	- Neighbor   287 (1,0,1,3,3)
+	- Neighbor   559 (2,0,2,3,3)
+	- Neighbor    47 (0,0,2,3,3)
+
+Node   304     (1,0,3,0,0) is connected to:
+	- Neighbor   256 (1,0,0,0,0)
+	- Neighbor   288 (1,0,2,0,0)
+	- Neighbor   560 (2,0,3,0,0)
+	- Neighbor    48 (0,0,3,0,0)
+
+Node   305     (1,0,3,0,1) is connected to:
+	- Neighbor   257 (1,0,0,0,1)
+	- Neighbor   289 (1,0,2,0,1)
+	- Neighbor   561 (2,0,3,0,1)
+	- Neighbor    49 (0,0,3,0,1)
+
+Node   306     (1,0,3,0,2) is connected to:
+	- Neighbor   258 (1,0,0,0,2)
+	- Neighbor   290 (1,0,2,0,2)
+	- Neighbor   562 (2,0,3,0,2)
+	- Neighbor    50 (0,0,3,0,2)
+
+Node   307     (1,0,3,0,3) is connected to:
+	- Neighbor   259 (1,0,0,0,3)
+	- Neighbor   291 (1,0,2,0,3)
+	- Neighbor   563 (2,0,3,0,3)
+	- Neighbor    51 (0,0,3,0,3)
+
+Node   308     (1,0,3,1,0) is connected to:
+	- Neighbor   260 (1,0,0,1,0)
+	- Neighbor   292 (1,0,2,1,0)
+	- Neighbor   564 (2,0,3,1,0)
+	- Neighbor    52 (0,0,3,1,0)
+
+Node   309     (1,0,3,1,1) is connected to:
+	- Neighbor   261 (1,0,0,1,1)
+	- Neighbor   293 (1,0,2,1,1)
+	- Neighbor   565 (2,0,3,1,1)
+	- Neighbor    53 (0,0,3,1,1)
+
+Node   310     (1,0,3,1,2) is connected to:
+	- Neighbor   262 (1,0,0,1,2)
+	- Neighbor   294 (1,0,2,1,2)
+	- Neighbor   566 (2,0,3,1,2)
+	- Neighbor    54 (0,0,3,1,2)
+
+Node   311     (1,0,3,1,3) is connected to:
+	- Neighbor   263 (1,0,0,1,3)
+	- Neighbor   295 (1,0,2,1,3)
+	- Neighbor   567 (2,0,3,1,3)
+	- Neighbor    55 (0,0,3,1,3)
+
+Node   312     (1,0,3,2,0) is connected to:
+	- Neighbor   264 (1,0,0,2,0)
+	- Neighbor   296 (1,0,2,2,0)
+	- Neighbor   568 (2,0,3,2,0)
+	- Neighbor    56 (0,0,3,2,0)
+
+Node   313     (1,0,3,2,1) is connected to:
+	- Neighbor   265 (1,0,0,2,1)
+	- Neighbor   297 (1,0,2,2,1)
+	- Neighbor   569 (2,0,3,2,1)
+	- Neighbor    57 (0,0,3,2,1)
+
+Node   314     (1,0,3,2,2) is connected to:
+	- Neighbor   266 (1,0,0,2,2)
+	- Neighbor   298 (1,0,2,2,2)
+	- Neighbor   570 (2,0,3,2,2)
+	- Neighbor    58 (0,0,3,2,2)
+
+Node   315     (1,0,3,2,3) is connected to:
+	- Neighbor   267 (1,0,0,2,3)
+	- Neighbor   299 (1,0,2,2,3)
+	- Neighbor   571 (2,0,3,2,3)
+	- Neighbor    59 (0,0,3,2,3)
+
+Node   316     (1,0,3,3,0) is connected to:
+	- Neighbor   268 (1,0,0,3,0)
+	- Neighbor   300 (1,0,2,3,0)
+	- Neighbor   572 (2,0,3,3,0)
+	- Neighbor    60 (0,0,3,3,0)
+
+Node   317     (1,0,3,3,1) is connected to:
+	- Neighbor   269 (1,0,0,3,1)
+	- Neighbor   301 (1,0,2,3,1)
+	- Neighbor   573 (2,0,3,3,1)
+	- Neighbor    61 (0,0,3,3,1)
+
+Node   318     (1,0,3,3,2) is connected to:
+	- Neighbor   270 (1,0,0,3,2)
+	- Neighbor   302 (1,0,2,3,2)
+	- Neighbor   574 (2,0,3,3,2)
+	- Neighbor    62 (0,0,3,3,2)
+
+Node   319     (1,0,3,3,3) is connected to:
+	- Neighbor   271 (1,0,0,3,3)
+	- Neighbor   303 (1,0,2,3,3)
+	- Neighbor   575 (2,0,3,3,3)
+	- Neighbor    63 (0,0,3,3,3)
+
+Node   320     (1,1,0,0,0) is connected to:
+	- Neighbor   336 (1,1,1,0,0)
+	- Neighbor   368 (1,1,3,0,0)
+	- Neighbor   576 (2,1,0,0,0)
+	- Neighbor    64 (0,1,0,0,0)
+
+Node   321     (1,1,0,0,1) is connected to:
+	- Neighbor   337 (1,1,1,0,1)
+	- Neighbor   369 (1,1,3,0,1)
+	- Neighbor   577 (2,1,0,0,1)
+	- Neighbor    65 (0,1,0,0,1)
+
+Node   322     (1,1,0,0,2) is connected to:
+	- Neighbor   338 (1,1,1,0,2)
+	- Neighbor   370 (1,1,3,0,2)
+	- Neighbor   578 (2,1,0,0,2)
+	- Neighbor    66 (0,1,0,0,2)
+
+Node   323     (1,1,0,0,3) is connected to:
+	- Neighbor   339 (1,1,1,0,3)
+	- Neighbor   371 (1,1,3,0,3)
+	- Neighbor   579 (2,1,0,0,3)
+	- Neighbor    67 (0,1,0,0,3)
+
+Node   324     (1,1,0,1,0) is connected to:
+	- Neighbor   340 (1,1,1,1,0)
+	- Neighbor   372 (1,1,3,1,0)
+	- Neighbor   580 (2,1,0,1,0)
+	- Neighbor    68 (0,1,0,1,0)
+
+Node   325     (1,1,0,1,1) is connected to:
+	- Neighbor   341 (1,1,1,1,1)
+	- Neighbor   373 (1,1,3,1,1)
+	- Neighbor   581 (2,1,0,1,1)
+	- Neighbor    69 (0,1,0,1,1)
+
+Node   326     (1,1,0,1,2) is connected to:
+	- Neighbor   342 (1,1,1,1,2)
+	- Neighbor   374 (1,1,3,1,2)
+	- Neighbor   582 (2,1,0,1,2)
+	- Neighbor    70 (0,1,0,1,2)
+
+Node   327     (1,1,0,1,3) is connected to:
+	- Neighbor   343 (1,1,1,1,3)
+	- Neighbor   375 (1,1,3,1,3)
+	- Neighbor   583 (2,1,0,1,3)
+	- Neighbor    71 (0,1,0,1,3)
+
+Node   328     (1,1,0,2,0) is connected to:
+	- Neighbor   344 (1,1,1,2,0)
+	- Neighbor   376 (1,1,3,2,0)
+	- Neighbor   584 (2,1,0,2,0)
+	- Neighbor    72 (0,1,0,2,0)
+
+Node   329     (1,1,0,2,1) is connected to:
+	- Neighbor   345 (1,1,1,2,1)
+	- Neighbor   377 (1,1,3,2,1)
+	- Neighbor   585 (2,1,0,2,1)
+	- Neighbor    73 (0,1,0,2,1)
+
+Node   330     (1,1,0,2,2) is connected to:
+	- Neighbor   346 (1,1,1,2,2)
+	- Neighbor   378 (1,1,3,2,2)
+	- Neighbor   586 (2,1,0,2,2)
+	- Neighbor    74 (0,1,0,2,2)
+
+Node   331     (1,1,0,2,3) is connected to:
+	- Neighbor   347 (1,1,1,2,3)
+	- Neighbor   379 (1,1,3,2,3)
+	- Neighbor   587 (2,1,0,2,3)
+	- Neighbor    75 (0,1,0,2,3)
+
+Node   332     (1,1,0,3,0) is connected to:
+	- Neighbor   348 (1,1,1,3,0)
+	- Neighbor   380 (1,1,3,3,0)
+	- Neighbor   588 (2,1,0,3,0)
+	- Neighbor    76 (0,1,0,3,0)
+
+Node   333     (1,1,0,3,1) is connected to:
+	- Neighbor   349 (1,1,1,3,1)
+	- Neighbor   381 (1,1,3,3,1)
+	- Neighbor   589 (2,1,0,3,1)
+	- Neighbor    77 (0,1,0,3,1)
+
+Node   334     (1,1,0,3,2) is connected to:
+	- Neighbor   350 (1,1,1,3,2)
+	- Neighbor   382 (1,1,3,3,2)
+	- Neighbor   590 (2,1,0,3,2)
+	- Neighbor    78 (0,1,0,3,2)
+
+Node   335     (1,1,0,3,3) is connected to:
+	- Neighbor   351 (1,1,1,3,3)
+	- Neighbor   383 (1,1,3,3,3)
+	- Neighbor   591 (2,1,0,3,3)
+	- Neighbor    79 (0,1,0,3,3)
+
+Node   336     (1,1,1,0,0) is connected to:
+	- Neighbor   352 (1,1,2,0,0)
+	- Neighbor   320 (1,1,0,0,0)
+	- Neighbor   592 (2,1,1,0,0)
+	- Neighbor    80 (0,1,1,0,0)
+
+Node   337     (1,1,1,0,1) is connected to:
+	- Neighbor   353 (1,1,2,0,1)
+	- Neighbor   321 (1,1,0,0,1)
+	- Neighbor   593 (2,1,1,0,1)
+	- Neighbor    81 (0,1,1,0,1)
+
+Node   338     (1,1,1,0,2) is connected to:
+	- Neighbor   354 (1,1,2,0,2)
+	- Neighbor   322 (1,1,0,0,2)
+	- Neighbor   594 (2,1,1,0,2)
+	- Neighbor    82 (0,1,1,0,2)
+
+Node   339     (1,1,1,0,3) is connected to:
+	- Neighbor   355 (1,1,2,0,3)
+	- Neighbor   323 (1,1,0,0,3)
+	- Neighbor   595 (2,1,1,0,3)
+	- Neighbor    83 (0,1,1,0,3)
+
+Node   340     (1,1,1,1,0) is connected to:
+	- Neighbor   356 (1,1,2,1,0)
+	- Neighbor   324 (1,1,0,1,0)
+	- Neighbor   596 (2,1,1,1,0)
+	- Neighbor    84 (0,1,1,1,0)
+
+Node   341     (1,1,1,1,1) is connected to:
+	- Neighbor   357 (1,1,2,1,1)
+	- Neighbor   325 (1,1,0,1,1)
+	- Neighbor   597 (2,1,1,1,1)
+	- Neighbor    85 (0,1,1,1,1)
+
+Node   342     (1,1,1,1,2) is connected to:
+	- Neighbor   358 (1,1,2,1,2)
+	- Neighbor   326 (1,1,0,1,2)
+	- Neighbor   598 (2,1,1,1,2)
+	- Neighbor    86 (0,1,1,1,2)
+
+Node   343     (1,1,1,1,3) is connected to:
+	- Neighbor   359 (1,1,2,1,3)
+	- Neighbor   327 (1,1,0,1,3)
+	- Neighbor   599 (2,1,1,1,3)
+	- Neighbor    87 (0,1,1,1,3)
+
+Node   344     (1,1,1,2,0) is connected to:
+	- Neighbor   360 (1,1,2,2,0)
+	- Neighbor   328 (1,1,0,2,0)
+	- Neighbor   600 (2,1,1,2,0)
+	- Neighbor    88 (0,1,1,2,0)
+
+Node   345     (1,1,1,2,1) is connected to:
+	- Neighbor   361 (1,1,2,2,1)
+	- Neighbor   329 (1,1,0,2,1)
+	- Neighbor   601 (2,1,1,2,1)
+	- Neighbor    89 (0,1,1,2,1)
+
+Node   346     (1,1,1,2,2) is connected to:
+	- Neighbor   362 (1,1,2,2,2)
+	- Neighbor   330 (1,1,0,2,2)
+	- Neighbor   602 (2,1,1,2,2)
+	- Neighbor    90 (0,1,1,2,2)
+
+Node   347     (1,1,1,2,3) is connected to:
+	- Neighbor   363 (1,1,2,2,3)
+	- Neighbor   331 (1,1,0,2,3)
+	- Neighbor   603 (2,1,1,2,3)
+	- Neighbor    91 (0,1,1,2,3)
+
+Node   348     (1,1,1,3,0) is connected to:
+	- Neighbor   364 (1,1,2,3,0)
+	- Neighbor   332 (1,1,0,3,0)
+	- Neighbor   604 (2,1,1,3,0)
+	- Neighbor    92 (0,1,1,3,0)
+
+Node   349     (1,1,1,3,1) is connected to:
+	- Neighbor   365 (1,1,2,3,1)
+	- Neighbor   333 (1,1,0,3,1)
+	- Neighbor   605 (2,1,1,3,1)
+	- Neighbor    93 (0,1,1,3,1)
+
+Node   350     (1,1,1,3,2) is connected to:
+	- Neighbor   366 (1,1,2,3,2)
+	- Neighbor   334 (1,1,0,3,2)
+	- Neighbor   606 (2,1,1,3,2)
+	- Neighbor    94 (0,1,1,3,2)
+
+Node   351     (1,1,1,3,3) is connected to:
+	- Neighbor   367 (1,1,2,3,3)
+	- Neighbor   335 (1,1,0,3,3)
+	- Neighbor   607 (2,1,1,3,3)
+	- Neighbor    95 (0,1,1,3,3)
+
+Node   352     (1,1,2,0,0) is connected to:
+	- Neighbor   368 (1,1,3,0,0)
+	- Neighbor   336 (1,1,1,0,0)
+	- Neighbor   608 (2,1,2,0,0)
+	- Neighbor    96 (0,1,2,0,0)
+
+Node   353     (1,1,2,0,1) is connected to:
+	- Neighbor   369 (1,1,3,0,1)
+	- Neighbor   337 (1,1,1,0,1)
+	- Neighbor   609 (2,1,2,0,1)
+	- Neighbor    97 (0,1,2,0,1)
+
+Node   354     (1,1,2,0,2) is connected to:
+	- Neighbor   370 (1,1,3,0,2)
+	- Neighbor   338 (1,1,1,0,2)
+	- Neighbor   610 (2,1,2,0,2)
+	- Neighbor    98 (0,1,2,0,2)
+
+Node   355     (1,1,2,0,3) is connected to:
+	- Neighbor   371 (1,1,3,0,3)
+	- Neighbor   339 (1,1,1,0,3)
+	- Neighbor   611 (2,1,2,0,3)
+	- Neighbor    99 (0,1,2,0,3)
+
+Node   356     (1,1,2,1,0) is connected to:
+	- Neighbor   372 (1,1,3,1,0)
+	- Neighbor   340 (1,1,1,1,0)
+	- Neighbor   612 (2,1,2,1,0)
+	- Neighbor   100 (0,1,2,1,0)
+
+Node   357     (1,1,2,1,1) is connected to:
+	- Neighbor   373 (1,1,3,1,1)
+	- Neighbor   341 (1,1,1,1,1)
+	- Neighbor   613 (2,1,2,1,1)
+	- Neighbor   101 (0,1,2,1,1)
+
+Node   358     (1,1,2,1,2) is connected to:
+	- Neighbor   374 (1,1,3,1,2)
+	- Neighbor   342 (1,1,1,1,2)
+	- Neighbor   614 (2,1,2,1,2)
+	- Neighbor   102 (0,1,2,1,2)
+
+Node   359     (1,1,2,1,3) is connected to:
+	- Neighbor   375 (1,1,3,1,3)
+	- Neighbor   343 (1,1,1,1,3)
+	- Neighbor   615 (2,1,2,1,3)
+	- Neighbor   103 (0,1,2,1,3)
+
+Node   360     (1,1,2,2,0) is connected to:
+	- Neighbor   376 (1,1,3,2,0)
+	- Neighbor   344 (1,1,1,2,0)
+	- Neighbor   616 (2,1,2,2,0)
+	- Neighbor   104 (0,1,2,2,0)
+
+Node   361     (1,1,2,2,1) is connected to:
+	- Neighbor   377 (1,1,3,2,1)
+	- Neighbor   345 (1,1,1,2,1)
+	- Neighbor   617 (2,1,2,2,1)
+	- Neighbor   105 (0,1,2,2,1)
+
+Node   362     (1,1,2,2,2) is connected to:
+	- Neighbor   378 (1,1,3,2,2)
+	- Neighbor   346 (1,1,1,2,2)
+	- Neighbor   618 (2,1,2,2,2)
+	- Neighbor   106 (0,1,2,2,2)
+
+Node   363     (1,1,2,2,3) is connected to:
+	- Neighbor   379 (1,1,3,2,3)
+	- Neighbor   347 (1,1,1,2,3)
+	- Neighbor   619 (2,1,2,2,3)
+	- Neighbor   107 (0,1,2,2,3)
+
+Node   364     (1,1,2,3,0) is connected to:
+	- Neighbor   380 (1,1,3,3,0)
+	- Neighbor   348 (1,1,1,3,0)
+	- Neighbor   620 (2,1,2,3,0)
+	- Neighbor   108 (0,1,2,3,0)
+
+Node   365     (1,1,2,3,1) is connected to:
+	- Neighbor   381 (1,1,3,3,1)
+	- Neighbor   349 (1,1,1,3,1)
+	- Neighbor   621 (2,1,2,3,1)
+	- Neighbor   109 (0,1,2,3,1)
+
+Node   366     (1,1,2,3,2) is connected to:
+	- Neighbor   382 (1,1,3,3,2)
+	- Neighbor   350 (1,1,1,3,2)
+	- Neighbor   622 (2,1,2,3,2)
+	- Neighbor   110 (0,1,2,3,2)
+
+Node   367     (1,1,2,3,3) is connected to:
+	- Neighbor   383 (1,1,3,3,3)
+	- Neighbor   351 (1,1,1,3,3)
+	- Neighbor   623 (2,1,2,3,3)
+	- Neighbor   111 (0,1,2,3,3)
+
+Node   368     (1,1,3,0,0) is connected to:
+	- Neighbor   320 (1,1,0,0,0)
+	- Neighbor   352 (1,1,2,0,0)
+	- Neighbor   624 (2,1,3,0,0)
+	- Neighbor   112 (0,1,3,0,0)
+
+Node   369     (1,1,3,0,1) is connected to:
+	- Neighbor   321 (1,1,0,0,1)
+	- Neighbor   353 (1,1,2,0,1)
+	- Neighbor   625 (2,1,3,0,1)
+	- Neighbor   113 (0,1,3,0,1)
+
+Node   370     (1,1,3,0,2) is connected to:
+	- Neighbor   322 (1,1,0,0,2)
+	- Neighbor   354 (1,1,2,0,2)
+	- Neighbor   626 (2,1,3,0,2)
+	- Neighbor   114 (0,1,3,0,2)
+
+Node   371     (1,1,3,0,3) is connected to:
+	- Neighbor   323 (1,1,0,0,3)
+	- Neighbor   355 (1,1,2,0,3)
+	- Neighbor   627 (2,1,3,0,3)
+	- Neighbor   115 (0,1,3,0,3)
+
+Node   372     (1,1,3,1,0) is connected to:
+	- Neighbor   324 (1,1,0,1,0)
+	- Neighbor   356 (1,1,2,1,0)
+	- Neighbor   628 (2,1,3,1,0)
+	- Neighbor   116 (0,1,3,1,0)
+
+Node   373     (1,1,3,1,1) is connected to:
+	- Neighbor   325 (1,1,0,1,1)
+	- Neighbor   357 (1,1,2,1,1)
+	- Neighbor   629 (2,1,3,1,1)
+	- Neighbor   117 (0,1,3,1,1)
+
+Node   374     (1,1,3,1,2) is connected to:
+	- Neighbor   326 (1,1,0,1,2)
+	- Neighbor   358 (1,1,2,1,2)
+	- Neighbor   630 (2,1,3,1,2)
+	- Neighbor   118 (0,1,3,1,2)
+
+Node   375     (1,1,3,1,3) is connected to:
+	- Neighbor   327 (1,1,0,1,3)
+	- Neighbor   359 (1,1,2,1,3)
+	- Neighbor   631 (2,1,3,1,3)
+	- Neighbor   119 (0,1,3,1,3)
+
+Node   376     (1,1,3,2,0) is connected to:
+	- Neighbor   328 (1,1,0,2,0)
+	- Neighbor   360 (1,1,2,2,0)
+	- Neighbor   632 (2,1,3,2,0)
+	- Neighbor   120 (0,1,3,2,0)
+
+Node   377     (1,1,3,2,1) is connected to:
+	- Neighbor   329 (1,1,0,2,1)
+	- Neighbor   361 (1,1,2,2,1)
+	- Neighbor   633 (2,1,3,2,1)
+	- Neighbor   121 (0,1,3,2,1)
+
+Node   378     (1,1,3,2,2) is connected to:
+	- Neighbor   330 (1,1,0,2,2)
+	- Neighbor   362 (1,1,2,2,2)
+	- Neighbor   634 (2,1,3,2,2)
+	- Neighbor   122 (0,1,3,2,2)
+
+Node   379     (1,1,3,2,3) is connected to:
+	- Neighbor   331 (1,1,0,2,3)
+	- Neighbor   363 (1,1,2,2,3)
+	- Neighbor   635 (2,1,3,2,3)
+	- Neighbor   123 (0,1,3,2,3)
+
+Node   380     (1,1,3,3,0) is connected to:
+	- Neighbor   332 (1,1,0,3,0)
+	- Neighbor   364 (1,1,2,3,0)
+	- Neighbor   636 (2,1,3,3,0)
+	- Neighbor   124 (0,1,3,3,0)
+
+Node   381     (1,1,3,3,1) is connected to:
+	- Neighbor   333 (1,1,0,3,1)
+	- Neighbor   365 (1,1,2,3,1)
+	- Neighbor   637 (2,1,3,3,1)
+	- Neighbor   125 (0,1,3,3,1)
+
+Node   382     (1,1,3,3,2) is connected to:
+	- Neighbor   334 (1,1,0,3,2)
+	- Neighbor   366 (1,1,2,3,2)
+	- Neighbor   638 (2,1,3,3,2)
+	- Neighbor   126 (0,1,3,3,2)
+
+Node   383     (1,1,3,3,3) is connected to:
+	- Neighbor   335 (1,1,0,3,3)
+	- Neighbor   367 (1,1,2,3,3)
+	- Neighbor   639 (2,1,3,3,3)
+	- Neighbor   127 (0,1,3,3,3)
+
+Node   384     (1,2,0,0,0) is connected to:
+	- Neighbor   400 (1,2,1,0,0)
+	- Neighbor   432 (1,2,3,0,0)
+	- Neighbor   640 (2,2,0,0,0)
+	- Neighbor   128 (0,2,0,0,0)
+
+Node   385     (1,2,0,0,1) is connected to:
+	- Neighbor   401 (1,2,1,0,1)
+	- Neighbor   433 (1,2,3,0,1)
+	- Neighbor   641 (2,2,0,0,1)
+	- Neighbor   129 (0,2,0,0,1)
+
+Node   386     (1,2,0,0,2) is connected to:
+	- Neighbor   402 (1,2,1,0,2)
+	- Neighbor   434 (1,2,3,0,2)
+	- Neighbor   642 (2,2,0,0,2)
+	- Neighbor   130 (0,2,0,0,2)
+
+Node   387     (1,2,0,0,3) is connected to:
+	- Neighbor   403 (1,2,1,0,3)
+	- Neighbor   435 (1,2,3,0,3)
+	- Neighbor   643 (2,2,0,0,3)
+	- Neighbor   131 (0,2,0,0,3)
+
+Node   388     (1,2,0,1,0) is connected to:
+	- Neighbor   404 (1,2,1,1,0)
+	- Neighbor   436 (1,2,3,1,0)
+	- Neighbor   644 (2,2,0,1,0)
+	- Neighbor   132 (0,2,0,1,0)
+
+Node   389     (1,2,0,1,1) is connected to:
+	- Neighbor   405 (1,2,1,1,1)
+	- Neighbor   437 (1,2,3,1,1)
+	- Neighbor   645 (2,2,0,1,1)
+	- Neighbor   133 (0,2,0,1,1)
+
+Node   390     (1,2,0,1,2) is connected to:
+	- Neighbor   406 (1,2,1,1,2)
+	- Neighbor   438 (1,2,3,1,2)
+	- Neighbor   646 (2,2,0,1,2)
+	- Neighbor   134 (0,2,0,1,2)
+
+Node   391     (1,2,0,1,3) is connected to:
+	- Neighbor   407 (1,2,1,1,3)
+	- Neighbor   439 (1,2,3,1,3)
+	- Neighbor   647 (2,2,0,1,3)
+	- Neighbor   135 (0,2,0,1,3)
+
+Node   392     (1,2,0,2,0) is connected to:
+	- Neighbor   408 (1,2,1,2,0)
+	- Neighbor   440 (1,2,3,2,0)
+	- Neighbor   648 (2,2,0,2,0)
+	- Neighbor   136 (0,2,0,2,0)
+
+Node   393     (1,2,0,2,1) is connected to:
+	- Neighbor   409 (1,2,1,2,1)
+	- Neighbor   441 (1,2,3,2,1)
+	- Neighbor   649 (2,2,0,2,1)
+	- Neighbor   137 (0,2,0,2,1)
+
+Node   394     (1,2,0,2,2) is connected to:
+	- Neighbor   410 (1,2,1,2,2)
+	- Neighbor   442 (1,2,3,2,2)
+	- Neighbor   650 (2,2,0,2,2)
+	- Neighbor   138 (0,2,0,2,2)
+
+Node   395     (1,2,0,2,3) is connected to:
+	- Neighbor   411 (1,2,1,2,3)
+	- Neighbor   443 (1,2,3,2,3)
+	- Neighbor   651 (2,2,0,2,3)
+	- Neighbor   139 (0,2,0,2,3)
+
+Node   396     (1,2,0,3,0) is connected to:
+	- Neighbor   412 (1,2,1,3,0)
+	- Neighbor   444 (1,2,3,3,0)
+	- Neighbor   652 (2,2,0,3,0)
+	- Neighbor   140 (0,2,0,3,0)
+
+Node   397     (1,2,0,3,1) is connected to:
+	- Neighbor   413 (1,2,1,3,1)
+	- Neighbor   445 (1,2,3,3,1)
+	- Neighbor   653 (2,2,0,3,1)
+	- Neighbor   141 (0,2,0,3,1)
+
+Node   398     (1,2,0,3,2) is connected to:
+	- Neighbor   414 (1,2,1,3,2)
+	- Neighbor   446 (1,2,3,3,2)
+	- Neighbor   654 (2,2,0,3,2)
+	- Neighbor   142 (0,2,0,3,2)
+
+Node   399     (1,2,0,3,3) is connected to:
+	- Neighbor   415 (1,2,1,3,3)
+	- Neighbor   447 (1,2,3,3,3)
+	- Neighbor   655 (2,2,0,3,3)
+	- Neighbor   143 (0,2,0,3,3)
+
+Node   400     (1,2,1,0,0) is connected to:
+	- Neighbor   416 (1,2,2,0,0)
+	- Neighbor   384 (1,2,0,0,0)
+	- Neighbor   656 (2,2,1,0,0)
+	- Neighbor   144 (0,2,1,0,0)
+
+Node   401     (1,2,1,0,1) is connected to:
+	- Neighbor   417 (1,2,2,0,1)
+	- Neighbor   385 (1,2,0,0,1)
+	- Neighbor   657 (2,2,1,0,1)
+	- Neighbor   145 (0,2,1,0,1)
+
+Node   402     (1,2,1,0,2) is connected to:
+	- Neighbor   418 (1,2,2,0,2)
+	- Neighbor   386 (1,2,0,0,2)
+	- Neighbor   658 (2,2,1,0,2)
+	- Neighbor   146 (0,2,1,0,2)
+
+Node   403     (1,2,1,0,3) is connected to:
+	- Neighbor   419 (1,2,2,0,3)
+	- Neighbor   387 (1,2,0,0,3)
+	- Neighbor   659 (2,2,1,0,3)
+	- Neighbor   147 (0,2,1,0,3)
+
+Node   404     (1,2,1,1,0) is connected to:
+	- Neighbor   420 (1,2,2,1,0)
+	- Neighbor   388 (1,2,0,1,0)
+	- Neighbor   660 (2,2,1,1,0)
+	- Neighbor   148 (0,2,1,1,0)
+
+Node   405     (1,2,1,1,1) is connected to:
+	- Neighbor   421 (1,2,2,1,1)
+	- Neighbor   389 (1,2,0,1,1)
+	- Neighbor   661 (2,2,1,1,1)
+	- Neighbor   149 (0,2,1,1,1)
+
+Node   406     (1,2,1,1,2) is connected to:
+	- Neighbor   422 (1,2,2,1,2)
+	- Neighbor   390 (1,2,0,1,2)
+	- Neighbor   662 (2,2,1,1,2)
+	- Neighbor   150 (0,2,1,1,2)
+
+Node   407     (1,2,1,1,3) is connected to:
+	- Neighbor   423 (1,2,2,1,3)
+	- Neighbor   391 (1,2,0,1,3)
+	- Neighbor   663 (2,2,1,1,3)
+	- Neighbor   151 (0,2,1,1,3)
+
+Node   408     (1,2,1,2,0) is connected to:
+	- Neighbor   424 (1,2,2,2,0)
+	- Neighbor   392 (1,2,0,2,0)
+	- Neighbor   664 (2,2,1,2,0)
+	- Neighbor   152 (0,2,1,2,0)
+
+Node   409     (1,2,1,2,1) is connected to:
+	- Neighbor   425 (1,2,2,2,1)
+	- Neighbor   393 (1,2,0,2,1)
+	- Neighbor   665 (2,2,1,2,1)
+	- Neighbor   153 (0,2,1,2,1)
+
+Node   410     (1,2,1,2,2) is connected to:
+	- Neighbor   426 (1,2,2,2,2)
+	- Neighbor   394 (1,2,0,2,2)
+	- Neighbor   666 (2,2,1,2,2)
+	- Neighbor   154 (0,2,1,2,2)
+
+Node   411     (1,2,1,2,3) is connected to:
+	- Neighbor   427 (1,2,2,2,3)
+	- Neighbor   395 (1,2,0,2,3)
+	- Neighbor   667 (2,2,1,2,3)
+	- Neighbor   155 (0,2,1,2,3)
+
+Node   412     (1,2,1,3,0) is connected to:
+	- Neighbor   428 (1,2,2,3,0)
+	- Neighbor   396 (1,2,0,3,0)
+	- Neighbor   668 (2,2,1,3,0)
+	- Neighbor   156 (0,2,1,3,0)
+
+Node   413     (1,2,1,3,1) is connected to:
+	- Neighbor   429 (1,2,2,3,1)
+	- Neighbor   397 (1,2,0,3,1)
+	- Neighbor   669 (2,2,1,3,1)
+	- Neighbor   157 (0,2,1,3,1)
+
+Node   414     (1,2,1,3,2) is connected to:
+	- Neighbor   430 (1,2,2,3,2)
+	- Neighbor   398 (1,2,0,3,2)
+	- Neighbor   670 (2,2,1,3,2)
+	- Neighbor   158 (0,2,1,3,2)
+
+Node   415     (1,2,1,3,3) is connected to:
+	- Neighbor   431 (1,2,2,3,3)
+	- Neighbor   399 (1,2,0,3,3)
+	- Neighbor   671 (2,2,1,3,3)
+	- Neighbor   159 (0,2,1,3,3)
+
+Node   416     (1,2,2,0,0) is connected to:
+	- Neighbor   432 (1,2,3,0,0)
+	- Neighbor   400 (1,2,1,0,0)
+	- Neighbor   672 (2,2,2,0,0)
+	- Neighbor   160 (0,2,2,0,0)
+
+Node   417     (1,2,2,0,1) is connected to:
+	- Neighbor   433 (1,2,3,0,1)
+	- Neighbor   401 (1,2,1,0,1)
+	- Neighbor   673 (2,2,2,0,1)
+	- Neighbor   161 (0,2,2,0,1)
+
+Node   418     (1,2,2,0,2) is connected to:
+	- Neighbor   434 (1,2,3,0,2)
+	- Neighbor   402 (1,2,1,0,2)
+	- Neighbor   674 (2,2,2,0,2)
+	- Neighbor   162 (0,2,2,0,2)
+
+Node   419     (1,2,2,0,3) is connected to:
+	- Neighbor   435 (1,2,3,0,3)
+	- Neighbor   403 (1,2,1,0,3)
+	- Neighbor   675 (2,2,2,0,3)
+	- Neighbor   163 (0,2,2,0,3)
+
+Node   420     (1,2,2,1,0) is connected to:
+	- Neighbor   436 (1,2,3,1,0)
+	- Neighbor   404 (1,2,1,1,0)
+	- Neighbor   676 (2,2,2,1,0)
+	- Neighbor   164 (0,2,2,1,0)
+
+Node   421     (1,2,2,1,1) is connected to:
+	- Neighbor   437 (1,2,3,1,1)
+	- Neighbor   405 (1,2,1,1,1)
+	- Neighbor   677 (2,2,2,1,1)
+	- Neighbor   165 (0,2,2,1,1)
+
+Node   422     (1,2,2,1,2) is connected to:
+	- Neighbor   438 (1,2,3,1,2)
+	- Neighbor   406 (1,2,1,1,2)
+	- Neighbor   678 (2,2,2,1,2)
+	- Neighbor   166 (0,2,2,1,2)
+
+Node   423     (1,2,2,1,3) is connected to:
+	- Neighbor   439 (1,2,3,1,3)
+	- Neighbor   407 (1,2,1,1,3)
+	- Neighbor   679 (2,2,2,1,3)
+	- Neighbor   167 (0,2,2,1,3)
+
+Node   424     (1,2,2,2,0) is connected to:
+	- Neighbor   440 (1,2,3,2,0)
+	- Neighbor   408 (1,2,1,2,0)
+	- Neighbor   680 (2,2,2,2,0)
+	- Neighbor   168 (0,2,2,2,0)
+
+Node   425     (1,2,2,2,1) is connected to:
+	- Neighbor   441 (1,2,3,2,1)
+	- Neighbor   409 (1,2,1,2,1)
+	- Neighbor   681 (2,2,2,2,1)
+	- Neighbor   169 (0,2,2,2,1)
+
+Node   426     (1,2,2,2,2) is connected to:
+	- Neighbor   442 (1,2,3,2,2)
+	- Neighbor   410 (1,2,1,2,2)
+	- Neighbor   682 (2,2,2,2,2)
+	- Neighbor   170 (0,2,2,2,2)
+
+Node   427     (1,2,2,2,3) is connected to:
+	- Neighbor   443 (1,2,3,2,3)
+	- Neighbor   411 (1,2,1,2,3)
+	- Neighbor   683 (2,2,2,2,3)
+	- Neighbor   171 (0,2,2,2,3)
+
+Node   428     (1,2,2,3,0) is connected to:
+	- Neighbor   444 (1,2,3,3,0)
+	- Neighbor   412 (1,2,1,3,0)
+	- Neighbor   684 (2,2,2,3,0)
+	- Neighbor   172 (0,2,2,3,0)
+
+Node   429     (1,2,2,3,1) is connected to:
+	- Neighbor   445 (1,2,3,3,1)
+	- Neighbor   413 (1,2,1,3,1)
+	- Neighbor   685 (2,2,2,3,1)
+	- Neighbor   173 (0,2,2,3,1)
+
+Node   430     (1,2,2,3,2) is connected to:
+	- Neighbor   446 (1,2,3,3,2)
+	- Neighbor   414 (1,2,1,3,2)
+	- Neighbor   686 (2,2,2,3,2)
+	- Neighbor   174 (0,2,2,3,2)
+
+Node   431     (1,2,2,3,3) is connected to:
+	- Neighbor   447 (1,2,3,3,3)
+	- Neighbor   415 (1,2,1,3,3)
+	- Neighbor   687 (2,2,2,3,3)
+	- Neighbor   175 (0,2,2,3,3)
+
+Node   432     (1,2,3,0,0) is connected to:
+	- Neighbor   384 (1,2,0,0,0)
+	- Neighbor   416 (1,2,2,0,0)
+	- Neighbor   688 (2,2,3,0,0)
+	- Neighbor   176 (0,2,3,0,0)
+
+Node   433     (1,2,3,0,1) is connected to:
+	- Neighbor   385 (1,2,0,0,1)
+	- Neighbor   417 (1,2,2,0,1)
+	- Neighbor   689 (2,2,3,0,1)
+	- Neighbor   177 (0,2,3,0,1)
+
+Node   434     (1,2,3,0,2) is connected to:
+	- Neighbor   386 (1,2,0,0,2)
+	- Neighbor   418 (1,2,2,0,2)
+	- Neighbor   690 (2,2,3,0,2)
+	- Neighbor   178 (0,2,3,0,2)
+
+Node   435     (1,2,3,0,3) is connected to:
+	- Neighbor   387 (1,2,0,0,3)
+	- Neighbor   419 (1,2,2,0,3)
+	- Neighbor   691 (2,2,3,0,3)
+	- Neighbor   179 (0,2,3,0,3)
+
+Node   436     (1,2,3,1,0) is connected to:
+	- Neighbor   388 (1,2,0,1,0)
+	- Neighbor   420 (1,2,2,1,0)
+	- Neighbor   692 (2,2,3,1,0)
+	- Neighbor   180 (0,2,3,1,0)
+
+Node   437     (1,2,3,1,1) is connected to:
+	- Neighbor   389 (1,2,0,1,1)
+	- Neighbor   421 (1,2,2,1,1)
+	- Neighbor   693 (2,2,3,1,1)
+	- Neighbor   181 (0,2,3,1,1)
+
+Node   438     (1,2,3,1,2) is connected to:
+	- Neighbor   390 (1,2,0,1,2)
+	- Neighbor   422 (1,2,2,1,2)
+	- Neighbor   694 (2,2,3,1,2)
+	- Neighbor   182 (0,2,3,1,2)
+
+Node   439     (1,2,3,1,3) is connected to:
+	- Neighbor   391 (1,2,0,1,3)
+	- Neighbor   423 (1,2,2,1,3)
+	- Neighbor   695 (2,2,3,1,3)
+	- Neighbor   183 (0,2,3,1,3)
+
+Node   440     (1,2,3,2,0) is connected to:
+	- Neighbor   392 (1,2,0,2,0)
+	- Neighbor   424 (1,2,2,2,0)
+	- Neighbor   696 (2,2,3,2,0)
+	- Neighbor   184 (0,2,3,2,0)
+
+Node   441     (1,2,3,2,1) is connected to:
+	- Neighbor   393 (1,2,0,2,1)
+	- Neighbor   425 (1,2,2,2,1)
+	- Neighbor   697 (2,2,3,2,1)
+	- Neighbor   185 (0,2,3,2,1)
+
+Node   442     (1,2,3,2,2) is connected to:
+	- Neighbor   394 (1,2,0,2,2)
+	- Neighbor   426 (1,2,2,2,2)
+	- Neighbor   698 (2,2,3,2,2)
+	- Neighbor   186 (0,2,3,2,2)
+
+Node   443     (1,2,3,2,3) is connected to:
+	- Neighbor   395 (1,2,0,2,3)
+	- Neighbor   427 (1,2,2,2,3)
+	- Neighbor   699 (2,2,3,2,3)
+	- Neighbor   187 (0,2,3,2,3)
+
+Node   444     (1,2,3,3,0) is connected to:
+	- Neighbor   396 (1,2,0,3,0)
+	- Neighbor   428 (1,2,2,3,0)
+	- Neighbor   700 (2,2,3,3,0)
+	- Neighbor   188 (0,2,3,3,0)
+
+Node   445     (1,2,3,3,1) is connected to:
+	- Neighbor   397 (1,2,0,3,1)
+	- Neighbor   429 (1,2,2,3,1)
+	- Neighbor   701 (2,2,3,3,1)
+	- Neighbor   189 (0,2,3,3,1)
+
+Node   446     (1,2,3,3,2) is connected to:
+	- Neighbor   398 (1,2,0,3,2)
+	- Neighbor   430 (1,2,2,3,2)
+	- Neighbor   702 (2,2,3,3,2)
+	- Neighbor   190 (0,2,3,3,2)
+
+Node   447     (1,2,3,3,3) is connected to:
+	- Neighbor   399 (1,2,0,3,3)
+	- Neighbor   431 (1,2,2,3,3)
+	- Neighbor   703 (2,2,3,3,3)
+	- Neighbor   191 (0,2,3,3,3)
+
+Node   448     (1,3,0,0,0) is connected to:
+	- Neighbor   464 (1,3,1,0,0)
+	- Neighbor   496 (1,3,3,0,0)
+	- Neighbor   704 (2,3,0,0,0)
+	- Neighbor   192 (0,3,0,0,0)
+
+Node   449     (1,3,0,0,1) is connected to:
+	- Neighbor   465 (1,3,1,0,1)
+	- Neighbor   497 (1,3,3,0,1)
+	- Neighbor   705 (2,3,0,0,1)
+	- Neighbor   193 (0,3,0,0,1)
+
+Node   450     (1,3,0,0,2) is connected to:
+	- Neighbor   466 (1,3,1,0,2)
+	- Neighbor   498 (1,3,3,0,2)
+	- Neighbor   706 (2,3,0,0,2)
+	- Neighbor   194 (0,3,0,0,2)
+
+Node   451     (1,3,0,0,3) is connected to:
+	- Neighbor   467 (1,3,1,0,3)
+	- Neighbor   499 (1,3,3,0,3)
+	- Neighbor   707 (2,3,0,0,3)
+	- Neighbor   195 (0,3,0,0,3)
+
+Node   452     (1,3,0,1,0) is connected to:
+	- Neighbor   468 (1,3,1,1,0)
+	- Neighbor   500 (1,3,3,1,0)
+	- Neighbor   708 (2,3,0,1,0)
+	- Neighbor   196 (0,3,0,1,0)
+
+Node   453     (1,3,0,1,1) is connected to:
+	- Neighbor   469 (1,3,1,1,1)
+	- Neighbor   501 (1,3,3,1,1)
+	- Neighbor   709 (2,3,0,1,1)
+	- Neighbor   197 (0,3,0,1,1)
+
+Node   454     (1,3,0,1,2) is connected to:
+	- Neighbor   470 (1,3,1,1,2)
+	- Neighbor   502 (1,3,3,1,2)
+	- Neighbor   710 (2,3,0,1,2)
+	- Neighbor   198 (0,3,0,1,2)
+
+Node   455     (1,3,0,1,3) is connected to:
+	- Neighbor   471 (1,3,1,1,3)
+	- Neighbor   503 (1,3,3,1,3)
+	- Neighbor   711 (2,3,0,1,3)
+	- Neighbor   199 (0,3,0,1,3)
+
+Node   456     (1,3,0,2,0) is connected to:
+	- Neighbor   472 (1,3,1,2,0)
+	- Neighbor   504 (1,3,3,2,0)
+	- Neighbor   712 (2,3,0,2,0)
+	- Neighbor   200 (0,3,0,2,0)
+
+Node   457     (1,3,0,2,1) is connected to:
+	- Neighbor   473 (1,3,1,2,1)
+	- Neighbor   505 (1,3,3,2,1)
+	- Neighbor   713 (2,3,0,2,1)
+	- Neighbor   201 (0,3,0,2,1)
+
+Node   458     (1,3,0,2,2) is connected to:
+	- Neighbor   474 (1,3,1,2,2)
+	- Neighbor   506 (1,3,3,2,2)
+	- Neighbor   714 (2,3,0,2,2)
+	- Neighbor   202 (0,3,0,2,2)
+
+Node   459     (1,3,0,2,3) is connected to:
+	- Neighbor   475 (1,3,1,2,3)
+	- Neighbor   507 (1,3,3,2,3)
+	- Neighbor   715 (2,3,0,2,3)
+	- Neighbor   203 (0,3,0,2,3)
+
+Node   460     (1,3,0,3,0) is connected to:
+	- Neighbor   476 (1,3,1,3,0)
+	- Neighbor   508 (1,3,3,3,0)
+	- Neighbor   716 (2,3,0,3,0)
+	- Neighbor   204 (0,3,0,3,0)
+
+Node   461     (1,3,0,3,1) is connected to:
+	- Neighbor   477 (1,3,1,3,1)
+	- Neighbor   509 (1,3,3,3,1)
+	- Neighbor   717 (2,3,0,3,1)
+	- Neighbor   205 (0,3,0,3,1)
+
+Node   462     (1,3,0,3,2) is connected to:
+	- Neighbor   478 (1,3,1,3,2)
+	- Neighbor   510 (1,3,3,3,2)
+	- Neighbor   718 (2,3,0,3,2)
+	- Neighbor   206 (0,3,0,3,2)
+
+Node   463     (1,3,0,3,3) is connected to:
+	- Neighbor   479 (1,3,1,3,3)
+	- Neighbor   511 (1,3,3,3,3)
+	- Neighbor   719 (2,3,0,3,3)
+	- Neighbor   207 (0,3,0,3,3)
+
+Node   464     (1,3,1,0,0) is connected to:
+	- Neighbor   480 (1,3,2,0,0)
+	- Neighbor   448 (1,3,0,0,0)
+	- Neighbor   720 (2,3,1,0,0)
+	- Neighbor   208 (0,3,1,0,0)
+
+Node   465     (1,3,1,0,1) is connected to:
+	- Neighbor   481 (1,3,2,0,1)
+	- Neighbor   449 (1,3,0,0,1)
+	- Neighbor   721 (2,3,1,0,1)
+	- Neighbor   209 (0,3,1,0,1)
+
+Node   466     (1,3,1,0,2) is connected to:
+	- Neighbor   482 (1,3,2,0,2)
+	- Neighbor   450 (1,3,0,0,2)
+	- Neighbor   722 (2,3,1,0,2)
+	- Neighbor   210 (0,3,1,0,2)
+
+Node   467     (1,3,1,0,3) is connected to:
+	- Neighbor   483 (1,3,2,0,3)
+	- Neighbor   451 (1,3,0,0,3)
+	- Neighbor   723 (2,3,1,0,3)
+	- Neighbor   211 (0,3,1,0,3)
+
+Node   468     (1,3,1,1,0) is connected to:
+	- Neighbor   484 (1,3,2,1,0)
+	- Neighbor   452 (1,3,0,1,0)
+	- Neighbor   724 (2,3,1,1,0)
+	- Neighbor   212 (0,3,1,1,0)
+
+Node   469     (1,3,1,1,1) is connected to:
+	- Neighbor   485 (1,3,2,1,1)
+	- Neighbor   453 (1,3,0,1,1)
+	- Neighbor   725 (2,3,1,1,1)
+	- Neighbor   213 (0,3,1,1,1)
+
+Node   470     (1,3,1,1,2) is connected to:
+	- Neighbor   486 (1,3,2,1,2)
+	- Neighbor   454 (1,3,0,1,2)
+	- Neighbor   726 (2,3,1,1,2)
+	- Neighbor   214 (0,3,1,1,2)
+
+Node   471     (1,3,1,1,3) is connected to:
+	- Neighbor   487 (1,3,2,1,3)
+	- Neighbor   455 (1,3,0,1,3)
+	- Neighbor   727 (2,3,1,1,3)
+	- Neighbor   215 (0,3,1,1,3)
+
+Node   472     (1,3,1,2,0) is connected to:
+	- Neighbor   488 (1,3,2,2,0)
+	- Neighbor   456 (1,3,0,2,0)
+	- Neighbor   728 (2,3,1,2,0)
+	- Neighbor   216 (0,3,1,2,0)
+
+Node   473     (1,3,1,2,1) is connected to:
+	- Neighbor   489 (1,3,2,2,1)
+	- Neighbor   457 (1,3,0,2,1)
+	- Neighbor   729 (2,3,1,2,1)
+	- Neighbor   217 (0,3,1,2,1)
+
+Node   474     (1,3,1,2,2) is connected to:
+	- Neighbor   490 (1,3,2,2,2)
+	- Neighbor   458 (1,3,0,2,2)
+	- Neighbor   730 (2,3,1,2,2)
+	- Neighbor   218 (0,3,1,2,2)
+
+Node   475     (1,3,1,2,3) is connected to:
+	- Neighbor   491 (1,3,2,2,3)
+	- Neighbor   459 (1,3,0,2,3)
+	- Neighbor   731 (2,3,1,2,3)
+	- Neighbor   219 (0,3,1,2,3)
+
+Node   476     (1,3,1,3,0) is connected to:
+	- Neighbor   492 (1,3,2,3,0)
+	- Neighbor   460 (1,3,0,3,0)
+	- Neighbor   732 (2,3,1,3,0)
+	- Neighbor   220 (0,3,1,3,0)
+
+Node   477     (1,3,1,3,1) is connected to:
+	- Neighbor   493 (1,3,2,3,1)
+	- Neighbor   461 (1,3,0,3,1)
+	- Neighbor   733 (2,3,1,3,1)
+	- Neighbor   221 (0,3,1,3,1)
+
+Node   478     (1,3,1,3,2) is connected to:
+	- Neighbor   494 (1,3,2,3,2)
+	- Neighbor   462 (1,3,0,3,2)
+	- Neighbor   734 (2,3,1,3,2)
+	- Neighbor   222 (0,3,1,3,2)
+
+Node   479     (1,3,1,3,3) is connected to:
+	- Neighbor   495 (1,3,2,3,3)
+	- Neighbor   463 (1,3,0,3,3)
+	- Neighbor   735 (2,3,1,3,3)
+	- Neighbor   223 (0,3,1,3,3)
+
+Node   480     (1,3,2,0,0) is connected to:
+	- Neighbor   496 (1,3,3,0,0)
+	- Neighbor   464 (1,3,1,0,0)
+	- Neighbor   736 (2,3,2,0,0)
+	- Neighbor   224 (0,3,2,0,0)
+
+Node   481     (1,3,2,0,1) is connected to:
+	- Neighbor   497 (1,3,3,0,1)
+	- Neighbor   465 (1,3,1,0,1)
+	- Neighbor   737 (2,3,2,0,1)
+	- Neighbor   225 (0,3,2,0,1)
+
+Node   482     (1,3,2,0,2) is connected to:
+	- Neighbor   498 (1,3,3,0,2)
+	- Neighbor   466 (1,3,1,0,2)
+	- Neighbor   738 (2,3,2,0,2)
+	- Neighbor   226 (0,3,2,0,2)
+
+Node   483     (1,3,2,0,3) is connected to:
+	- Neighbor   499 (1,3,3,0,3)
+	- Neighbor   467 (1,3,1,0,3)
+	- Neighbor   739 (2,3,2,0,3)
+	- Neighbor   227 (0,3,2,0,3)
+
+Node   484     (1,3,2,1,0) is connected to:
+	- Neighbor   500 (1,3,3,1,0)
+	- Neighbor   468 (1,3,1,1,0)
+	- Neighbor   740 (2,3,2,1,0)
+	- Neighbor   228 (0,3,2,1,0)
+
+Node   485     (1,3,2,1,1) is connected to:
+	- Neighbor   501 (1,3,3,1,1)
+	- Neighbor   469 (1,3,1,1,1)
+	- Neighbor   741 (2,3,2,1,1)
+	- Neighbor   229 (0,3,2,1,1)
+
+Node   486     (1,3,2,1,2) is connected to:
+	- Neighbor   502 (1,3,3,1,2)
+	- Neighbor   470 (1,3,1,1,2)
+	- Neighbor   742 (2,3,2,1,2)
+	- Neighbor   230 (0,3,2,1,2)
+
+Node   487     (1,3,2,1,3) is connected to:
+	- Neighbor   503 (1,3,3,1,3)
+	- Neighbor   471 (1,3,1,1,3)
+	- Neighbor   743 (2,3,2,1,3)
+	- Neighbor   231 (0,3,2,1,3)
+
+Node   488     (1,3,2,2,0) is connected to:
+	- Neighbor   504 (1,3,3,2,0)
+	- Neighbor   472 (1,3,1,2,0)
+	- Neighbor   744 (2,3,2,2,0)
+	- Neighbor   232 (0,3,2,2,0)
+
+Node   489     (1,3,2,2,1) is connected to:
+	- Neighbor   505 (1,3,3,2,1)
+	- Neighbor   473 (1,3,1,2,1)
+	- Neighbor   745 (2,3,2,2,1)
+	- Neighbor   233 (0,3,2,2,1)
+
+Node   490     (1,3,2,2,2) is connected to:
+	- Neighbor   506 (1,3,3,2,2)
+	- Neighbor   474 (1,3,1,2,2)
+	- Neighbor   746 (2,3,2,2,2)
+	- Neighbor   234 (0,3,2,2,2)
+
+Node   491     (1,3,2,2,3) is connected to:
+	- Neighbor   507 (1,3,3,2,3)
+	- Neighbor   475 (1,3,1,2,3)
+	- Neighbor   747 (2,3,2,2,3)
+	- Neighbor   235 (0,3,2,2,3)
+
+Node   492     (1,3,2,3,0) is connected to:
+	- Neighbor   508 (1,3,3,3,0)
+	- Neighbor   476 (1,3,1,3,0)
+	- Neighbor   748 (2,3,2,3,0)
+	- Neighbor   236 (0,3,2,3,0)
+
+Node   493     (1,3,2,3,1) is connected to:
+	- Neighbor   509 (1,3,3,3,1)
+	- Neighbor   477 (1,3,1,3,1)
+	- Neighbor   749 (2,3,2,3,1)
+	- Neighbor   237 (0,3,2,3,1)
+
+Node   494     (1,3,2,3,2) is connected to:
+	- Neighbor   510 (1,3,3,3,2)
+	- Neighbor   478 (1,3,1,3,2)
+	- Neighbor   750 (2,3,2,3,2)
+	- Neighbor   238 (0,3,2,3,2)
+
+Node   495     (1,3,2,3,3) is connected to:
+	- Neighbor   511 (1,3,3,3,3)
+	- Neighbor   479 (1,3,1,3,3)
+	- Neighbor   751 (2,3,2,3,3)
+	- Neighbor   239 (0,3,2,3,3)
+
+Node   496     (1,3,3,0,0) is connected to:
+	- Neighbor   448 (1,3,0,0,0)
+	- Neighbor   480 (1,3,2,0,0)
+	- Neighbor   752 (2,3,3,0,0)
+	- Neighbor   240 (0,3,3,0,0)
+
+Node   497     (1,3,3,0,1) is connected to:
+	- Neighbor   449 (1,3,0,0,1)
+	- Neighbor   481 (1,3,2,0,1)
+	- Neighbor   753 (2,3,3,0,1)
+	- Neighbor   241 (0,3,3,0,1)
+
+Node   498     (1,3,3,0,2) is connected to:
+	- Neighbor   450 (1,3,0,0,2)
+	- Neighbor   482 (1,3,2,0,2)
+	- Neighbor   754 (2,3,3,0,2)
+	- Neighbor   242 (0,3,3,0,2)
+
+Node   499     (1,3,3,0,3) is connected to:
+	- Neighbor   451 (1,3,0,0,3)
+	- Neighbor   483 (1,3,2,0,3)
+	- Neighbor   755 (2,3,3,0,3)
+	- Neighbor   243 (0,3,3,0,3)
+
+Node   500     (1,3,3,1,0) is connected to:
+	- Neighbor   452 (1,3,0,1,0)
+	- Neighbor   484 (1,3,2,1,0)
+	- Neighbor   756 (2,3,3,1,0)
+	- Neighbor   244 (0,3,3,1,0)
+
+Node   501     (1,3,3,1,1) is connected to:
+	- Neighbor   453 (1,3,0,1,1)
+	- Neighbor   485 (1,3,2,1,1)
+	- Neighbor   757 (2,3,3,1,1)
+	- Neighbor   245 (0,3,3,1,1)
+
+Node   502     (1,3,3,1,2) is connected to:
+	- Neighbor   454 (1,3,0,1,2)
+	- Neighbor   486 (1,3,2,1,2)
+	- Neighbor   758 (2,3,3,1,2)
+	- Neighbor   246 (0,3,3,1,2)
+
+Node   503     (1,3,3,1,3) is connected to:
+	- Neighbor   455 (1,3,0,1,3)
+	- Neighbor   487 (1,3,2,1,3)
+	- Neighbor   759 (2,3,3,1,3)
+	- Neighbor   247 (0,3,3,1,3)
+
+Node   504     (1,3,3,2,0) is connected to:
+	- Neighbor   456 (1,3,0,2,0)
+	- Neighbor   488 (1,3,2,2,0)
+	- Neighbor   760 (2,3,3,2,0)
+	- Neighbor   248 (0,3,3,2,0)
+
+Node   505     (1,3,3,2,1) is connected to:
+	- Neighbor   457 (1,3,0,2,1)
+	- Neighbor   489 (1,3,2,2,1)
+	- Neighbor   761 (2,3,3,2,1)
+	- Neighbor   249 (0,3,3,2,1)
+
+Node   506     (1,3,3,2,2) is connected to:
+	- Neighbor   458 (1,3,0,2,2)
+	- Neighbor   490 (1,3,2,2,2)
+	- Neighbor   762 (2,3,3,2,2)
+	- Neighbor   250 (0,3,3,2,2)
+
+Node   507     (1,3,3,2,3) is connected to:
+	- Neighbor   459 (1,3,0,2,3)
+	- Neighbor   491 (1,3,2,2,3)
+	- Neighbor   763 (2,3,3,2,3)
+	- Neighbor   251 (0,3,3,2,3)
+
+Node   508     (1,3,3,3,0) is connected to:
+	- Neighbor   460 (1,3,0,3,0)
+	- Neighbor   492 (1,3,2,3,0)
+	- Neighbor   764 (2,3,3,3,0)
+	- Neighbor   252 (0,3,3,3,0)
+
+Node   509     (1,3,3,3,1) is connected to:
+	- Neighbor   461 (1,3,0,3,1)
+	- Neighbor   493 (1,3,2,3,1)
+	- Neighbor   765 (2,3,3,3,1)
+	- Neighbor   253 (0,3,3,3,1)
+
+Node   510     (1,3,3,3,2) is connected to:
+	- Neighbor   462 (1,3,0,3,2)
+	- Neighbor   494 (1,3,2,3,2)
+	- Neighbor   766 (2,3,3,3,2)
+	- Neighbor   254 (0,3,3,3,2)
+
+Node   511     (1,3,3,3,3) is connected to:
+	- Neighbor   463 (1,3,0,3,3)
+	- Neighbor   495 (1,3,2,3,3)
+	- Neighbor   767 (2,3,3,3,3)
+	- Neighbor   255 (0,3,3,3,3)
+
+Node   512     (2,0,0,0,0) is connected to:
+	- Neighbor   516 (2,0,0,1,0)
+	- Neighbor   524 (2,0,0,3,0)
+	- Neighbor   768 (3,0,0,0,0)
+	- Neighbor   256 (1,0,0,0,0)
+
+Node   513     (2,0,0,0,1) is connected to:
+	- Neighbor   517 (2,0,0,1,1)
+	- Neighbor   525 (2,0,0,3,1)
+	- Neighbor   769 (3,0,0,0,1)
+	- Neighbor   257 (1,0,0,0,1)
+
+Node   514     (2,0,0,0,2) is connected to:
+	- Neighbor   518 (2,0,0,1,2)
+	- Neighbor   526 (2,0,0,3,2)
+	- Neighbor   770 (3,0,0,0,2)
+	- Neighbor   258 (1,0,0,0,2)
+
+Node   515     (2,0,0,0,3) is connected to:
+	- Neighbor   519 (2,0,0,1,3)
+	- Neighbor   527 (2,0,0,3,3)
+	- Neighbor   771 (3,0,0,0,3)
+	- Neighbor   259 (1,0,0,0,3)
+
+Node   516     (2,0,0,1,0) is connected to:
+	- Neighbor   520 (2,0,0,2,0)
+	- Neighbor   512 (2,0,0,0,0)
+	- Neighbor   772 (3,0,0,1,0)
+	- Neighbor   260 (1,0,0,1,0)
+
+Node   517     (2,0,0,1,1) is connected to:
+	- Neighbor   521 (2,0,0,2,1)
+	- Neighbor   513 (2,0,0,0,1)
+	- Neighbor   773 (3,0,0,1,1)
+	- Neighbor   261 (1,0,0,1,1)
+
+Node   518     (2,0,0,1,2) is connected to:
+	- Neighbor   522 (2,0,0,2,2)
+	- Neighbor   514 (2,0,0,0,2)
+	- Neighbor   774 (3,0,0,1,2)
+	- Neighbor   262 (1,0,0,1,2)
+
+Node   519     (2,0,0,1,3) is connected to:
+	- Neighbor   523 (2,0,0,2,3)
+	- Neighbor   515 (2,0,0,0,3)
+	- Neighbor   775 (3,0,0,1,3)
+	- Neighbor   263 (1,0,0,1,3)
+
+Node   520     (2,0,0,2,0) is connected to:
+	- Neighbor   524 (2,0,0,3,0)
+	- Neighbor   516 (2,0,0,1,0)
+	- Neighbor   776 (3,0,0,2,0)
+	- Neighbor   264 (1,0,0,2,0)
+
+Node   521     (2,0,0,2,1) is connected to:
+	- Neighbor   525 (2,0,0,3,1)
+	- Neighbor   517 (2,0,0,1,1)
+	- Neighbor   777 (3,0,0,2,1)
+	- Neighbor   265 (1,0,0,2,1)
+
+Node   522     (2,0,0,2,2) is connected to:
+	- Neighbor   526 (2,0,0,3,2)
+	- Neighbor   518 (2,0,0,1,2)
+	- Neighbor   778 (3,0,0,2,2)
+	- Neighbor   266 (1,0,0,2,2)
+
+Node   523     (2,0,0,2,3) is connected to:
+	- Neighbor   527 (2,0,0,3,3)
+	- Neighbor   519 (2,0,0,1,3)
+	- Neighbor   779 (3,0,0,2,3)
+	- Neighbor   267 (1,0,0,2,3)
+
+Node   524     (2,0,0,3,0) is connected to:
+	- Neighbor   512 (2,0,0,0,0)
+	- Neighbor   520 (2,0,0,2,0)
+	- Neighbor   780 (3,0,0,3,0)
+	- Neighbor   268 (1,0,0,3,0)
+
+Node   525     (2,0,0,3,1) is connected to:
+	- Neighbor   513 (2,0,0,0,1)
+	- Neighbor   521 (2,0,0,2,1)
+	- Neighbor   781 (3,0,0,3,1)
+	- Neighbor   269 (1,0,0,3,1)
+
+Node   526     (2,0,0,3,2) is connected to:
+	- Neighbor   514 (2,0,0,0,2)
+	- Neighbor   522 (2,0,0,2,2)
+	- Neighbor   782 (3,0,0,3,2)
+	- Neighbor   270 (1,0,0,3,2)
+
+Node   527     (2,0,0,3,3) is connected to:
+	- Neighbor   515 (2,0,0,0,3)
+	- Neighbor   523 (2,0,0,2,3)
+	- Neighbor   783 (3,0,0,3,3)
+	- Neighbor   271 (1,0,0,3,3)
+
+Node   528     (2,0,1,0,0) is connected to:
+	- Neighbor   532 (2,0,1,1,0)
+	- Neighbor   540 (2,0,1,3,0)
+	- Neighbor   784 (3,0,1,0,0)
+	- Neighbor   272 (1,0,1,0,0)
+
+Node   529     (2,0,1,0,1) is connected to:
+	- Neighbor   533 (2,0,1,1,1)
+	- Neighbor   541 (2,0,1,3,1)
+	- Neighbor   785 (3,0,1,0,1)
+	- Neighbor   273 (1,0,1,0,1)
+
+Node   530     (2,0,1,0,2) is connected to:
+	- Neighbor   534 (2,0,1,1,2)
+	- Neighbor   542 (2,0,1,3,2)
+	- Neighbor   786 (3,0,1,0,2)
+	- Neighbor   274 (1,0,1,0,2)
+
+Node   531     (2,0,1,0,3) is connected to:
+	- Neighbor   535 (2,0,1,1,3)
+	- Neighbor   543 (2,0,1,3,3)
+	- Neighbor   787 (3,0,1,0,3)
+	- Neighbor   275 (1,0,1,0,3)
+
+Node   532     (2,0,1,1,0) is connected to:
+	- Neighbor   536 (2,0,1,2,0)
+	- Neighbor   528 (2,0,1,0,0)
+	- Neighbor   788 (3,0,1,1,0)
+	- Neighbor   276 (1,0,1,1,0)
+
+Node   533     (2,0,1,1,1) is connected to:
+	- Neighbor   537 (2,0,1,2,1)
+	- Neighbor   529 (2,0,1,0,1)
+	- Neighbor   789 (3,0,1,1,1)
+	- Neighbor   277 (1,0,1,1,1)
+
+Node   534     (2,0,1,1,2) is connected to:
+	- Neighbor   538 (2,0,1,2,2)
+	- Neighbor   530 (2,0,1,0,2)
+	- Neighbor   790 (3,0,1,1,2)
+	- Neighbor   278 (1,0,1,1,2)
+
+Node   535     (2,0,1,1,3) is connected to:
+	- Neighbor   539 (2,0,1,2,3)
+	- Neighbor   531 (2,0,1,0,3)
+	- Neighbor   791 (3,0,1,1,3)
+	- Neighbor   279 (1,0,1,1,3)
+
+Node   536     (2,0,1,2,0) is connected to:
+	- Neighbor   540 (2,0,1,3,0)
+	- Neighbor   532 (2,0,1,1,0)
+	- Neighbor   792 (3,0,1,2,0)
+	- Neighbor   280 (1,0,1,2,0)
+
+Node   537     (2,0,1,2,1) is connected to:
+	- Neighbor   541 (2,0,1,3,1)
+	- Neighbor   533 (2,0,1,1,1)
+	- Neighbor   793 (3,0,1,2,1)
+	- Neighbor   281 (1,0,1,2,1)
+
+Node   538     (2,0,1,2,2) is connected to:
+	- Neighbor   542 (2,0,1,3,2)
+	- Neighbor   534 (2,0,1,1,2)
+	- Neighbor   794 (3,0,1,2,2)
+	- Neighbor   282 (1,0,1,2,2)
+
+Node   539     (2,0,1,2,3) is connected to:
+	- Neighbor   543 (2,0,1,3,3)
+	- Neighbor   535 (2,0,1,1,3)
+	- Neighbor   795 (3,0,1,2,3)
+	- Neighbor   283 (1,0,1,2,3)
+
+Node   540     (2,0,1,3,0) is connected to:
+	- Neighbor   528 (2,0,1,0,0)
+	- Neighbor   536 (2,0,1,2,0)
+	- Neighbor   796 (3,0,1,3,0)
+	- Neighbor   284 (1,0,1,3,0)
+
+Node   541     (2,0,1,3,1) is connected to:
+	- Neighbor   529 (2,0,1,0,1)
+	- Neighbor   537 (2,0,1,2,1)
+	- Neighbor   797 (3,0,1,3,1)
+	- Neighbor   285 (1,0,1,3,1)
+
+Node   542     (2,0,1,3,2) is connected to:
+	- Neighbor   530 (2,0,1,0,2)
+	- Neighbor   538 (2,0,1,2,2)
+	- Neighbor   798 (3,0,1,3,2)
+	- Neighbor   286 (1,0,1,3,2)
+
+Node   543     (2,0,1,3,3) is connected to:
+	- Neighbor   531 (2,0,1,0,3)
+	- Neighbor   539 (2,0,1,2,3)
+	- Neighbor   799 (3,0,1,3,3)
+	- Neighbor   287 (1,0,1,3,3)
+
+Node   544     (2,0,2,0,0) is connected to:
+	- Neighbor   548 (2,0,2,1,0)
+	- Neighbor   556 (2,0,2,3,0)
+	- Neighbor   800 (3,0,2,0,0)
+	- Neighbor   288 (1,0,2,0,0)
+
+Node   545     (2,0,2,0,1) is connected to:
+	- Neighbor   549 (2,0,2,1,1)
+	- Neighbor   557 (2,0,2,3,1)
+	- Neighbor   801 (3,0,2,0,1)
+	- Neighbor   289 (1,0,2,0,1)
+
+Node   546     (2,0,2,0,2) is connected to:
+	- Neighbor   550 (2,0,2,1,2)
+	- Neighbor   558 (2,0,2,3,2)
+	- Neighbor   802 (3,0,2,0,2)
+	- Neighbor   290 (1,0,2,0,2)
+
+Node   547     (2,0,2,0,3) is connected to:
+	- Neighbor   551 (2,0,2,1,3)
+	- Neighbor   559 (2,0,2,3,3)
+	- Neighbor   803 (3,0,2,0,3)
+	- Neighbor   291 (1,0,2,0,3)
+
+Node   548     (2,0,2,1,0) is connected to:
+	- Neighbor   552 (2,0,2,2,0)
+	- Neighbor   544 (2,0,2,0,0)
+	- Neighbor   804 (3,0,2,1,0)
+	- Neighbor   292 (1,0,2,1,0)
+
+Node   549     (2,0,2,1,1) is connected to:
+	- Neighbor   553 (2,0,2,2,1)
+	- Neighbor   545 (2,0,2,0,1)
+	- Neighbor   805 (3,0,2,1,1)
+	- Neighbor   293 (1,0,2,1,1)
+
+Node   550     (2,0,2,1,2) is connected to:
+	- Neighbor   554 (2,0,2,2,2)
+	- Neighbor   546 (2,0,2,0,2)
+	- Neighbor   806 (3,0,2,1,2)
+	- Neighbor   294 (1,0,2,1,2)
+
+Node   551     (2,0,2,1,3) is connected to:
+	- Neighbor   555 (2,0,2,2,3)
+	- Neighbor   547 (2,0,2,0,3)
+	- Neighbor   807 (3,0,2,1,3)
+	- Neighbor   295 (1,0,2,1,3)
+
+Node   552     (2,0,2,2,0) is connected to:
+	- Neighbor   556 (2,0,2,3,0)
+	- Neighbor   548 (2,0,2,1,0)
+	- Neighbor   808 (3,0,2,2,0)
+	- Neighbor   296 (1,0,2,2,0)
+
+Node   553     (2,0,2,2,1) is connected to:
+	- Neighbor   557 (2,0,2,3,1)
+	- Neighbor   549 (2,0,2,1,1)
+	- Neighbor   809 (3,0,2,2,1)
+	- Neighbor   297 (1,0,2,2,1)
+
+Node   554     (2,0,2,2,2) is connected to:
+	- Neighbor   558 (2,0,2,3,2)
+	- Neighbor   550 (2,0,2,1,2)
+	- Neighbor   810 (3,0,2,2,2)
+	- Neighbor   298 (1,0,2,2,2)
+
+Node   555     (2,0,2,2,3) is connected to:
+	- Neighbor   559 (2,0,2,3,3)
+	- Neighbor   551 (2,0,2,1,3)
+	- Neighbor   811 (3,0,2,2,3)
+	- Neighbor   299 (1,0,2,2,3)
+
+Node   556     (2,0,2,3,0) is connected to:
+	- Neighbor   544 (2,0,2,0,0)
+	- Neighbor   552 (2,0,2,2,0)
+	- Neighbor   812 (3,0,2,3,0)
+	- Neighbor   300 (1,0,2,3,0)
+
+Node   557     (2,0,2,3,1) is connected to:
+	- Neighbor   545 (2,0,2,0,1)
+	- Neighbor   553 (2,0,2,2,1)
+	- Neighbor   813 (3,0,2,3,1)
+	- Neighbor   301 (1,0,2,3,1)
+
+Node   558     (2,0,2,3,2) is connected to:
+	- Neighbor   546 (2,0,2,0,2)
+	- Neighbor   554 (2,0,2,2,2)
+	- Neighbor   814 (3,0,2,3,2)
+	- Neighbor   302 (1,0,2,3,2)
+
+Node   559     (2,0,2,3,3) is connected to:
+	- Neighbor   547 (2,0,2,0,3)
+	- Neighbor   555 (2,0,2,2,3)
+	- Neighbor   815 (3,0,2,3,3)
+	- Neighbor   303 (1,0,2,3,3)
+
+Node   560     (2,0,3,0,0) is connected to:
+	- Neighbor   564 (2,0,3,1,0)
+	- Neighbor   572 (2,0,3,3,0)
+	- Neighbor   816 (3,0,3,0,0)
+	- Neighbor   304 (1,0,3,0,0)
+
+Node   561     (2,0,3,0,1) is connected to:
+	- Neighbor   565 (2,0,3,1,1)
+	- Neighbor   573 (2,0,3,3,1)
+	- Neighbor   817 (3,0,3,0,1)
+	- Neighbor   305 (1,0,3,0,1)
+
+Node   562     (2,0,3,0,2) is connected to:
+	- Neighbor   566 (2,0,3,1,2)
+	- Neighbor   574 (2,0,3,3,2)
+	- Neighbor   818 (3,0,3,0,2)
+	- Neighbor   306 (1,0,3,0,2)
+
+Node   563     (2,0,3,0,3) is connected to:
+	- Neighbor   567 (2,0,3,1,3)
+	- Neighbor   575 (2,0,3,3,3)
+	- Neighbor   819 (3,0,3,0,3)
+	- Neighbor   307 (1,0,3,0,3)
+
+Node   564     (2,0,3,1,0) is connected to:
+	- Neighbor   568 (2,0,3,2,0)
+	- Neighbor   560 (2,0,3,0,0)
+	- Neighbor   820 (3,0,3,1,0)
+	- Neighbor   308 (1,0,3,1,0)
+
+Node   565     (2,0,3,1,1) is connected to:
+	- Neighbor   569 (2,0,3,2,1)
+	- Neighbor   561 (2,0,3,0,1)
+	- Neighbor   821 (3,0,3,1,1)
+	- Neighbor   309 (1,0,3,1,1)
+
+Node   566     (2,0,3,1,2) is connected to:
+	- Neighbor   570 (2,0,3,2,2)
+	- Neighbor   562 (2,0,3,0,2)
+	- Neighbor   822 (3,0,3,1,2)
+	- Neighbor   310 (1,0,3,1,2)
+
+Node   567     (2,0,3,1,3) is connected to:
+	- Neighbor   571 (2,0,3,2,3)
+	- Neighbor   563 (2,0,3,0,3)
+	- Neighbor   823 (3,0,3,1,3)
+	- Neighbor   311 (1,0,3,1,3)
+
+Node   568     (2,0,3,2,0) is connected to:
+	- Neighbor   572 (2,0,3,3,0)
+	- Neighbor   564 (2,0,3,1,0)
+	- Neighbor   824 (3,0,3,2,0)
+	- Neighbor   312 (1,0,3,2,0)
+
+Node   569     (2,0,3,2,1) is connected to:
+	- Neighbor   573 (2,0,3,3,1)
+	- Neighbor   565 (2,0,3,1,1)
+	- Neighbor   825 (3,0,3,2,1)
+	- Neighbor   313 (1,0,3,2,1)
+
+Node   570     (2,0,3,2,2) is connected to:
+	- Neighbor   574 (2,0,3,3,2)
+	- Neighbor   566 (2,0,3,1,2)
+	- Neighbor   826 (3,0,3,2,2)
+	- Neighbor   314 (1,0,3,2,2)
+
+Node   571     (2,0,3,2,3) is connected to:
+	- Neighbor   575 (2,0,3,3,3)
+	- Neighbor   567 (2,0,3,1,3)
+	- Neighbor   827 (3,0,3,2,3)
+	- Neighbor   315 (1,0,3,2,3)
+
+Node   572     (2,0,3,3,0) is connected to:
+	- Neighbor   560 (2,0,3,0,0)
+	- Neighbor   568 (2,0,3,2,0)
+	- Neighbor   828 (3,0,3,3,0)
+	- Neighbor   316 (1,0,3,3,0)
+
+Node   573     (2,0,3,3,1) is connected to:
+	- Neighbor   561 (2,0,3,0,1)
+	- Neighbor   569 (2,0,3,2,1)
+	- Neighbor   829 (3,0,3,3,1)
+	- Neighbor   317 (1,0,3,3,1)
+
+Node   574     (2,0,3,3,2) is connected to:
+	- Neighbor   562 (2,0,3,0,2)
+	- Neighbor   570 (2,0,3,2,2)
+	- Neighbor   830 (3,0,3,3,2)
+	- Neighbor   318 (1,0,3,3,2)
+
+Node   575     (2,0,3,3,3) is connected to:
+	- Neighbor   563 (2,0,3,0,3)
+	- Neighbor   571 (2,0,3,2,3)
+	- Neighbor   831 (3,0,3,3,3)
+	- Neighbor   319 (1,0,3,3,3)
+
+Node   576     (2,1,0,0,0) is connected to:
+	- Neighbor   580 (2,1,0,1,0)
+	- Neighbor   588 (2,1,0,3,0)
+	- Neighbor   832 (3,1,0,0,0)
+	- Neighbor   320 (1,1,0,0,0)
+
+Node   577     (2,1,0,0,1) is connected to:
+	- Neighbor   581 (2,1,0,1,1)
+	- Neighbor   589 (2,1,0,3,1)
+	- Neighbor   833 (3,1,0,0,1)
+	- Neighbor   321 (1,1,0,0,1)
+
+Node   578     (2,1,0,0,2) is connected to:
+	- Neighbor   582 (2,1,0,1,2)
+	- Neighbor   590 (2,1,0,3,2)
+	- Neighbor   834 (3,1,0,0,2)
+	- Neighbor   322 (1,1,0,0,2)
+
+Node   579     (2,1,0,0,3) is connected to:
+	- Neighbor   583 (2,1,0,1,3)
+	- Neighbor   591 (2,1,0,3,3)
+	- Neighbor   835 (3,1,0,0,3)
+	- Neighbor   323 (1,1,0,0,3)
+
+Node   580     (2,1,0,1,0) is connected to:
+	- Neighbor   584 (2,1,0,2,0)
+	- Neighbor   576 (2,1,0,0,0)
+	- Neighbor   836 (3,1,0,1,0)
+	- Neighbor   324 (1,1,0,1,0)
+
+Node   581     (2,1,0,1,1) is connected to:
+	- Neighbor   585 (2,1,0,2,1)
+	- Neighbor   577 (2,1,0,0,1)
+	- Neighbor   837 (3,1,0,1,1)
+	- Neighbor   325 (1,1,0,1,1)
+
+Node   582     (2,1,0,1,2) is connected to:
+	- Neighbor   586 (2,1,0,2,2)
+	- Neighbor   578 (2,1,0,0,2)
+	- Neighbor   838 (3,1,0,1,2)
+	- Neighbor   326 (1,1,0,1,2)
+
+Node   583     (2,1,0,1,3) is connected to:
+	- Neighbor   587 (2,1,0,2,3)
+	- Neighbor   579 (2,1,0,0,3)
+	- Neighbor   839 (3,1,0,1,3)
+	- Neighbor   327 (1,1,0,1,3)
+
+Node   584     (2,1,0,2,0) is connected to:
+	- Neighbor   588 (2,1,0,3,0)
+	- Neighbor   580 (2,1,0,1,0)
+	- Neighbor   840 (3,1,0,2,0)
+	- Neighbor   328 (1,1,0,2,0)
+
+Node   585     (2,1,0,2,1) is connected to:
+	- Neighbor   589 (2,1,0,3,1)
+	- Neighbor   581 (2,1,0,1,1)
+	- Neighbor   841 (3,1,0,2,1)
+	- Neighbor   329 (1,1,0,2,1)
+
+Node   586     (2,1,0,2,2) is connected to:
+	- Neighbor   590 (2,1,0,3,2)
+	- Neighbor   582 (2,1,0,1,2)
+	- Neighbor   842 (3,1,0,2,2)
+	- Neighbor   330 (1,1,0,2,2)
+
+Node   587     (2,1,0,2,3) is connected to:
+	- Neighbor   591 (2,1,0,3,3)
+	- Neighbor   583 (2,1,0,1,3)
+	- Neighbor   843 (3,1,0,2,3)
+	- Neighbor   331 (1,1,0,2,3)
+
+Node   588     (2,1,0,3,0) is connected to:
+	- Neighbor   576 (2,1,0,0,0)
+	- Neighbor   584 (2,1,0,2,0)
+	- Neighbor   844 (3,1,0,3,0)
+	- Neighbor   332 (1,1,0,3,0)
+
+Node   589     (2,1,0,3,1) is connected to:
+	- Neighbor   577 (2,1,0,0,1)
+	- Neighbor   585 (2,1,0,2,1)
+	- Neighbor   845 (3,1,0,3,1)
+	- Neighbor   333 (1,1,0,3,1)
+
+Node   590     (2,1,0,3,2) is connected to:
+	- Neighbor   578 (2,1,0,0,2)
+	- Neighbor   586 (2,1,0,2,2)
+	- Neighbor   846 (3,1,0,3,2)
+	- Neighbor   334 (1,1,0,3,2)
+
+Node   591     (2,1,0,3,3) is connected to:
+	- Neighbor   579 (2,1,0,0,3)
+	- Neighbor   587 (2,1,0,2,3)
+	- Neighbor   847 (3,1,0,3,3)
+	- Neighbor   335 (1,1,0,3,3)
+
+Node   592     (2,1,1,0,0) is connected to:
+	- Neighbor   596 (2,1,1,1,0)
+	- Neighbor   604 (2,1,1,3,0)
+	- Neighbor   848 (3,1,1,0,0)
+	- Neighbor   336 (1,1,1,0,0)
+
+Node   593     (2,1,1,0,1) is connected to:
+	- Neighbor   597 (2,1,1,1,1)
+	- Neighbor   605 (2,1,1,3,1)
+	- Neighbor   849 (3,1,1,0,1)
+	- Neighbor   337 (1,1,1,0,1)
+
+Node   594     (2,1,1,0,2) is connected to:
+	- Neighbor   598 (2,1,1,1,2)
+	- Neighbor   606 (2,1,1,3,2)
+	- Neighbor   850 (3,1,1,0,2)
+	- Neighbor   338 (1,1,1,0,2)
+
+Node   595     (2,1,1,0,3) is connected to:
+	- Neighbor   599 (2,1,1,1,3)
+	- Neighbor   607 (2,1,1,3,3)
+	- Neighbor   851 (3,1,1,0,3)
+	- Neighbor   339 (1,1,1,0,3)
+
+Node   596     (2,1,1,1,0) is connected to:
+	- Neighbor   600 (2,1,1,2,0)
+	- Neighbor   592 (2,1,1,0,0)
+	- Neighbor   852 (3,1,1,1,0)
+	- Neighbor   340 (1,1,1,1,0)
+
+Node   597     (2,1,1,1,1) is connected to:
+	- Neighbor   601 (2,1,1,2,1)
+	- Neighbor   593 (2,1,1,0,1)
+	- Neighbor   853 (3,1,1,1,1)
+	- Neighbor   341 (1,1,1,1,1)
+
+Node   598     (2,1,1,1,2) is connected to:
+	- Neighbor   602 (2,1,1,2,2)
+	- Neighbor   594 (2,1,1,0,2)
+	- Neighbor   854 (3,1,1,1,2)
+	- Neighbor   342 (1,1,1,1,2)
+
+Node   599     (2,1,1,1,3) is connected to:
+	- Neighbor   603 (2,1,1,2,3)
+	- Neighbor   595 (2,1,1,0,3)
+	- Neighbor   855 (3,1,1,1,3)
+	- Neighbor   343 (1,1,1,1,3)
+
+Node   600     (2,1,1,2,0) is connected to:
+	- Neighbor   604 (2,1,1,3,0)
+	- Neighbor   596 (2,1,1,1,0)
+	- Neighbor   856 (3,1,1,2,0)
+	- Neighbor   344 (1,1,1,2,0)
+
+Node   601     (2,1,1,2,1) is connected to:
+	- Neighbor   605 (2,1,1,3,1)
+	- Neighbor   597 (2,1,1,1,1)
+	- Neighbor   857 (3,1,1,2,1)
+	- Neighbor   345 (1,1,1,2,1)
+
+Node   602     (2,1,1,2,2) is connected to:
+	- Neighbor   606 (2,1,1,3,2)
+	- Neighbor   598 (2,1,1,1,2)
+	- Neighbor   858 (3,1,1,2,2)
+	- Neighbor   346 (1,1,1,2,2)
+
+Node   603     (2,1,1,2,3) is connected to:
+	- Neighbor   607 (2,1,1,3,3)
+	- Neighbor   599 (2,1,1,1,3)
+	- Neighbor   859 (3,1,1,2,3)
+	- Neighbor   347 (1,1,1,2,3)
+
+Node   604     (2,1,1,3,0) is connected to:
+	- Neighbor   592 (2,1,1,0,0)
+	- Neighbor   600 (2,1,1,2,0)
+	- Neighbor   860 (3,1,1,3,0)
+	- Neighbor   348 (1,1,1,3,0)
+
+Node   605     (2,1,1,3,1) is connected to:
+	- Neighbor   593 (2,1,1,0,1)
+	- Neighbor   601 (2,1,1,2,1)
+	- Neighbor   861 (3,1,1,3,1)
+	- Neighbor   349 (1,1,1,3,1)
+
+Node   606     (2,1,1,3,2) is connected to:
+	- Neighbor   594 (2,1,1,0,2)
+	- Neighbor   602 (2,1,1,2,2)
+	- Neighbor   862 (3,1,1,3,2)
+	- Neighbor   350 (1,1,1,3,2)
+
+Node   607     (2,1,1,3,3) is connected to:
+	- Neighbor   595 (2,1,1,0,3)
+	- Neighbor   603 (2,1,1,2,3)
+	- Neighbor   863 (3,1,1,3,3)
+	- Neighbor   351 (1,1,1,3,3)
+
+Node   608     (2,1,2,0,0) is connected to:
+	- Neighbor   612 (2,1,2,1,0)
+	- Neighbor   620 (2,1,2,3,0)
+	- Neighbor   864 (3,1,2,0,0)
+	- Neighbor   352 (1,1,2,0,0)
+
+Node   609     (2,1,2,0,1) is connected to:
+	- Neighbor   613 (2,1,2,1,1)
+	- Neighbor   621 (2,1,2,3,1)
+	- Neighbor   865 (3,1,2,0,1)
+	- Neighbor   353 (1,1,2,0,1)
+
+Node   610     (2,1,2,0,2) is connected to:
+	- Neighbor   614 (2,1,2,1,2)
+	- Neighbor   622 (2,1,2,3,2)
+	- Neighbor   866 (3,1,2,0,2)
+	- Neighbor   354 (1,1,2,0,2)
+
+Node   611     (2,1,2,0,3) is connected to:
+	- Neighbor   615 (2,1,2,1,3)
+	- Neighbor   623 (2,1,2,3,3)
+	- Neighbor   867 (3,1,2,0,3)
+	- Neighbor   355 (1,1,2,0,3)
+
+Node   612     (2,1,2,1,0) is connected to:
+	- Neighbor   616 (2,1,2,2,0)
+	- Neighbor   608 (2,1,2,0,0)
+	- Neighbor   868 (3,1,2,1,0)
+	- Neighbor   356 (1,1,2,1,0)
+
+Node   613     (2,1,2,1,1) is connected to:
+	- Neighbor   617 (2,1,2,2,1)
+	- Neighbor   609 (2,1,2,0,1)
+	- Neighbor   869 (3,1,2,1,1)
+	- Neighbor   357 (1,1,2,1,1)
+
+Node   614     (2,1,2,1,2) is connected to:
+	- Neighbor   618 (2,1,2,2,2)
+	- Neighbor   610 (2,1,2,0,2)
+	- Neighbor   870 (3,1,2,1,2)
+	- Neighbor   358 (1,1,2,1,2)
+
+Node   615     (2,1,2,1,3) is connected to:
+	- Neighbor   619 (2,1,2,2,3)
+	- Neighbor   611 (2,1,2,0,3)
+	- Neighbor   871 (3,1,2,1,3)
+	- Neighbor   359 (1,1,2,1,3)
+
+Node   616     (2,1,2,2,0) is connected to:
+	- Neighbor   620 (2,1,2,3,0)
+	- Neighbor   612 (2,1,2,1,0)
+	- Neighbor   872 (3,1,2,2,0)
+	- Neighbor   360 (1,1,2,2,0)
+
+Node   617     (2,1,2,2,1) is connected to:
+	- Neighbor   621 (2,1,2,3,1)
+	- Neighbor   613 (2,1,2,1,1)
+	- Neighbor   873 (3,1,2,2,1)
+	- Neighbor   361 (1,1,2,2,1)
+
+Node   618     (2,1,2,2,2) is connected to:
+	- Neighbor   622 (2,1,2,3,2)
+	- Neighbor   614 (2,1,2,1,2)
+	- Neighbor   874 (3,1,2,2,2)
+	- Neighbor   362 (1,1,2,2,2)
+
+Node   619     (2,1,2,2,3) is connected to:
+	- Neighbor   623 (2,1,2,3,3)
+	- Neighbor   615 (2,1,2,1,3)
+	- Neighbor   875 (3,1,2,2,3)
+	- Neighbor   363 (1,1,2,2,3)
+
+Node   620     (2,1,2,3,0) is connected to:
+	- Neighbor   608 (2,1,2,0,0)
+	- Neighbor   616 (2,1,2,2,0)
+	- Neighbor   876 (3,1,2,3,0)
+	- Neighbor   364 (1,1,2,3,0)
+
+Node   621     (2,1,2,3,1) is connected to:
+	- Neighbor   609 (2,1,2,0,1)
+	- Neighbor   617 (2,1,2,2,1)
+	- Neighbor   877 (3,1,2,3,1)
+	- Neighbor   365 (1,1,2,3,1)
+
+Node   622     (2,1,2,3,2) is connected to:
+	- Neighbor   610 (2,1,2,0,2)
+	- Neighbor   618 (2,1,2,2,2)
+	- Neighbor   878 (3,1,2,3,2)
+	- Neighbor   366 (1,1,2,3,2)
+
+Node   623     (2,1,2,3,3) is connected to:
+	- Neighbor   611 (2,1,2,0,3)
+	- Neighbor   619 (2,1,2,2,3)
+	- Neighbor   879 (3,1,2,3,3)
+	- Neighbor   367 (1,1,2,3,3)
+
+Node   624     (2,1,3,0,0) is connected to:
+	- Neighbor   628 (2,1,3,1,0)
+	- Neighbor   636 (2,1,3,3,0)
+	- Neighbor   880 (3,1,3,0,0)
+	- Neighbor   368 (1,1,3,0,0)
+
+Node   625     (2,1,3,0,1) is connected to:
+	- Neighbor   629 (2,1,3,1,1)
+	- Neighbor   637 (2,1,3,3,1)
+	- Neighbor   881 (3,1,3,0,1)
+	- Neighbor   369 (1,1,3,0,1)
+
+Node   626     (2,1,3,0,2) is connected to:
+	- Neighbor   630 (2,1,3,1,2)
+	- Neighbor   638 (2,1,3,3,2)
+	- Neighbor   882 (3,1,3,0,2)
+	- Neighbor   370 (1,1,3,0,2)
+
+Node   627     (2,1,3,0,3) is connected to:
+	- Neighbor   631 (2,1,3,1,3)
+	- Neighbor   639 (2,1,3,3,3)
+	- Neighbor   883 (3,1,3,0,3)
+	- Neighbor   371 (1,1,3,0,3)
+
+Node   628     (2,1,3,1,0) is connected to:
+	- Neighbor   632 (2,1,3,2,0)
+	- Neighbor   624 (2,1,3,0,0)
+	- Neighbor   884 (3,1,3,1,0)
+	- Neighbor   372 (1,1,3,1,0)
+
+Node   629     (2,1,3,1,1) is connected to:
+	- Neighbor   633 (2,1,3,2,1)
+	- Neighbor   625 (2,1,3,0,1)
+	- Neighbor   885 (3,1,3,1,1)
+	- Neighbor   373 (1,1,3,1,1)
+
+Node   630     (2,1,3,1,2) is connected to:
+	- Neighbor   634 (2,1,3,2,2)
+	- Neighbor   626 (2,1,3,0,2)
+	- Neighbor   886 (3,1,3,1,2)
+	- Neighbor   374 (1,1,3,1,2)
+
+Node   631     (2,1,3,1,3) is connected to:
+	- Neighbor   635 (2,1,3,2,3)
+	- Neighbor   627 (2,1,3,0,3)
+	- Neighbor   887 (3,1,3,1,3)
+	- Neighbor   375 (1,1,3,1,3)
+
+Node   632     (2,1,3,2,0) is connected to:
+	- Neighbor   636 (2,1,3,3,0)
+	- Neighbor   628 (2,1,3,1,0)
+	- Neighbor   888 (3,1,3,2,0)
+	- Neighbor   376 (1,1,3,2,0)
+
+Node   633     (2,1,3,2,1) is connected to:
+	- Neighbor   637 (2,1,3,3,1)
+	- Neighbor   629 (2,1,3,1,1)
+	- Neighbor   889 (3,1,3,2,1)
+	- Neighbor   377 (1,1,3,2,1)
+
+Node   634     (2,1,3,2,2) is connected to:
+	- Neighbor   638 (2,1,3,3,2)
+	- Neighbor   630 (2,1,3,1,2)
+	- Neighbor   890 (3,1,3,2,2)
+	- Neighbor   378 (1,1,3,2,2)
+
+Node   635     (2,1,3,2,3) is connected to:
+	- Neighbor   639 (2,1,3,3,3)
+	- Neighbor   631 (2,1,3,1,3)
+	- Neighbor   891 (3,1,3,2,3)
+	- Neighbor   379 (1,1,3,2,3)
+
+Node   636     (2,1,3,3,0) is connected to:
+	- Neighbor   624 (2,1,3,0,0)
+	- Neighbor   632 (2,1,3,2,0)
+	- Neighbor   892 (3,1,3,3,0)
+	- Neighbor   380 (1,1,3,3,0)
+
+Node   637     (2,1,3,3,1) is connected to:
+	- Neighbor   625 (2,1,3,0,1)
+	- Neighbor   633 (2,1,3,2,1)
+	- Neighbor   893 (3,1,3,3,1)
+	- Neighbor   381 (1,1,3,3,1)
+
+Node   638     (2,1,3,3,2) is connected to:
+	- Neighbor   626 (2,1,3,0,2)
+	- Neighbor   634 (2,1,3,2,2)
+	- Neighbor   894 (3,1,3,3,2)
+	- Neighbor   382 (1,1,3,3,2)
+
+Node   639     (2,1,3,3,3) is connected to:
+	- Neighbor   627 (2,1,3,0,3)
+	- Neighbor   635 (2,1,3,2,3)
+	- Neighbor   895 (3,1,3,3,3)
+	- Neighbor   383 (1,1,3,3,3)
+
+Node   640     (2,2,0,0,0) is connected to:
+	- Neighbor   644 (2,2,0,1,0)
+	- Neighbor   652 (2,2,0,3,0)
+	- Neighbor   896 (3,2,0,0,0)
+	- Neighbor   384 (1,2,0,0,0)
+
+Node   641     (2,2,0,0,1) is connected to:
+	- Neighbor   645 (2,2,0,1,1)
+	- Neighbor   653 (2,2,0,3,1)
+	- Neighbor   897 (3,2,0,0,1)
+	- Neighbor   385 (1,2,0,0,1)
+
+Node   642     (2,2,0,0,2) is connected to:
+	- Neighbor   646 (2,2,0,1,2)
+	- Neighbor   654 (2,2,0,3,2)
+	- Neighbor   898 (3,2,0,0,2)
+	- Neighbor   386 (1,2,0,0,2)
+
+Node   643     (2,2,0,0,3) is connected to:
+	- Neighbor   647 (2,2,0,1,3)
+	- Neighbor   655 (2,2,0,3,3)
+	- Neighbor   899 (3,2,0,0,3)
+	- Neighbor   387 (1,2,0,0,3)
+
+Node   644     (2,2,0,1,0) is connected to:
+	- Neighbor   648 (2,2,0,2,0)
+	- Neighbor   640 (2,2,0,0,0)
+	- Neighbor   900 (3,2,0,1,0)
+	- Neighbor   388 (1,2,0,1,0)
+
+Node   645     (2,2,0,1,1) is connected to:
+	- Neighbor   649 (2,2,0,2,1)
+	- Neighbor   641 (2,2,0,0,1)
+	- Neighbor   901 (3,2,0,1,1)
+	- Neighbor   389 (1,2,0,1,1)
+
+Node   646     (2,2,0,1,2) is connected to:
+	- Neighbor   650 (2,2,0,2,2)
+	- Neighbor   642 (2,2,0,0,2)
+	- Neighbor   902 (3,2,0,1,2)
+	- Neighbor   390 (1,2,0,1,2)
+
+Node   647     (2,2,0,1,3) is connected to:
+	- Neighbor   651 (2,2,0,2,3)
+	- Neighbor   643 (2,2,0,0,3)
+	- Neighbor   903 (3,2,0,1,3)
+	- Neighbor   391 (1,2,0,1,3)
+
+Node   648     (2,2,0,2,0) is connected to:
+	- Neighbor   652 (2,2,0,3,0)
+	- Neighbor   644 (2,2,0,1,0)
+	- Neighbor   904 (3,2,0,2,0)
+	- Neighbor   392 (1,2,0,2,0)
+
+Node   649     (2,2,0,2,1) is connected to:
+	- Neighbor   653 (2,2,0,3,1)
+	- Neighbor   645 (2,2,0,1,1)
+	- Neighbor   905 (3,2,0,2,1)
+	- Neighbor   393 (1,2,0,2,1)
+
+Node   650     (2,2,0,2,2) is connected to:
+	- Neighbor   654 (2,2,0,3,2)
+	- Neighbor   646 (2,2,0,1,2)
+	- Neighbor   906 (3,2,0,2,2)
+	- Neighbor   394 (1,2,0,2,2)
+
+Node   651     (2,2,0,2,3) is connected to:
+	- Neighbor   655 (2,2,0,3,3)
+	- Neighbor   647 (2,2,0,1,3)
+	- Neighbor   907 (3,2,0,2,3)
+	- Neighbor   395 (1,2,0,2,3)
+
+Node   652     (2,2,0,3,0) is connected to:
+	- Neighbor   640 (2,2,0,0,0)
+	- Neighbor   648 (2,2,0,2,0)
+	- Neighbor   908 (3,2,0,3,0)
+	- Neighbor   396 (1,2,0,3,0)
+
+Node   653     (2,2,0,3,1) is connected to:
+	- Neighbor   641 (2,2,0,0,1)
+	- Neighbor   649 (2,2,0,2,1)
+	- Neighbor   909 (3,2,0,3,1)
+	- Neighbor   397 (1,2,0,3,1)
+
+Node   654     (2,2,0,3,2) is connected to:
+	- Neighbor   642 (2,2,0,0,2)
+	- Neighbor   650 (2,2,0,2,2)
+	- Neighbor   910 (3,2,0,3,2)
+	- Neighbor   398 (1,2,0,3,2)
+
+Node   655     (2,2,0,3,3) is connected to:
+	- Neighbor   643 (2,2,0,0,3)
+	- Neighbor   651 (2,2,0,2,3)
+	- Neighbor   911 (3,2,0,3,3)
+	- Neighbor   399 (1,2,0,3,3)
+
+Node   656     (2,2,1,0,0) is connected to:
+	- Neighbor   660 (2,2,1,1,0)
+	- Neighbor   668 (2,2,1,3,0)
+	- Neighbor   912 (3,2,1,0,0)
+	- Neighbor   400 (1,2,1,0,0)
+
+Node   657     (2,2,1,0,1) is connected to:
+	- Neighbor   661 (2,2,1,1,1)
+	- Neighbor   669 (2,2,1,3,1)
+	- Neighbor   913 (3,2,1,0,1)
+	- Neighbor   401 (1,2,1,0,1)
+
+Node   658     (2,2,1,0,2) is connected to:
+	- Neighbor   662 (2,2,1,1,2)
+	- Neighbor   670 (2,2,1,3,2)
+	- Neighbor   914 (3,2,1,0,2)
+	- Neighbor   402 (1,2,1,0,2)
+
+Node   659     (2,2,1,0,3) is connected to:
+	- Neighbor   663 (2,2,1,1,3)
+	- Neighbor   671 (2,2,1,3,3)
+	- Neighbor   915 (3,2,1,0,3)
+	- Neighbor   403 (1,2,1,0,3)
+
+Node   660     (2,2,1,1,0) is connected to:
+	- Neighbor   664 (2,2,1,2,0)
+	- Neighbor   656 (2,2,1,0,0)
+	- Neighbor   916 (3,2,1,1,0)
+	- Neighbor   404 (1,2,1,1,0)
+
+Node   661     (2,2,1,1,1) is connected to:
+	- Neighbor   665 (2,2,1,2,1)
+	- Neighbor   657 (2,2,1,0,1)
+	- Neighbor   917 (3,2,1,1,1)
+	- Neighbor   405 (1,2,1,1,1)
+
+Node   662     (2,2,1,1,2) is connected to:
+	- Neighbor   666 (2,2,1,2,2)
+	- Neighbor   658 (2,2,1,0,2)
+	- Neighbor   918 (3,2,1,1,2)
+	- Neighbor   406 (1,2,1,1,2)
+
+Node   663     (2,2,1,1,3) is connected to:
+	- Neighbor   667 (2,2,1,2,3)
+	- Neighbor   659 (2,2,1,0,3)
+	- Neighbor   919 (3,2,1,1,3)
+	- Neighbor   407 (1,2,1,1,3)
+
+Node   664     (2,2,1,2,0) is connected to:
+	- Neighbor   668 (2,2,1,3,0)
+	- Neighbor   660 (2,2,1,1,0)
+	- Neighbor   920 (3,2,1,2,0)
+	- Neighbor   408 (1,2,1,2,0)
+
+Node   665     (2,2,1,2,1) is connected to:
+	- Neighbor   669 (2,2,1,3,1)
+	- Neighbor   661 (2,2,1,1,1)
+	- Neighbor   921 (3,2,1,2,1)
+	- Neighbor   409 (1,2,1,2,1)
+
+Node   666     (2,2,1,2,2) is connected to:
+	- Neighbor   670 (2,2,1,3,2)
+	- Neighbor   662 (2,2,1,1,2)
+	- Neighbor   922 (3,2,1,2,2)
+	- Neighbor   410 (1,2,1,2,2)
+
+Node   667     (2,2,1,2,3) is connected to:
+	- Neighbor   671 (2,2,1,3,3)
+	- Neighbor   663 (2,2,1,1,3)
+	- Neighbor   923 (3,2,1,2,3)
+	- Neighbor   411 (1,2,1,2,3)
+
+Node   668     (2,2,1,3,0) is connected to:
+	- Neighbor   656 (2,2,1,0,0)
+	- Neighbor   664 (2,2,1,2,0)
+	- Neighbor   924 (3,2,1,3,0)
+	- Neighbor   412 (1,2,1,3,0)
+
+Node   669     (2,2,1,3,1) is connected to:
+	- Neighbor   657 (2,2,1,0,1)
+	- Neighbor   665 (2,2,1,2,1)
+	- Neighbor   925 (3,2,1,3,1)
+	- Neighbor   413 (1,2,1,3,1)
+
+Node   670     (2,2,1,3,2) is connected to:
+	- Neighbor   658 (2,2,1,0,2)
+	- Neighbor   666 (2,2,1,2,2)
+	- Neighbor   926 (3,2,1,3,2)
+	- Neighbor   414 (1,2,1,3,2)
+
+Node   671     (2,2,1,3,3) is connected to:
+	- Neighbor   659 (2,2,1,0,3)
+	- Neighbor   667 (2,2,1,2,3)
+	- Neighbor   927 (3,2,1,3,3)
+	- Neighbor   415 (1,2,1,3,3)
+
+Node   672     (2,2,2,0,0) is connected to:
+	- Neighbor   676 (2,2,2,1,0)
+	- Neighbor   684 (2,2,2,3,0)
+	- Neighbor   928 (3,2,2,0,0)
+	- Neighbor   416 (1,2,2,0,0)
+
+Node   673     (2,2,2,0,1) is connected to:
+	- Neighbor   677 (2,2,2,1,1)
+	- Neighbor   685 (2,2,2,3,1)
+	- Neighbor   929 (3,2,2,0,1)
+	- Neighbor   417 (1,2,2,0,1)
+
+Node   674     (2,2,2,0,2) is connected to:
+	- Neighbor   678 (2,2,2,1,2)
+	- Neighbor   686 (2,2,2,3,2)
+	- Neighbor   930 (3,2,2,0,2)
+	- Neighbor   418 (1,2,2,0,2)
+
+Node   675     (2,2,2,0,3) is connected to:
+	- Neighbor   679 (2,2,2,1,3)
+	- Neighbor   687 (2,2,2,3,3)
+	- Neighbor   931 (3,2,2,0,3)
+	- Neighbor   419 (1,2,2,0,3)
+
+Node   676     (2,2,2,1,0) is connected to:
+	- Neighbor   680 (2,2,2,2,0)
+	- Neighbor   672 (2,2,2,0,0)
+	- Neighbor   932 (3,2,2,1,0)
+	- Neighbor   420 (1,2,2,1,0)
+
+Node   677     (2,2,2,1,1) is connected to:
+	- Neighbor   681 (2,2,2,2,1)
+	- Neighbor   673 (2,2,2,0,1)
+	- Neighbor   933 (3,2,2,1,1)
+	- Neighbor   421 (1,2,2,1,1)
+
+Node   678     (2,2,2,1,2) is connected to:
+	- Neighbor   682 (2,2,2,2,2)
+	- Neighbor   674 (2,2,2,0,2)
+	- Neighbor   934 (3,2,2,1,2)
+	- Neighbor   422 (1,2,2,1,2)
+
+Node   679     (2,2,2,1,3) is connected to:
+	- Neighbor   683 (2,2,2,2,3)
+	- Neighbor   675 (2,2,2,0,3)
+	- Neighbor   935 (3,2,2,1,3)
+	- Neighbor   423 (1,2,2,1,3)
+
+Node   680     (2,2,2,2,0) is connected to:
+	- Neighbor   684 (2,2,2,3,0)
+	- Neighbor   676 (2,2,2,1,0)
+	- Neighbor   936 (3,2,2,2,0)
+	- Neighbor   424 (1,2,2,2,0)
+
+Node   681     (2,2,2,2,1) is connected to:
+	- Neighbor   685 (2,2,2,3,1)
+	- Neighbor   677 (2,2,2,1,1)
+	- Neighbor   937 (3,2,2,2,1)
+	- Neighbor   425 (1,2,2,2,1)
+
+Node   682     (2,2,2,2,2) is connected to:
+	- Neighbor   686 (2,2,2,3,2)
+	- Neighbor   678 (2,2,2,1,2)
+	- Neighbor   938 (3,2,2,2,2)
+	- Neighbor   426 (1,2,2,2,2)
+
+Node   683     (2,2,2,2,3) is connected to:
+	- Neighbor   687 (2,2,2,3,3)
+	- Neighbor   679 (2,2,2,1,3)
+	- Neighbor   939 (3,2,2,2,3)
+	- Neighbor   427 (1,2,2,2,3)
+
+Node   684     (2,2,2,3,0) is connected to:
+	- Neighbor   672 (2,2,2,0,0)
+	- Neighbor   680 (2,2,2,2,0)
+	- Neighbor   940 (3,2,2,3,0)
+	- Neighbor   428 (1,2,2,3,0)
+
+Node   685     (2,2,2,3,1) is connected to:
+	- Neighbor   673 (2,2,2,0,1)
+	- Neighbor   681 (2,2,2,2,1)
+	- Neighbor   941 (3,2,2,3,1)
+	- Neighbor   429 (1,2,2,3,1)
+
+Node   686     (2,2,2,3,2) is connected to:
+	- Neighbor   674 (2,2,2,0,2)
+	- Neighbor   682 (2,2,2,2,2)
+	- Neighbor   942 (3,2,2,3,2)
+	- Neighbor   430 (1,2,2,3,2)
+
+Node   687     (2,2,2,3,3) is connected to:
+	- Neighbor   675 (2,2,2,0,3)
+	- Neighbor   683 (2,2,2,2,3)
+	- Neighbor   943 (3,2,2,3,3)
+	- Neighbor   431 (1,2,2,3,3)
+
+Node   688     (2,2,3,0,0) is connected to:
+	- Neighbor   692 (2,2,3,1,0)
+	- Neighbor   700 (2,2,3,3,0)
+	- Neighbor   944 (3,2,3,0,0)
+	- Neighbor   432 (1,2,3,0,0)
+
+Node   689     (2,2,3,0,1) is connected to:
+	- Neighbor   693 (2,2,3,1,1)
+	- Neighbor   701 (2,2,3,3,1)
+	- Neighbor   945 (3,2,3,0,1)
+	- Neighbor   433 (1,2,3,0,1)
+
+Node   690     (2,2,3,0,2) is connected to:
+	- Neighbor   694 (2,2,3,1,2)
+	- Neighbor   702 (2,2,3,3,2)
+	- Neighbor   946 (3,2,3,0,2)
+	- Neighbor   434 (1,2,3,0,2)
+
+Node   691     (2,2,3,0,3) is connected to:
+	- Neighbor   695 (2,2,3,1,3)
+	- Neighbor   703 (2,2,3,3,3)
+	- Neighbor   947 (3,2,3,0,3)
+	- Neighbor   435 (1,2,3,0,3)
+
+Node   692     (2,2,3,1,0) is connected to:
+	- Neighbor   696 (2,2,3,2,0)
+	- Neighbor   688 (2,2,3,0,0)
+	- Neighbor   948 (3,2,3,1,0)
+	- Neighbor   436 (1,2,3,1,0)
+
+Node   693     (2,2,3,1,1) is connected to:
+	- Neighbor   697 (2,2,3,2,1)
+	- Neighbor   689 (2,2,3,0,1)
+	- Neighbor   949 (3,2,3,1,1)
+	- Neighbor   437 (1,2,3,1,1)
+
+Node   694     (2,2,3,1,2) is connected to:
+	- Neighbor   698 (2,2,3,2,2)
+	- Neighbor   690 (2,2,3,0,2)
+	- Neighbor   950 (3,2,3,1,2)
+	- Neighbor   438 (1,2,3,1,2)
+
+Node   695     (2,2,3,1,3) is connected to:
+	- Neighbor   699 (2,2,3,2,3)
+	- Neighbor   691 (2,2,3,0,3)
+	- Neighbor   951 (3,2,3,1,3)
+	- Neighbor   439 (1,2,3,1,3)
+
+Node   696     (2,2,3,2,0) is connected to:
+	- Neighbor   700 (2,2,3,3,0)
+	- Neighbor   692 (2,2,3,1,0)
+	- Neighbor   952 (3,2,3,2,0)
+	- Neighbor   440 (1,2,3,2,0)
+
+Node   697     (2,2,3,2,1) is connected to:
+	- Neighbor   701 (2,2,3,3,1)
+	- Neighbor   693 (2,2,3,1,1)
+	- Neighbor   953 (3,2,3,2,1)
+	- Neighbor   441 (1,2,3,2,1)
+
+Node   698     (2,2,3,2,2) is connected to:
+	- Neighbor   702 (2,2,3,3,2)
+	- Neighbor   694 (2,2,3,1,2)
+	- Neighbor   954 (3,2,3,2,2)
+	- Neighbor   442 (1,2,3,2,2)
+
+Node   699     (2,2,3,2,3) is connected to:
+	- Neighbor   703 (2,2,3,3,3)
+	- Neighbor   695 (2,2,3,1,3)
+	- Neighbor   955 (3,2,3,2,3)
+	- Neighbor   443 (1,2,3,2,3)
+
+Node   700     (2,2,3,3,0) is connected to:
+	- Neighbor   688 (2,2,3,0,0)
+	- Neighbor   696 (2,2,3,2,0)
+	- Neighbor   956 (3,2,3,3,0)
+	- Neighbor   444 (1,2,3,3,0)
+
+Node   701     (2,2,3,3,1) is connected to:
+	- Neighbor   689 (2,2,3,0,1)
+	- Neighbor   697 (2,2,3,2,1)
+	- Neighbor   957 (3,2,3,3,1)
+	- Neighbor   445 (1,2,3,3,1)
+
+Node   702     (2,2,3,3,2) is connected to:
+	- Neighbor   690 (2,2,3,0,2)
+	- Neighbor   698 (2,2,3,2,2)
+	- Neighbor   958 (3,2,3,3,2)
+	- Neighbor   446 (1,2,3,3,2)
+
+Node   703     (2,2,3,3,3) is connected to:
+	- Neighbor   691 (2,2,3,0,3)
+	- Neighbor   699 (2,2,3,2,3)
+	- Neighbor   959 (3,2,3,3,3)
+	- Neighbor   447 (1,2,3,3,3)
+
+Node   704     (2,3,0,0,0) is connected to:
+	- Neighbor   708 (2,3,0,1,0)
+	- Neighbor   716 (2,3,0,3,0)
+	- Neighbor   960 (3,3,0,0,0)
+	- Neighbor   448 (1,3,0,0,0)
+
+Node   705     (2,3,0,0,1) is connected to:
+	- Neighbor   709 (2,3,0,1,1)
+	- Neighbor   717 (2,3,0,3,1)
+	- Neighbor   961 (3,3,0,0,1)
+	- Neighbor   449 (1,3,0,0,1)
+
+Node   706     (2,3,0,0,2) is connected to:
+	- Neighbor   710 (2,3,0,1,2)
+	- Neighbor   718 (2,3,0,3,2)
+	- Neighbor   962 (3,3,0,0,2)
+	- Neighbor   450 (1,3,0,0,2)
+
+Node   707     (2,3,0,0,3) is connected to:
+	- Neighbor   711 (2,3,0,1,3)
+	- Neighbor   719 (2,3,0,3,3)
+	- Neighbor   963 (3,3,0,0,3)
+	- Neighbor   451 (1,3,0,0,3)
+
+Node   708     (2,3,0,1,0) is connected to:
+	- Neighbor   712 (2,3,0,2,0)
+	- Neighbor   704 (2,3,0,0,0)
+	- Neighbor   964 (3,3,0,1,0)
+	- Neighbor   452 (1,3,0,1,0)
+
+Node   709     (2,3,0,1,1) is connected to:
+	- Neighbor   713 (2,3,0,2,1)
+	- Neighbor   705 (2,3,0,0,1)
+	- Neighbor   965 (3,3,0,1,1)
+	- Neighbor   453 (1,3,0,1,1)
+
+Node   710     (2,3,0,1,2) is connected to:
+	- Neighbor   714 (2,3,0,2,2)
+	- Neighbor   706 (2,3,0,0,2)
+	- Neighbor   966 (3,3,0,1,2)
+	- Neighbor   454 (1,3,0,1,2)
+
+Node   711     (2,3,0,1,3) is connected to:
+	- Neighbor   715 (2,3,0,2,3)
+	- Neighbor   707 (2,3,0,0,3)
+	- Neighbor   967 (3,3,0,1,3)
+	- Neighbor   455 (1,3,0,1,3)
+
+Node   712     (2,3,0,2,0) is connected to:
+	- Neighbor   716 (2,3,0,3,0)
+	- Neighbor   708 (2,3,0,1,0)
+	- Neighbor   968 (3,3,0,2,0)
+	- Neighbor   456 (1,3,0,2,0)
+
+Node   713     (2,3,0,2,1) is connected to:
+	- Neighbor   717 (2,3,0,3,1)
+	- Neighbor   709 (2,3,0,1,1)
+	- Neighbor   969 (3,3,0,2,1)
+	- Neighbor   457 (1,3,0,2,1)
+
+Node   714     (2,3,0,2,2) is connected to:
+	- Neighbor   718 (2,3,0,3,2)
+	- Neighbor   710 (2,3,0,1,2)
+	- Neighbor   970 (3,3,0,2,2)
+	- Neighbor   458 (1,3,0,2,2)
+
+Node   715     (2,3,0,2,3) is connected to:
+	- Neighbor   719 (2,3,0,3,3)
+	- Neighbor   711 (2,3,0,1,3)
+	- Neighbor   971 (3,3,0,2,3)
+	- Neighbor   459 (1,3,0,2,3)
+
+Node   716     (2,3,0,3,0) is connected to:
+	- Neighbor   704 (2,3,0,0,0)
+	- Neighbor   712 (2,3,0,2,0)
+	- Neighbor   972 (3,3,0,3,0)
+	- Neighbor   460 (1,3,0,3,0)
+
+Node   717     (2,3,0,3,1) is connected to:
+	- Neighbor   705 (2,3,0,0,1)
+	- Neighbor   713 (2,3,0,2,1)
+	- Neighbor   973 (3,3,0,3,1)
+	- Neighbor   461 (1,3,0,3,1)
+
+Node   718     (2,3,0,3,2) is connected to:
+	- Neighbor   706 (2,3,0,0,2)
+	- Neighbor   714 (2,3,0,2,2)
+	- Neighbor   974 (3,3,0,3,2)
+	- Neighbor   462 (1,3,0,3,2)
+
+Node   719     (2,3,0,3,3) is connected to:
+	- Neighbor   707 (2,3,0,0,3)
+	- Neighbor   715 (2,3,0,2,3)
+	- Neighbor   975 (3,3,0,3,3)
+	- Neighbor   463 (1,3,0,3,3)
+
+Node   720     (2,3,1,0,0) is connected to:
+	- Neighbor   724 (2,3,1,1,0)
+	- Neighbor   732 (2,3,1,3,0)
+	- Neighbor   976 (3,3,1,0,0)
+	- Neighbor   464 (1,3,1,0,0)
+
+Node   721     (2,3,1,0,1) is connected to:
+	- Neighbor   725 (2,3,1,1,1)
+	- Neighbor   733 (2,3,1,3,1)
+	- Neighbor   977 (3,3,1,0,1)
+	- Neighbor   465 (1,3,1,0,1)
+
+Node   722     (2,3,1,0,2) is connected to:
+	- Neighbor   726 (2,3,1,1,2)
+	- Neighbor   734 (2,3,1,3,2)
+	- Neighbor   978 (3,3,1,0,2)
+	- Neighbor   466 (1,3,1,0,2)
+
+Node   723     (2,3,1,0,3) is connected to:
+	- Neighbor   727 (2,3,1,1,3)
+	- Neighbor   735 (2,3,1,3,3)
+	- Neighbor   979 (3,3,1,0,3)
+	- Neighbor   467 (1,3,1,0,3)
+
+Node   724     (2,3,1,1,0) is connected to:
+	- Neighbor   728 (2,3,1,2,0)
+	- Neighbor   720 (2,3,1,0,0)
+	- Neighbor   980 (3,3,1,1,0)
+	- Neighbor   468 (1,3,1,1,0)
+
+Node   725     (2,3,1,1,1) is connected to:
+	- Neighbor   729 (2,3,1,2,1)
+	- Neighbor   721 (2,3,1,0,1)
+	- Neighbor   981 (3,3,1,1,1)
+	- Neighbor   469 (1,3,1,1,1)
+
+Node   726     (2,3,1,1,2) is connected to:
+	- Neighbor   730 (2,3,1,2,2)
+	- Neighbor   722 (2,3,1,0,2)
+	- Neighbor   982 (3,3,1,1,2)
+	- Neighbor   470 (1,3,1,1,2)
+
+Node   727     (2,3,1,1,3) is connected to:
+	- Neighbor   731 (2,3,1,2,3)
+	- Neighbor   723 (2,3,1,0,3)
+	- Neighbor   983 (3,3,1,1,3)
+	- Neighbor   471 (1,3,1,1,3)
+
+Node   728     (2,3,1,2,0) is connected to:
+	- Neighbor   732 (2,3,1,3,0)
+	- Neighbor   724 (2,3,1,1,0)
+	- Neighbor   984 (3,3,1,2,0)
+	- Neighbor   472 (1,3,1,2,0)
+
+Node   729     (2,3,1,2,1) is connected to:
+	- Neighbor   733 (2,3,1,3,1)
+	- Neighbor   725 (2,3,1,1,1)
+	- Neighbor   985 (3,3,1,2,1)
+	- Neighbor   473 (1,3,1,2,1)
+
+Node   730     (2,3,1,2,2) is connected to:
+	- Neighbor   734 (2,3,1,3,2)
+	- Neighbor   726 (2,3,1,1,2)
+	- Neighbor   986 (3,3,1,2,2)
+	- Neighbor   474 (1,3,1,2,2)
+
+Node   731     (2,3,1,2,3) is connected to:
+	- Neighbor   735 (2,3,1,3,3)
+	- Neighbor   727 (2,3,1,1,3)
+	- Neighbor   987 (3,3,1,2,3)
+	- Neighbor   475 (1,3,1,2,3)
+
+Node   732     (2,3,1,3,0) is connected to:
+	- Neighbor   720 (2,3,1,0,0)
+	- Neighbor   728 (2,3,1,2,0)
+	- Neighbor   988 (3,3,1,3,0)
+	- Neighbor   476 (1,3,1,3,0)
+
+Node   733     (2,3,1,3,1) is connected to:
+	- Neighbor   721 (2,3,1,0,1)
+	- Neighbor   729 (2,3,1,2,1)
+	- Neighbor   989 (3,3,1,3,1)
+	- Neighbor   477 (1,3,1,3,1)
+
+Node   734     (2,3,1,3,2) is connected to:
+	- Neighbor   722 (2,3,1,0,2)
+	- Neighbor   730 (2,3,1,2,2)
+	- Neighbor   990 (3,3,1,3,2)
+	- Neighbor   478 (1,3,1,3,2)
+
+Node   735     (2,3,1,3,3) is connected to:
+	- Neighbor   723 (2,3,1,0,3)
+	- Neighbor   731 (2,3,1,2,3)
+	- Neighbor   991 (3,3,1,3,3)
+	- Neighbor   479 (1,3,1,3,3)
+
+Node   736     (2,3,2,0,0) is connected to:
+	- Neighbor   740 (2,3,2,1,0)
+	- Neighbor   748 (2,3,2,3,0)
+	- Neighbor   992 (3,3,2,0,0)
+	- Neighbor   480 (1,3,2,0,0)
+
+Node   737     (2,3,2,0,1) is connected to:
+	- Neighbor   741 (2,3,2,1,1)
+	- Neighbor   749 (2,3,2,3,1)
+	- Neighbor   993 (3,3,2,0,1)
+	- Neighbor   481 (1,3,2,0,1)
+
+Node   738     (2,3,2,0,2) is connected to:
+	- Neighbor   742 (2,3,2,1,2)
+	- Neighbor   750 (2,3,2,3,2)
+	- Neighbor   994 (3,3,2,0,2)
+	- Neighbor   482 (1,3,2,0,2)
+
+Node   739     (2,3,2,0,3) is connected to:
+	- Neighbor   743 (2,3,2,1,3)
+	- Neighbor   751 (2,3,2,3,3)
+	- Neighbor   995 (3,3,2,0,3)
+	- Neighbor   483 (1,3,2,0,3)
+
+Node   740     (2,3,2,1,0) is connected to:
+	- Neighbor   744 (2,3,2,2,0)
+	- Neighbor   736 (2,3,2,0,0)
+	- Neighbor   996 (3,3,2,1,0)
+	- Neighbor   484 (1,3,2,1,0)
+
+Node   741     (2,3,2,1,1) is connected to:
+	- Neighbor   745 (2,3,2,2,1)
+	- Neighbor   737 (2,3,2,0,1)
+	- Neighbor   997 (3,3,2,1,1)
+	- Neighbor   485 (1,3,2,1,1)
+
+Node   742     (2,3,2,1,2) is connected to:
+	- Neighbor   746 (2,3,2,2,2)
+	- Neighbor   738 (2,3,2,0,2)
+	- Neighbor   998 (3,3,2,1,2)
+	- Neighbor   486 (1,3,2,1,2)
+
+Node   743     (2,3,2,1,3) is connected to:
+	- Neighbor   747 (2,3,2,2,3)
+	- Neighbor   739 (2,3,2,0,3)
+	- Neighbor   999 (3,3,2,1,3)
+	- Neighbor   487 (1,3,2,1,3)
+
+Node   744     (2,3,2,2,0) is connected to:
+	- Neighbor   748 (2,3,2,3,0)
+	- Neighbor   740 (2,3,2,1,0)
+	- Neighbor  1000 (3,3,2,2,0)
+	- Neighbor   488 (1,3,2,2,0)
+
+Node   745     (2,3,2,2,1) is connected to:
+	- Neighbor   749 (2,3,2,3,1)
+	- Neighbor   741 (2,3,2,1,1)
+	- Neighbor  1001 (3,3,2,2,1)
+	- Neighbor   489 (1,3,2,2,1)
+
+Node   746     (2,3,2,2,2) is connected to:
+	- Neighbor   750 (2,3,2,3,2)
+	- Neighbor   742 (2,3,2,1,2)
+	- Neighbor  1002 (3,3,2,2,2)
+	- Neighbor   490 (1,3,2,2,2)
+
+Node   747     (2,3,2,2,3) is connected to:
+	- Neighbor   751 (2,3,2,3,3)
+	- Neighbor   743 (2,3,2,1,3)
+	- Neighbor  1003 (3,3,2,2,3)
+	- Neighbor   491 (1,3,2,2,3)
+
+Node   748     (2,3,2,3,0) is connected to:
+	- Neighbor   736 (2,3,2,0,0)
+	- Neighbor   744 (2,3,2,2,0)
+	- Neighbor  1004 (3,3,2,3,0)
+	- Neighbor   492 (1,3,2,3,0)
+
+Node   749     (2,3,2,3,1) is connected to:
+	- Neighbor   737 (2,3,2,0,1)
+	- Neighbor   745 (2,3,2,2,1)
+	- Neighbor  1005 (3,3,2,3,1)
+	- Neighbor   493 (1,3,2,3,1)
+
+Node   750     (2,3,2,3,2) is connected to:
+	- Neighbor   738 (2,3,2,0,2)
+	- Neighbor   746 (2,3,2,2,2)
+	- Neighbor  1006 (3,3,2,3,2)
+	- Neighbor   494 (1,3,2,3,2)
+
+Node   751     (2,3,2,3,3) is connected to:
+	- Neighbor   739 (2,3,2,0,3)
+	- Neighbor   747 (2,3,2,2,3)
+	- Neighbor  1007 (3,3,2,3,3)
+	- Neighbor   495 (1,3,2,3,3)
+
+Node   752     (2,3,3,0,0) is connected to:
+	- Neighbor   756 (2,3,3,1,0)
+	- Neighbor   764 (2,3,3,3,0)
+	- Neighbor  1008 (3,3,3,0,0)
+	- Neighbor   496 (1,3,3,0,0)
+
+Node   753     (2,3,3,0,1) is connected to:
+	- Neighbor   757 (2,3,3,1,1)
+	- Neighbor   765 (2,3,3,3,1)
+	- Neighbor  1009 (3,3,3,0,1)
+	- Neighbor   497 (1,3,3,0,1)
+
+Node   754     (2,3,3,0,2) is connected to:
+	- Neighbor   758 (2,3,3,1,2)
+	- Neighbor   766 (2,3,3,3,2)
+	- Neighbor  1010 (3,3,3,0,2)
+	- Neighbor   498 (1,3,3,0,2)
+
+Node   755     (2,3,3,0,3) is connected to:
+	- Neighbor   759 (2,3,3,1,3)
+	- Neighbor   767 (2,3,3,3,3)
+	- Neighbor  1011 (3,3,3,0,3)
+	- Neighbor   499 (1,3,3,0,3)
+
+Node   756     (2,3,3,1,0) is connected to:
+	- Neighbor   760 (2,3,3,2,0)
+	- Neighbor   752 (2,3,3,0,0)
+	- Neighbor  1012 (3,3,3,1,0)
+	- Neighbor   500 (1,3,3,1,0)
+
+Node   757     (2,3,3,1,1) is connected to:
+	- Neighbor   761 (2,3,3,2,1)
+	- Neighbor   753 (2,3,3,0,1)
+	- Neighbor  1013 (3,3,3,1,1)
+	- Neighbor   501 (1,3,3,1,1)
+
+Node   758     (2,3,3,1,2) is connected to:
+	- Neighbor   762 (2,3,3,2,2)
+	- Neighbor   754 (2,3,3,0,2)
+	- Neighbor  1014 (3,3,3,1,2)
+	- Neighbor   502 (1,3,3,1,2)
+
+Node   759     (2,3,3,1,3) is connected to:
+	- Neighbor   763 (2,3,3,2,3)
+	- Neighbor   755 (2,3,3,0,3)
+	- Neighbor  1015 (3,3,3,1,3)
+	- Neighbor   503 (1,3,3,1,3)
+
+Node   760     (2,3,3,2,0) is connected to:
+	- Neighbor   764 (2,3,3,3,0)
+	- Neighbor   756 (2,3,3,1,0)
+	- Neighbor  1016 (3,3,3,2,0)
+	- Neighbor   504 (1,3,3,2,0)
+
+Node   761     (2,3,3,2,1) is connected to:
+	- Neighbor   765 (2,3,3,3,1)
+	- Neighbor   757 (2,3,3,1,1)
+	- Neighbor  1017 (3,3,3,2,1)
+	- Neighbor   505 (1,3,3,2,1)
+
+Node   762     (2,3,3,2,2) is connected to:
+	- Neighbor   766 (2,3,3,3,2)
+	- Neighbor   758 (2,3,3,1,2)
+	- Neighbor  1018 (3,3,3,2,2)
+	- Neighbor   506 (1,3,3,2,2)
+
+Node   763     (2,3,3,2,3) is connected to:
+	- Neighbor   767 (2,3,3,3,3)
+	- Neighbor   759 (2,3,3,1,3)
+	- Neighbor  1019 (3,3,3,2,3)
+	- Neighbor   507 (1,3,3,2,3)
+
+Node   764     (2,3,3,3,0) is connected to:
+	- Neighbor   752 (2,3,3,0,0)
+	- Neighbor   760 (2,3,3,2,0)
+	- Neighbor  1020 (3,3,3,3,0)
+	- Neighbor   508 (1,3,3,3,0)
+
+Node   765     (2,3,3,3,1) is connected to:
+	- Neighbor   753 (2,3,3,0,1)
+	- Neighbor   761 (2,3,3,2,1)
+	- Neighbor  1021 (3,3,3,3,1)
+	- Neighbor   509 (1,3,3,3,1)
+
+Node   766     (2,3,3,3,2) is connected to:
+	- Neighbor   754 (2,3,3,0,2)
+	- Neighbor   762 (2,3,3,2,2)
+	- Neighbor  1022 (3,3,3,3,2)
+	- Neighbor   510 (1,3,3,3,2)
+
+Node   767     (2,3,3,3,3) is connected to:
+	- Neighbor   755 (2,3,3,0,3)
+	- Neighbor   763 (2,3,3,2,3)
+	- Neighbor  1023 (3,3,3,3,3)
+	- Neighbor   511 (1,3,3,3,3)
+
+Node   768     (3,0,0,0,0) is connected to:
+	- Neighbor   769 (3,0,0,0,1)
+	- Neighbor   771 (3,0,0,0,3)
+	- Neighbor     0 (0,0,0,0,0)
+	- Neighbor   512 (2,0,0,0,0)
+
+Node   769     (3,0,0,0,1) is connected to:
+	- Neighbor   770 (3,0,0,0,2)
+	- Neighbor   768 (3,0,0,0,0)
+	- Neighbor     1 (0,0,0,0,1)
+	- Neighbor   513 (2,0,0,0,1)
+
+Node   770     (3,0,0,0,2) is connected to:
+	- Neighbor   771 (3,0,0,0,3)
+	- Neighbor   769 (3,0,0,0,1)
+	- Neighbor     2 (0,0,0,0,2)
+	- Neighbor   514 (2,0,0,0,2)
+
+Node   771     (3,0,0,0,3) is connected to:
+	- Neighbor   768 (3,0,0,0,0)
+	- Neighbor   770 (3,0,0,0,2)
+	- Neighbor     3 (0,0,0,0,3)
+	- Neighbor   515 (2,0,0,0,3)
+
+Node   772     (3,0,0,1,0) is connected to:
+	- Neighbor   773 (3,0,0,1,1)
+	- Neighbor   775 (3,0,0,1,3)
+	- Neighbor     4 (0,0,0,1,0)
+	- Neighbor   516 (2,0,0,1,0)
+
+Node   773     (3,0,0,1,1) is connected to:
+	- Neighbor   774 (3,0,0,1,2)
+	- Neighbor   772 (3,0,0,1,0)
+	- Neighbor     5 (0,0,0,1,1)
+	- Neighbor   517 (2,0,0,1,1)
+
+Node   774     (3,0,0,1,2) is connected to:
+	- Neighbor   775 (3,0,0,1,3)
+	- Neighbor   773 (3,0,0,1,1)
+	- Neighbor     6 (0,0,0,1,2)
+	- Neighbor   518 (2,0,0,1,2)
+
+Node   775     (3,0,0,1,3) is connected to:
+	- Neighbor   772 (3,0,0,1,0)
+	- Neighbor   774 (3,0,0,1,2)
+	- Neighbor     7 (0,0,0,1,3)
+	- Neighbor   519 (2,0,0,1,3)
+
+Node   776     (3,0,0,2,0) is connected to:
+	- Neighbor   777 (3,0,0,2,1)
+	- Neighbor   779 (3,0,0,2,3)
+	- Neighbor     8 (0,0,0,2,0)
+	- Neighbor   520 (2,0,0,2,0)
+
+Node   777     (3,0,0,2,1) is connected to:
+	- Neighbor   778 (3,0,0,2,2)
+	- Neighbor   776 (3,0,0,2,0)
+	- Neighbor     9 (0,0,0,2,1)
+	- Neighbor   521 (2,0,0,2,1)
+
+Node   778     (3,0,0,2,2) is connected to:
+	- Neighbor   779 (3,0,0,2,3)
+	- Neighbor   777 (3,0,0,2,1)
+	- Neighbor    10 (0,0,0,2,2)
+	- Neighbor   522 (2,0,0,2,2)
+
+Node   779     (3,0,0,2,3) is connected to:
+	- Neighbor   776 (3,0,0,2,0)
+	- Neighbor   778 (3,0,0,2,2)
+	- Neighbor    11 (0,0,0,2,3)
+	- Neighbor   523 (2,0,0,2,3)
+
+Node   780     (3,0,0,3,0) is connected to:
+	- Neighbor   781 (3,0,0,3,1)
+	- Neighbor   783 (3,0,0,3,3)
+	- Neighbor    12 (0,0,0,3,0)
+	- Neighbor   524 (2,0,0,3,0)
+
+Node   781     (3,0,0,3,1) is connected to:
+	- Neighbor   782 (3,0,0,3,2)
+	- Neighbor   780 (3,0,0,3,0)
+	- Neighbor    13 (0,0,0,3,1)
+	- Neighbor   525 (2,0,0,3,1)
+
+Node   782     (3,0,0,3,2) is connected to:
+	- Neighbor   783 (3,0,0,3,3)
+	- Neighbor   781 (3,0,0,3,1)
+	- Neighbor    14 (0,0,0,3,2)
+	- Neighbor   526 (2,0,0,3,2)
+
+Node   783     (3,0,0,3,3) is connected to:
+	- Neighbor   780 (3,0,0,3,0)
+	- Neighbor   782 (3,0,0,3,2)
+	- Neighbor    15 (0,0,0,3,3)
+	- Neighbor   527 (2,0,0,3,3)
+
+Node   784     (3,0,1,0,0) is connected to:
+	- Neighbor   785 (3,0,1,0,1)
+	- Neighbor   787 (3,0,1,0,3)
+	- Neighbor    16 (0,0,1,0,0)
+	- Neighbor   528 (2,0,1,0,0)
+
+Node   785     (3,0,1,0,1) is connected to:
+	- Neighbor   786 (3,0,1,0,2)
+	- Neighbor   784 (3,0,1,0,0)
+	- Neighbor    17 (0,0,1,0,1)
+	- Neighbor   529 (2,0,1,0,1)
+
+Node   786     (3,0,1,0,2) is connected to:
+	- Neighbor   787 (3,0,1,0,3)
+	- Neighbor   785 (3,0,1,0,1)
+	- Neighbor    18 (0,0,1,0,2)
+	- Neighbor   530 (2,0,1,0,2)
+
+Node   787     (3,0,1,0,3) is connected to:
+	- Neighbor   784 (3,0,1,0,0)
+	- Neighbor   786 (3,0,1,0,2)
+	- Neighbor    19 (0,0,1,0,3)
+	- Neighbor   531 (2,0,1,0,3)
+
+Node   788     (3,0,1,1,0) is connected to:
+	- Neighbor   789 (3,0,1,1,1)
+	- Neighbor   791 (3,0,1,1,3)
+	- Neighbor    20 (0,0,1,1,0)
+	- Neighbor   532 (2,0,1,1,0)
+
+Node   789     (3,0,1,1,1) is connected to:
+	- Neighbor   790 (3,0,1,1,2)
+	- Neighbor   788 (3,0,1,1,0)
+	- Neighbor    21 (0,0,1,1,1)
+	- Neighbor   533 (2,0,1,1,1)
+
+Node   790     (3,0,1,1,2) is connected to:
+	- Neighbor   791 (3,0,1,1,3)
+	- Neighbor   789 (3,0,1,1,1)
+	- Neighbor    22 (0,0,1,1,2)
+	- Neighbor   534 (2,0,1,1,2)
+
+Node   791     (3,0,1,1,3) is connected to:
+	- Neighbor   788 (3,0,1,1,0)
+	- Neighbor   790 (3,0,1,1,2)
+	- Neighbor    23 (0,0,1,1,3)
+	- Neighbor   535 (2,0,1,1,3)
+
+Node   792     (3,0,1,2,0) is connected to:
+	- Neighbor   793 (3,0,1,2,1)
+	- Neighbor   795 (3,0,1,2,3)
+	- Neighbor    24 (0,0,1,2,0)
+	- Neighbor   536 (2,0,1,2,0)
+
+Node   793     (3,0,1,2,1) is connected to:
+	- Neighbor   794 (3,0,1,2,2)
+	- Neighbor   792 (3,0,1,2,0)
+	- Neighbor    25 (0,0,1,2,1)
+	- Neighbor   537 (2,0,1,2,1)
+
+Node   794     (3,0,1,2,2) is connected to:
+	- Neighbor   795 (3,0,1,2,3)
+	- Neighbor   793 (3,0,1,2,1)
+	- Neighbor    26 (0,0,1,2,2)
+	- Neighbor   538 (2,0,1,2,2)
+
+Node   795     (3,0,1,2,3) is connected to:
+	- Neighbor   792 (3,0,1,2,0)
+	- Neighbor   794 (3,0,1,2,2)
+	- Neighbor    27 (0,0,1,2,3)
+	- Neighbor   539 (2,0,1,2,3)
+
+Node   796     (3,0,1,3,0) is connected to:
+	- Neighbor   797 (3,0,1,3,1)
+	- Neighbor   799 (3,0,1,3,3)
+	- Neighbor    28 (0,0,1,3,0)
+	- Neighbor   540 (2,0,1,3,0)
+
+Node   797     (3,0,1,3,1) is connected to:
+	- Neighbor   798 (3,0,1,3,2)
+	- Neighbor   796 (3,0,1,3,0)
+	- Neighbor    29 (0,0,1,3,1)
+	- Neighbor   541 (2,0,1,3,1)
+
+Node   798     (3,0,1,3,2) is connected to:
+	- Neighbor   799 (3,0,1,3,3)
+	- Neighbor   797 (3,0,1,3,1)
+	- Neighbor    30 (0,0,1,3,2)
+	- Neighbor   542 (2,0,1,3,2)
+
+Node   799     (3,0,1,3,3) is connected to:
+	- Neighbor   796 (3,0,1,3,0)
+	- Neighbor   798 (3,0,1,3,2)
+	- Neighbor    31 (0,0,1,3,3)
+	- Neighbor   543 (2,0,1,3,3)
+
+Node   800     (3,0,2,0,0) is connected to:
+	- Neighbor   801 (3,0,2,0,1)
+	- Neighbor   803 (3,0,2,0,3)
+	- Neighbor    32 (0,0,2,0,0)
+	- Neighbor   544 (2,0,2,0,0)
+
+Node   801     (3,0,2,0,1) is connected to:
+	- Neighbor   802 (3,0,2,0,2)
+	- Neighbor   800 (3,0,2,0,0)
+	- Neighbor    33 (0,0,2,0,1)
+	- Neighbor   545 (2,0,2,0,1)
+
+Node   802     (3,0,2,0,2) is connected to:
+	- Neighbor   803 (3,0,2,0,3)
+	- Neighbor   801 (3,0,2,0,1)
+	- Neighbor    34 (0,0,2,0,2)
+	- Neighbor   546 (2,0,2,0,2)
+
+Node   803     (3,0,2,0,3) is connected to:
+	- Neighbor   800 (3,0,2,0,0)
+	- Neighbor   802 (3,0,2,0,2)
+	- Neighbor    35 (0,0,2,0,3)
+	- Neighbor   547 (2,0,2,0,3)
+
+Node   804     (3,0,2,1,0) is connected to:
+	- Neighbor   805 (3,0,2,1,1)
+	- Neighbor   807 (3,0,2,1,3)
+	- Neighbor    36 (0,0,2,1,0)
+	- Neighbor   548 (2,0,2,1,0)
+
+Node   805     (3,0,2,1,1) is connected to:
+	- Neighbor   806 (3,0,2,1,2)
+	- Neighbor   804 (3,0,2,1,0)
+	- Neighbor    37 (0,0,2,1,1)
+	- Neighbor   549 (2,0,2,1,1)
+
+Node   806     (3,0,2,1,2) is connected to:
+	- Neighbor   807 (3,0,2,1,3)
+	- Neighbor   805 (3,0,2,1,1)
+	- Neighbor    38 (0,0,2,1,2)
+	- Neighbor   550 (2,0,2,1,2)
+
+Node   807     (3,0,2,1,3) is connected to:
+	- Neighbor   804 (3,0,2,1,0)
+	- Neighbor   806 (3,0,2,1,2)
+	- Neighbor    39 (0,0,2,1,3)
+	- Neighbor   551 (2,0,2,1,3)
+
+Node   808     (3,0,2,2,0) is connected to:
+	- Neighbor   809 (3,0,2,2,1)
+	- Neighbor   811 (3,0,2,2,3)
+	- Neighbor    40 (0,0,2,2,0)
+	- Neighbor   552 (2,0,2,2,0)
+
+Node   809     (3,0,2,2,1) is connected to:
+	- Neighbor   810 (3,0,2,2,2)
+	- Neighbor   808 (3,0,2,2,0)
+	- Neighbor    41 (0,0,2,2,1)
+	- Neighbor   553 (2,0,2,2,1)
+
+Node   810     (3,0,2,2,2) is connected to:
+	- Neighbor   811 (3,0,2,2,3)
+	- Neighbor   809 (3,0,2,2,1)
+	- Neighbor    42 (0,0,2,2,2)
+	- Neighbor   554 (2,0,2,2,2)
+
+Node   811     (3,0,2,2,3) is connected to:
+	- Neighbor   808 (3,0,2,2,0)
+	- Neighbor   810 (3,0,2,2,2)
+	- Neighbor    43 (0,0,2,2,3)
+	- Neighbor   555 (2,0,2,2,3)
+
+Node   812     (3,0,2,3,0) is connected to:
+	- Neighbor   813 (3,0,2,3,1)
+	- Neighbor   815 (3,0,2,3,3)
+	- Neighbor    44 (0,0,2,3,0)
+	- Neighbor   556 (2,0,2,3,0)
+
+Node   813     (3,0,2,3,1) is connected to:
+	- Neighbor   814 (3,0,2,3,2)
+	- Neighbor   812 (3,0,2,3,0)
+	- Neighbor    45 (0,0,2,3,1)
+	- Neighbor   557 (2,0,2,3,1)
+
+Node   814     (3,0,2,3,2) is connected to:
+	- Neighbor   815 (3,0,2,3,3)
+	- Neighbor   813 (3,0,2,3,1)
+	- Neighbor    46 (0,0,2,3,2)
+	- Neighbor   558 (2,0,2,3,2)
+
+Node   815     (3,0,2,3,3) is connected to:
+	- Neighbor   812 (3,0,2,3,0)
+	- Neighbor   814 (3,0,2,3,2)
+	- Neighbor    47 (0,0,2,3,3)
+	- Neighbor   559 (2,0,2,3,3)
+
+Node   816     (3,0,3,0,0) is connected to:
+	- Neighbor   817 (3,0,3,0,1)
+	- Neighbor   819 (3,0,3,0,3)
+	- Neighbor    48 (0,0,3,0,0)
+	- Neighbor   560 (2,0,3,0,0)
+
+Node   817     (3,0,3,0,1) is connected to:
+	- Neighbor   818 (3,0,3,0,2)
+	- Neighbor   816 (3,0,3,0,0)
+	- Neighbor    49 (0,0,3,0,1)
+	- Neighbor   561 (2,0,3,0,1)
+
+Node   818     (3,0,3,0,2) is connected to:
+	- Neighbor   819 (3,0,3,0,3)
+	- Neighbor   817 (3,0,3,0,1)
+	- Neighbor    50 (0,0,3,0,2)
+	- Neighbor   562 (2,0,3,0,2)
+
+Node   819     (3,0,3,0,3) is connected to:
+	- Neighbor   816 (3,0,3,0,0)
+	- Neighbor   818 (3,0,3,0,2)
+	- Neighbor    51 (0,0,3,0,3)
+	- Neighbor   563 (2,0,3,0,3)
+
+Node   820     (3,0,3,1,0) is connected to:
+	- Neighbor   821 (3,0,3,1,1)
+	- Neighbor   823 (3,0,3,1,3)
+	- Neighbor    52 (0,0,3,1,0)
+	- Neighbor   564 (2,0,3,1,0)
+
+Node   821     (3,0,3,1,1) is connected to:
+	- Neighbor   822 (3,0,3,1,2)
+	- Neighbor   820 (3,0,3,1,0)
+	- Neighbor    53 (0,0,3,1,1)
+	- Neighbor   565 (2,0,3,1,1)
+
+Node   822     (3,0,3,1,2) is connected to:
+	- Neighbor   823 (3,0,3,1,3)
+	- Neighbor   821 (3,0,3,1,1)
+	- Neighbor    54 (0,0,3,1,2)
+	- Neighbor   566 (2,0,3,1,2)
+
+Node   823     (3,0,3,1,3) is connected to:
+	- Neighbor   820 (3,0,3,1,0)
+	- Neighbor   822 (3,0,3,1,2)
+	- Neighbor    55 (0,0,3,1,3)
+	- Neighbor   567 (2,0,3,1,3)
+
+Node   824     (3,0,3,2,0) is connected to:
+	- Neighbor   825 (3,0,3,2,1)
+	- Neighbor   827 (3,0,3,2,3)
+	- Neighbor    56 (0,0,3,2,0)
+	- Neighbor   568 (2,0,3,2,0)
+
+Node   825     (3,0,3,2,1) is connected to:
+	- Neighbor   826 (3,0,3,2,2)
+	- Neighbor   824 (3,0,3,2,0)
+	- Neighbor    57 (0,0,3,2,1)
+	- Neighbor   569 (2,0,3,2,1)
+
+Node   826     (3,0,3,2,2) is connected to:
+	- Neighbor   827 (3,0,3,2,3)
+	- Neighbor   825 (3,0,3,2,1)
+	- Neighbor    58 (0,0,3,2,2)
+	- Neighbor   570 (2,0,3,2,2)
+
+Node   827     (3,0,3,2,3) is connected to:
+	- Neighbor   824 (3,0,3,2,0)
+	- Neighbor   826 (3,0,3,2,2)
+	- Neighbor    59 (0,0,3,2,3)
+	- Neighbor   571 (2,0,3,2,3)
+
+Node   828     (3,0,3,3,0) is connected to:
+	- Neighbor   829 (3,0,3,3,1)
+	- Neighbor   831 (3,0,3,3,3)
+	- Neighbor    60 (0,0,3,3,0)
+	- Neighbor   572 (2,0,3,3,0)
+
+Node   829     (3,0,3,3,1) is connected to:
+	- Neighbor   830 (3,0,3,3,2)
+	- Neighbor   828 (3,0,3,3,0)
+	- Neighbor    61 (0,0,3,3,1)
+	- Neighbor   573 (2,0,3,3,1)
+
+Node   830     (3,0,3,3,2) is connected to:
+	- Neighbor   831 (3,0,3,3,3)
+	- Neighbor   829 (3,0,3,3,1)
+	- Neighbor    62 (0,0,3,3,2)
+	- Neighbor   574 (2,0,3,3,2)
+
+Node   831     (3,0,3,3,3) is connected to:
+	- Neighbor   828 (3,0,3,3,0)
+	- Neighbor   830 (3,0,3,3,2)
+	- Neighbor    63 (0,0,3,3,3)
+	- Neighbor   575 (2,0,3,3,3)
+
+Node   832     (3,1,0,0,0) is connected to:
+	- Neighbor   833 (3,1,0,0,1)
+	- Neighbor   835 (3,1,0,0,3)
+	- Neighbor    64 (0,1,0,0,0)
+	- Neighbor   576 (2,1,0,0,0)
+
+Node   833     (3,1,0,0,1) is connected to:
+	- Neighbor   834 (3,1,0,0,2)
+	- Neighbor   832 (3,1,0,0,0)
+	- Neighbor    65 (0,1,0,0,1)
+	- Neighbor   577 (2,1,0,0,1)
+
+Node   834     (3,1,0,0,2) is connected to:
+	- Neighbor   835 (3,1,0,0,3)
+	- Neighbor   833 (3,1,0,0,1)
+	- Neighbor    66 (0,1,0,0,2)
+	- Neighbor   578 (2,1,0,0,2)
+
+Node   835     (3,1,0,0,3) is connected to:
+	- Neighbor   832 (3,1,0,0,0)
+	- Neighbor   834 (3,1,0,0,2)
+	- Neighbor    67 (0,1,0,0,3)
+	- Neighbor   579 (2,1,0,0,3)
+
+Node   836     (3,1,0,1,0) is connected to:
+	- Neighbor   837 (3,1,0,1,1)
+	- Neighbor   839 (3,1,0,1,3)
+	- Neighbor    68 (0,1,0,1,0)
+	- Neighbor   580 (2,1,0,1,0)
+
+Node   837     (3,1,0,1,1) is connected to:
+	- Neighbor   838 (3,1,0,1,2)
+	- Neighbor   836 (3,1,0,1,0)
+	- Neighbor    69 (0,1,0,1,1)
+	- Neighbor   581 (2,1,0,1,1)
+
+Node   838     (3,1,0,1,2) is connected to:
+	- Neighbor   839 (3,1,0,1,3)
+	- Neighbor   837 (3,1,0,1,1)
+	- Neighbor    70 (0,1,0,1,2)
+	- Neighbor   582 (2,1,0,1,2)
+
+Node   839     (3,1,0,1,3) is connected to:
+	- Neighbor   836 (3,1,0,1,0)
+	- Neighbor   838 (3,1,0,1,2)
+	- Neighbor    71 (0,1,0,1,3)
+	- Neighbor   583 (2,1,0,1,3)
+
+Node   840     (3,1,0,2,0) is connected to:
+	- Neighbor   841 (3,1,0,2,1)
+	- Neighbor   843 (3,1,0,2,3)
+	- Neighbor    72 (0,1,0,2,0)
+	- Neighbor   584 (2,1,0,2,0)
+
+Node   841     (3,1,0,2,1) is connected to:
+	- Neighbor   842 (3,1,0,2,2)
+	- Neighbor   840 (3,1,0,2,0)
+	- Neighbor    73 (0,1,0,2,1)
+	- Neighbor   585 (2,1,0,2,1)
+
+Node   842     (3,1,0,2,2) is connected to:
+	- Neighbor   843 (3,1,0,2,3)
+	- Neighbor   841 (3,1,0,2,1)
+	- Neighbor    74 (0,1,0,2,2)
+	- Neighbor   586 (2,1,0,2,2)
+
+Node   843     (3,1,0,2,3) is connected to:
+	- Neighbor   840 (3,1,0,2,0)
+	- Neighbor   842 (3,1,0,2,2)
+	- Neighbor    75 (0,1,0,2,3)
+	- Neighbor   587 (2,1,0,2,3)
+
+Node   844     (3,1,0,3,0) is connected to:
+	- Neighbor   845 (3,1,0,3,1)
+	- Neighbor   847 (3,1,0,3,3)
+	- Neighbor    76 (0,1,0,3,0)
+	- Neighbor   588 (2,1,0,3,0)
+
+Node   845     (3,1,0,3,1) is connected to:
+	- Neighbor   846 (3,1,0,3,2)
+	- Neighbor   844 (3,1,0,3,0)
+	- Neighbor    77 (0,1,0,3,1)
+	- Neighbor   589 (2,1,0,3,1)
+
+Node   846     (3,1,0,3,2) is connected to:
+	- Neighbor   847 (3,1,0,3,3)
+	- Neighbor   845 (3,1,0,3,1)
+	- Neighbor    78 (0,1,0,3,2)
+	- Neighbor   590 (2,1,0,3,2)
+
+Node   847     (3,1,0,3,3) is connected to:
+	- Neighbor   844 (3,1,0,3,0)
+	- Neighbor   846 (3,1,0,3,2)
+	- Neighbor    79 (0,1,0,3,3)
+	- Neighbor   591 (2,1,0,3,3)
+
+Node   848     (3,1,1,0,0) is connected to:
+	- Neighbor   849 (3,1,1,0,1)
+	- Neighbor   851 (3,1,1,0,3)
+	- Neighbor    80 (0,1,1,0,0)
+	- Neighbor   592 (2,1,1,0,0)
+
+Node   849     (3,1,1,0,1) is connected to:
+	- Neighbor   850 (3,1,1,0,2)
+	- Neighbor   848 (3,1,1,0,0)
+	- Neighbor    81 (0,1,1,0,1)
+	- Neighbor   593 (2,1,1,0,1)
+
+Node   850     (3,1,1,0,2) is connected to:
+	- Neighbor   851 (3,1,1,0,3)
+	- Neighbor   849 (3,1,1,0,1)
+	- Neighbor    82 (0,1,1,0,2)
+	- Neighbor   594 (2,1,1,0,2)
+
+Node   851     (3,1,1,0,3) is connected to:
+	- Neighbor   848 (3,1,1,0,0)
+	- Neighbor   850 (3,1,1,0,2)
+	- Neighbor    83 (0,1,1,0,3)
+	- Neighbor   595 (2,1,1,0,3)
+
+Node   852     (3,1,1,1,0) is connected to:
+	- Neighbor   853 (3,1,1,1,1)
+	- Neighbor   855 (3,1,1,1,3)
+	- Neighbor    84 (0,1,1,1,0)
+	- Neighbor   596 (2,1,1,1,0)
+
+Node   853     (3,1,1,1,1) is connected to:
+	- Neighbor   854 (3,1,1,1,2)
+	- Neighbor   852 (3,1,1,1,0)
+	- Neighbor    85 (0,1,1,1,1)
+	- Neighbor   597 (2,1,1,1,1)
+
+Node   854     (3,1,1,1,2) is connected to:
+	- Neighbor   855 (3,1,1,1,3)
+	- Neighbor   853 (3,1,1,1,1)
+	- Neighbor    86 (0,1,1,1,2)
+	- Neighbor   598 (2,1,1,1,2)
+
+Node   855     (3,1,1,1,3) is connected to:
+	- Neighbor   852 (3,1,1,1,0)
+	- Neighbor   854 (3,1,1,1,2)
+	- Neighbor    87 (0,1,1,1,3)
+	- Neighbor   599 (2,1,1,1,3)
+
+Node   856     (3,1,1,2,0) is connected to:
+	- Neighbor   857 (3,1,1,2,1)
+	- Neighbor   859 (3,1,1,2,3)
+	- Neighbor    88 (0,1,1,2,0)
+	- Neighbor   600 (2,1,1,2,0)
+
+Node   857     (3,1,1,2,1) is connected to:
+	- Neighbor   858 (3,1,1,2,2)
+	- Neighbor   856 (3,1,1,2,0)
+	- Neighbor    89 (0,1,1,2,1)
+	- Neighbor   601 (2,1,1,2,1)
+
+Node   858     (3,1,1,2,2) is connected to:
+	- Neighbor   859 (3,1,1,2,3)
+	- Neighbor   857 (3,1,1,2,1)
+	- Neighbor    90 (0,1,1,2,2)
+	- Neighbor   602 (2,1,1,2,2)
+
+Node   859     (3,1,1,2,3) is connected to:
+	- Neighbor   856 (3,1,1,2,0)
+	- Neighbor   858 (3,1,1,2,2)
+	- Neighbor    91 (0,1,1,2,3)
+	- Neighbor   603 (2,1,1,2,3)
+
+Node   860     (3,1,1,3,0) is connected to:
+	- Neighbor   861 (3,1,1,3,1)
+	- Neighbor   863 (3,1,1,3,3)
+	- Neighbor    92 (0,1,1,3,0)
+	- Neighbor   604 (2,1,1,3,0)
+
+Node   861     (3,1,1,3,1) is connected to:
+	- Neighbor   862 (3,1,1,3,2)
+	- Neighbor   860 (3,1,1,3,0)
+	- Neighbor    93 (0,1,1,3,1)
+	- Neighbor   605 (2,1,1,3,1)
+
+Node   862     (3,1,1,3,2) is connected to:
+	- Neighbor   863 (3,1,1,3,3)
+	- Neighbor   861 (3,1,1,3,1)
+	- Neighbor    94 (0,1,1,3,2)
+	- Neighbor   606 (2,1,1,3,2)
+
+Node   863     (3,1,1,3,3) is connected to:
+	- Neighbor   860 (3,1,1,3,0)
+	- Neighbor   862 (3,1,1,3,2)
+	- Neighbor    95 (0,1,1,3,3)
+	- Neighbor   607 (2,1,1,3,3)
+
+Node   864     (3,1,2,0,0) is connected to:
+	- Neighbor   865 (3,1,2,0,1)
+	- Neighbor   867 (3,1,2,0,3)
+	- Neighbor    96 (0,1,2,0,0)
+	- Neighbor   608 (2,1,2,0,0)
+
+Node   865     (3,1,2,0,1) is connected to:
+	- Neighbor   866 (3,1,2,0,2)
+	- Neighbor   864 (3,1,2,0,0)
+	- Neighbor    97 (0,1,2,0,1)
+	- Neighbor   609 (2,1,2,0,1)
+
+Node   866     (3,1,2,0,2) is connected to:
+	- Neighbor   867 (3,1,2,0,3)
+	- Neighbor   865 (3,1,2,0,1)
+	- Neighbor    98 (0,1,2,0,2)
+	- Neighbor   610 (2,1,2,0,2)
+
+Node   867     (3,1,2,0,3) is connected to:
+	- Neighbor   864 (3,1,2,0,0)
+	- Neighbor   866 (3,1,2,0,2)
+	- Neighbor    99 (0,1,2,0,3)
+	- Neighbor   611 (2,1,2,0,3)
+
+Node   868     (3,1,2,1,0) is connected to:
+	- Neighbor   869 (3,1,2,1,1)
+	- Neighbor   871 (3,1,2,1,3)
+	- Neighbor   100 (0,1,2,1,0)
+	- Neighbor   612 (2,1,2,1,0)
+
+Node   869     (3,1,2,1,1) is connected to:
+	- Neighbor   870 (3,1,2,1,2)
+	- Neighbor   868 (3,1,2,1,0)
+	- Neighbor   101 (0,1,2,1,1)
+	- Neighbor   613 (2,1,2,1,1)
+
+Node   870     (3,1,2,1,2) is connected to:
+	- Neighbor   871 (3,1,2,1,3)
+	- Neighbor   869 (3,1,2,1,1)
+	- Neighbor   102 (0,1,2,1,2)
+	- Neighbor   614 (2,1,2,1,2)
+
+Node   871     (3,1,2,1,3) is connected to:
+	- Neighbor   868 (3,1,2,1,0)
+	- Neighbor   870 (3,1,2,1,2)
+	- Neighbor   103 (0,1,2,1,3)
+	- Neighbor   615 (2,1,2,1,3)
+
+Node   872     (3,1,2,2,0) is connected to:
+	- Neighbor   873 (3,1,2,2,1)
+	- Neighbor   875 (3,1,2,2,3)
+	- Neighbor   104 (0,1,2,2,0)
+	- Neighbor   616 (2,1,2,2,0)
+
+Node   873     (3,1,2,2,1) is connected to:
+	- Neighbor   874 (3,1,2,2,2)
+	- Neighbor   872 (3,1,2,2,0)
+	- Neighbor   105 (0,1,2,2,1)
+	- Neighbor   617 (2,1,2,2,1)
+
+Node   874     (3,1,2,2,2) is connected to:
+	- Neighbor   875 (3,1,2,2,3)
+	- Neighbor   873 (3,1,2,2,1)
+	- Neighbor   106 (0,1,2,2,2)
+	- Neighbor   618 (2,1,2,2,2)
+
+Node   875     (3,1,2,2,3) is connected to:
+	- Neighbor   872 (3,1,2,2,0)
+	- Neighbor   874 (3,1,2,2,2)
+	- Neighbor   107 (0,1,2,2,3)
+	- Neighbor   619 (2,1,2,2,3)
+
+Node   876     (3,1,2,3,0) is connected to:
+	- Neighbor   877 (3,1,2,3,1)
+	- Neighbor   879 (3,1,2,3,3)
+	- Neighbor   108 (0,1,2,3,0)
+	- Neighbor   620 (2,1,2,3,0)
+
+Node   877     (3,1,2,3,1) is connected to:
+	- Neighbor   878 (3,1,2,3,2)
+	- Neighbor   876 (3,1,2,3,0)
+	- Neighbor   109 (0,1,2,3,1)
+	- Neighbor   621 (2,1,2,3,1)
+
+Node   878     (3,1,2,3,2) is connected to:
+	- Neighbor   879 (3,1,2,3,3)
+	- Neighbor   877 (3,1,2,3,1)
+	- Neighbor   110 (0,1,2,3,2)
+	- Neighbor   622 (2,1,2,3,2)
+
+Node   879     (3,1,2,3,3) is connected to:
+	- Neighbor   876 (3,1,2,3,0)
+	- Neighbor   878 (3,1,2,3,2)
+	- Neighbor   111 (0,1,2,3,3)
+	- Neighbor   623 (2,1,2,3,3)
+
+Node   880     (3,1,3,0,0) is connected to:
+	- Neighbor   881 (3,1,3,0,1)
+	- Neighbor   883 (3,1,3,0,3)
+	- Neighbor   112 (0,1,3,0,0)
+	- Neighbor   624 (2,1,3,0,0)
+
+Node   881     (3,1,3,0,1) is connected to:
+	- Neighbor   882 (3,1,3,0,2)
+	- Neighbor   880 (3,1,3,0,0)
+	- Neighbor   113 (0,1,3,0,1)
+	- Neighbor   625 (2,1,3,0,1)
+
+Node   882     (3,1,3,0,2) is connected to:
+	- Neighbor   883 (3,1,3,0,3)
+	- Neighbor   881 (3,1,3,0,1)
+	- Neighbor   114 (0,1,3,0,2)
+	- Neighbor   626 (2,1,3,0,2)
+
+Node   883     (3,1,3,0,3) is connected to:
+	- Neighbor   880 (3,1,3,0,0)
+	- Neighbor   882 (3,1,3,0,2)
+	- Neighbor   115 (0,1,3,0,3)
+	- Neighbor   627 (2,1,3,0,3)
+
+Node   884     (3,1,3,1,0) is connected to:
+	- Neighbor   885 (3,1,3,1,1)
+	- Neighbor   887 (3,1,3,1,3)
+	- Neighbor   116 (0,1,3,1,0)
+	- Neighbor   628 (2,1,3,1,0)
+
+Node   885     (3,1,3,1,1) is connected to:
+	- Neighbor   886 (3,1,3,1,2)
+	- Neighbor   884 (3,1,3,1,0)
+	- Neighbor   117 (0,1,3,1,1)
+	- Neighbor   629 (2,1,3,1,1)
+
+Node   886     (3,1,3,1,2) is connected to:
+	- Neighbor   887 (3,1,3,1,3)
+	- Neighbor   885 (3,1,3,1,1)
+	- Neighbor   118 (0,1,3,1,2)
+	- Neighbor   630 (2,1,3,1,2)
+
+Node   887     (3,1,3,1,3) is connected to:
+	- Neighbor   884 (3,1,3,1,0)
+	- Neighbor   886 (3,1,3,1,2)
+	- Neighbor   119 (0,1,3,1,3)
+	- Neighbor   631 (2,1,3,1,3)
+
+Node   888     (3,1,3,2,0) is connected to:
+	- Neighbor   889 (3,1,3,2,1)
+	- Neighbor   891 (3,1,3,2,3)
+	- Neighbor   120 (0,1,3,2,0)
+	- Neighbor   632 (2,1,3,2,0)
+
+Node   889     (3,1,3,2,1) is connected to:
+	- Neighbor   890 (3,1,3,2,2)
+	- Neighbor   888 (3,1,3,2,0)
+	- Neighbor   121 (0,1,3,2,1)
+	- Neighbor   633 (2,1,3,2,1)
+
+Node   890     (3,1,3,2,2) is connected to:
+	- Neighbor   891 (3,1,3,2,3)
+	- Neighbor   889 (3,1,3,2,1)
+	- Neighbor   122 (0,1,3,2,2)
+	- Neighbor   634 (2,1,3,2,2)
+
+Node   891     (3,1,3,2,3) is connected to:
+	- Neighbor   888 (3,1,3,2,0)
+	- Neighbor   890 (3,1,3,2,2)
+	- Neighbor   123 (0,1,3,2,3)
+	- Neighbor   635 (2,1,3,2,3)
+
+Node   892     (3,1,3,3,0) is connected to:
+	- Neighbor   893 (3,1,3,3,1)
+	- Neighbor   895 (3,1,3,3,3)
+	- Neighbor   124 (0,1,3,3,0)
+	- Neighbor   636 (2,1,3,3,0)
+
+Node   893     (3,1,3,3,1) is connected to:
+	- Neighbor   894 (3,1,3,3,2)
+	- Neighbor   892 (3,1,3,3,0)
+	- Neighbor   125 (0,1,3,3,1)
+	- Neighbor   637 (2,1,3,3,1)
+
+Node   894     (3,1,3,3,2) is connected to:
+	- Neighbor   895 (3,1,3,3,3)
+	- Neighbor   893 (3,1,3,3,1)
+	- Neighbor   126 (0,1,3,3,2)
+	- Neighbor   638 (2,1,3,3,2)
+
+Node   895     (3,1,3,3,3) is connected to:
+	- Neighbor   892 (3,1,3,3,0)
+	- Neighbor   894 (3,1,3,3,2)
+	- Neighbor   127 (0,1,3,3,3)
+	- Neighbor   639 (2,1,3,3,3)
+
+Node   896     (3,2,0,0,0) is connected to:
+	- Neighbor   897 (3,2,0,0,1)
+	- Neighbor   899 (3,2,0,0,3)
+	- Neighbor   128 (0,2,0,0,0)
+	- Neighbor   640 (2,2,0,0,0)
+
+Node   897     (3,2,0,0,1) is connected to:
+	- Neighbor   898 (3,2,0,0,2)
+	- Neighbor   896 (3,2,0,0,0)
+	- Neighbor   129 (0,2,0,0,1)
+	- Neighbor   641 (2,2,0,0,1)
+
+Node   898     (3,2,0,0,2) is connected to:
+	- Neighbor   899 (3,2,0,0,3)
+	- Neighbor   897 (3,2,0,0,1)
+	- Neighbor   130 (0,2,0,0,2)
+	- Neighbor   642 (2,2,0,0,2)
+
+Node   899     (3,2,0,0,3) is connected to:
+	- Neighbor   896 (3,2,0,0,0)
+	- Neighbor   898 (3,2,0,0,2)
+	- Neighbor   131 (0,2,0,0,3)
+	- Neighbor   643 (2,2,0,0,3)
+
+Node   900     (3,2,0,1,0) is connected to:
+	- Neighbor   901 (3,2,0,1,1)
+	- Neighbor   903 (3,2,0,1,3)
+	- Neighbor   132 (0,2,0,1,0)
+	- Neighbor   644 (2,2,0,1,0)
+
+Node   901     (3,2,0,1,1) is connected to:
+	- Neighbor   902 (3,2,0,1,2)
+	- Neighbor   900 (3,2,0,1,0)
+	- Neighbor   133 (0,2,0,1,1)
+	- Neighbor   645 (2,2,0,1,1)
+
+Node   902     (3,2,0,1,2) is connected to:
+	- Neighbor   903 (3,2,0,1,3)
+	- Neighbor   901 (3,2,0,1,1)
+	- Neighbor   134 (0,2,0,1,2)
+	- Neighbor   646 (2,2,0,1,2)
+
+Node   903     (3,2,0,1,3) is connected to:
+	- Neighbor   900 (3,2,0,1,0)
+	- Neighbor   902 (3,2,0,1,2)
+	- Neighbor   135 (0,2,0,1,3)
+	- Neighbor   647 (2,2,0,1,3)
+
+Node   904     (3,2,0,2,0) is connected to:
+	- Neighbor   905 (3,2,0,2,1)
+	- Neighbor   907 (3,2,0,2,3)
+	- Neighbor   136 (0,2,0,2,0)
+	- Neighbor   648 (2,2,0,2,0)
+
+Node   905     (3,2,0,2,1) is connected to:
+	- Neighbor   906 (3,2,0,2,2)
+	- Neighbor   904 (3,2,0,2,0)
+	- Neighbor   137 (0,2,0,2,1)
+	- Neighbor   649 (2,2,0,2,1)
+
+Node   906     (3,2,0,2,2) is connected to:
+	- Neighbor   907 (3,2,0,2,3)
+	- Neighbor   905 (3,2,0,2,1)
+	- Neighbor   138 (0,2,0,2,2)
+	- Neighbor   650 (2,2,0,2,2)
+
+Node   907     (3,2,0,2,3) is connected to:
+	- Neighbor   904 (3,2,0,2,0)
+	- Neighbor   906 (3,2,0,2,2)
+	- Neighbor   139 (0,2,0,2,3)
+	- Neighbor   651 (2,2,0,2,3)
+
+Node   908     (3,2,0,3,0) is connected to:
+	- Neighbor   909 (3,2,0,3,1)
+	- Neighbor   911 (3,2,0,3,3)
+	- Neighbor   140 (0,2,0,3,0)
+	- Neighbor   652 (2,2,0,3,0)
+
+Node   909     (3,2,0,3,1) is connected to:
+	- Neighbor   910 (3,2,0,3,2)
+	- Neighbor   908 (3,2,0,3,0)
+	- Neighbor   141 (0,2,0,3,1)
+	- Neighbor   653 (2,2,0,3,1)
+
+Node   910     (3,2,0,3,2) is connected to:
+	- Neighbor   911 (3,2,0,3,3)
+	- Neighbor   909 (3,2,0,3,1)
+	- Neighbor   142 (0,2,0,3,2)
+	- Neighbor   654 (2,2,0,3,2)
+
+Node   911     (3,2,0,3,3) is connected to:
+	- Neighbor   908 (3,2,0,3,0)
+	- Neighbor   910 (3,2,0,3,2)
+	- Neighbor   143 (0,2,0,3,3)
+	- Neighbor   655 (2,2,0,3,3)
+
+Node   912     (3,2,1,0,0) is connected to:
+	- Neighbor   913 (3,2,1,0,1)
+	- Neighbor   915 (3,2,1,0,3)
+	- Neighbor   144 (0,2,1,0,0)
+	- Neighbor   656 (2,2,1,0,0)
+
+Node   913     (3,2,1,0,1) is connected to:
+	- Neighbor   914 (3,2,1,0,2)
+	- Neighbor   912 (3,2,1,0,0)
+	- Neighbor   145 (0,2,1,0,1)
+	- Neighbor   657 (2,2,1,0,1)
+
+Node   914     (3,2,1,0,2) is connected to:
+	- Neighbor   915 (3,2,1,0,3)
+	- Neighbor   913 (3,2,1,0,1)
+	- Neighbor   146 (0,2,1,0,2)
+	- Neighbor   658 (2,2,1,0,2)
+
+Node   915     (3,2,1,0,3) is connected to:
+	- Neighbor   912 (3,2,1,0,0)
+	- Neighbor   914 (3,2,1,0,2)
+	- Neighbor   147 (0,2,1,0,3)
+	- Neighbor   659 (2,2,1,0,3)
+
+Node   916     (3,2,1,1,0) is connected to:
+	- Neighbor   917 (3,2,1,1,1)
+	- Neighbor   919 (3,2,1,1,3)
+	- Neighbor   148 (0,2,1,1,0)
+	- Neighbor   660 (2,2,1,1,0)
+
+Node   917     (3,2,1,1,1) is connected to:
+	- Neighbor   918 (3,2,1,1,2)
+	- Neighbor   916 (3,2,1,1,0)
+	- Neighbor   149 (0,2,1,1,1)
+	- Neighbor   661 (2,2,1,1,1)
+
+Node   918     (3,2,1,1,2) is connected to:
+	- Neighbor   919 (3,2,1,1,3)
+	- Neighbor   917 (3,2,1,1,1)
+	- Neighbor   150 (0,2,1,1,2)
+	- Neighbor   662 (2,2,1,1,2)
+
+Node   919     (3,2,1,1,3) is connected to:
+	- Neighbor   916 (3,2,1,1,0)
+	- Neighbor   918 (3,2,1,1,2)
+	- Neighbor   151 (0,2,1,1,3)
+	- Neighbor   663 (2,2,1,1,3)
+
+Node   920     (3,2,1,2,0) is connected to:
+	- Neighbor   921 (3,2,1,2,1)
+	- Neighbor   923 (3,2,1,2,3)
+	- Neighbor   152 (0,2,1,2,0)
+	- Neighbor   664 (2,2,1,2,0)
+
+Node   921     (3,2,1,2,1) is connected to:
+	- Neighbor   922 (3,2,1,2,2)
+	- Neighbor   920 (3,2,1,2,0)
+	- Neighbor   153 (0,2,1,2,1)
+	- Neighbor   665 (2,2,1,2,1)
+
+Node   922     (3,2,1,2,2) is connected to:
+	- Neighbor   923 (3,2,1,2,3)
+	- Neighbor   921 (3,2,1,2,1)
+	- Neighbor   154 (0,2,1,2,2)
+	- Neighbor   666 (2,2,1,2,2)
+
+Node   923     (3,2,1,2,3) is connected to:
+	- Neighbor   920 (3,2,1,2,0)
+	- Neighbor   922 (3,2,1,2,2)
+	- Neighbor   155 (0,2,1,2,3)
+	- Neighbor   667 (2,2,1,2,3)
+
+Node   924     (3,2,1,3,0) is connected to:
+	- Neighbor   925 (3,2,1,3,1)
+	- Neighbor   927 (3,2,1,3,3)
+	- Neighbor   156 (0,2,1,3,0)
+	- Neighbor   668 (2,2,1,3,0)
+
+Node   925     (3,2,1,3,1) is connected to:
+	- Neighbor   926 (3,2,1,3,2)
+	- Neighbor   924 (3,2,1,3,0)
+	- Neighbor   157 (0,2,1,3,1)
+	- Neighbor   669 (2,2,1,3,1)
+
+Node   926     (3,2,1,3,2) is connected to:
+	- Neighbor   927 (3,2,1,3,3)
+	- Neighbor   925 (3,2,1,3,1)
+	- Neighbor   158 (0,2,1,3,2)
+	- Neighbor   670 (2,2,1,3,2)
+
+Node   927     (3,2,1,3,3) is connected to:
+	- Neighbor   924 (3,2,1,3,0)
+	- Neighbor   926 (3,2,1,3,2)
+	- Neighbor   159 (0,2,1,3,3)
+	- Neighbor   671 (2,2,1,3,3)
+
+Node   928     (3,2,2,0,0) is connected to:
+	- Neighbor   929 (3,2,2,0,1)
+	- Neighbor   931 (3,2,2,0,3)
+	- Neighbor   160 (0,2,2,0,0)
+	- Neighbor   672 (2,2,2,0,0)
+
+Node   929     (3,2,2,0,1) is connected to:
+	- Neighbor   930 (3,2,2,0,2)
+	- Neighbor   928 (3,2,2,0,0)
+	- Neighbor   161 (0,2,2,0,1)
+	- Neighbor   673 (2,2,2,0,1)
+
+Node   930     (3,2,2,0,2) is connected to:
+	- Neighbor   931 (3,2,2,0,3)
+	- Neighbor   929 (3,2,2,0,1)
+	- Neighbor   162 (0,2,2,0,2)
+	- Neighbor   674 (2,2,2,0,2)
+
+Node   931     (3,2,2,0,3) is connected to:
+	- Neighbor   928 (3,2,2,0,0)
+	- Neighbor   930 (3,2,2,0,2)
+	- Neighbor   163 (0,2,2,0,3)
+	- Neighbor   675 (2,2,2,0,3)
+
+Node   932     (3,2,2,1,0) is connected to:
+	- Neighbor   933 (3,2,2,1,1)
+	- Neighbor   935 (3,2,2,1,3)
+	- Neighbor   164 (0,2,2,1,0)
+	- Neighbor   676 (2,2,2,1,0)
+
+Node   933     (3,2,2,1,1) is connected to:
+	- Neighbor   934 (3,2,2,1,2)
+	- Neighbor   932 (3,2,2,1,0)
+	- Neighbor   165 (0,2,2,1,1)
+	- Neighbor   677 (2,2,2,1,1)
+
+Node   934     (3,2,2,1,2) is connected to:
+	- Neighbor   935 (3,2,2,1,3)
+	- Neighbor   933 (3,2,2,1,1)
+	- Neighbor   166 (0,2,2,1,2)
+	- Neighbor   678 (2,2,2,1,2)
+
+Node   935     (3,2,2,1,3) is connected to:
+	- Neighbor   932 (3,2,2,1,0)
+	- Neighbor   934 (3,2,2,1,2)
+	- Neighbor   167 (0,2,2,1,3)
+	- Neighbor   679 (2,2,2,1,3)
+
+Node   936     (3,2,2,2,0) is connected to:
+	- Neighbor   937 (3,2,2,2,1)
+	- Neighbor   939 (3,2,2,2,3)
+	- Neighbor   168 (0,2,2,2,0)
+	- Neighbor   680 (2,2,2,2,0)
+
+Node   937     (3,2,2,2,1) is connected to:
+	- Neighbor   938 (3,2,2,2,2)
+	- Neighbor   936 (3,2,2,2,0)
+	- Neighbor   169 (0,2,2,2,1)
+	- Neighbor   681 (2,2,2,2,1)
+
+Node   938     (3,2,2,2,2) is connected to:
+	- Neighbor   939 (3,2,2,2,3)
+	- Neighbor   937 (3,2,2,2,1)
+	- Neighbor   170 (0,2,2,2,2)
+	- Neighbor   682 (2,2,2,2,2)
+
+Node   939     (3,2,2,2,3) is connected to:
+	- Neighbor   936 (3,2,2,2,0)
+	- Neighbor   938 (3,2,2,2,2)
+	- Neighbor   171 (0,2,2,2,3)
+	- Neighbor   683 (2,2,2,2,3)
+
+Node   940     (3,2,2,3,0) is connected to:
+	- Neighbor   941 (3,2,2,3,1)
+	- Neighbor   943 (3,2,2,3,3)
+	- Neighbor   172 (0,2,2,3,0)
+	- Neighbor   684 (2,2,2,3,0)
+
+Node   941     (3,2,2,3,1) is connected to:
+	- Neighbor   942 (3,2,2,3,2)
+	- Neighbor   940 (3,2,2,3,0)
+	- Neighbor   173 (0,2,2,3,1)
+	- Neighbor   685 (2,2,2,3,1)
+
+Node   942     (3,2,2,3,2) is connected to:
+	- Neighbor   943 (3,2,2,3,3)
+	- Neighbor   941 (3,2,2,3,1)
+	- Neighbor   174 (0,2,2,3,2)
+	- Neighbor   686 (2,2,2,3,2)
+
+Node   943     (3,2,2,3,3) is connected to:
+	- Neighbor   940 (3,2,2,3,0)
+	- Neighbor   942 (3,2,2,3,2)
+	- Neighbor   175 (0,2,2,3,3)
+	- Neighbor   687 (2,2,2,3,3)
+
+Node   944     (3,2,3,0,0) is connected to:
+	- Neighbor   945 (3,2,3,0,1)
+	- Neighbor   947 (3,2,3,0,3)
+	- Neighbor   176 (0,2,3,0,0)
+	- Neighbor   688 (2,2,3,0,0)
+
+Node   945     (3,2,3,0,1) is connected to:
+	- Neighbor   946 (3,2,3,0,2)
+	- Neighbor   944 (3,2,3,0,0)
+	- Neighbor   177 (0,2,3,0,1)
+	- Neighbor   689 (2,2,3,0,1)
+
+Node   946     (3,2,3,0,2) is connected to:
+	- Neighbor   947 (3,2,3,0,3)
+	- Neighbor   945 (3,2,3,0,1)
+	- Neighbor   178 (0,2,3,0,2)
+	- Neighbor   690 (2,2,3,0,2)
+
+Node   947     (3,2,3,0,3) is connected to:
+	- Neighbor   944 (3,2,3,0,0)
+	- Neighbor   946 (3,2,3,0,2)
+	- Neighbor   179 (0,2,3,0,3)
+	- Neighbor   691 (2,2,3,0,3)
+
+Node   948     (3,2,3,1,0) is connected to:
+	- Neighbor   949 (3,2,3,1,1)
+	- Neighbor   951 (3,2,3,1,3)
+	- Neighbor   180 (0,2,3,1,0)
+	- Neighbor   692 (2,2,3,1,0)
+
+Node   949     (3,2,3,1,1) is connected to:
+	- Neighbor   950 (3,2,3,1,2)
+	- Neighbor   948 (3,2,3,1,0)
+	- Neighbor   181 (0,2,3,1,1)
+	- Neighbor   693 (2,2,3,1,1)
+
+Node   950     (3,2,3,1,2) is connected to:
+	- Neighbor   951 (3,2,3,1,3)
+	- Neighbor   949 (3,2,3,1,1)
+	- Neighbor   182 (0,2,3,1,2)
+	- Neighbor   694 (2,2,3,1,2)
+
+Node   951     (3,2,3,1,3) is connected to:
+	- Neighbor   948 (3,2,3,1,0)
+	- Neighbor   950 (3,2,3,1,2)
+	- Neighbor   183 (0,2,3,1,3)
+	- Neighbor   695 (2,2,3,1,3)
+
+Node   952     (3,2,3,2,0) is connected to:
+	- Neighbor   953 (3,2,3,2,1)
+	- Neighbor   955 (3,2,3,2,3)
+	- Neighbor   184 (0,2,3,2,0)
+	- Neighbor   696 (2,2,3,2,0)
+
+Node   953     (3,2,3,2,1) is connected to:
+	- Neighbor   954 (3,2,3,2,2)
+	- Neighbor   952 (3,2,3,2,0)
+	- Neighbor   185 (0,2,3,2,1)
+	- Neighbor   697 (2,2,3,2,1)
+
+Node   954     (3,2,3,2,2) is connected to:
+	- Neighbor   955 (3,2,3,2,3)
+	- Neighbor   953 (3,2,3,2,1)
+	- Neighbor   186 (0,2,3,2,2)
+	- Neighbor   698 (2,2,3,2,2)
+
+Node   955     (3,2,3,2,3) is connected to:
+	- Neighbor   952 (3,2,3,2,0)
+	- Neighbor   954 (3,2,3,2,2)
+	- Neighbor   187 (0,2,3,2,3)
+	- Neighbor   699 (2,2,3,2,3)
+
+Node   956     (3,2,3,3,0) is connected to:
+	- Neighbor   957 (3,2,3,3,1)
+	- Neighbor   959 (3,2,3,3,3)
+	- Neighbor   188 (0,2,3,3,0)
+	- Neighbor   700 (2,2,3,3,0)
+
+Node   957     (3,2,3,3,1) is connected to:
+	- Neighbor   958 (3,2,3,3,2)
+	- Neighbor   956 (3,2,3,3,0)
+	- Neighbor   189 (0,2,3,3,1)
+	- Neighbor   701 (2,2,3,3,1)
+
+Node   958     (3,2,3,3,2) is connected to:
+	- Neighbor   959 (3,2,3,3,3)
+	- Neighbor   957 (3,2,3,3,1)
+	- Neighbor   190 (0,2,3,3,2)
+	- Neighbor   702 (2,2,3,3,2)
+
+Node   959     (3,2,3,3,3) is connected to:
+	- Neighbor   956 (3,2,3,3,0)
+	- Neighbor   958 (3,2,3,3,2)
+	- Neighbor   191 (0,2,3,3,3)
+	- Neighbor   703 (2,2,3,3,3)
+
+Node   960     (3,3,0,0,0) is connected to:
+	- Neighbor   961 (3,3,0,0,1)
+	- Neighbor   963 (3,3,0,0,3)
+	- Neighbor   192 (0,3,0,0,0)
+	- Neighbor   704 (2,3,0,0,0)
+
+Node   961     (3,3,0,0,1) is connected to:
+	- Neighbor   962 (3,3,0,0,2)
+	- Neighbor   960 (3,3,0,0,0)
+	- Neighbor   193 (0,3,0,0,1)
+	- Neighbor   705 (2,3,0,0,1)
+
+Node   962     (3,3,0,0,2) is connected to:
+	- Neighbor   963 (3,3,0,0,3)
+	- Neighbor   961 (3,3,0,0,1)
+	- Neighbor   194 (0,3,0,0,2)
+	- Neighbor   706 (2,3,0,0,2)
+
+Node   963     (3,3,0,0,3) is connected to:
+	- Neighbor   960 (3,3,0,0,0)
+	- Neighbor   962 (3,3,0,0,2)
+	- Neighbor   195 (0,3,0,0,3)
+	- Neighbor   707 (2,3,0,0,3)
+
+Node   964     (3,3,0,1,0) is connected to:
+	- Neighbor   965 (3,3,0,1,1)
+	- Neighbor   967 (3,3,0,1,3)
+	- Neighbor   196 (0,3,0,1,0)
+	- Neighbor   708 (2,3,0,1,0)
+
+Node   965     (3,3,0,1,1) is connected to:
+	- Neighbor   966 (3,3,0,1,2)
+	- Neighbor   964 (3,3,0,1,0)
+	- Neighbor   197 (0,3,0,1,1)
+	- Neighbor   709 (2,3,0,1,1)
+
+Node   966     (3,3,0,1,2) is connected to:
+	- Neighbor   967 (3,3,0,1,3)
+	- Neighbor   965 (3,3,0,1,1)
+	- Neighbor   198 (0,3,0,1,2)
+	- Neighbor   710 (2,3,0,1,2)
+
+Node   967     (3,3,0,1,3) is connected to:
+	- Neighbor   964 (3,3,0,1,0)
+	- Neighbor   966 (3,3,0,1,2)
+	- Neighbor   199 (0,3,0,1,3)
+	- Neighbor   711 (2,3,0,1,3)
+
+Node   968     (3,3,0,2,0) is connected to:
+	- Neighbor   969 (3,3,0,2,1)
+	- Neighbor   971 (3,3,0,2,3)
+	- Neighbor   200 (0,3,0,2,0)
+	- Neighbor   712 (2,3,0,2,0)
+
+Node   969     (3,3,0,2,1) is connected to:
+	- Neighbor   970 (3,3,0,2,2)
+	- Neighbor   968 (3,3,0,2,0)
+	- Neighbor   201 (0,3,0,2,1)
+	- Neighbor   713 (2,3,0,2,1)
+
+Node   970     (3,3,0,2,2) is connected to:
+	- Neighbor   971 (3,3,0,2,3)
+	- Neighbor   969 (3,3,0,2,1)
+	- Neighbor   202 (0,3,0,2,2)
+	- Neighbor   714 (2,3,0,2,2)
+
+Node   971     (3,3,0,2,3) is connected to:
+	- Neighbor   968 (3,3,0,2,0)
+	- Neighbor   970 (3,3,0,2,2)
+	- Neighbor   203 (0,3,0,2,3)
+	- Neighbor   715 (2,3,0,2,3)
+
+Node   972     (3,3,0,3,0) is connected to:
+	- Neighbor   973 (3,3,0,3,1)
+	- Neighbor   975 (3,3,0,3,3)
+	- Neighbor   204 (0,3,0,3,0)
+	- Neighbor   716 (2,3,0,3,0)
+
+Node   973     (3,3,0,3,1) is connected to:
+	- Neighbor   974 (3,3,0,3,2)
+	- Neighbor   972 (3,3,0,3,0)
+	- Neighbor   205 (0,3,0,3,1)
+	- Neighbor   717 (2,3,0,3,1)
+
+Node   974     (3,3,0,3,2) is connected to:
+	- Neighbor   975 (3,3,0,3,3)
+	- Neighbor   973 (3,3,0,3,1)
+	- Neighbor   206 (0,3,0,3,2)
+	- Neighbor   718 (2,3,0,3,2)
+
+Node   975     (3,3,0,3,3) is connected to:
+	- Neighbor   972 (3,3,0,3,0)
+	- Neighbor   974 (3,3,0,3,2)
+	- Neighbor   207 (0,3,0,3,3)
+	- Neighbor   719 (2,3,0,3,3)
+
+Node   976     (3,3,1,0,0) is connected to:
+	- Neighbor   977 (3,3,1,0,1)
+	- Neighbor   979 (3,3,1,0,3)
+	- Neighbor   208 (0,3,1,0,0)
+	- Neighbor   720 (2,3,1,0,0)
+
+Node   977     (3,3,1,0,1) is connected to:
+	- Neighbor   978 (3,3,1,0,2)
+	- Neighbor   976 (3,3,1,0,0)
+	- Neighbor   209 (0,3,1,0,1)
+	- Neighbor   721 (2,3,1,0,1)
+
+Node   978     (3,3,1,0,2) is connected to:
+	- Neighbor   979 (3,3,1,0,3)
+	- Neighbor   977 (3,3,1,0,1)
+	- Neighbor   210 (0,3,1,0,2)
+	- Neighbor   722 (2,3,1,0,2)
+
+Node   979     (3,3,1,0,3) is connected to:
+	- Neighbor   976 (3,3,1,0,0)
+	- Neighbor   978 (3,3,1,0,2)
+	- Neighbor   211 (0,3,1,0,3)
+	- Neighbor   723 (2,3,1,0,3)
+
+Node   980     (3,3,1,1,0) is connected to:
+	- Neighbor   981 (3,3,1,1,1)
+	- Neighbor   983 (3,3,1,1,3)
+	- Neighbor   212 (0,3,1,1,0)
+	- Neighbor   724 (2,3,1,1,0)
+
+Node   981     (3,3,1,1,1) is connected to:
+	- Neighbor   982 (3,3,1,1,2)
+	- Neighbor   980 (3,3,1,1,0)
+	- Neighbor   213 (0,3,1,1,1)
+	- Neighbor   725 (2,3,1,1,1)
+
+Node   982     (3,3,1,1,2) is connected to:
+	- Neighbor   983 (3,3,1,1,3)
+	- Neighbor   981 (3,3,1,1,1)
+	- Neighbor   214 (0,3,1,1,2)
+	- Neighbor   726 (2,3,1,1,2)
+
+Node   983     (3,3,1,1,3) is connected to:
+	- Neighbor   980 (3,3,1,1,0)
+	- Neighbor   982 (3,3,1,1,2)
+	- Neighbor   215 (0,3,1,1,3)
+	- Neighbor   727 (2,3,1,1,3)
+
+Node   984     (3,3,1,2,0) is connected to:
+	- Neighbor   985 (3,3,1,2,1)
+	- Neighbor   987 (3,3,1,2,3)
+	- Neighbor   216 (0,3,1,2,0)
+	- Neighbor   728 (2,3,1,2,0)
+
+Node   985     (3,3,1,2,1) is connected to:
+	- Neighbor   986 (3,3,1,2,2)
+	- Neighbor   984 (3,3,1,2,0)
+	- Neighbor   217 (0,3,1,2,1)
+	- Neighbor   729 (2,3,1,2,1)
+
+Node   986     (3,3,1,2,2) is connected to:
+	- Neighbor   987 (3,3,1,2,3)
+	- Neighbor   985 (3,3,1,2,1)
+	- Neighbor   218 (0,3,1,2,2)
+	- Neighbor   730 (2,3,1,2,2)
+
+Node   987     (3,3,1,2,3) is connected to:
+	- Neighbor   984 (3,3,1,2,0)
+	- Neighbor   986 (3,3,1,2,2)
+	- Neighbor   219 (0,3,1,2,3)
+	- Neighbor   731 (2,3,1,2,3)
+
+Node   988     (3,3,1,3,0) is connected to:
+	- Neighbor   989 (3,3,1,3,1)
+	- Neighbor   991 (3,3,1,3,3)
+	- Neighbor   220 (0,3,1,3,0)
+	- Neighbor   732 (2,3,1,3,0)
+
+Node   989     (3,3,1,3,1) is connected to:
+	- Neighbor   990 (3,3,1,3,2)
+	- Neighbor   988 (3,3,1,3,0)
+	- Neighbor   221 (0,3,1,3,1)
+	- Neighbor   733 (2,3,1,3,1)
+
+Node   990     (3,3,1,3,2) is connected to:
+	- Neighbor   991 (3,3,1,3,3)
+	- Neighbor   989 (3,3,1,3,1)
+	- Neighbor   222 (0,3,1,3,2)
+	- Neighbor   734 (2,3,1,3,2)
+
+Node   991     (3,3,1,3,3) is connected to:
+	- Neighbor   988 (3,3,1,3,0)
+	- Neighbor   990 (3,3,1,3,2)
+	- Neighbor   223 (0,3,1,3,3)
+	- Neighbor   735 (2,3,1,3,3)
+
+Node   992     (3,3,2,0,0) is connected to:
+	- Neighbor   993 (3,3,2,0,1)
+	- Neighbor   995 (3,3,2,0,3)
+	- Neighbor   224 (0,3,2,0,0)
+	- Neighbor   736 (2,3,2,0,0)
+
+Node   993     (3,3,2,0,1) is connected to:
+	- Neighbor   994 (3,3,2,0,2)
+	- Neighbor   992 (3,3,2,0,0)
+	- Neighbor   225 (0,3,2,0,1)
+	- Neighbor   737 (2,3,2,0,1)
+
+Node   994     (3,3,2,0,2) is connected to:
+	- Neighbor   995 (3,3,2,0,3)
+	- Neighbor   993 (3,3,2,0,1)
+	- Neighbor   226 (0,3,2,0,2)
+	- Neighbor   738 (2,3,2,0,2)
+
+Node   995     (3,3,2,0,3) is connected to:
+	- Neighbor   992 (3,3,2,0,0)
+	- Neighbor   994 (3,3,2,0,2)
+	- Neighbor   227 (0,3,2,0,3)
+	- Neighbor   739 (2,3,2,0,3)
+
+Node   996     (3,3,2,1,0) is connected to:
+	- Neighbor   997 (3,3,2,1,1)
+	- Neighbor   999 (3,3,2,1,3)
+	- Neighbor   228 (0,3,2,1,0)
+	- Neighbor   740 (2,3,2,1,0)
+
+Node   997     (3,3,2,1,1) is connected to:
+	- Neighbor   998 (3,3,2,1,2)
+	- Neighbor   996 (3,3,2,1,0)
+	- Neighbor   229 (0,3,2,1,1)
+	- Neighbor   741 (2,3,2,1,1)
+
+Node   998     (3,3,2,1,2) is connected to:
+	- Neighbor   999 (3,3,2,1,3)
+	- Neighbor   997 (3,3,2,1,1)
+	- Neighbor   230 (0,3,2,1,2)
+	- Neighbor   742 (2,3,2,1,2)
+
+Node   999     (3,3,2,1,3) is connected to:
+	- Neighbor   996 (3,3,2,1,0)
+	- Neighbor   998 (3,3,2,1,2)
+	- Neighbor   231 (0,3,2,1,3)
+	- Neighbor   743 (2,3,2,1,3)
+
+Node  1000     (3,3,2,2,0) is connected to:
+	- Neighbor  1001 (3,3,2,2,1)
+	- Neighbor  1003 (3,3,2,2,3)
+	- Neighbor   232 (0,3,2,2,0)
+	- Neighbor   744 (2,3,2,2,0)
+
+Node  1001     (3,3,2,2,1) is connected to:
+	- Neighbor  1002 (3,3,2,2,2)
+	- Neighbor  1000 (3,3,2,2,0)
+	- Neighbor   233 (0,3,2,2,1)
+	- Neighbor   745 (2,3,2,2,1)
+
+Node  1002     (3,3,2,2,2) is connected to:
+	- Neighbor  1003 (3,3,2,2,3)
+	- Neighbor  1001 (3,3,2,2,1)
+	- Neighbor   234 (0,3,2,2,2)
+	- Neighbor   746 (2,3,2,2,2)
+
+Node  1003     (3,3,2,2,3) is connected to:
+	- Neighbor  1000 (3,3,2,2,0)
+	- Neighbor  1002 (3,3,2,2,2)
+	- Neighbor   235 (0,3,2,2,3)
+	- Neighbor   747 (2,3,2,2,3)
+
+Node  1004     (3,3,2,3,0) is connected to:
+	- Neighbor  1005 (3,3,2,3,1)
+	- Neighbor  1007 (3,3,2,3,3)
+	- Neighbor   236 (0,3,2,3,0)
+	- Neighbor   748 (2,3,2,3,0)
+
+Node  1005     (3,3,2,3,1) is connected to:
+	- Neighbor  1006 (3,3,2,3,2)
+	- Neighbor  1004 (3,3,2,3,0)
+	- Neighbor   237 (0,3,2,3,1)
+	- Neighbor   749 (2,3,2,3,1)
+
+Node  1006     (3,3,2,3,2) is connected to:
+	- Neighbor  1007 (3,3,2,3,3)
+	- Neighbor  1005 (3,3,2,3,1)
+	- Neighbor   238 (0,3,2,3,2)
+	- Neighbor   750 (2,3,2,3,2)
+
+Node  1007     (3,3,2,3,3) is connected to:
+	- Neighbor  1004 (3,3,2,3,0)
+	- Neighbor  1006 (3,3,2,3,2)
+	- Neighbor   239 (0,3,2,3,3)
+	- Neighbor   751 (2,3,2,3,3)
+
+Node  1008     (3,3,3,0,0) is connected to:
+	- Neighbor  1009 (3,3,3,0,1)
+	- Neighbor  1011 (3,3,3,0,3)
+	- Neighbor   240 (0,3,3,0,0)
+	- Neighbor   752 (2,3,3,0,0)
+
+Node  1009     (3,3,3,0,1) is connected to:
+	- Neighbor  1010 (3,3,3,0,2)
+	- Neighbor  1008 (3,3,3,0,0)
+	- Neighbor   241 (0,3,3,0,1)
+	- Neighbor   753 (2,3,3,0,1)
+
+Node  1010     (3,3,3,0,2) is connected to:
+	- Neighbor  1011 (3,3,3,0,3)
+	- Neighbor  1009 (3,3,3,0,1)
+	- Neighbor   242 (0,3,3,0,2)
+	- Neighbor   754 (2,3,3,0,2)
+
+Node  1011     (3,3,3,0,3) is connected to:
+	- Neighbor  1008 (3,3,3,0,0)
+	- Neighbor  1010 (3,3,3,0,2)
+	- Neighbor   243 (0,3,3,0,3)
+	- Neighbor   755 (2,3,3,0,3)
+
+Node  1012     (3,3,3,1,0) is connected to:
+	- Neighbor  1013 (3,3,3,1,1)
+	- Neighbor  1015 (3,3,3,1,3)
+	- Neighbor   244 (0,3,3,1,0)
+	- Neighbor   756 (2,3,3,1,0)
+
+Node  1013     (3,3,3,1,1) is connected to:
+	- Neighbor  1014 (3,3,3,1,2)
+	- Neighbor  1012 (3,3,3,1,0)
+	- Neighbor   245 (0,3,3,1,1)
+	- Neighbor   757 (2,3,3,1,1)
+
+Node  1014     (3,3,3,1,2) is connected to:
+	- Neighbor  1015 (3,3,3,1,3)
+	- Neighbor  1013 (3,3,3,1,1)
+	- Neighbor   246 (0,3,3,1,2)
+	- Neighbor   758 (2,3,3,1,2)
+
+Node  1015     (3,3,3,1,3) is connected to:
+	- Neighbor  1012 (3,3,3,1,0)
+	- Neighbor  1014 (3,3,3,1,2)
+	- Neighbor   247 (0,3,3,1,3)
+	- Neighbor   759 (2,3,3,1,3)
+
+Node  1016     (3,3,3,2,0) is connected to:
+	- Neighbor  1017 (3,3,3,2,1)
+	- Neighbor  1019 (3,3,3,2,3)
+	- Neighbor   248 (0,3,3,2,0)
+	- Neighbor   760 (2,3,3,2,0)
+
+Node  1017     (3,3,3,2,1) is connected to:
+	- Neighbor  1018 (3,3,3,2,2)
+	- Neighbor  1016 (3,3,3,2,0)
+	- Neighbor   249 (0,3,3,2,1)
+	- Neighbor   761 (2,3,3,2,1)
+
+Node  1018     (3,3,3,2,2) is connected to:
+	- Neighbor  1019 (3,3,3,2,3)
+	- Neighbor  1017 (3,3,3,2,1)
+	- Neighbor   250 (0,3,3,2,2)
+	- Neighbor   762 (2,3,3,2,2)
+
+Node  1019     (3,3,3,2,3) is connected to:
+	- Neighbor  1016 (3,3,3,2,0)
+	- Neighbor  1018 (3,3,3,2,2)
+	- Neighbor   251 (0,3,3,2,3)
+	- Neighbor   763 (2,3,3,2,3)
+
+Node  1020     (3,3,3,3,0) is connected to:
+	- Neighbor  1021 (3,3,3,3,1)
+	- Neighbor  1023 (3,3,3,3,3)
+	- Neighbor   252 (0,3,3,3,0)
+	- Neighbor   764 (2,3,3,3,0)
+
+Node  1021     (3,3,3,3,1) is connected to:
+	- Neighbor  1022 (3,3,3,3,2)
+	- Neighbor  1020 (3,3,3,3,0)
+	- Neighbor   253 (0,3,3,3,1)
+	- Neighbor   765 (2,3,3,3,1)
+
+Node  1022     (3,3,3,3,2) is connected to:
+	- Neighbor  1023 (3,3,3,3,3)
+	- Neighbor  1021 (3,3,3,3,1)
+	- Neighbor   254 (0,3,3,3,2)
+	- Neighbor   766 (2,3,3,3,2)
+
+Node  1023     (3,3,3,3,3) is connected to:
+	- Neighbor  1020 (3,3,3,3,0)
+	- Neighbor  1022 (3,3,3,3,2)
+	- Neighbor   255 (0,3,3,3,3)
+	- Neighbor   767 (2,3,3,3,3)
+
