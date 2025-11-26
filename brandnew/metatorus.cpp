@@ -611,11 +611,6 @@ int metaTorus::route_directed(int start_id, int target_id) {
     return directed(-1, start_id, target_id, visited, 0);
 }
 
-/**
- * @brief Recursive DRP-based routing algorithm.
- * Finds the neighbor with the highest probability, checks its validity, and recurses.
- * Backtracks if a high-probability path leads to a dead end.
- */
 int metaTorus::directed(int prev_id, int current_id, int target_id, std::unordered_map<int, bool>& visited, int depth) {
     if (current_id == target_id) return depth;
 

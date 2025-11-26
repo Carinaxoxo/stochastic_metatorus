@@ -24,41 +24,8 @@ testMeta::testMeta(int n_dims, int k_arity) : n(n_dims), k(k_arity) {
     V = ipow(k, n);
     nodes.resize(V);
 
-    for (int i = 0; i < V; ++i) {
-        nodes[i].id = i;
-        std::vector<int> current_coords = getCoords(i);
-        nodes[i].neighbors.clear();
-
-        // --- Neighbor Logic based on user's example ---
-        std::vector<int> temp_coords;
-        int x = (current_coords[0] + 1);
-        if (x >= n) x = x % n;
-
-        temp_coords = current_coords;
-        temp_coords[x] = (current_coords[x] + 1) % k;
-        int neighbor1 = getId(temp_coords);
-
-        temp_coords = current_coords;
-        temp_coords[x] = (current_coords[x] - 1 + k) % k;
-        int neighbor2 = getId(temp_coords);
-
-        temp_coords = current_coords;
-        temp_coords[0] = (current_coords[0] + 1) % k;
-        int neighbor3 = getId(temp_coords);
-
-        temp_coords = current_coords;
-        temp_coords[0] = (current_coords[0] - 1 + k) % k;
-        int neighbor4 = getId(temp_coords);
-
-        nodes[i].neighbors.push_back(neighbor1);
-        nodes[i].neighbors.push_back(neighbor2);
-        nodes[i].neighbors.push_back(neighbor3);
-        nodes[i].neighbors.push_back(neighbor4);
-
-        for (int j = 0; j < nodes[i].neighbors.size(); ++j) {
-            nodes[i].neighbor_id_to_index[nodes[i].neighbors[j]] = j;
-        }
-    }
+// Generate neighbors using the Meta Torus specific logic
+    createMetaTorusNeighborsDOR();
 
     // Initialize probability storage
     int degree = 4; // Metatorus-like degree
@@ -74,7 +41,55 @@ testMeta::testMeta(int n_dims, int k_arity) : n(n_dims), k(k_arity) {
         }
     }
 }
+/**
+ * @brief Creates the 4 Meta Torus neighbors for each node, ensuring they are
+ * stored in dimension order to support deterministic routing.
+ * This implementation is based on your createNeighbors4() logic.
+ */
+void testMeta::createMetaTorusNeighborsDOR() {
+    for (int i = 0; i < V; ++i) {
+        std::vector<int> current_coords = getCoords(i);
+        nodes[i].neighbors.assign(4, -1);
 
+        // A temporary structure to hold {dimension, neighbor_id} pairs.
+        std::vector<std::pair<int, int>> temp_neighbors;
+
+        int header = current_coords[0];
+        // The header selects another dimension. We'll use modulo to keep it in bounds.
+        int x = (header + 1) % n;
+        // Ensure x is not dimension 0, as per the implied logic.
+        if (x == 0) x = 1;
+
+        // 1. Neighbor on header ring (dimension 0) in positive direction
+        std::vector<int> temp_coords_1 = current_coords;
+        temp_coords_1[0] = (header + 1) % (n - 1); // Use k for arity of the ring
+        temp_neighbors.push_back({0, getId(temp_coords_1)});
+
+        // 2. Neighbor on header ring (dimension 0) in negative direction
+        std::vector<int> temp_coords_2 = current_coords;
+        temp_coords_2[0] = (header - 1 + (n - 1)) % (n - 1);
+        temp_neighbors.push_back({0, getId(temp_coords_2)});
+
+        // 3. Neighbor in selected dimension 'x' in positive direction
+        std::vector<int> temp_coords_3 = current_coords;
+        temp_coords_3[x] = (current_coords[x] + 1) % k;
+        temp_neighbors.push_back({x, getId(temp_coords_3)});
+
+        // 4. Neighbor in selected dimension 'x' in negative direction
+        std::vector<int> temp_coords_4 = current_coords;
+        temp_coords_4[x] = (current_coords[x] - 1 + k) % k;
+        temp_neighbors.push_back({x, getId(temp_coords_4)});
+
+        // CRITICAL STEP: Sort the pairs. This sorts by dimension number first,
+        // which enforces the dimension-order needed for deterministic routing.
+        std::sort(temp_neighbors.begin(), temp_neighbors.end());
+
+        // Assign the sorted neighbor IDs to the final neighbors list.
+        for (int j = 0; j < 4; ++j) {
+            nodes[i].neighbors[j] = temp_neighbors[j].second;
+        }
+    }
+}
 // --- Part 2: Directed Routing Probability Calculation (Hybrid Model) ---
 void testMeta::calcDirectedRoutingProbabilities() {
     const int full_torus_degree = 2 * n;
@@ -302,3 +317,69 @@ std::vector<int> testMeta::findFaultFreePathBFS(int start_node, int end_node) co
     return path;
 }
 
+// --- Part 5: Brute Force "Dummy" Adaptive Routing Algorithm ---
+
+/**
+ * Calculates the Manhattan distance between two nodes on the torus.
+ */
+int testMeta::distance(int node_a_id, int node_b_id) const {
+    std::vector<int> coords_a = getCoords(node_a_id);
+    std::vector<int> coords_b = getCoords(node_b_id);
+    int d = 0;
+    for (int i = 0; i < n; ++i) {
+        int diff = std::abs(coords_a[i] - coords_b[i]);
+        d += std::min(diff, k - diff);
+    }
+    return d;
+}
+
+/**
+ * Checks if a neighbor is a "preferred" neighbor (i.e., gets one step closer).
+ */
+bool testMeta::isPreferred(int neighbor_id, int current_id, int target_id) const {
+    return distance(neighbor_id, target_id) == distance(current_id, target_id) - 1;
+}
+
+NeighborClasses testMeta::classifyNeighbors(int current_id, int target_id) const {
+    NeighborClasses classes;
+    for (int neighbor_id : nodes.at(current_id).neighbors) {
+        if (isPreferred(neighbor_id, current_id, target_id)) {
+            classes.preferred.push_back(neighbor_id);
+        } else {
+            classes.spare.push_back(neighbor_id);
+        }
+    }
+    return classes;
+}
+
+
+/**
+ * Public wrapper to start the brute force routing.
+ */
+int testMeta::route_brute(int start_id, int target_id) const {
+    std::unordered_map<int, bool> visited;
+    return brute(-1, start_id, target_id, visited, 0);
+}
+
+int testMeta::brute(int prev_id, int current_id, int target_id, std::unordered_map<int, bool>& visited, int depth) const {
+    if (current_id == target_id) return depth;
+    visited[current_id] = true;
+
+    NeighborClasses classes = classifyNeighbors(current_id, target_id);
+
+    for (int neighbor_id : classes.preferred) {
+        if (neighbor_id != prev_id && !hasFaultyLink(current_id, neighbor_id)) {
+            if (visited.count(neighbor_id)) return DELIVERY_FAIL;
+            return brute(current_id, neighbor_id, target_id, visited, depth + 1);
+        }
+    }
+
+    for (int neighbor_id : classes.spare) {
+        if (neighbor_id != prev_id && !hasFaultyLink(current_id, neighbor_id)) {
+            if (visited.count(neighbor_id)) return DELIVERY_FAIL;
+            return brute(current_id, neighbor_id, target_id, visited, depth + 1);
+        }
+    }
+
+    return DELIVERY_FAIL;
+}
